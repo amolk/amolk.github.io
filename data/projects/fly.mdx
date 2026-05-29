@@ -1,0 +1,35 @@
+---
+title: "fly"
+slug: fly
+summary: "Drosophila brain connectome simulation with LIF neurons and a NeuroMechFly body"
+status: active
+category: research
+year_started: "2026"
+tags: ["neuroscience", "connectome", "lif-neurons", "flygym", "simulation"]
+featured: false
+---
+
+## About
+
+Closed-loop simulation of the *Drosophila melanogaster* brain: the FlyWire connectome (~139K neurons, ~50M synapses) modeled as a Leaky Integrate-and-Fire network with a sparse weight matrix, wired into a biomechanical fly body via flygym/NeuroMechFly (MuJoCo, 42-DoF legs, compound eyes, odor sensors). Sensory inputs (vision, olfaction, proprioception) flow into the network; descending/motor neuron firing rates drive leg actuators; observations feed back as sensory input each timestep. No learning — behavior emerges from connectome dynamics alone. Python 3.10+, NumPy/SciPy/pandas/pyarrow/matplotlib/flygym.
+
+## Why notable
+
+- Uses real connectome data at scale (~139K neurons, ~50M synapses) while staying CPU-tractable via sparse linear algebra.
+- True closed sensorimotor loop with a biomechanical body, not a disembodied network.
+- Compact, opinionated codebase (~7 modules) that runs end-to-end from a single CLI invocation.
+
+## Architecture
+
+- `fly_sim/config.py` — central configuration dataclass.
+- `fly_sim/connectome.py` — loads FlyWire `connections.csv.gz` + `cell_types.csv.gz`, builds sparse weight matrix `W[i,j] = synapse_count × nt_sign` (ACh excitatory, GABA/Glu inhibitory); synthetic-connectome fallback for dev without data.
+- `fly_sim/neurons.py` — vectorized NumPy LIF: `V[t+1] = V[t]·decay + (Wᵀ·spikes + I_ext)·dt/τ`, scipy.sparse matmul.
+- `fly_sim/body.py` — flygym wrapper; maps retina → visual neurons, antennae → olfactory, joints → proprioceptive, descending+motor → leg actuators.
+- `fly_sim/simulation.py` — main loop tying connectome ↔ neurons ↔ body.
+- `fly_sim/viz.py` + `analysis.py` — spike rasters, firing rates, trajectory plots.
+- `scripts/run.py` — CLI entry (`--duration`, `--neurons`, `--render`, `--real-data`, `--save-plot`); also exposed as `fly-sim` console script.
+- `tests/test_neurons.py` — unit tests for neuron dynamics.
+
+## Chronology
+
+- **2026-03-09** — Initial commit: end-to-end Drosophila connectome simulation with synthetic-data fallback and CLI runner.

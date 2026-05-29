@@ -1,0 +1,52 @@
+---
+title: "agent-callstack"
+slug: agent-callstack
+summary: "A call stack for AI agents — `fork()` + `join()` semantics for long-horizon LLM workflows."
+status: active
+category: flagship
+year_started: "2026"
+repo_url: "https://github.com/unwind-labs/callstack"
+featured: true
+order: 2
+---
+
+## About
+
+agent-callstack gives AI agents a proper call stack. Each `/call` forks the parent's full session context — like `fork()` in Unix — so the child inherits everything without re-prompting. When the child completes, only its compact return value flows back; the parent's context stays clean. The design solves two failure modes: sub-agents that start blind (no parent context, wasted tokens) and main-agent accumulation (context rot, lossy compaction). The core insight was first built in Playbooks AI (2023) and is here generalized to work with any harness, starting with Claude Code.
+
+## Architecture
+
+```
+plugins/callstack/agent_callstack/
+  __init__.py    Public API: call, call_many, resume, Caller, Result
+  state.py       Pure state machine: discriminated unions + step()
+  driver.py      Effect runner: ties channel + state + tree
+  channel.py     Claude CLI subprocess + NDJSON protocol
+  protocol.py    SYSTEM_INSTRUCTION + envelope parser
+  session.py     SessionLocator: ~/.claude/projects discovery
+  trace.py       TraceWriter (JSONL) + TreeStore (sidecar snapshots)
+  analysis.py    SessionAnalyzer: post-execution inspection
+.claude/skills/call/   Claude Code skill entrypoint
+examples/
+  customer_support/  MFA + refund workflow demo
+  parallel_calls/    Fan-out with nested parallelism demo
+```
+
+Install: `cp -r agent-callstack/.claude/skills/call ~/.claude/skills/`
+
+## Chronology
+
+- 2026-04-15 — initial commit; MCP tools, stream-json protocol, Claude Code skill
+- 2026-04-16 — restructured runtime as state-machine-as-data with pure `step(state, event) → (state, [effects])`
+- 2026-04-16 — switched to JSON envelope protocol (CALL / YIELD / RETURN); added `summary` field
+- 2026-04-16 — added session_log + session_log_start_line to call results; instrumentation hooks for paper experiments
+- 2026-04-18 — `CALLSTACK_MAX_CONCURRENT_FORKS` semaphore (default 8) to prevent OOM on wide call trees
+- 2026-05-02 — v0.2.0: rebranded to `unwind-labs/callstack`; plugin manifests enriched for launch
+- 2026-05-10 — MCP rename: `invoke*` → unified `call` / `resume` (single + parallel collapsed into one tool surface)
+- 2026-05-11 — agent-callstack-paper restructured into `drafts/`; v2 framing draft *Agent Callstacks: A Missing Control-Flow Primitive for Language-Model Programs* added (position + phenomenology, RLM-as-dual); experiments add `yield_depth_cost` probe + naive-bubble-up ablation
+- 2026-05-10 — `call` gains `context="fork"|"fresh"` modes (fresh = subagent-style isolation, no transcript inheritance); `cwd` accepts `{PWD}` substitution and supports cross-project spawn (only with `context=fresh`); nodes carry `call_type ∈ {fork, fresh, fresh_cross_project}`. Makes `call` a strict superset of Claude Code's built-in Agent/Task tool
+- 2026-05-14 — deterministic child session identity: Driver pre-allocates the child claude's session UUID, passes it both as `--session-id <uuid>` and as `CALLSTACK_OWN_SESSION` in the spawned env; child MCP server resolves its own session from that env var, eliminating the `SessionLocator` mtime-fallback race on concurrent siblings and removing reliance on Claude Code's opaque env-propagation across forked stdio MCP children. Legacy `CALLSTACK_PARENT_SESSION` env removed (its inherited value made grandchildren resolve the root as their parent); "we're nested" signal is now solely `CALLSTACK_ROOT_INVOKE_ID`. New Layer-3/5/6 regression suite pins the foundational invariant that `/call` always forks from the *immediate* caller's session. README walkthrough refreshed to a 4-level-deep MFA branch. Companion docs fix: `RETURN.result` clarified as any JSON value, not just strings.
+- 2026-05-24 — fix: report.yaml no longer sealed before the child process terminates. Lifecycle race closed; consumers can't observe a sealed report on a still-running child.
+- 2026-05-25 → 2026-05-26 — post-recheck remediation + coverage push to fail_under=92 + CI/pre-commit infrastructure (~45 commits in one continuous run). New GitHub Actions test workflow (linux+macos, py3.12, coverage gate), ruff baseline (line-length 120) + pre-commit hooks (ruff check/format + pre-push pytest, ruff pinned to 0.9.0), real package layout declared (drops the `py-modules=[]` lie), pool subsystem extracted into `channel_pool.py`, `nested_mixed_calls` example added, hermetic conftest isolating the suite from inherited `CALLSTACK_*` env, hypothesis property tests for protocol/state/env, env.py / report.py / shutdown.py / reporter.py / frames.py lifted to ≥99–100% coverage. Recheck fixes cover signal-handler deadlock (reentrant registry lock), `max_context_tokens_seen` guard on resume, timeout/abandoned terminal nodes mapped to real errors, `TraceWriter.write` serialized against interleaved appends, JSONL streaming reader in analysis, `child_id` invariants pinned in driver/state.
+- 2026-05-22 — REVIEW-201/202/203/204/205/206/207/208 batch: separates the abandonment policy from the tree walkers (REVIEW-201); shutdown hardening lifted into its own module (REVIEW-202); `last_tree` becomes a stable public surface on `Driver` (REVIEW-208); `_finalize_own_frames` only runs on the exception boundary (REVIEW-203, perf); TTL fallback layered next to `_pid_alive` (REVIEW-204, correctness); `_load_frames` cache deep-copies on retrieval to prevent caller mutation (REVIEW-205); upstream-failure classifier inlined now that it has only one entry (REVIEW-206, simplify); MAX_DEPTH default restored to 10 with ceiling 32 (REVIEW-207, revert).
+- 2026-05-13 — hardening sprint across callstack + unwind (~31 commits in one day). **callstack**: security P1 batch (SEC-002/004/007/008/011), perf P1 (PERF-D/E/F/G/H — subprocess pool, reporter debounce + content-hash skip, O(1) ancestor lookup via `_TreeIndex`), arch P1 DRY batch (ARCH-1/3/4/7/8/9 — split monolithic `__init__.py` into focused modules), P2 hardening (security caps, perf, cleanup), then session-inheritance fixes: child `/call` now inherits *immediate* parent's session (not root), reads Claude Code's actual session env var, slim per-fork preamble with precise `session_log_start_line`. Also `CALLSTACK_MAX_DEPTH` env override (default 5 → 10), symlink-escape hardening in `_resolve_cwd`. **unwind**: security batch (path-traversal in SPA static fallback, WebSocket Origin policy, AppleScript escape in folder picker, slug/session_id validation, gated `/api/docs` behind `UNWIND_DOCS`), perf batch (cache invoke_id→parent_session map at registry level, tail-read JSONLs in `_is_at_user_yield`, JSONL parse cache by (mtime, size), canvas ETag from project-state fingerprint, drop polling-over-WS, single long-lived watcher flush thread), refactors (collapse `parse_ts`/`assistant_text`/`tool_result` helpers; three frontend duplications), then a11y (PaneFrame keyboard-focusable + shortcut announcement) + frontend fix (preserve thread on refresh, jitter WS, sandbox markdown links).

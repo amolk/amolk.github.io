@@ -1,0 +1,48 @@
+---
+title: "agent-callstack-unwind"
+slug: agent-callstack-unwind
+summary: "Outside-in web observer for Claude Code sessions and callstack call trees."
+status: active
+category: shipped
+year_started: "2026"
+repo_url: "https://github.com/unwind-labs/unwind"
+featured: false
+---
+
+## About
+
+unwind reads `~/.claude/projects/*.jsonl` (Claude Code's session logs) plus `<project>/.claude/callstack/log/` and renders, in a local web UI, every session that has run in a project — the conversation for each, the call hierarchy between sessions when callstack's `/call` skill is used, and any spawned subagents. Three-pane layout: project sessions list, call-tree canvas, conversation detail. `unwind serve` from a project folder opens a browser tab; same data is also available from `unwind project|session|messages|task` CLI subcommands.
+
+**Pivot history.** Originally scoped as a Rust ratatui TUI with continuous retrospective in-process compaction. On 2026-04-27 the Rust workspace was deleted and a Python observability tool (`unwind-lite`) was renamed in to become unwind. The retrospective-compaction work is deferred to a v2 release (agent-callstack-compaction-paper follows that release).
+
+## Architecture
+
+Stack: Python 3.11+, FastAPI + uvicorn (server), watchdog (file watcher), custom shadcn-style renderer for the canvas. Build backend `poetry-core`; tag-triggered PyPI publish via OIDC trusted publisher.
+
+```
+unwind/
+  src/unwind/           Python package
+  web/                  vite build output served by FastAPI
+  dev/                  PLAN.md, PRD.md, smoke.sh
+  tests/                pytest
+  pyproject.toml        poetry-core, PEP 621 [project]
+```
+
+**PyPI naming quirk:** distribution is `unwind-labs` (the `unwind` name is owned by an unrelated package), but the installed console script is `unwind` and the import is `import unwind`. Install: `pip install unwind-labs` → `unwind serve`.
+
+## Chronology
+
+- 2026-04-28 — first git commit; Release 0.1.1; PyPI distribution `unwind-labs` reserved
+- 2026-05-01 — noun-verb CLI surface (`project`, `session`, `messages`, `task`); Release 0.2.0 → 0.2.3
+- 2026-05-02 — repo URLs pointed at `unwind-labs/unwind`; resumed sessions surfaced instead of hidden as forks; Release 0.2.4 / 0.2.5
+- 2026-05-03 — Release 0.3.0; canvas rewritten from incremental emission to deterministic backend pass; round canvas UI (pill controls, 16px nodes, marker-only forks)
+- 2026-05-04 — Release 0.3.1; tightened yield semantics; canvas/list status UI polish
+- 2026-05-10 — recognize new `call`/`resume` tool names alongside legacy `invoke*`
+- 2026-05-10 — unify spawn detection; fix canvas/CALL-row UX; wire view state into browser history; Release 0.3.2
+- 2026-05-10 — thread `call_type` through spawns and infer fork status from envelopes (mirrors callstack `context=fork|fresh` distinction); test coverage added
+- 2026-05-13 — pre-launch hardening (17 commits in one batch): security (path-traversal in SPA static fallback, WebSocket Origin policy, AppleScript-string escape in folder picker, slug/session_id validation at route boundary, gate `/api/docs` + `/api/openapi.json` behind `UNWIND_DOCS`, gate pick-folder behind Origin check); perf (cache invoke_id→parent_session map at registry, tail-read JSONLs in `_is_at_user_yield`, JSONL parse cache by (mtime, size), canvas ETag from project-state fingerprint, drop polling on top of WebSocket + memoize `CompactCard` rows, single long-lived flush thread in watcher debounce); refactors (collapse `parse_ts`/`assistant_text`/`tool_result` helpers, three frontend duplications); a11y (PaneFrame keyboard-focusable, shortcut announcement); frontend fix (preserve thread on refresh, jitter WS reconnect, sandbox markdown links)
+- 2026-05-24 — agent thinking blocks surfaced in the session trace UI (`feat: surface agent thinking blocks in session trace`); pricing table refreshed (Haiku rates updated + Sonnet >200K tier added) so the 0.3.3 canvas USD-cost surface stays accurate. Preceded 05-23 evening by a subtree-aggregation refactor cleaning up boundary handling from code review.
+- 2026-05-25 — cross-project Reports surface: `unwind usage report --month` CLI subcommand + a Reports view in the web UI for cross-project monthly token + USD rollup, deep-linkable via URL-synced view + month. Subtle flowing emerald wash on in-progress canvas cards. Bugfix: stop double-counting usage inherited from fork parents.
+- 2026-05-27 — `await_call` rows now render as follower edges back to the original child window in the canvas (224682c) — `mcp__plugin_callstack_call__await_call` invocations and their originating `call` are visualized as connected, not as duplicate windows. Detail-pane state stays in sync with the canvas card when an `await_call` row is selected (43cf5c0). New `web/src/panes/instances.test.ts` covers the canvas-instance merge logic (uncommitted). No new release after 0.4.0.
+- 2026-05-26 — **Release 0.4.0**. Bugfixes: terminal-ancestor wall in `aggregate_status_for_session`; placeholder rendered for encrypted-only thinking blocks. Canvas live-card surface flattened to inverted light-gray. Husky + lint-staged + Prettier pre-commit hook (with `.prettierrc` enforcing 2-space indent) wired, and the web + canvas surface bulk-reformatted. README rewritten with a problem-led opener, feature zig-zag, and a new CLI-for-Claude section.
+- 2026-05-22 — Release **0.3.3**: per-window token usage + USD cost surfaced on canvas, with cost shown on every card and a PNG export of the canvas; new `unwind session usage` CLI subcommand for the same breakdown; `--version` flag; live/yield status now propagates from descendants up to ancestors (live subtrees rendered with an emerald-tinted card surface). Bug fix: `/api/sessions/*` routes accept `agent-<hex>` subagent IDs. Backed by a structural refactor: one `Status` type, fork divergence + fork-spawn status both driven from a single `SessionScan` (second walk deleted), `Spawn` split into `CallSpawn`/`SubagentSpawn` typed variants, `canvas_tree.py` and `watcher._handle_jsonl` both split into focused modules/handlers, legacy-args compat shims dropped from `annotate_spawns`/`build_canvas_tree`/`collect_invocations`.

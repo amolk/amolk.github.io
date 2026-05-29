@@ -1,0 +1,33 @@
+---
+title: "fluaid"
+slug: fluaid
+summary: "Web-based fluid presentations on an infinite 2D canvas with 3D camera transitions"
+status: exploration
+category: tool
+year_started: "2024"
+tags: ["presentations", "three-js", "react", "infinite-canvas", "prototype"]
+featured: false
+---
+
+## About
+
+fluaid is a prototype web app for marketers and executives to build polished business presentations on an infinite 2D canvas, with smooth 3D camera transitions between slides (Prezi-style, but modernized). React 18 + TypeScript + Three.js via react-three-fiber + styled-components, scaffolded on Create React App. Status: design-complete prototype with a written PRD; not under git, last touched 2024.
+
+## Why notable
+
+- Combines product thinking (full PRD covering canvas, slides, text/image/video/3D objects, persistence, playback) with a working React-Three-Fiber scaffold.
+- Tackles a clear UX gap: PowerPoint slide-by-slide vs. Prezi's dated UX — fluaid targets polished, executive-grade 3D narrative.
+
+## Architecture
+
+- `src/pages/` — Home, Editor, Viewer (main app surfaces).
+- `src/components/` — reusable UI building blocks.
+- `src/context/` + `src/hooks/` — React context providers and custom hooks for canvas/camera state.
+- `src/data/`, `src/types/`, `src/utils/`, `src/styles/` — supporting layers.
+- Three.js / react-three-fiber / drei drive infinite 2D canvas, camera translation/rotation in 3D, and spline-curve transitions between slide keyframes.
+- Persistence intended as human-readable YAML; export via shareable URL (per PRD).
+- Run with `npm start` (CRA dev server on :3000).
+
+## Chronology
+
+- **2024** — PRD authored; React/Three.js scaffold built (no git history retained).

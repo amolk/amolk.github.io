@@ -1,0 +1,29 @@
+---
+title: "free-energy-minimization-framework"
+slug: free-energy-minimization-framework
+summary: "Notebook-driven exploration of free-energy minimization for perception, in pure NumPy."
+status: archived
+category: research
+year_started: "2018"
+tags: ["free-energy", "predictive-coding", "autoencoder", "numpy", "research"]
+repo_url: "https://github.com/amolk/free-energy-minimization-framework"
+featured: false
+---
+
+## About
+
+A self-directed research repo iterating on Friston-style free-energy / predictive-coding ideas across nine numbered folders (`5/` through `13/`), each a self-contained attempt. The arc moves from foundational regression and unit-network primitives toward unsupervised structure discovery: by iteration 12 it covers self-supervised encoders, Hebbian updates, and precision-of-scaled-pdf calculations; iteration 13 attacks domain quantization and video-frame autoencoders on synthetic video. Everything is implemented from scratch on NumPy — no PyTorch/TF — which is the point: build the math by hand.
+
+## Why notable
+
+- Sustained nine-iteration research arc on a hard problem (free-energy minimization), with each iteration leaving its own artifacts so the thinking is auditable.
+- From-scratch NumPy implementation forces understanding of every gradient and update rule, not just calling library autodiff.
+- The video-frame autoencoder work in `13/` is a non-trivial end-to-end pipeline (generator → quantizer → autoencoder).
+
+## Architecture
+
+- `AIAlgosNumpy/` — reusable NumPy primitives: `function_approximator_network.py`, `unit.py`, `unit_stack.py`, plus univariate/multivariate linear-regression intro notebooks.
+- `5/`–`13/` — one folder per iteration, each holding `main.py` and notebooks for that round's hypothesis.
+- `12/` — late-stage exploration: notebooks 13–17 cover Hebbian updates, self-supervised encoders, precision calculations.
+- `13/` — final iteration: notebooks 01–04 on domain quantization, 05 simple video generator, 06 video domain quantization, 07–08 video frame autoencoders, plus `datasets/`.
+- No package install — notebooks are the interface.

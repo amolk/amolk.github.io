@@ -1,0 +1,28 @@
+---
+title: "scrapescale"
+slug: scrapescale
+summary: "Production Scrapy spider fleet that fed the [[upscale]] commercial real-estate listings pipeline."
+status: archived
+category: older
+year_started: "2019"
+tags: ["scrapy", "scrapyd", "scraping", "real-estate"]
+repo_url: "https://github.com/amolk/scrapescale"
+featured: false
+---
+
+## About
+
+Scrapy project containing four spiders that crawl commercial real-estate listings — a base `listing_spider` and `os_listing_spider`, plus `recent_*` resumable variants for incremental refresh. Deployed to a dedicated EC2 scrapyd host (provisioned by scrapescale-chef) via `scrapyd-deploy`; jobs scheduled and cancelled through scrapyd's HTTP API. The 2-year `os` spider supports resume by skipping listing IDs already in the upscale DB (seeded into `/tmp/os_ids.txt`).
+
+## Why notable
+
+- Actually ran in production feeding a real product (upscale CRE listings).
+- Resume semantics keyed off the production DB — the spider is aware of prior state, not a one-shot crawl.
+- Standard shape (it's Scrapy doing what Scrapy does), but end-to-end deployed with infra-as-code.
+
+## Architecture
+
+- Standard Scrapy layout: `scrapescale/spiders/*.py` plus `items.py`, `middlewares.py`, `pipelines.py`, `settings.py`; `setup.py` for scrapyd packaging.
+- Four spiders: `listing_spider`, `os_listing_spider`, `recent_listing_spider`, `recent_os_listing_spider` (resume-aware).
+- Deploy: `scrapyd-deploy`. Schedule: `curl .../schedule.json -d project=scrapescale -d spider=<name>`. Cancel via `cancel.json`.
+- Hosted on EC2 (single t2.micro) provisioned and configured by scrapescale-chef.

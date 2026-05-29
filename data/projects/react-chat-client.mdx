@@ -1,0 +1,25 @@
+---
+title: "react-chat-client"
+slug: react-chat-client
+summary: "React/Redux chat UI for Google DialogFlow with rich responses and drag-drop file upload."
+status: archived
+category: older
+year_started: "2023"
+tags: ["react", "redux", "dialogflow", "chatbot"]
+repo_url: "https://github.com/amolk/react_chat_client"
+featured: false
+---
+
+## About
+
+Pre-alpha React (create-react-app) front-end for Google DialogFlow chatbots. Bridges the api.ai JS SDK to a `react-simple-chatbot` UI, with Redux for conversation state, React-Bootstrap for layout, and `react-file-drop` for drag-drop attachments. Supports rich DialogFlow responses (e.g. tabular replies). The README is explicit: it's a starting point for someone building a chatbot front-end, not a production component.
+
+## Why notable
+
+- Honest scope: a small reusable starter, not a finished product. Useful as evidence of comfort with the CRA + Redux + third-party-SDK pattern, but modest.
+
+## Architecture
+
+- Standard CRA layout: `src/{actions,reducers,store,middleware,components,constants}` (Redux), `public/`, `serviceWorker.js`.
+- Chat surface driven by `react-simple-chatbot`; DialogFlow connectivity via `api-ai-javascript@2.0.0-beta`.
+- Run: `yarn install && yarn start`.

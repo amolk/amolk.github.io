@@ -1,0 +1,28 @@
+---
+title: "i3ai"
+slug: i3ai
+summary: "Infinite Improbability Institute for Artificial Intelligence — public research site."
+status: paused
+category: tool
+year_started: "2024"
+year_ended: "2025"
+tags: ["i3ai", "research-site", "sitepress", "rails", "htcc"]
+repo_url: "https://github.com/i3AI/i3ai"
+featured: false
+---
+
+## About
+
+i3AI is Amol's umbrella for independent AI research, and this site is its public face — landing pages, an about page, and a small library of long-form research pages (HTCC manuscript, cognitive homeostatic agents, the pattern machine, what-is-conscious-AI). Two generations exist: the original Pelican static site (`amolk/i3ai.org`, 2024-05) and the current Sitepress + Rails rebuild (`i3AI/i3ai`, 2025-10). The current site auto-deploys to render.com on push to `main`.
+
+## Why notable
+
+- The site is the citable home for HTCC and the cognitive-homeostatic-agents research thread — the connective tissue across `nanogpt-experiments`, `pattern-machine`, and the broader Karta/Carapace work.
+- Two complete generations show a real platform migration (Pelican → Sitepress) executed for concrete reasons.
+
+## Architecture
+
+- **Current (`i3AI/i3ai`)**: Sitepress (a Rails-based static-site generator) with Tailwind CSS and Haml/Markdown content pages. Layouts and partials in `layouts/`, `helpers/`, `assets/`; site config in `config/site.rb`. `Procfile.dev` + `foreman start -f Procfile.dev` for local preview at `127.0.0.1:8080`. Deploys to render.com on push to `main`.
+- **Content pages** (`pages/`): `index`, `about`, `htcc` (+ `htcc/` subfolder with manuscript v0.1, homeostatic main loop notes, 2018 poster, chat transcripts), `cognitive_homeostatic_agents`, `pattern_machine`, `what_is_conscious_ai`.
+- **Previous (`amolk/i3ai.org`)**: Pelican (Python) static site, `make devserver PORT=8080` for preview, `make github` to deploy to GitHub Pages. Content under `content/pages/`, custom CSS and `extra/`.
+- **Migration motivation**: move from Python/Pelican to a Ruby/Sitepress stack consistent with Amol's other Rails work (LifeSage), and to enable richer HTML/Haml partials than Pelican templates allowed.

@@ -1,0 +1,54 @@
+---
+title: "carapace-intelligence2"
+slug: carapace-intelligence2
+summary: "Deterministic Python implementation of the **Decision Intelligence framework** specified in carapace-intelligence's `docs/decision-intelligence-paper."
+status: active
+category: shipped
+year_started: "2026"
+featured: false
+---
+
+## About
+
+Deterministic Python implementation of the **Decision Intelligence framework** specified in carapace-intelligence's `docs/decision-intelligence-paper.md` (2026-05-23). The LLM is treated as a *learned environment model* — a stochastic transition operator + reward elicitor — and explicit search, Bayesian expectimax backward induction, and structured robustness analysis are layered on top. All global reasoning (value, recommendation, sensitivity) is deterministic and reproducible from cached LLM outputs.
+
+**Pivot history.** Started 2026-04-23 as a workspace for a "query-first, markdown-native, STAG-shaped" rethink of carapace-intelligence (`PRD.md` + `IMPLEMENTATION.md`, no git). Sat dormant through May until 2026-05-27, when the workspace was re-scoped and bootstrapped as a real repo to implement the DI paper as code in a single overnight run. The earlier STAG framing did not carry into the new codebase.
+
+## Architecture
+
+```
+carapace-intelligence2/
+  decision-intelligence-paper.md   spec (mirrors carapace-intelligence/docs/)
+  src/di/
+    core/         types, hashing, graph, config, taxonomy
+    cache/        content-addressed store with mandatory rationale sidecars
+    solver/       value, recommend, subopt, best-line, opponent modes
+    sensitivity/  four-arm perturbation sweep + pivot conditions
+    agents/       LLM elicitation agents (framer, typer, tempo-holder, …)
+    construct/    full-BFS + PUCT-MCTS tree builders
+    audit/        tail-risk gate
+    prescribe/    final narrative + evidence map
+    orchestrator.py
+    cli.py
+  project/
+    action_kinds.yaml            project-pinned action taxonomy
+    tail_risk_patterns.yaml      project-pinned pattern library
+  tests/
+    fixtures/    hand-built graphs for solver/sensitivity validation
+    unit/        per-module
+```
+
+## Chronology
+
+- 2026-04-23 — workspace created (`PRD.md`, `IMPLEMENTATION.md`); no git
+- 2026-05-27 19:24 — f556db6: initial commit (decision intelligence paper landed in repo root)
+- 2026-05-27 19:45 — c091233: **Phase A** core scaffolding — frozen-dataclass types, content hashing, finite DAG, cache with mandatory rationale sidecars, taxonomy, config, `validate_data.py`, hand-built fixture graph, `pyproject.toml`/pytest setup
+- 2026-05-27 19:52 — 3d997dd: **Phase B** deterministic solver — value, recommend, subopt, best-line, opponent modes
+- 2026-05-27 19:55 — f00dec3: **Phase C** sensitivity sweep — four-arm perturbation (weights, scores, probabilities, opponent-type) + pivot conditions
+- 2026-05-27 20:00 — 2b74ab8: **Phase D** elicitation agents — framer, typer, tempo-holder, dim-scorer, action-enumerator, state-expander with self-validating contracts
+- 2026-05-27 20:04 — 865b499: **Phase E** tree construction — priors, pruning, full-BFS builder
+- 2026-05-27 20:07 — cc4d35c: **Phase F** tail-risk audit gate + prescriber
+- 2026-05-27 20:11 — 3f82c88: **Phase G** end-to-end orchestrator + CLI
+- 2026-05-27 20:12 — f0c99ff: **Phase H** independent-per-node exploration (§10.12 of the paper) + isolation traces
+
+107 tests pass; ruff clean.

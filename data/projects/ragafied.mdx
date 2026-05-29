@@ -1,0 +1,28 @@
+---
+title: "ragafied"
+slug: ragafied
+summary: "Ragafied — Indian classical music side project."
+status: archived
+category: older
+year_started: "2013"
+tags: ["rails", "saas", "music"]
+repo_url: "https://github.com/amolk/ragafied"
+featured: false
+---
+
+## About
+
+A Rails 3.2.12 SaaS scaffold built May 2013 from the `rails-stripe-membership-saas` recipe of `rails_apps_composer`, shaped around an Indian-classical-music lessons concept. Domain models are sketches — `Raga`, `Guru` (teacher with images), `Lesson`, `Audio` — wired up but never grown into a real product. Only commit beyond scaffold was "Use Guru images on home page".
+
+## Why notable
+
+- Demonstrates a full Rails SaaS stack circa 2013: Devise + CanCan + Stripe + Cucumber + RSpec + FactoryGirl wired together end-to-end.
+- Domain modeling for a non-trivial vertical (Indian classical music: ragas, gurus, lessons), even if shallow.
+
+## Architecture
+
+- Rails 3.2.12 on Ruby (no explicit pin), SQLite.
+- Domain: 8 models — `Raga`, `Guru`, `Lesson`, `Audio`, `User`, `AdminUser`, `Role`, `Ability`.
+- 7 controllers including `content_controller`, `lessons_controller`, custom `registrations_controller` / `sessions_controller`.
+- Auth/authz via Devise + CanCan; admin starter app; Bootstrap/Sass + Haml; Simple Form.
+- Test stack: RSpec + Cucumber features + FactoryGirl, Stripe spec helpers, Guard for continuous testing.

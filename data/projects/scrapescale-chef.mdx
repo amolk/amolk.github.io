@@ -1,0 +1,27 @@
+---
+title: "scrapescale-chef"
+slug: scrapescale-chef
+summary: "Chef cookbook + knife-solo runner that provisions the [[scrapescale]] scrapyd EC2 host."
+status: archived
+category: older
+year_started: "2019"
+tags: ["chef", "infra-as-code", "scrapyd", "aws"]
+repo_url: "https://github.com/amolk/scrapescale_chef"
+featured: false
+---
+
+## About
+
+Infra-as-code companion to scrapescale. Uses Chef + `knife-solo` (Ruby) to bootstrap a fresh EC2 host into a working scrapyd worker: SSH in, copy cookbooks, run chef, configure an HTTP proxy in the user's shell. Single-host setup (t2.micro defined in `scrapescale.yml`), reproducible from a clean image.
+
+## Why notable
+
+- Reproducible single-command host provisioning for the production scraper fleet — not snowflake servers.
+- Honest scope: it's one cookbook for one host. Useful glue, not architecture worth a deep dive on its own.
+
+## Architecture
+
+- `cookbooks/scrapescale/` — the Chef recipe (recipes, templates, files, test, spec, metadata.rb).
+- `runchef.rb` + `install_scrapescale.sh` — Ruby/shell wrapper that ssh's to the target with `~/.ssh/upscale_cre.pem`, copies cookbooks, and runs chef.
+- `scrapescale.yml` — target node (AWS, t2.micro, AMI, IP). `scrapescale.json` — chef node attributes.
+- `Gemfile` pins `knife-solo` + `net-ssh`. Bootstrap: `./install_scrapescale.sh`.

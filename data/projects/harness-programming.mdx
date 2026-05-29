@@ -1,0 +1,59 @@
+---
+title: "harness-programming"
+slug: harness-programming
+summary: "Short e-book coining and developing the term **Harness Programming** — the sub-discipline of Harness Engineering concerned with composing the natural-language and configuration artifacts that, toge..."
+status: active
+category: shipped
+year_started: "2026"
+featured: false
+---
+
+## About
+
+The book draws two parallels:
+
+| Broad discipline       | Narrower sub-discipline                       |
+| ---------------------- | --------------------------------------------- |
+| Software Engineering   | Computer Programming                          |
+| Harness Engineering    | **Harness Programming**                       |
+
+The second parallel: just as conventional programming diversified into schools (functional, logic, OO) each demanding its own runtime, natural-language programming will diversify into schools, each requiring corresponding harness capabilities. Playbooks is treated as the clearest concrete example of a structured-DSL school of natural-language programming, and as the strongest argument for why filling in formal constructs is a bet against the model getting better.
+
+Target ~25K words, ~2–3K per chapter. Chapters self-contained, readable out of order.
+
+## Architecture
+
+```
+harness-programming/
+  README.md
+  OUTLINE.md
+  00-preface.md
+  01-naming.md                    Why "Harness Programming" deserves a name
+  02-harness.md                   Harness as runtime — stochastic interpreter with opinions
+  03-natural-language-as-code.md  NL as a programming medium
+  04-schools.md                   Schools and runtimes; Playbooks as early example
+  05-primitives.md                System prompts, AGENTS.md/CLAUDE.md, tools, skills, hooks, subagents/forks, memory, plans/todos
+  06-decomposition.md             Skill vs hook vs tool — choosing the surface
+  07-patterns.md                  Defer-to-Tool, Check-Before-Acting, Surface-Conflict, Fail-Loud, Fork-for-Context-Hygiene, Hook-for-Determinism, Single-Responsibility-Skill, …
+  08-craft.md                     Style, debugging, evals, anti-patterns
+  09-outlook.md                   Open problems for the discipline
+  10-sources.md                   Sources and influences
+  blog-excerpt.md                 Short-form companion piece
+  research/
+    00-synthesis.md               Industry/academic discourse map (May 2026)
+    01-decomposition.md           anthropics/skills walkthrough (7 skills)
+    02-program-constructs.md      25+3 empirical + 7 placeholder constructs
+    03-extended-corpus.md         Playbooks DSL as structured-DSL school
+    CITATIONS.md
+    anthropic-skills/             Source material
+    playbooks-corpus/             Source material
+```
+
+Git-initialized 2026-05-20 (single initial commit, no remote yet).
+
+## Chronology
+
+- 2026-05-12 — repo created at `~/work/harness-programming`. README + OUTLINE committed; chapters 00–09 drafted same day. Research artifacts under `research/` feed revision passes (synthesis of industry discourse, decomposition of the anthropics/skills corpus, empirical catalog of SKILL.md program constructs, Playbooks-as-extended-corpus).
+- 2026-05-13 — revision pass: expanded ch.01 naming, ch.02 harness-as-runtime, ch.06 decomposition; added ch.10 sources/influences and `blog-excerpt.md` short-form companion. ~29K words total.
+- 2026-05-17 — second revision pass across chapters 00–08; ch.05 primitives and ch.07 patterns expanded most.
+- 2026-05-20 — repo initialized as git (single initial commit). Reviewer workflow defined in `TODO.md`: senior-SWE-no-prior-harness-experience persona, per-chapter ≥10-point feedback then re-read after revision, cumulative context across chapters.

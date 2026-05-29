@@ -1,0 +1,35 @@
+---
+title: "hierarchical-predictive-coding-transformer"
+slug: hierarchical-predictive-coding-transformer
+summary: "Research codebase exploring hierarchical predictive coding as a training principle for transformers (HERT and variants)."
+status: exploration
+category: research
+year_started: "2026"
+tags: ["predictive-coding", "transformer", "vit", "research", "pytorch"]
+featured: false
+---
+
+## About
+
+PyTorch research codebase that fuses **hierarchical predictive coding** with transformer architectures. The core idea: train transformer layers as a stack of predictors, each one predicting the next layer's representation and propagating only the residual (prediction error) — a structural analogue to biological predictive coding. Five model variants explore complementary mechanisms — confidence-gated early exit (CAE), difference target propagation (DTP), Hebbian updates, and locality constraints — against a standard ViT/BERT baseline. Active solo research; CIFAR-10 / ImageNet / GLUE training and analysis pipelines all in place, GPU-grade run still pending for full accuracy validation.
+
+## Why notable
+
+- Original ML research with five distinct architectural variants, not a fork of an existing repo.
+- End-to-end engineering rigor: configs, trainers, tests, ablation scripts, W&B integration, smoke tests — not just a notebook.
+- Documented learnings file (`fix_plan.md`) shows scientific honesty about bugs found and validated (CAE confidence saturation, HERT gradient isolation, residual magnitude decay across stages).
+
+## Architecture
+
+- `src/models/` — `vit.py`, `bert.py` baselines plus `hert.py`, `hert_cae.py`, `cae.py`, `dtp_hert.py`, `hebbian_hert.py`, `locality_hert.py`, `early_exit.py`, plus a `factory.py` dispatcher.
+- `src/training/` — one trainer per variant (`hert_trainer`, `cae_trainer`, `hert_cae_trainer`, `dtp_trainer`, `hebbian_trainer`, `locality_trainer`, `bert_trainer`) sharing a base `trainer.py`.
+- `configs/` — YAML configs for CIFAR-10, ImageNet, GLUE, and HERT/CAE combinations.
+- `scripts/` — 12+ analysis scripts (attention, CKA, calibration, t-SNE, scaling laws, early-exit depth, residual amplitudes, ablations) plus per-variant `train_*.py` entry points and `smoke_test.py`.
+- `tests/` — pytest coverage for HERT, CAE, HERT+CAE, early-exit, mixup, warmup scheduler, gradient clipping, ViT.
+- `wandb/` + `checkpoints/` — Weights & Biases experiment tracking; staged HERT+CAE checkpoints up to `hert_cae_stage_final.pt`.
+
+## Chronology
+
+- **2026-03-16 / 17** — Initial scaffold, baselines (ViT, BERT), HERT variants, smoke tests for all four variants pass on CPU in ~1.4s.
+- **2026-03-17 / 18** — Staged HERT+CAE training run completes 6 stages; checkpoints saved through `stage_final`; warmup scheduler, gradient clipping, Mixup/CutMix added.
+- **2026-05-14** — Latest test updates; remaining work is the full GPU run targeting >=90% on CIFAR-10.

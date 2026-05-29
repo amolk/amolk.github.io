@@ -1,0 +1,30 @@
+---
+title: "pattern-machine"
+slug: pattern-machine
+summary: "Pattern-discovery engine — long-running personal research on spiking-NN pattern formation."
+status: paused
+category: research
+year_started: "2022"
+year_ended: "2023"
+tags: ["spiking-nn", "pytorch", "pattern-discovery", "research"]
+repo_url: "https://github.com/i3AI/pattern-machine"
+featured: false
+---
+
+## About
+
+Pattern Machine explores how structural patterns emerge from temporal sensory streams, framed as a spiking-neural-network architecture with local Hebbian-style learning. The work spans two repos covering two distinct iterations:
+
+- **`amolk/pattern-machine` (2022, canonical for content)** — the richer of the two. A proper `patternmachine` Python package (20+ modules) under `src/`, with a documented experiment series running from single-layer regression through 1D bouncing-ball dynamics, temporal-to-spatial mapping, high-D multi-patch patterns, and pattern hallucination — captured as numbered `.py` scripts plus generated `.gif`/`.png` artifacts.
+- **`i3AI/pattern-machine` (2023, canonical for architecture)** — a cleaner Poetry-managed rewrite under the i3AI org, narrowing to a computational-graph core (`pm/computational_graph.py`, `variable.py`, `network.py`, `operations/`) with a LIF-with-adaptive-threshold demonstration. Adds PyTorch + Bokeh.
+
+## Why notable
+
+- Multi-year self-directed research thread on a substantive problem — pattern emergence in spiking networks — with two full iterations visible in code.
+- The 2022 iteration has real experimental artifacts (animated gifs of pattern formation, pickled trained patterns, hallucination outputs) rather than just code.
+- The 2023 rewrite shows architectural maturity: collapses the messy 2022 package into a small, clean computational-graph + operations module structure.
+
+## Architecture
+
+- **`amolk/pattern-machine`** — setuptools + `src/patternmachine/` package with `layer.py`, `patch_grid.py`, `pattern_grid.py`, `signal_grid.py`/`signal_grid_set.py`, `local_learning.py`, `pattern_similarity.py`, `trace.py`, `clock.py`, `single_layer_regression.py`, plus a `signal_source/` subpackage. `notebooks/` holds the experiment series 01–10 with `.py` drivers, `.gif` outputs (`04_temporal_to_spatial`, `05_high_d_temporal_to_spatial`, `09_epoch_hallucination`, etc.), pickled patterns, and a small `.m4v` input clip. `docs/` is Sphinx-configured. `tests/` present.
+- **`i3AI/pattern-machine`** — Poetry; small `pm/` package (`computational_graph.py`, `variable.py`, `network.py`, `enums.py`) with `operations/` (`activation_functions.py`, `base.py`, `connections.py`, `ensemble.py`, `probe.py`). PyTorch 1.13, NetworkX, Bokeh, matplotlib. `notebooks/001.py`, `002.py`. `tests/` present.

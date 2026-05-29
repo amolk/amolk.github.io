@@ -1,0 +1,29 @@
+---
+title: "hypersheet"
+slug: hypersheet
+summary: "\"Easy Scalable Hierarchical Spreadsheets\" — early take on the idea that later became z10 / karta."
+status: archived
+category: tool
+year_started: "2016"
+tags: ["spreadsheet", "hierarchy", "relay", "graphql", "react"]
+repo_url: "https://github.com/amolk/hypersheet"
+featured: false
+---
+
+## About
+
+A January-2016 experiment in hierarchical spreadsheets, built directly on Facebook's just-released Relay Starter Kit when Relay was still at 0.6 and GraphQL at 0.4. The product hypothesis — that spreadsheets should compose hierarchically rather than as flat grids — is the same instinct that later showed up in z10 and karta. Small in scope (the model layer is essentially a single `Sheet`), but interesting as the first artifact in that line of thinking and as an early-adopter Relay/GraphQL codebase.
+
+## Why notable
+
+- Earliest artifact of Amol's hierarchical-data thread — direct lineage to z10 and karta.
+- Built on Relay 0.6 / GraphQL 0.4 in January 2016, weeks after they were open-sourced — willingness to adopt unstable bleeding-edge stacks.
+- Demonstrates full-stack range in a tiny repo (GraphQL schema, Relay client, Sequelize/Postgres, Babel/Webpack pipeline).
+
+## Architecture
+
+- `server.js` — Express + `express-graphql` (Relay-style) entry point.
+- `js/` — React 0.14 client (`app.js`, `components/`, `routes/`) using `fixed-data-table` for the grid surface and `material-ui` 0.14 for chrome.
+- `data/schema.js` + `scripts/updateSchema.js` — GraphQL schema definition and the introspection-dump script Relay needed for build-time codegen.
+- `models/sheet.js` + `migrations/` — Sequelize ORM over Postgres.
+- Babel 6 transpile pipeline (`babel-preset-stage-0`/`es2015`/`react`), `webpack` 1.12 + `webpack-dev-server`.

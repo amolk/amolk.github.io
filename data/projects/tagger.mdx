@@ -1,0 +1,27 @@
+---
+title: "tagger"
+slug: tagger
+summary: "Fine-tunes BERT for token-level sequence tagging on natural-language utterances."
+status: archived
+category: older
+year_started: "2020"
+tags: ["pytorch", "bert", "transformers", "nlp", "sequence-tagging"]
+repo_url: "https://github.com/amolk/tagger"
+featured: false
+---
+
+## About
+
+PyTorch + HuggingFace transformers project that fine-tunes `bert-base-uncased` for 3-class token classification — a building block in the text-to-SQL line of work for tagging meaningful spans in user questions. CLI supports `train`, `predict`, and `threshold_suggest` subcommands. Trains on GPU when available, uses differential learning rates (5e-6 for the BERT encoder, 1e-3 for the classifier head), and checkpoints by best validation loss. No README, but the code is short and self-explanatory.
+
+## Why notable
+
+- Hand-rolled HuggingFace fine-tuning loop with separate LR groups and per-epoch best-checkpoint saving — the right shape for the job, not framework boilerplate.
+- Honest caveat: research utility, not a polished tool — no README, narrow internal use.
+
+## Architecture
+
+- `tagger/` package: `dataset_reader.py`, `model.py` (`BertForTokenClassification`, num_labels=3), `train.py` (epoch loop), `predict.py`.
+- Top-level `tagger.py` is the argparse entry point.
+- `tests/` with fixtures; `requirements.txt` pins torch, transformers, nltk, scikit-learn.
+- Run: `python tagger.py train --dataset_json_file_path ... --output_dir ... --num_epochs N` then `python tagger.py predict --model_file_path ... --utterance "..."`.

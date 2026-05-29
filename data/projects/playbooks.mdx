@@ -1,0 +1,43 @@
+---
+title: "playbooks"
+slug: playbooks
+summary: "Flagship: a semantic programming system for AI agents — Markdown-as-source, compiler-to-IR, durable runtime, VSCode debugger. Sunset April 2026."
+status: active
+category: flagship
+year_started: "2024"
+year_ended: "2026"
+tags: ["ai-agents", "semantic-programming", "compiler", "runtime", "sunsetting"]
+repo_url: "https://github.com/playbooks-ai/playbooks.git"
+featured: true
+order: 3
+---
+
+## About
+
+Playbooks is the **flagship project** of the `playbooks-ai` GitHub org (PyPI: `playbooks`, v0.7.4, MIT). It is a full semantic programming system for AI agents: a structured Markdown language for specifying agent behavior; **PBAsm**, a semantic intermediate representation; a compiler from Markdown to PBAsm; and a durable runtime that executes PBAsm with the determinism of traditional software and the flexibility of LLMs. Agents are modeled as classes with public/exported playbooks (methods), triggers (event decorators), instance state, and a real call stack. Started June 2022, shipped 16 releases through v0.7.4 (Feb 2026), four full system rewrites. **Officially sunset on April 5, 2026**: the generalist agent + skills approach won, with Anthropic Skills (Oct 16, 2025) becoming the de facto standard. The retrospective in the repo README articulates the core lesson — forward-compatible NL specs win, and the simpler harness benefits more from model improvement. Spawned an entire ecosystem of sibling projects (playbooks-vscode, playbooks-lm, playbooks-docs, playbooks-website, playbooks-enterprise, durable-python).
+
+## Why notable
+
+- Five years of sustained solo work on a single ambitious thesis — natural language as a programming language — with a published retrospective that is intellectually honest about why it lost.
+- Genuinely original ideas validated in code: PBAsm intermediate representation, class-based agent modeling with triggers, VSCode-debuggable natural-language programs (May 2025, well ahead of the industry), forward-compatibility principle.
+- Org-scale execution: spawned 6+ sibling repos (extension, fine-tuned LM, durable runtime extracted as OSS library, docs site, enterprise edition, marketing site).
+
+## Architecture
+
+- `src/playbooks/` — core package: `compilation/` (Markdown → PBAsm), `execution/` (durable interpreter), `core/`, `agents/`, `agent_clients/`, `playbook/`, `triggers.py`, `debug/`, `llm/`, `meetings/`, `state/`, `transport/`, `channels/`, `infrastructure/`.
+- CLI entry points: `playbooks` (`cli.py`) and `pb` (`shebang_cli.py`) — `.pb` files are shebang-executable scripts.
+- Runtime stack: `litellm` (model-agnostic), `langfuse` (tracing), `redis` + `diskcache` (cache), `apscheduler` (scheduling), `fastapi` (server), `fastmcp` (MCP integration), `simpleeval` (safe eval).
+- Tests, ruff, black, pytest-asyncio, pytest-cov; integration test marker; pre-commit hooks; GH Actions test/lint workflows.
+- ~150 PBAsm cache entries and 20+ example `.pb` programs (customer-support, nativity, adaptive-waiting, …).
+
+## Chronology
+
+- **2022-06** — Project started: GPT-3 era experiments with English as a programming language.
+- **2024-09-21** — Public commit history begins (skeleton landing page, runtime port to JS).
+- **2024-11-24** — v0.1.0.
+- **2025-05-26** — v0.3.0; VSCode debugger first lands (DAP, breakpoints, .pb → .pbc compile).
+- **2025-06-15** — v0.4.0; full VSCode debug experience.
+- **2025-09-27** — v0.6.0; Python interpreter path, ANTHROPIC_API_KEY env, .pbc renamed to .pbasm.
+- **2025-11-10** — v0.7.0; major release.
+- **2026-02-01** — v0.7.4, the final release; message batching, token counting via tiktoken, LangFuse fixes.
+- **2026-04-05** — "Sunsetting Playbooks" commit; retrospective published.

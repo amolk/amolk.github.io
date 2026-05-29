@@ -1,0 +1,31 @@
+---
+title: "crazywindows"
+slug: crazywindows
+summary: "AI-powered macOS window manager — Magnet/Rectangle competitor with Claude-driven smart layouts."
+status: active
+category: shipped
+year_started: "2026"
+tags: ["macos", "menu-bar", "window-manager", "claude-api", "storekit2"]
+repo_url: "https://github.com/CrazyAIApps/CrazyWindows"
+featured: false
+---
+
+## About
+
+CrazyWindows is a SwiftUI menu-bar app for macOS 13+ that snaps the front window to 13 preset positions (halves, quarters, thirds, full, center) via global hotkeys, and uses Claude Sonnet 4 to auto-arrange multi-window "Smart Sessions" tailored to coding, design, writing, or research contexts. It targets the Magnet/Rectangle slot with an AI premium tier: $9.99 one-time on the App Store plus a $4.99/mo subscription for AI Smart Sessions, gated by StoreKit 2 with async entitlement checks. Privacy-first by design — only app names and screen dimensions are sent to the API, never window content. Third stablemate in the CrazyAIApps line alongside CrazyDisk.
+
+## Why notable
+
+- Clean separation of concerns: actor-isolated AI client + rule-based fallback gives instant UX while the LLM is in flight.
+- Full DEBUG sandbox (mock AI, IAP overrides, paywall triggers, launch-arg-driven UI test mode) — the kind of testability that's rare in indie macOS apps.
+- Ships the full revenue stack: App Store IAP, StoreKit 2 subscription, sandbox StoreKit config, and entitlement-gated features.
+
+## Architecture
+
+- **App shell**: `CrazyWindowsApp.swift` (@main) + `AppDelegate.swift` — menu-bar-only (`LSUIElement`), routes launch args, manages NSStatusItem and onboarding.
+- **Core/**: `WindowManager` (singleton, uses `AXUIElement` — no private APIs), `ShortcutHandler` (Carbon Event Manager global hotkeys, signature `CWWM`), `LayoutPresets` (named multi-window arrangements persisted to UserDefaults).
+- **AI/**: `ClaudeAPIClient` (actor-isolated, `claude-sonnet-4-20250514`, 3-attempt exponential backoff), `SmartSessionManager` (NSWorkspace observer for session detection), `LayoutSuggestionEngine` (rule-based fallback rendered before the API responds).
+- **Subscription/**: `StoreKitManager` (StoreKit 2, `Transaction.currentEntitlements`), `SubscriptionGateView` paywall. Local `CrazyWindows.storekit` config for sandbox purchases.
+- **Developer/** (DEBUG-only, `#if DEBUG` stripped from Release): `DeveloperSettings` for in-memory IAP overrides, `MockClaudeAPIClient` for offline canned responses, `DeveloperMenuView` sandbox panel.
+- **Tests**: `WindowManagerTests` (8), `LayoutEngineTests` (8), `SandboxTests` (12), `CrazyWindowsUITests` (17 XCUITest end-to-end flows driven by `--uitesting` launch args).
+- **Run**: open `CrazyWindows.xcodeproj` in Xcode 15+, build & run; tests via `⌘U` or `xcodebuild test -scheme CrazyWindowsTests -destination 'platform=macOS'`.

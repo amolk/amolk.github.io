@@ -1,0 +1,27 @@
+---
+title: "disambiguation-service"
+slug: disambiguation-service
+summary: "Catches ambiguous words in a natural-language question before it hits a text-to-SQL parser."
+status: archived
+category: older
+year_started: "2019"
+tags: ["nlp", "nlu", "semantic-similarity", "text2sql"]
+repo_url: "https://github.com/amolk/disambiguation_service"
+featured: false
+---
+
+## About
+
+Python service that takes a user's natural-language question plus a database schema (column names) and flags words that don't have a confident match in the schema — so the UI can ask the user to clarify rather than passing junk to a NL2SQL model. Uses spaCy (`en_core_web_lg`) for POS tagging, NER, and word-vector similarity; returns ranked column suggestions for each ambiguous token plus separate temporal-clarification prompts. Built as part of the text-to-SQL UX line of work; small but production-shaped (pytest, requirements pinned).
+
+## Why notable
+
+- Tackles a real failure mode in conversational analytics — the parser is only as good as the question, and silent ambiguity ruins UX.
+- Cleanly factored single-purpose service with a tight return contract (ambiguity flags + ranked suggestions + temporal hints), pytest-tested.
+
+## Architecture
+
+- Single `DisambiguationService` class; one public method `process(nlu, schema, temporal_jargon_list)`.
+- POS analysis picks "important" tokens (skips stopwords like *how*, *many*, *their*); similarity matrix scores each against schema columns.
+- NER + jargon list separately identifies temporal words and decides whether to prompt for clarification or time-range specification.
+- Run: `pip install -r requirements.txt && python -m spacy download en_core_web_lg && pytest`.

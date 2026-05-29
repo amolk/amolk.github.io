@@ -1,0 +1,63 @@
+---
+title: "unfold"
+slug: unfold
+summary: "Foundation-inspired branching-timeline 3D graph component. Began 2026-05-23 as a \"prime radiant\" explorer prototype; on 2026-05-26 carved into a reusable `<Unfold data={...}/>` React library with t..."
+status: active
+category: flagship
+year_started: "2026"
+featured: true
+order: 5
+---
+
+## About
+
+A 3D scene that renders a branching timeline as a graph of flat-shaded nodes connected by curved edges with per-edge particle streams. Visual language is borrowed from the Apple TV *Foundation* Prime Radiant — wine background, sage/copper accents, woven-palette particle wisps drifting along edges, sparse bright "glints" driving bloom pinpricks against a dim matte grain.
+
+As of 2026-05-26 the codebase is split into a **public library surface** (`src/lib/` — `<Unfold data={...} theme={…} style={…} layout="layered"/>`, plus public types in `src/lib/types.ts` and an `internal/` folder for the scene), and a **demo app** (`src/demo/` — `App.tsx`, `demo-data.ts`, `leva-panels.tsx`) which is the original prototype repositioned as the consumer of the library.
+
+The library is **phase-gated**: data + theme + style + layout are wired (phases 2/3/4); interaction callbacks (`onNode*`, `onEdge*`, `onBackgroundClick`), selection/focus state, `onNodeExpand`, `cameraMode`, and the `UnfoldHandle` ref API are accepted on `UnfoldProps` for forward-compatible type-checking but are silently no-op until phases 6–10 land them. Public types deliberately import zero `three` — positions are plain `[number, number, number]` tuples and colors are hex strings, so the library boundary never leaks a `THREE.Vector3` to consumers.
+
+Stack: React + Three.js via `@react-three/fiber` and `@react-three/drei`, postprocessing for bloom, `leva` for live controls (now a public `theme`/`style` surface, not just dev HUD). Layout is deterministic across reloads (mulberry32-seeded PRNG). Nodes are flat-shaded; particles have their own GLSL vertex+fragment shaders with an EdgeFlow path that mixes up to 8 colors-in-proportions per edge.
+
+## Architecture
+
+```
+unfold/
+  README.md
+  package.json          name: "unfold" (private: true)
+  src/
+    main.tsx            ReactDOM root → mounts the demo
+    App.tsx             Thin shim (demo entry)
+    lib/                Public library surface
+      Unfold.tsx        forwardRef<UnfoldHandle, UnfoldProps> — Canvas + Bloom + internal Scene
+      index.ts          Public exports
+      types.ts          UnfoldProps, UnfoldHandle, UnfoldNode, UnfoldEdge, EdgeFlow, Vec3, Theme, Style
+                        (No `three` import; positions are tuples, colors are hex strings)
+      internal/
+        Scene           Camera + Nodes + ParticleField + edges (composition root)
+        defaults.ts     resolveTheme + resolveStyle + DEFAULT_BLOOM
+        …               nodes/particles shaders, gpu-mirror primitives, layout math
+    demo/               Consumer-of-the-library: the original prototype repositioned
+      App.tsx           Demo app — sets theme + style + a layered/conical demo dataset
+      demo-data.ts      Seeded demo timeline
+      leva-panels.tsx   Dev HUD that pokes the public theme/style surface
+    scene/, timeline/, explorer/   Pre-carve-out prototype modules (some still referenced)
+```
+
+No remote yet; README landed 2026-05-26. The library is published only intra-repo; the demo serves as the integration test for `UnfoldProps`. Forward-compat props (`onNode*`, `onEdge*`, `focusedNodeId`, `expandedNodeIds`, `onFocusChange`, `onNodeExpand`, `cameraMode`, `initialCamera`, the `ref` handle) are typed but no-op until phases 6–10 wire them.
+
+## Chronology
+
+- 2026-05-23 22:40 — c91d89c: initial Foundation-inspired branching-timeline prototype
+- 2026-05-24 08:32 — 991c177: convert prototype into an interactive focus-based explorer
+- 2026-05-24 10:39 — 9a6c440: bulge nodes (particle-bulge replaces sun spheres), two-tier glints (~8% bright + 92% matte), click-to-expand, sharp crystalline grain falloff, glitter shimmer baseline+spike, global wind with gusts, drift coherence (per-particle seed shrinks toward zero so adjacent particles form visible wisps), palette shift toward wine + sage/copper
+- 2026-05-24 12:15 — 5244686: synthetic incoming stub-edge into the root so root has particle flow before expansion; alpha ramp along stub via edge-fade texture G channel; camera starts side-on (+X around Y) with target tilted up so root lands ~20% from bottom; CameraFollow mounts only after first node click and latches on first interaction (avoids fighting zoom-to-cursor); stops post-transition particle pop by keeping faded-out entries alive until next click sync
+- 2026-05-24 14:36 — 5d86f75: explorer modes (single-path / toggle / full-tree, selectable via leva); 1×N data-texture bulge upload (4096 cap); particle count scales linearly with visible edge count; pointSize and intensity tied to camera zoom via cubic ease-out; glints off by default
+- 2026-05-25 11:59 — 0051422: smoke-wisp particle field with stream coherence and motion streaks
+- 2026-05-25 13:08 — 6755215: per-stream burst gate (ON/OFF cycle along the wisp filament — gives the smoke-wisp field a discrete pulse along each stream rather than continuous flow)
+- 2026-05-25 19:06 — a9704e4: woven palette particles, simplified flat-shaded nodes, head/tail pinch split (nodes drop the bulge shader experiment in favor of flat-shaded surfaces; particle palette interweaves wine/sage/copper; each wisp filament tapers at head and tail independently)
+- 2026-05-25 19:49 — d5932af: `gpu-mirror` primitives — shared mutable typed-array contracts between CPU layout code and GPU buffers (introduces a typed contract for the typed-array slabs uploaded to instanced attributes / data textures)
+- 2026-05-25 20:11 — af2fee8: extract `SceneProjection` module from `Scene.tsx` (separates the layout→screen-space projection math from the React/three render tree — first architectural carve-out as the prototype grows)
+- 2026-05-25 20:15 — 3986f82: make scene-projection fade mirrors fixed-capacity (caps the gpu-mirror slabs used by the fade pass at a known maximum to bound allocation)
+- 2026-05-26 (morning sweep) — small refactors before the library carve-out: 80ec5af (fix edge-fade UV math after the fixed-capacity refactor); cab22e2 (extract `useZoomDrivenControl` hook for camera-zoom-driven leva controls); 8b9ed8a (drop the 60-entry dep array on the leva→uniforms mirror effect); 02cae4a (wire leva controls straight to shader uniforms via transient `onChange`); F1 5bcc43f (delete dead timeline generator + rename `generate.ts` → `types.ts`); F2 dfdd48b (collapse `VisibleScene` to `{nodes, edges, focusId}`); F3 676b5c3 (remove load-bearing-for-nothing `as any` on `useControls` result); F4 e7a5dfd (one Theme panel drives stable/crisis colors everywhere); F5 45046ec (extract `useOrbitControls` accessor); F6 cccddd1 (delete dead `materialRef` in `ParticleField`); 0d0bca1 (ignore `.claude/` tooling artifacts)
+- 2026-05-26 (library carve-out, **P1–P5.4**) — **P1** 74060ca: library skeleton — public types + `Unfold` stub (`src/lib/`, `types.ts`, `internal/`). **P2** 438a78f: tracer bullet — `<Unfold data={...}/>` renders the graph (data prop wired end-to-end). **P2.1** d5f770c: checkpoint-1 cleanup — JSDoc inert props, centralize bg, drop stale Leva refs. **P3** 0577bf0: promote Leva to public `theme`/`style` props (no more dev-only HUD). **P4** 5e0856d: layered auto-layout + deterministic bezier derivation (Phase 4 of the public API roadmap). **P5** 30d06fe: `EdgeFlow` shader — per-particle colors-in-proportions driven from `edge.flow` (the public edge data shape). **P5.1** c428fad: fix data-only updates + `nodeRadius` geometry-rebuild attribute loss. **P5.2** 1f07fd2: expose `style.edge.wispMorphSpeed` (default 0.15). **P5.3** c7bf8be: rewrite layered auto-layout as 3D conical (deterministic prototype look). **P5.4** 55e883e: match prototype look more closely — fix fan span, add jitter + length variation.

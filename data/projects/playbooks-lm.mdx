@@ -1,0 +1,35 @@
+---
+title: "playbooks-lm"
+slug: playbooks-lm
+summary: "Subproject of [[playbooks]]: fine-tune a small open-weight model (Qwen-3-4B / Gemma) to compile and interpret Playbooks programs locally."
+status: paused
+category: shipped
+year_started: "2025"
+tags: ["playbooks", "fine-tuning", "llm", "qwen", "sagemaker"]
+repo_url: "https://github.com/playbooks-ai/playbooks-lm.git"
+featured: false
+---
+
+## About
+
+Subproject of playbooks. End-to-end pipeline that fine-tunes a small open-weight model on real Playbooks compilation and interpretation traces, then ships it as a locally-runnable Ollama model so users can run Playbooks programs without paying frontier-model token costs. Pipeline: extract traces from LangFuse → curate prompt/response pairs with stratified splits → LoRA-fine-tune on AWS SageMaker (ml.g5.xlarge, single GPU) → convert LoRA adapter to GGUF → serve via Ollama. Both Qwen-3-4B and Gemma training paths exist. Status: experimental, paused alongside the main Playbooks project.
+
+## Why notable
+
+- Full vertical: production telemetry → curated dataset → cloud fine-tuning → quantized local serving.
+- Practical economics — fine-tunes the interpreter (the hot path) while keeping a frontier model for compilation (the cold path).
+- Mixed-cloud / mixed-format work: LangFuse, SageMaker, Docker, GGUF, Ollama.
+
+## Architecture
+
+- `src/data/` — `extract_full_dataset.py` pulls Playbooks-related traces/generations from LangFuse; `create_training_dataset.py` does dedup, quality scoring, ChatML formatting, and stratified train/val/test splits.
+- `src/training/` — SageMaker entry points (`train.py`, `train_refactored.py`, `train-gemma.py`, `train-gemma-lora.py`), `Dockerfile`, `launch_sagemaker_training.py`, `setup_sagemaker.sh`, `setup_macbook.sh`, `build_and_push.sh`, plus `local_convert_to_gguf.py` for adapter export.
+- `src/local_model_inference/` — `Modelfile.base` and `Modelfile.playbookslm` for Ollama.
+- `src/ec2/` — EC2 debug-instance helpers (`launch_ec2_debug.py`, `download_training_files.sh`).
+- Configured to point Playbooks at the local model via `MODEL=ollama/playbooks-lm` + `LLM_API_BASE=http://localhost:11434` (keeping Sonnet as the compiler).
+
+## Chronology
+
+- **2025-06-29** — Initial commit, scaffold.
+- **2025-07-03** — Pipeline updates.
+- **2025-08-14 / 15** — Qwen-3-4B fine-tuning run.

@@ -1,0 +1,30 @@
+---
+title: "lifesage"
+slug: lifesage
+summary: "AI life-coaching product (paused) — Rails + Hotwire chat app with progressive conversation compaction and a Person/Sage domain model."
+status: paused
+category: startup
+year_started: "2023"
+tags: ["rails", "hotwire", "viewcomponent", "auth0", "devise"]
+repo_url: "https://github.com/LifeSage/LifeSage"
+featured: false
+---
+
+## About
+
+LifeSage was a venture to build an AI life-coaching product reachable at lifesage.ai. It shipped to alpha-1: deployed on Render, LLC formed, Google Analytics + Microsoft Clarity wired, person-profile JSON, progressive conversation compaction, LLM call+token logging. Alpha-2 work (vector-DB long-term memory, offline conversation summarization, dynamic summary retrieval) was scoped in the README TODO but not finished. The progressive-compaction approach prefigured ideas Amol later returned to in `agent-callstack`.
+
+## Why notable
+
+- Reached real-world alpha: lifesage.ai live, LLC, analytics, IAP groundwork — not a toy.
+- The `Derivative*` model family is an early concrete take on the "compress and retrieve over long conversations" problem that resurfaces in `agent-callstack`.
+- Disciplined Rails: ViewComponent + Hotwire + RSpec + Devise/Auth0 + Render deploy, all wired together end-to-end.
+
+## Architecture
+
+- **Framework**: Rails 7-style app, Tailwind + Haml templates, ViewComponents under `app/views/`, Hotwire (Turbo + Stimulus) for live chat updates. `Procfile.dev` for local dev, `Guardfile` for autoreload, `render.yaml` for production deploy.
+- **Auth**: Devise + Auth0 for user authentication, with TOS-acceptance gate.
+- **Domain model** (`app/models/`): `Person` is the central entity (a user *or* a sage); `Conversation` and `Message` link people; `Sage` and `User` extend `Person`. `LlmChatCall` logs every LLM call with token usage. A family of `Derivative` models (`DerivativeSummary`, `DerivativeConversationSummary`, `DerivativePersonProfile`, `DerivativeConversationPersonProfile`) capture asynchronously-computed artifacts over conversations and profiles — the substrate for progressive compaction and long-term memory.
+- **Other surfaces**: admin via `Dashboards/`, mailers, jobs, channels, waitlist subscription model, landing/about/TOS pages.
+- **Tests**: RSpec with `spec/models`, `spec/controllers`, `spec/features`, `spec/jobs`, factories, support helpers.
+- **Run**: `bin/setup` then `bin/dev` (or `foreman start -f Procfile.dev`); tests via `bundle exec rspec`.
