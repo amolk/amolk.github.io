@@ -20,91 +20,132 @@ const STATUS_LABEL: Record<string, string> = {
   exploration: 'Exploration',
 };
 
-interface TimelineProps {
-  projects: Project[];
+const ROW_H = 16; // px per row, zero gap between rows
+const DAY = 86400000;
+
+function parseRanges(p: Project): { start: Date; end: Date }[] {
+  const out: { start: Date; end: Date }[] = [];
+  for (const r of p.ranges || []) {
+    const [a, b] = r.split(':');
+    if (!a) continue;
+    const start = new Date(a + 'T00:00:00');
+    const end = new Date((b || a) + 'T00:00:00');
+    if (!isNaN(start.getTime()) && !isNaN(end.getTime())) out.push({ start, end });
+  }
+  if (out.length === 0 && p.year_started) {
+    const y0 = parseInt(p.year_started, 10);
+    const y1 = parseInt(p.year_ended || p.year_started, 10);
+    if (y0) out.push({ start: new Date(y0, 0, 1), end: new Date(y1 || y0, 11, 31) });
+  }
+  return out;
 }
 
-export default function Timeline({ projects }: TimelineProps) {
-  const data = useMemo(() => {
-    const items = projects
-      .map((p) => {
-        const start = parseInt(p.year_started || '', 10);
-        const endStr = p.year_ended || p.year_started;
-        const end = parseInt(endStr || '', 10);
-        if (!start || !end) return null;
-        return { p, start, end };
-      })
-      .filter((x): x is { p: Project; start: number; end: number } => !!x)
-      .sort((a, b) => b.start - a.start || a.p.title.localeCompare(b.p.title));
+const fmt = (d: Date) =>
+  d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
 
-    const minYear = Math.min(...items.map((i) => i.start));
-    const maxYear = Math.max(...items.map((i) => i.end));
-    return { items, minYear, maxYear };
+export default function Timeline({ projects }: { projects: Project[] }) {
+  const { rows, minMs, spanMs, years } = useMemo(() => {
+    const rows = projects
+      .map((p) => ({ p, ranges: parseRanges(p) }))
+      .filter((r) => r.ranges.length > 0)
+      .map((r) => ({
+        ...r,
+        earliest: Math.min(...r.ranges.map((x) => x.start.getTime())),
+        latest: Math.max(...r.ranges.map((x) => x.end.getTime())),
+      }))
+      // most recently started first
+      .sort((a, b) => b.earliest - a.earliest || a.p.title.localeCompare(b.p.title));
+
+    const minMs = Math.min(...rows.map((r) => r.earliest));
+    const maxMs = Math.max(...rows.map((r) => r.latest));
+    // pad to year boundaries
+    const minYear = new Date(minMs).getFullYear();
+    const maxYear = new Date(maxMs).getFullYear();
+    const axisMin = new Date(minYear, 0, 1).getTime();
+    const axisMax = new Date(maxYear + 1, 0, 1).getTime();
+    const span = axisMax - axisMin;
+    const years: number[] = [];
+    for (let y = minYear; y <= maxYear + 1; y++) years.push(y);
+    return { rows, minMs: axisMin, spanMs: span, years };
   }, [projects]);
 
-  const span = data.maxYear - data.minYear + 1;
-  const years = Array.from({ length: span }, (_, i) => data.minYear + i);
+  const pct = (ms: number) => ((ms - minMs) / spanMs) * 100;
 
   return (
-    <div className="w-full">
+    <div className="w-full text-sm">
       {/* Year axis */}
-      <div className="sticky top-0 z-10 bg-white/90 backdrop-blur-sm border-b border-gray-200 pb-2 mb-3">
-        <div className="flex">
-          <div className="w-56 shrink-0" />
-          <div className="flex-1 relative h-6">
-            {years.map((y, i) => (
-              <div
-                key={y}
-                className="absolute top-0 text-xs text-gray-500 font-light"
-                style={{ left: `${(i / span) * 100}%` }}
-              >
-                <span className="block -translate-x-1/2">{y}</span>
-              </div>
-            ))}
-          </div>
+      <div className="flex border-b border-gray-300 pb-1 mb-1">
+        <div className="w-44 shrink-0" />
+        <div className="flex-1 relative h-4">
+          {years.map((y) => (
+            <div
+              key={y}
+              className="absolute top-0 text-[10px] text-gray-400 font-light -translate-x-1/2"
+              style={{ left: `${pct(new Date(y, 0, 1).getTime())}%` }}
+            >
+              {y}
+            </div>
+          ))}
         </div>
       </div>
 
       {/* Rows */}
-      <ul className="space-y-2">
-        {data.items.map(({ p, start, end }) => {
-          const leftPct = ((start - data.minYear) / span) * 100;
-          const widthPct = Math.max(((end - start + 1) / span) * 100, 1.2);
+      <div className="relative">
+        {/* year gridlines behind rows */}
+        <div className="absolute inset-0 flex pointer-events-none">
+          <div className="w-44 shrink-0" />
+          <div className="flex-1 relative">
+            {years.map((y) => (
+              <div
+                key={y}
+                className="absolute top-0 bottom-0 border-l border-gray-100"
+                style={{ left: `${pct(new Date(y, 0, 1).getTime())}%` }}
+              />
+            ))}
+          </div>
+        </div>
+
+        {rows.map(({ p, ranges }) => {
           const color = STATUS_COLORS[p.status] || 'bg-gray-500';
           return (
-            <li key={p.slug} className="flex items-center group">
+            <div key={p.slug} className="flex items-center group" style={{ height: ROW_H }}>
               <Link
                 href={p.url}
-                className="w-56 shrink-0 pr-4 text-sm font-medium truncate text-gray-800 group-hover:text-black group-hover:underline underline-offset-4"
+                className="w-44 shrink-0 pr-3 text-[11px] leading-none truncate text-gray-700 group-hover:text-black group-hover:underline underline-offset-2"
                 title={p.summary}
               >
                 {p.title}
               </Link>
-              <div className="flex-1 relative h-7 bg-gray-50 rounded">
-                <Link
-                  href={p.url}
-                  className={`absolute top-1 bottom-1 ${color} rounded opacity-80 hover:opacity-100 transition-opacity flex items-center px-2`}
-                  style={{ left: `${leftPct}%`, width: `${widthPct}%` }}
-                  title={`${p.title} · ${start === end ? start : `${start}–${end}`} · ${STATUS_LABEL[p.status] || p.status}`}
-                >
-                  <span className="text-[10px] text-white/90 truncate">
-                    {start === end ? start : `${start}–${end}`}
-                  </span>
-                </Link>
+              <div className="flex-1 relative h-full">
+                {ranges.map((r, i) => {
+                  const left = pct(r.start.getTime());
+                  const widthRaw = ((r.end.getTime() - r.start.getTime() + DAY) / spanMs) * 100;
+                  const width = Math.max(widthRaw, 0.4); // floor so single-day shows
+                  return (
+                    <Link
+                      key={i}
+                      href={p.url}
+                      className={`absolute ${color} rounded-[2px] opacity-80 group-hover:opacity-100 transition-opacity`}
+                      style={{ left: `${left}%`, width: `${width}%`, top: 3, bottom: 3 }}
+                      title={`${p.title} · ${fmt(r.start)}${r.end.getTime() !== r.start.getTime() ? ` – ${fmt(r.end)}` : ''} · ${STATUS_LABEL[p.status] || p.status}`}
+                    />
+                  );
+                })}
               </div>
-            </li>
+            </div>
           );
         })}
-      </ul>
+      </div>
 
       {/* Legend */}
-      <div className="flex flex-wrap gap-4 mt-8 text-xs text-gray-500">
+      <div className="flex flex-wrap gap-x-4 gap-y-1 mt-4 text-[10px] text-gray-500">
         {Object.entries(STATUS_LABEL).map(([k, v]) => (
-          <div key={k} className="flex items-center gap-2">
-            <span className={`w-3 h-3 rounded ${STATUS_COLORS[k]}`} />
+          <div key={k} className="flex items-center gap-1.5">
+            <span className={`w-2.5 h-2.5 rounded-[2px] ${STATUS_COLORS[k]}`} />
             {v}
           </div>
         ))}
+        <span className="text-gray-400">· bars seeded from git history; multiple bars = paused &amp; resumed</span>
       </div>
     </div>
   );

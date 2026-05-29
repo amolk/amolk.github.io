@@ -18,6 +18,7 @@ export const Project = defineDocumentType(() => ({
     category: { type: 'enum', options: ['flagship', 'shipped', 'research', 'startup', 'tool', 'older'], required: true },
     year_started: { type: 'string', required: false },
     year_ended: { type: 'string', required: false },
+    ranges: { type: 'list', of: { type: 'string' }, default: [] },
     tags: { type: 'list', of: { type: 'string' }, default: [] },
     repo_url: { type: 'string', required: false },
     demo_url: { type: 'string', required: false },
