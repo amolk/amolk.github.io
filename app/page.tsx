@@ -10,16 +10,19 @@ export default function Home() {
   return (
     <div className="max-w-6xl mx-auto px-8">
       {/* Hero */}
-      <section className="min-h-[80vh] flex items-center pt-24">
+      <section className="min-h-[85vh] flex items-center pt-24">
         <div className="space-y-8 max-w-4xl">
           <h1 className="font-serif text-5xl md:text-7xl font-light leading-tight text-balance">
             AI systems, agent infrastructure, and the occasional theory of consciousness.
           </h1>
           <p className="text-xl md:text-2xl text-gray-500 font-light max-w-3xl leading-relaxed">
-            Building <Link href="/projects/karta/" className="underline underline-offset-4 hover:text-black">Karta</Link>,{' '}
+            Currently building <Link href="/projects/karta/" className="underline underline-offset-4 hover:text-black">Karta</Link>,{' '}
             <Link href="/projects/agent-callstack/" className="underline underline-offset-4 hover:text-black">the agent call stack</Link>, and{' '}
-            <Link href="/projects/carapace-intelligence/" className="underline underline-offset-4 hover:text-black">Carapace Intelligence</Link>{' '}
-            — alongside a 15-year arc through semantic programming, multi-agent systems, predictive coding, and shipped products.
+            <Link href="/projects/carapace-intelligence/" className="underline underline-offset-4 hover:text-black">Carapace Intelligence</Link>.
+            A 25-year arc from cortical neural networks at UT Austin, through a decade
+            on Microsoft InfoPath, founder roles, and conversational AI at Got It —
+            to today&apos;s agent infrastructure and a slow-burning research program
+            on consciousness.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <Link href="/projects/" className="px-8 py-3 bg-black text-white rounded-full text-base font-medium hover:bg-gray-800 transition-all duration-300 hover:scale-105 inline-block text-center">
