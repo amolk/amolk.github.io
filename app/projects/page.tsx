@@ -8,7 +8,7 @@ export const metadata = {
 };
 
 const CATEGORIES: { key: string; label: string; blurb?: string }[] = [
-  { key: 'flagship', label: 'Flagship', blurb: 'Current focus, deepest work.' },
+  { key: 'flagship', label: 'Top of mind', blurb: 'Current focus, deepest work.' },
   { key: 'shipped', label: 'Shipped', blurb: 'Products in the world.' },
   { key: 'research', label: 'Research', blurb: 'Open questions, papers, experiments.' },
   { key: 'startup', label: 'Startups', blurb: 'Things I have tried to build companies around.' },
