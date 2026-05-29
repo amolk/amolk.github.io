@@ -32,9 +32,11 @@ export default function About() {
         <Link href="/projects/homeostasis-publications/">the homeostatic theory of consciousness</Link>,{' '}
         <a href="https://aamas.csc.liv.ac.uk/Proceedings/aamas2021/pdfs/p12.pdf">Cognitive Homeostatic Agents</a>,{' '}
         <Link href="/projects/carapace-intelligence/">the Decision Intelligence formalization</Link>.
-        Actively working on <Link href="/projects/karta/">Karta</Link>,{' '}
-        <Link href="/projects/agent-callstack/">the agent call stack</Link>, and{' '}
-        <Link href="/projects/carapace-intelligence/">Carapace Intelligence</Link>.
+        I love to build, and there&apos;s a lot of it these days -{' '}
+        <Link href="/projects/karta/">Karta</Link>,{' '}
+        <Link href="/projects/agent-callstack/">the agent call stack</Link>,{' '}
+        <Link href="/projects/carapace-intelligence/">Carapace Intelligence</Link>, and
+        many more.
       </p>
 
       <p>
@@ -91,9 +93,8 @@ export default function About() {
       </p>
 
       <p>
-        I love to build, and with coding AI agents I&apos;m now having an amazing time
-        building at 1000x my former pace. Rapidly building large-scale projects, loving
-        the process. Right now that means{' '}
+        With coding AI agents I&apos;m now building at 1000x my former pace. Rapidly
+        building large-scale projects, loving the process. Right now that means{' '}
         <Link href="/projects/karta/">Karta</Link>,{' '}
         <Link href="/projects/agent-callstack/">agent-callstack</Link> +{' '}
         <Link href="/projects/agent-callstack-unwind/">unwind</Link>,{' '}
