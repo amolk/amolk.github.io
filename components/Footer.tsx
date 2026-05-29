@@ -26,7 +26,7 @@ export default function Footer() {
             <h3 className="text-xl font-semibold font-serif mb-4">Explore</h3>
             <div className="space-y-2">
               <Link href="/projects/" className="block text-gray-400 hover:text-white transition-colors">All projects</Link>
-              <Link href="/timeline/" className="block text-gray-400 hover:text-white transition-colors">Timeline</Link>
+              <Link href="/projects/#timeline" className="block text-gray-400 hover:text-white transition-colors">Timeline</Link>
               <Link href="/about/" className="block text-gray-400 hover:text-white transition-colors">About</Link>
             </div>
           </div>

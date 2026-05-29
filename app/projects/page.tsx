@@ -1,9 +1,10 @@
 import { allProjects } from 'contentlayer/generated';
 import ProjectCard from '@/components/ProjectCard';
+import Timeline from '@/components/Timeline';
 
 export const metadata = {
   title: 'Projects',
-  description: 'All projects, grouped by category.',
+  description: 'All projects, grouped by category, with a timeline across 25+ years of building.',
 };
 
 const CATEGORIES: { key: string; label: string; blurb?: string }[] = [
@@ -29,6 +30,12 @@ export default function ProjectsIndex() {
         <h1 className="font-serif text-4xl md:text-5xl font-medium tracking-tight mb-3">Projects</h1>
         <p className="text-gray-500 text-lg font-light">{allProjects.length} projects total - across product, research, and tooling.</p>
       </header>
+
+      {/* Timeline */}
+      <section id="timeline" className="mb-20 scroll-mt-24">
+        <h2 className="font-serif text-2xl md:text-3xl font-medium mb-6">Timeline</h2>
+        <Timeline projects={allProjects} />
+      </section>
 
       {groups.map((g) => (
         <section key={g.key} className="mb-16">
