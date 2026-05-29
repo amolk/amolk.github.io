@@ -47,7 +47,7 @@ export default function About() {
         <a href="https://homepages.inf.ed.ac.uk/jbednar/">Jim Bednar</a>. Then seven years
         at <strong>Microsoft (2001–2008)</strong> on NetDocs, InfoPath, the Office Forms
         platform, OneNote, and Windows Live - eight US patents come from that era. A
-        stretch of founder roles came next: <strong>Aflatune</strong> (2008–2010, India&apos;s
+        stretch of co-founder and CTO roles came next: <strong>Aflatune</strong> (2008–2010, India&apos;s
         first streaming music service, acquired by Dhingana),{' '}
         <strong>Creator Republic</strong> (2010–2011, KingOfTheWeb - a &ldquo;YouTube with
         a winner&rdquo; online reality game; acquired by uZoom),{' '}
