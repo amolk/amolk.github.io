@@ -31,6 +31,8 @@ export const Project = defineDocumentType(() => ({
     images: { type: 'list', of: { type: 'string' }, default: [] },
     video: { type: 'string', required: false },
     is_public: { type: 'boolean', default: false },
+    parent: { type: 'string', required: false },
+    subprojects: { type: 'list', of: { type: 'string' }, default: [] },
     featured: { type: 'boolean', default: false },
     order: { type: 'number', required: false },
   },

@@ -21,7 +21,7 @@ export default function Home() {
             live right here. Lately, coding agents let me build at 1000x my former
             pace, so there&apos;s a lot of it:{' '}
             <Link href="/projects/karta/" className="underline underline-offset-4 hover:text-black">Karta</Link>,{' '}
-            <Link href="/projects/agent-callstack/" className="underline underline-offset-4 hover:text-black">the agent call stack</Link>,{' '}
+            <Link href="/projects/callstack/" className="underline underline-offset-4 hover:text-black">the agent call stack</Link>,{' '}
             <Link href="/projects/carapace-intelligence/" className="underline underline-offset-4 hover:text-black">Carapace Intelligence</Link>, and more.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 pt-4">

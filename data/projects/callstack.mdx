@@ -1,18 +1,18 @@
 ---
-title: "agent-callstack"
-slug: agent-callstack
+title: "callstack"
+slug: callstack
 summary: "A call stack for AI agents - `fork()` + `join()` semantics for long-horizon LLM workflows."
 status: active
 category: flagship
 year_started: "2026"
 repo_url: "https://github.com/unwind-labs/callstack"
 is_public: true
-image: "/images/projects/agent-callstack/hero.gif"
+image: "/images/projects/callstack/hero.gif"
 ranges: ["2026-04-15:2026-05-28"]
 featured: true
 order: 2
 ---
 
-agent-callstack gives AI agents a proper call stack. Each `/call` forks the parent's full session context the way Unix `fork()` forks a process, so the child inherits everything without re-prompting; when the child completes, only its compact return value flows back to the parent. The design targets two well-known failure modes of long-horizon LLM workflows: sub-agents that start blind and waste tokens rebuilding context, and main agents whose context rots as everything accumulates in a single transcript.
+callstack gives AI agents a proper call stack. Each `/call` forks the parent's full session context the way Unix `fork()` forks a process, so the child inherits everything without re-prompting; when the child completes, only its compact return value flows back to the parent. The design targets two well-known failure modes of long-horizon LLM workflows: sub-agents that start blind and waste tokens rebuilding context, and main agents whose context rots as everything accumulates in a single transcript.
 
 The core insight was first prototyped inside Playbooks AI in 2023 and is now generalized to work with any harness, starting with Claude Code. The runtime is a pure state machine with effect-driven I/O, deterministic child session identity, parallel fan-out with a concurrency cap, and per-call trace files that downstream tools can render. It ships as the `unwind-labs/callstack` plugin with `call` / `resume` MCP tools and a Claude Code skill; coverage gate sits at 92%.

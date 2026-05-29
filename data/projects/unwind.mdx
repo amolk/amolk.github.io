@@ -1,16 +1,17 @@
 ---
-title: "agent-callstack-unwind"
-slug: agent-callstack-unwind
+title: "unwind"
+slug: unwind
 summary: "Outside-in web observer for Claude Code sessions and callstack call trees."
 status: active
 category: shipped
 year_started: "2026"
 repo_url: "https://github.com/unwind-labs/unwind"
 is_public: true
-image: "/images/projects/agent-callstack-unwind/hero.png"
-images: ["/images/projects/agent-callstack-unwind/call-tree.png", "/images/projects/agent-callstack-unwind/node-detail.png", "/images/projects/agent-callstack-unwind/usage-report.png"]
+image: "/images/projects/unwind/hero.png"
+images: ["/images/projects/unwind/call-tree.png", "/images/projects/unwind/node-detail.png", "/images/projects/unwind/usage-report.png"]
 ranges: ["2026-04-28:2026-05-27"]
-featured: false
+featured: true
+order: 6
 ---
 
 unwind is a local observability tool for Claude Code. Run `unwind serve` from a project folder and it opens a browser onto every session that has run there: a list of sessions, a call-tree canvas showing how sessions spawned each other when the callstack `/call` skill is used, and a conversation pane for any selected session. The same data is also exposed through `unwind project | session | messages | task` CLI subcommands for scripting. It reads Claude Code's own JSONL session logs plus the callstack trace sidecars, so it works without any harness modifications.

@@ -11,15 +11,19 @@ const CATEGORIES: { key: string; label: string; blurb?: string }[] = [
   { key: 'flagship', label: 'Top of mind', blurb: 'Current focus, deepest work.' },
   { key: 'shipped', label: 'Shipped', blurb: 'Products in the world.' },
   { key: 'research', label: 'Research', blurb: 'Open questions, papers, experiments.' },
+  { key: 'professional', label: 'Professional', blurb: 'Work at Microsoft, OfficeSpace.com, and Got It AI.' },
   { key: 'startup', label: 'Startups', blurb: 'Things I have tried to build companies around.' },
   { key: 'tool', label: 'Tools & explorations' },
   { key: 'older', label: 'Older work', blurb: 'Pre-2018 Rails-era and NLP-era projects, for completeness.' },
 ];
 
 export default function ProjectsIndex() {
+  const bySlug = new Map(allProjects.map((p) => [p.slug, p]));
+  const topLevel = allProjects.filter((p) => !p.parent);
+
   const groups = CATEGORIES.map(({ key, label, blurb }) => ({
     key, label, blurb,
-    projects: allProjects
+    projects: topLevel
       .filter((p) => p.category === key)
       .sort((a, b) => (b.year_started ?? '').localeCompare(a.year_started ?? '')),
   })).filter((g) => g.projects.length > 0);
@@ -43,7 +47,13 @@ export default function ProjectsIndex() {
             {g.blurb && <p className="text-sm text-gray-500 mt-1 font-light">{g.blurb}</p>}
           </div>
           <div className="grid sm:grid-cols-2 gap-5">
-            {g.projects.map((p) => <ProjectCard key={p.slug} project={p} />)}
+            {g.projects.map((p) => (
+              <ProjectCard
+                key={p.slug}
+                project={p}
+                subprojects={(p.subprojects || []).map((s) => bySlug.get(s)).filter(Boolean) as typeof allProjects}
+              />
+            ))}
           </div>
         </section>
       ))}

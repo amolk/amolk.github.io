@@ -32,6 +32,10 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
   const MDX = getMDXComponent(project.body.code);
   const years = project.year_started + (project.year_ended && project.year_ended !== project.year_started ? `–${project.year_ended}` : '');
+  const parent = project.parent ? allProjects.find((p) => p.slug === project.parent) : undefined;
+  const children = (project.subprojects || [])
+    .map((s) => allProjects.find((p) => p.slug === s))
+    .filter(Boolean) as typeof allProjects;
 
   return (
     <article className="max-w-3xl mx-auto px-8 pt-24 pb-16">
@@ -40,6 +44,11 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       </Link>
 
       <header className="mt-6 mb-10">
+        {parent && (
+          <div className="text-sm text-gray-500 mb-2">
+            Part of <Link href={parent.url} className="underline underline-offset-2 hover:text-black">{parent.title}</Link>
+          </div>
+        )}
         <h1 className="font-serif text-4xl md:text-5xl font-medium tracking-tight mb-3">{project.title}</h1>
         <p className="text-xl text-gray-500 font-light mb-6 leading-relaxed">{project.summary}</p>
         <div className="flex flex-wrap gap-2 text-xs mb-6">
@@ -75,6 +84,29 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       <div className="project-content">
         <MDX />
       </div>
+
+      {children.length > 0 && (
+        <section className="mt-12 pt-8 border-t border-gray-200">
+          <h2 className="font-serif text-2xl font-medium mb-5">Sub-projects</h2>
+          <div className="grid gap-4">
+            {children.map((c) => (
+              <Link
+                key={c.slug}
+                href={c.url}
+                className="block group p-5 rounded-xl border border-gray-200 hover:border-gray-400 transition-colors"
+              >
+                <div className="flex items-baseline justify-between gap-3 mb-1">
+                  <h3 className="font-serif text-lg font-medium group-hover:underline underline-offset-4">{c.title}</h3>
+                  <span className="text-xs text-gray-400 whitespace-nowrap font-light">
+                    {c.year_started}{c.year_ended && c.year_ended !== c.year_started ? `–${c.year_ended}` : ''}
+                  </span>
+                </div>
+                <p className="text-sm text-gray-600 leading-relaxed">{c.summary}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       {project.images && project.images.length > 0 && (
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4">

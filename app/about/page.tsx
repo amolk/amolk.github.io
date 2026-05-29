@@ -34,7 +34,7 @@ export default function About() {
         <Link href="/projects/carapace-intelligence/">the Decision Intelligence formalization</Link>.
         I love to build, and there&apos;s a lot of it these days -{' '}
         <Link href="/projects/karta/">Karta</Link>,{' '}
-        <Link href="/projects/agent-callstack/">the agent call stack</Link>,{' '}
+        <Link href="/projects/callstack/">the agent call stack</Link>,{' '}
         <Link href="/projects/carapace-intelligence/">Carapace Intelligence</Link>, and
         many more.
       </p>
@@ -97,15 +97,15 @@ export default function About() {
         With coding AI agents I&apos;m now building at 1000x my former pace. Rapidly
         building large-scale projects, loving the process. Right now that means{' '}
         <Link href="/projects/karta/">Karta</Link>,{' '}
-        <Link href="/projects/agent-callstack/">agent-callstack</Link> +{' '}
-        <Link href="/projects/agent-callstack-unwind/">unwind</Link>,{' '}
+        <Link href="/projects/callstack/">callstack</Link> +{' '}
+        <Link href="/projects/unwind/">unwind</Link>,{' '}
         <Link href="/projects/carapace-intelligence/">Carapace Intelligence</Link>,{' '}
         <Link href="/projects/unfold/">unfold</Link>, a few native macOS apps
         (<Link href="/projects/crazydisk/">CrazyDisk</Link>,{' '}
         <Link href="/projects/crazywindows/">CrazyWindows</Link>), and{' '}
         <Link href="/projects/harness-programming/">Harness Programming</Link> (a book in
         progress) - see the <Link href="/projects/">full project list</Link> ({total}{' '}
-        entries) and the <Link href="/timeline/">timeline</Link> for the rest.
+        entries) and the <Link href="/projects/#timeline">timeline</Link> for the rest.
       </p>
 
       <h2>Selected publications and patents</h2>

@@ -2,7 +2,7 @@
 title: "playbooks"
 slug: playbooks
 summary: "Flagship: a semantic programming system for AI agents - Markdown-as-source, compiler-to-IR, durable runtime, VSCode debugger. Sunset April 2026."
-status: active
+status: paused
 category: flagship
 year_started: "2024"
 year_ended: "2026"
@@ -10,8 +10,7 @@ tags: ["ai-agents", "semantic-programming", "compiler", "runtime", "sunsetting"]
 repo_url: "https://github.com/playbooks-ai/playbooks.git"
 is_public: true
 ranges: ["2024-09-21:2026-04-05"]
-featured: true
-order: 3
+featured: false
 ---
 
 Playbooks was a full semantic programming system for AI agents: a structured Markdown surface language for specifying agent behavior, a semantic intermediate representation called PBAsm, a compiler from Markdown to PBAsm, and a durable runtime that executed PBAsm with the determinism of traditional software and the flexibility of an LLM. Agents were modeled as classes with public playbooks (methods), triggers (event decorators), instance state, and a real call stack. It shipped on PyPI as `playbooks` through 16 releases ending at v0.7.4, spawned an org-scale ecosystem of sibling projects (VSCode debugger, fine-tuned LM, durable runtime extracted as OSS, docs site, enterprise edition), and was the result of five years of sustained solo work on a single thesis: natural language as a programming language.
