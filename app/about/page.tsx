@@ -80,11 +80,11 @@ export default function About() {
       </p>
 
       <p>
-        Alongside the day jobs, I&apos;ve also been running <strong>i3AI.org</strong>{' '}
-        since 2017 - a personal research program toward a biologically plausible neural
-        network framework for AGI, with the long goal of sentient AGI by 2030. Currently
-        on hold while the agent-infrastructure work has the foreground. The research
-        artifacts (<a href="https://aamas.csc.liv.ac.uk/Proceedings/aamas2021/pdfs/p12.pdf">Cognitive Homeostatic Agents</a>,{' '}
+        <strong>i3AI.org</strong> is a personal research program I started in 2017 - a
+        biologically plausible neural network framework for AGI, with the long goal of
+        sentient AGI by 2030. Not investigating actively right now and focusing more on
+        agentic AI initiatives, but the computational neuroscience learnings continue
+        to guide me. The research artifacts (<a href="https://aamas.csc.liv.ac.uk/Proceedings/aamas2021/pdfs/p12.pdf">Cognitive Homeostatic Agents</a>,{' '}
         the <Link href="/projects/homeostasis-publications/">homeostatic theory of consciousness</Link>,{' '}
         <Link href="/projects/pattern-machine/">Pattern Machine</Link>,{' '}
         <Link href="/projects/nanogpt-experiments/">nanoGPT experiments</Link>, and the{' '}
