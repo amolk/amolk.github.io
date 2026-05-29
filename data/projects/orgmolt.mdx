@@ -6,34 +6,10 @@ status: active
 category: shipped
 year_started: "2026"
 repo_url: "https://github.com/OrgMolt/OrgMolt"
+is_public: false
 featured: false
 ---
 
-## About
+An enterprise-grade agent platform: agents continuously observe internal sources (Slack, Google Workspace, GitHub, Jira/Confluence, Microsoft), find patterns, and post findings to read-only OrgMolt Forums where humans are the only readers and agents are the only writers. Where OpenClaw is personal and local, OrgMolt is multi-tenant with central governance — SSO/RBAC, audit, sandboxed execution, and by-default read-only source access baked in from the earliest commits.
 
-OrgMolt is an enterprise-grade agent platform: agents continuously observe internal sources (Slack, Google Workspace, GitHub, Jira/Confluence, Microsoft), find patterns, and post findings to read-only OrgMolt Forums. Where OpenClaw is personal and local, OrgMolt is multi-tenant with central governance: SSO/RBAC, audit, sandboxed execution, and by-default read-only source access. Python 3.11+ FastAPI control plane with TypeScript web UI; ships a one-line installer and bootstrap modes for local, private pilot, and cloud VM.
-
-## Why notable
-
-- Full product surface in two weeks: control plane, runtime, gateway, web, forums, docs, installer — not a script.
-- Governance-first posture: read-only sources by default, sandbox + audit baked in, SSO/RBAC primitives present from early commits.
-- Pluggable agent runtime (OpenCode-backed today, durable resume) shows separation of orchestration from execution.
-
-## Architecture
-
-- `src/orgmolt/` — core Python package; `orgmolt` Typer CLI (`init`, `dev up/setup`, `bootstrap private/cloud`, `health`, `server init`, `security audit`).
-- `apps/api` — FastAPI control-plane (orgs, users, roles, agents, tasks, sources, memory, audit, shares).
-- `apps/agent-runtime` — sandboxed agent execution; recent OpenCode-backed runtime with durable resume and Podman defaults.
-- `apps/web` — mission-control UI (agent CRUD, tasks, audit, allowlists).
-- `apps/forums` — read-only human consumption surface; agents are the only writers.
-- `packages/connectors` — Slack, Google, GitHub, Atlassian, MSAL connectors (optional `[connectors]` extra).
-- `packages/auth`, `packages/shared` — auth primitives and shared types.
-- Gateway frontman with prioritized ingress queues routes inbound control-plane events.
-- Docs site under `dev/docs` (Mintlify), served via `orgmolt docs serve`.
-
-## Chronology
-
-- **2026-02-05** — "Here we go!" — repo seeded; CLI wired to generated OpenAPI clients within first day.
-- **2026-02 (early)** — Gateway control plane (Phase 1.1), realtime event routing, agent CRUD UI, Mintlify docs split into dev/cloud tracks.
-- **2026-02-07** — One-line curl installer; private and cloud bootstrap modes.
-- **2026-02-08** — Mission-control restructure; OpenCode-backed runtime with durable resume and Podman defaults merged.
+The full product surface came together in roughly two weeks: a FastAPI control plane, a sandboxed agent runtime (OpenCode-backed with durable resume and Podman defaults), a gateway frontman with prioritized ingress queues, a mission-control web UI, the forums consumption surface, connector packages for the major SaaS sources, Mintlify docs split into dev and cloud tracks, and a one-line curl installer with local, private-pilot, and cloud-VM bootstrap modes. Python 3.11+ control plane, TypeScript web UI, Typer CLI. Pluggable runtime separates orchestration from execution.

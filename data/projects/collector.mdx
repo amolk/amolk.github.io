@@ -7,19 +7,10 @@ category: older
 year_started: "2013"
 tags: ["rails", "scaffold"]
 repo_url: "https://github.com/amolk/collector"
+is_public: true
 featured: false
 ---
 
-## About
+A Rails 4.0.0.rc2 scaffold generated October 2013 via `rails_apps_composer` (rails-bootstrap recipe) on Ruby 1.9.3. No domain logic was ever written — the repo is the generator output essentially as produced, with a trivial `visitors_controller`, no models, and a single commit in history.
 
-A Rails 4.0.0.rc2 scaffold generated October 2013 via `rails_apps_composer` (rails-bootstrap recipe). No domain logic was ever written — the repo is the generator output exactly as produced, with a single trivial `visitors_controller` and no models. Single commit in history.
-
-## Why notable
-
-- Honestly: very thin. Included only as a marker that an early-Rails-4 / Ruby-1.9.3 scaffold was set up. Consider deselecting from portfolio unless used to anchor a "lots of false starts" narrative.
-
-## Architecture
-
-- Rails 4.0.0.rc2 on Ruby 1.9.3.
-- Generator stack: Bootstrap/Sass + Haml, SQLite, Simple Form, Thin (dev) / Unicorn (prod), Guard for continuous testing.
-- No authentication, no models, one controller (`visitors_controller`); `app/models/` contains only the `concerns/` stub.
+Included in the portfolio purely for chronological completeness as a marker that an early-Rails-4 scaffold was set up. The generator stack (Bootstrap/Sass + Haml, SQLite, Simple Form, Thin/Unicorn, Guard) is representative of how new Rails apps were spun up in that window, but there's no product behind it.

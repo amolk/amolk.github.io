@@ -7,20 +7,10 @@ category: older
 year_started: "2020"
 tags: ["text2sql", "spider", "preprocessing", "tooling"]
 repo_url: "https://github.com/amolk/text2sql-utils"
+is_public: true
 featured: false
 ---
 
-## About
+Shared glue across the 2019–2020 text-to-SQL research line (BERTRAND-DR, IRNet, spider-schema-gnn experiments). The [Spider](https://yale-lily.github.io/spider) dataset format had become the de facto interchange for cross-domain text-to-SQL, so most of the friction was on either side of it: getting messy CSV datasets into Spider JSON, and getting structured query data back out of training logs.
 
-Two small Python packages that supported the BERTRAND-DR / IRNet / spider-schema-gnn experiments. `preprocessing/` converts ad-hoc CSV datasets into [Spider](https://yale-lily.github.io/spider) JSON format (`csv2spider.py`, `gml_csv_2_spider_schema_json.py`), splits into train/dev/test, and vendors Spider's `process_sql.py` tokenizer. `log_parser/` parses SQL queries out of noisy training-run log lines using `moz_sql_parser` with a graceful trim-and-retry on parse errors. MIT-licensed.
-
-## Why notable
-
-- Honest scope: a helper bag, not a product. Most useful read alongside the bertrand-dr paper and supporting code.
-- The `log_parser` trim-and-retry pattern is a small but pragmatic trick for getting structured data out of noisy training logs.
-
-## Architecture
-
-- `preprocessing/` — `csv2spider.py`, `csv_split_train_dev_test.py`, `gml_csv_2_spider_schema_json.py`, vendored `process_sql.py`.
-- `log_parser/` — `log_parser.py` (parses queries from log lines, prints helpful error rulers for failures) + `tests/`.
-- Each package has its own `requirements.txt`; no top-level install.
+Two small Python packages handle each side. `preprocessing/` converts ad-hoc CSVs into Spider JSON, splits into train/dev/test, and vendors Spider's own `process_sql.py` tokenizer for compatibility. `log_parser/` extracts SQL queries from noisy training-run log lines using `moz_sql_parser`, with a graceful trim-and-retry on parse errors — a small pragmatic trick for recovering structured data when the logs aren't quite clean. MIT-licensed; best read alongside the BERTRAND-DR paper rather than as a standalone artifact.

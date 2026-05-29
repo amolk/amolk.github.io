@@ -5,24 +5,10 @@ summary: "Early-stage product exploration: turn the deep-rewrite skill into a pa
 status: exploration
 category: tool
 tags: ["writing", "llm", "review", "exploration"]
+is_public: false
 featured: false
 ---
 
-## About
+Deep-rewriter is an early-stage exploration to productize an existing personal Claude skill — one that dispatches a panel of specialist and meta-assessment passes over a document, then rewrites it incorporating the feedback — as a standalone paid service. The reference point is reviewer3.com, which monetizes adversarial peer-review of research papers; the same multi-perspective critique loop generalizes naturally to PRDs, design docs, RFCs, and long-form articles.
 
-Early exploration to turn the existing `deep-rewrite` Claude skill — which dispatches specialist and meta-assessment passes over a document and then rewrites it — into a standalone paid service. The reference point is reviewer3.com, which monetizes adversarial peer-review of research papers; the same multi-perspective critique loop generalizes to PRDs, design docs, RFCs, and articles. Status: idea / pre-build. No repo yet.
-
-## Why notable
-
-- Direct line from a working personal skill to a potential commercial product — the engine already exists.
-- Tests the broader thesis that high-value writing/review workflows can be sold as thin LLM-wrapped services.
-
-## Architecture
-
-- `IDEA.md` — single seed note pointing at reviewer3.com as the inspiration and pricing model.
-- Reuses the existing `deep-rewrite` skill (multi-iteration specialist + meta-assessment passes) as the core engine.
-- Productization questions: target market (researchers vs. PMs vs. writers), self-serve vs. API, model cost economics.
-
-## Chronology
-
-- **2026-04-14** — Idea captured in `IDEA.md` after seeing reviewer3.com.
+Status: idea phase. The engine already works as a daily-use skill, so the open questions are productization rather than feasibility: which vertical to target first (researchers, PMs, technical writers), self-serve web vs. API delivery, and whether the model-cost economics support a viable per-document price.

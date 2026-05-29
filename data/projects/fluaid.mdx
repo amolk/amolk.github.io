@@ -6,28 +6,10 @@ status: exploration
 category: tool
 year_started: "2024"
 tags: ["presentations", "three-js", "react", "infinite-canvas", "prototype"]
+is_public: false
 featured: false
 ---
 
-## About
+Fluaid was a 2024 prototype exploration for a fluid presentation tool: an infinite 2D canvas where slides live anywhere, with smooth 3D camera transitions sweeping the viewer between them on spline-curve paths. Aimed at marketers and executives who want a polished, narrative alternative to PowerPoint's slide-by-slide rigidity without inheriting Prezi's dated UX. Built on React 18 + TypeScript with Three.js via react-three-fiber, scaffolded on Create React App, with persistence intended as human-readable YAML and sharing via URL.
 
-fluaid is a prototype web app for marketers and executives to build polished business presentations on an infinite 2D canvas, with smooth 3D camera transitions between slides (Prezi-style, but modernized). React 18 + TypeScript + Three.js via react-three-fiber + styled-components, scaffolded on Create React App. Status: design-complete prototype with a written PRD; not under git, last touched 2024.
-
-## Why notable
-
-- Combines product thinking (full PRD covering canvas, slides, text/image/video/3D objects, persistence, playback) with a working React-Three-Fiber scaffold.
-- Tackles a clear UX gap: PowerPoint slide-by-slide vs. Prezi's dated UX — fluaid targets polished, executive-grade 3D narrative.
-
-## Architecture
-
-- `src/pages/` — Home, Editor, Viewer (main app surfaces).
-- `src/components/` — reusable UI building blocks.
-- `src/context/` + `src/hooks/` — React context providers and custom hooks for canvas/camera state.
-- `src/data/`, `src/types/`, `src/utils/`, `src/styles/` — supporting layers.
-- Three.js / react-three-fiber / drei drive infinite 2D canvas, camera translation/rotation in 3D, and spline-curve transitions between slide keyframes.
-- Persistence intended as human-readable YAML; export via shareable URL (per PRD).
-- Run with `npm start` (CRA dev server on :3000).
-
-## Chronology
-
-- **2024** — PRD authored; React/Three.js scaffold built (no git history retained).
+Status: design-complete prototype. A full PRD covers the canvas, slide model, text/image/video/3D objects, persistence, and playback, and the scaffold has the editor/viewer surfaces and camera-state plumbing in place. It was paused after the prototype phase rather than carried to production.

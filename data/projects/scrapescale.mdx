@@ -1,28 +1,16 @@
 ---
 title: "scrapescale"
 slug: scrapescale
-summary: "Production Scrapy spider fleet that fed the [[upscale]] commercial real-estate listings pipeline."
+summary: "Production Scrapy spider fleet that fed a commercial real-estate listings pipeline."
 status: archived
 category: older
 year_started: "2019"
 tags: ["scrapy", "scrapyd", "scraping", "real-estate"]
 repo_url: "https://github.com/amolk/scrapescale"
+is_public: false
 featured: false
 ---
 
-## About
+Production Scrapy spider fleet that fed a commercial real-estate listings product — the data-acquisition layer for a CRE search tool. Four spiders handle a base crawl and incremental refresh against two source sites, deployed to a dedicated scrapyd host on EC2 (provisioned by a sister infra-as-code project) and scheduled through scrapyd's HTTP API.
 
-Scrapy project containing four spiders that crawl commercial real-estate listings — a base `listing_spider` and `os_listing_spider`, plus `recent_*` resumable variants for incremental refresh. Deployed to a dedicated EC2 scrapyd host (provisioned by scrapescale-chef) via `scrapyd-deploy`; jobs scheduled and cancelled through scrapyd's HTTP API. The 2-year `os` spider supports resume by skipping listing IDs already in the upscale DB (seeded into `/tmp/os_ids.txt`).
-
-## Why notable
-
-- Actually ran in production feeding a real product (upscale CRE listings).
-- Resume semantics keyed off the production DB — the spider is aware of prior state, not a one-shot crawl.
-- Standard shape (it's Scrapy doing what Scrapy does), but end-to-end deployed with infra-as-code.
-
-## Architecture
-
-- Standard Scrapy layout: `scrapescale/spiders/*.py` plus `items.py`, `middlewares.py`, `pipelines.py`, `settings.py`; `setup.py` for scrapyd packaging.
-- Four spiders: `listing_spider`, `os_listing_spider`, `recent_listing_spider`, `recent_os_listing_spider` (resume-aware).
-- Deploy: `scrapyd-deploy`. Schedule: `curl .../schedule.json -d project=scrapescale -d spider=<name>`. Cancel via `cancel.json`.
-- Hosted on EC2 (single t2.micro) provisioned and configured by scrapescale-chef.
+The interesting bit beyond standard Scrapy shape: the long-running historical spider supports resume by skipping listing IDs already present in the production DB, seeded into a local id list at startup. So a crawl interrupted halfway through a multi-year backfill picks up where it left off rather than re-fetching everything. End-to-end deployed with infra-as-code rather than running off a snowflake server.

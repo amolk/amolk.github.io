@@ -7,24 +7,10 @@ category: older
 year_started: "2013"
 tags: ["rails", "edtech", "video"]
 repo_url: "https://github.com/amolk/VideoReadr"
+is_public: false
 featured: false
 ---
 
-## About
+A Rails 3.2 edtech app from 2013, shipped under the Edufied.com brand. The core idea was annotating videos with timestamped paragraphs for educational use — a real product surface rather than a scaffold, with versioned content, multi-tier privacy, an admin UI, and Facebook OAuth login.
 
-A Rails 3.2 edtech app built in 2013 under the Edufied.com brand. Core idea: annotate videos with timestamped paragraphs for educational use. Real product surface — not a generator dump — with versioned content, multi-tier privacy, admin UI, and OAuth (Facebook) login.
-
-## Why notable
-
-- One of the most substantive of the Rails-era projects: real domain modeling (privacy-tiered scopes, slug + infusion-id keys), versioned content, OAuth social login.
-- Shipped under a real brand (Edufied.com), not just a side experiment.
-- Uses Amol's own published gem (`cache-with-yuicompressor`) — small portfolio echo.
-
-## Architecture
-
-- Rails 3.2+, MySQL, deployed with Capistrano.
-- 5 models — `Envideo` (annotated video with paragraphs, privacy levels `[:community, :public, :unlisted, :private]`, slug, infusion id), `User`, `Admin`, `Ability`, `ServerConfiguration`.
-- 8 controllers including `envideos`, `admins`, `configurations`, `sitemap`, `static`.
-- Auth/authz: Devise + Warden + Omniauth (Facebook) + CanCan; vestal_versions for content versioning.
-- Frontend: Haml + Formtastic + jQuery; uses sibling gem `cache-with-yuicompressor` for asset compression.
-- Tests: RSpec + Cucumber + autotest.
+The `Envideo` model carried paragraphs, privacy levels (`community / public / unlisted / private`), slugs, and an Infusionsoft id; auth was Devise + Warden + Omniauth + CanCan, with `vestal_versions` for content versioning. MySQL backend, Capistrano deploys, Haml + Formtastic + jQuery on the front end, RSpec + Cucumber for tests. One of the more substantive Rails-era projects in this portfolio — and it consumed the author's own `cache-with-yuicompressor` gem for asset compression.

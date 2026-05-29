@@ -6,27 +6,10 @@ status: exploration
 category: research
 year_started: "2026"
 tags: ["fraud-detection", "healthcare", "data", "investigation", "exploration"]
+is_public: false
 featured: false
 ---
 
-## About
+Real-world fraud investigation is gated less by modeling sophistication than by knowing which dataset answers which question. This project maps the public CMS and federal healthcare data landscape to concrete Medicaid fraud hypotheses, working catalog-first before any pipeline build-out. The current artifact is a tiered inventory of dozens of dataset categories spanning tens of millions of provider, payment, and prescription records, with each dataset annotated by its fraud applications — identity verification, ownership-network analysis, dual-billing detection, prescribing-pattern analysis — and tied back to a roster of named investigations.
 
-Investigative project that maps publicly available CMS and federal healthcare datasets to concrete Medicaid fraud detection hypotheses. Center of the work is a comprehensive supplementary dataset catalog covering 29 dataset categories and ~50M+ rows (~25GB), with each dataset annotated by its fraud-investigation applications (identity verification, ownership-network analysis, dual-billing detection, prescribing-pattern analysis, etc.) and tied back to 12+ named investigations (FL spike, inactive providers, shell companies, controlled-substance prescribing, …). The data corpus itself lives outside the tracked tree; the catalog is the durable artifact.
-
-## Why notable
-
-- Domain-deep work in a regulated, high-stakes area; reflects serious engagement with CMS data shapes, not a toy demo.
-- Catalog-first methodology — knowing what data exists, where it lives, and which hypothesis it answers — is exactly the bottleneck in real-world fraud work.
-- Cross-dataset linkage thinking (EIN clusters, authorized-official networks, NPI deactivation timelines) shows graph-style investigative instincts.
-
-## Architecture
-
-- `investigations/dataset-catalog.md` (~1170 lines) — tiered (Tier 1/2/3) inventory: NPPES (9.4M providers, 330 columns), SAM Exclusions, Open Payments, Medicare Enrollment, Part D Prescribers, HHA Ownership, plus 20+ more.
-- Phase plan: Week 1 (Tier-1 foundation load) → Week 2 (Tier-2 analysis) → Week 3+ (Tier-3 on-demand).
-- Each dataset entry documents: file path, size, row/column counts, key columns, fraud applications, and which named investigation it strengthens.
-- No code yet; the catalog is upstream of any pipeline build-out.
-
-## Chronology
-
-- **2026-02-21** — Dataset catalog v1 generated, 29 datasets indexed, fraud applications mapped to existing investigations.
-- **2026-05-23** — Project tree last touched.
+The methodology emphasizes cross-dataset linkage: EIN clusters across enrollment files, authorized-official networks tracing shared individuals across shell entities, NPI deactivation timelines correlated with billing spikes. Each catalog entry documents file path, size, row and column counts, key join columns, and which specific investigation it strengthens, giving a phased load plan (foundation tier first, analytical layers second, on-demand specifics last) once the pipeline work begins. Domain-deep, exploratory, framing-to-be-decided between open methodology writeup and applied work.

@@ -7,32 +7,11 @@ category: shipped
 year_started: "2026"
 tags: ["macos", "swiftui", "disk-usage", "app-store", "shipped-product"]
 repo_url: "https://github.com/CrazyAIApps/CrazyDisk.git"
+is_public: false
 featured: true
 order: 6
 ---
 
-## About
+CrazyDisk is a native macOS app that scans volumes and folders, visualizes usage as an interactive sunburst, and suggests what to clean up. It is built in Swift and SwiftUI for macOS 14+, ships under the CrazyAIApps label as both a GUI app and a `crazydisk` CLI sharing the same scan core, and is productized for App Store sale at $4.99/year with a 30-day trial and a landing page.
 
-CrazyDisk is a native macOS app that scans volumes and folders, visualizes usage via an interactive sunburst, and suggests what to delete. Built in Swift / SwiftUI (macOS 14+), packaged as both a GUI app and a `crazydisk` CLI sharing the same scan core. Productized for App Store sale at $4.99/yr with a 30-day trial and a landing page. Active development from Mar–Apr 2026 with rapid weekly polish iterations.
-
-## Why notable
-
-- Real shipping product, not a prototype: pricing, trial, landing page, App Store path.
-- Clean separation of scan core / suggestion engine / CLI / GUI — same Swift packages drive both surfaces.
-- Tackles hard macOS edges: APFS snapshot deletion identity, hidden-space accounting, security-scoped bookmarks, transactional deletes.
-
-## Architecture
-
-- `Package.swift` — Swift Package (tools v5.9, macOS 14+), depends on swift-argument-parser; defines `crazydisk` CLI executable and shared targets.
-- `shared/` — reusable Swift modules: `CrazyScanCore` (scan engine), `SuggestionCore` (cleanup heuristics with bundled `rules.json`), `SessionInterchange` (CLI ↔ app handoff).
-- `app/` — SwiftUI macOS app (`CrazyDisk.xcodeproj`, `project.yml` for XcodeGen) with `LandingView`, sunburst visualization, starred-folders store.
-- `cli/Sources/crazydisk` — command-line front-end built on the same cores.
-- `website/` — liquid-glass landing page with interactive carousel.
-- Build via `make` (root `Makefile`) for CLI, Xcode/XcodeGen for the app.
-
-## Chronology
-
-- **2026-03-16** — Initial Ralph project setup.
-- **2026-03-17** — Phase 1 (volume list / card UI) and Phase 2 (`ScanEngine` actor, `FileNode` model) land same day.
-- **2026-03 (late)** — Sunburst visualization, starred folders, native ProgressView migration, security-scoped bookmarks for sandboxed access.
-- **2026-04-02** — App Store pricing finalized ($4.99/yr, 30-day trial), volume-size accuracy fixes, sunburst perf cache.
+The interesting parts are at the macOS edges — APFS snapshot deletion identity, hidden-space accounting, security-scoped bookmarks for sandboxed access, transactional deletes — plus a clean enough split between scan core, suggestion engine, CLI, and GUI that the same Swift packages drive both surfaces. Active polish through Mar–Apr 2026.

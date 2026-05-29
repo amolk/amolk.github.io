@@ -7,22 +7,10 @@ category: older
 year_started: "2013"
 tags: ["rails", "saas", "music"]
 repo_url: "https://github.com/amolk/ragafied"
+is_public: true
 featured: false
 ---
 
-## About
+A Rails 3.2 SaaS scaffold from May 2013, generated from the `rails-stripe-membership-saas` recipe of `rails_apps_composer` and shaped around an Indian-classical-music lessons concept. Domain models — `Raga`, `Guru` (teacher with images), `Lesson`, `Audio` — were wired up alongside `User` / `AdminUser` / `Role` / `Ability`, but the project never grew past scaffold stage; the only commit beyond the generator output was "Use Guru images on home page."
 
-A Rails 3.2.12 SaaS scaffold built May 2013 from the `rails-stripe-membership-saas` recipe of `rails_apps_composer`, shaped around an Indian-classical-music lessons concept. Domain models are sketches — `Raga`, `Guru` (teacher with images), `Lesson`, `Audio` — wired up but never grown into a real product. Only commit beyond scaffold was "Use Guru images on home page".
-
-## Why notable
-
-- Demonstrates a full Rails SaaS stack circa 2013: Devise + CanCan + Stripe + Cucumber + RSpec + FactoryGirl wired together end-to-end.
-- Domain modeling for a non-trivial vertical (Indian classical music: ragas, gurus, lessons), even if shallow.
-
-## Architecture
-
-- Rails 3.2.12 on Ruby (no explicit pin), SQLite.
-- Domain: 8 models — `Raga`, `Guru`, `Lesson`, `Audio`, `User`, `AdminUser`, `Role`, `Ability`.
-- 7 controllers including `content_controller`, `lessons_controller`, custom `registrations_controller` / `sessions_controller`.
-- Auth/authz via Devise + CanCan; admin starter app; Bootstrap/Sass + Haml; Simple Form.
-- Test stack: RSpec + Cucumber features + FactoryGirl, Stripe spec helpers, Guard for continuous testing.
+Stack reflects the era: Devise + CanCan for auth, Stripe for membership billing, Bootstrap/Sass + Haml + Simple Form on the front end, RSpec + Cucumber + FactoryGirl + Guard for testing. Useful as a snapshot of how a full Rails SaaS got bootstrapped in 2013, even if the product itself didn't materialize.

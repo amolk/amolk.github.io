@@ -7,20 +7,11 @@ category: flagship
 year_started: "2026"
 tags: ["ai-agents", "orchestration", "multi-agent", "claude-code"]
 repo_url: "https://github.com/amolk/karta.git"
+is_public: true
 featured: true
 order: 1
 ---
 
-## About
+Karta is a thin orchestration layer for production AI agents. It builds on top of existing coding agents — Claude Code, OpenCode — rather than reimplementing them, and adds the pieces real applications need: multi-user sessions, multi-agent routing, participant-aware messaging, cross-instance communication, HTTP deployment, multi-tenancy, policy enforcement, and lifecycle hooks. The bet is that the next generation of agentic apps will be assembled from harnesses that already exist, and what's missing is the surrounding control plane.
 
-Karta is a thin orchestration layer that builds on top of existing coding agents (Claude Code, OpenCode) rather than reinventing them. It adds what production applications need: multi-user sessions, multi-agent routing, participant-aware messaging, cross-instance communication, HTTP deployment, multi-tenancy, policy enforcement, and lifecycle hooks — without reimplementing agent capabilities. Install: `pip install karta-python`.
-
-## Architecture
-
-```
-apps/
-  karta-python/    Python runtime: sessions, agents, policies, hooks, workspace strategies, MCP
-  karta-web/       Rails control plane: identity, organizations, audit log, dashboard, per-org API keys
-```
-
-Harness Layer (Claude Code / OpenCode) → Karta Core (sessions, agents, policies, hooks) → Client Layer (HTTP API, CLI, Python SDK) → Gateway (event ingestion, fan-out) → Multi-Tenancy (KartaHub, WorkspaceManager). karta-python validates customer API keys against karta-web via `/v1/internal/tenants` over a service-token channel.
+The runtime ships on PyPI as `karta-python` and pairs with `karta-web`, a Rails control plane handling identity, organizations, audit logs, and per-org API keys. The two halves are wired through a service-token channel so customer keys are validated centrally while agent execution stays in the runtime. It is the active flagship of the work — a monorepo with both halves under one roof.

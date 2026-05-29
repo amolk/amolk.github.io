@@ -7,28 +7,10 @@ category: shipped
 year_started: "2025"
 tags: ["playbooks", "durability", "python", "runtime", "ast"]
 repo_url: "https://github.com/playbooks-ai/durable-python.git"
+is_public: true
 featured: false
 ---
 
-## About
+An open-source Python library (`durable-python` on PyPI, v0.1.1) that turns ordinary `async def` functions into checkpointable, resumable programs. An AST transformer rewrites the function body into an ordered list of `CodeBlock`s; a runtime drives execution, persists state on `PauseForEventException`, and resumes from the last checkpoint when the awaited event arrives. Ships with `InMemoryStateStore` and a cloudpickle-backed `DiskStateStore`, plus a pluggable `OrchestrationBackend` interface so other agent frameworks can wire in their own event bus. Python 3.12+, MIT-licensed.
 
-Open-source Python library (PyPI: `durable-python`, v0.1.1) that turns ordinary `async def` functions into checkpointable, resumable programs. An AST transformer rewrites the function body into an ordered list of `CodeBlock`s; a runtime drives execution, persists state on `PauseForEventException`, and resumes from the last checkpoint when the awaited event arrives. Distilled from the durable-execution core that ships inside playbooks and released as a standalone primitive other agent frameworks can adopt. Python 3.12+, MIT-licensed.
-
-## Why notable
-
-- AST-level program transformation is a non-trivial Python skill rarely seen outside frameworks like Temporal or DBOS.
-- Tight, single-purpose library (a few hundred lines) with a clean pluggable backend story — easy to read end-to-end, easy to extend.
-- Demonstrates extracting reusable infrastructure from a larger product (playbooks) and shipping it as its own OSS package.
-
-## Architecture
-
-- `src/durable/` — core package: `DurableRuntime`, `CallStack`, `FunctionCall`, `CodeBlock`.
-- `DurableAstTransformer` / `make_durable(fn)` — AST rewrite that splits an async function into checkpoint-bounded blocks.
-- `OrchestrationBackend` / `DurableBackend` — pluggable orchestration interface; OSS backend pairs a `StateStore` with an in-memory event bus.
-- `StateStore` implementations — `InMemoryStateStore` and `DiskStateStore` (cloudpickle-backed).
-- `examples/basic_example.py`, `examples/disk_persistence_example.py` — runnable demos.
-- Tests + GitHub Actions for `test` and `lint`; Poetry-managed, ruff + black + pytest-cov.
-
-## Chronology
-
-- **2025-11-22 / 23** — Initial commit and full README, illustration, badges, GH Actions, ruff/black, code coverage, version bump to 0.1.1 — all in a single intense day-and-a-half push.
+Distilled from the durable-execution core inside Playbooks and released as a standalone primitive — a few hundred lines you can read end-to-end. AST-level program transformation is a corner of Python rarely touched outside frameworks like Temporal or DBOS, and the project is a worked example of extracting reusable infrastructure from a larger product and shipping it as its own package, with GitHub Actions for test/lint and full Poetry/ruff/black/pytest-cov setup.

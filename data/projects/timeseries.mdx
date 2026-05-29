@@ -7,21 +7,10 @@ category: older
 year_started: "2013"
 tags: ["gem", "mongodb", "timeseries"]
 repo_url: "https://github.com/amolk/timeseries"
+is_public: true
 featured: false
 ---
 
-## About
+A small Ruby gem from February 2013 that adds a `timeseries` mixin to MongoMapper documents for storing time-series data in MongoDB and querying it by range and granularity (e.g. `resolution => 'day'`). Single-purpose utility — declare the fields via a `timeseries [...]` DSL with per-field resolution config, get back bucketed rollup queries.
 
-A small Ruby gem (February 2013) that adds a `timeseries` mixin to MongoMapper documents for storing time-series data in MongoDB and querying by range and granularity (e.g. `resolution => 'day'`). Single-purpose utility, packaged as a standard gem.
-
-## Why notable
-
-- Published Ruby gem from the early MongoDB era — shows comfort with NoSQL data modeling and Ruby DSL design beyond Rails defaults.
-- Narrow but real: solves the bucketed-resolution-rollup problem before it became standard infra.
-
-## Architecture
-
-- One module (`lib/timeseries.rb`) plus `lib/timeseries/version.rb`.
-- Mixed into a MongoMapper document; fields declared via a `timeseries [...]` DSL with per-field resolution config.
-- Backed by MongoDB via MongoMapper (`mongoid.yml` config present).
-- RSpec spec (`spec/timeseries_spec.rb`).
+From the early MongoDB / MongoMapper era, before bucketed time-series storage became standard infrastructure. Packaged as a normal gem with an RSpec spec; narrow in scope, but a real shipped artifact rather than a scaffold.

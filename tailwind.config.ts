@@ -11,6 +11,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         serif: ['var(--font-source-serif-pro)', 'Georgia', 'serif'],
+        sans: ['var(--font-source-serif-pro)', 'Georgia', 'serif'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

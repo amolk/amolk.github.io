@@ -1,27 +1,54 @@
-import Link from 'next/link';
-import siteMetadata from '@/data/siteMetadata';
+'use client';
 
-const navItems = [
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useRef } from 'react';
+import { useMouseDistanceOpacity } from '@/lib/useMouseDistanceOpacity';
+
+const NAV = [
   { href: '/', label: 'Home' },
   { href: '/projects/', label: 'Projects' },
+  { href: '/timeline/', label: 'Timeline' },
   { href: '/about/', label: 'About' },
 ];
 
 export default function TopNav() {
+  const pathname = usePathname() || '/';
+  const navRef = useRef<HTMLDivElement>(null);
+  const opacity = useMouseDistanceOpacity(navRef as React.RefObject<HTMLElement>, { d1: 200, d2: 400 });
+
+  const isActive = (href: string) =>
+    href === '/' ? pathname === '/' : pathname.startsWith(href);
+
   return (
-    <header className="border-b border-border">
-      <div className="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
-        <Link href="/" className="font-serif text-xl font-medium tracking-tight">
-          {siteMetadata.headerTitle}
+    <div
+      ref={navRef}
+      style={{ opacity }}
+      className="fixed top-0 right-0 z-50 bg-white bg-opacity-50 px-8 py-3 w-full transition-opacity duration-100 ease-out backdrop-brightness-200 pointer-events-none"
+    >
+      <nav className="flex justify-between items-center font-light max-w-6xl mx-auto">
+        <Link
+          href="/"
+          className="font-serif text-lg font-medium text-black pointer-events-auto"
+        >
+          Amol Kelkar
         </Link>
-        <nav className="flex gap-6 text-sm">
-          {navItems.map((item) => (
-            <Link key={item.href} href={item.href} className="text-muted-foreground hover:text-foreground transition">
+        <div className="flex items-center space-x-8">
+          {NAV.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={
+                isActive(item.href)
+                  ? 'text-black font-medium pointer-events-auto'
+                  : 'text-gray-500 hover:text-black transition-colors duration-200 pointer-events-auto'
+              }
+            >
               {item.label}
             </Link>
           ))}
-        </nav>
-      </div>
-    </header>
+        </div>
+      </nav>
+    </div>
   );
 }

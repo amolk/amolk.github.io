@@ -8,29 +8,39 @@ export default function Home() {
     .sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
 
   return (
-    <div className="max-w-5xl mx-auto px-6 py-16">
+    <div className="max-w-6xl mx-auto px-8">
       {/* Hero */}
-      <section className="mb-20">
-        <h1 className="font-serif text-5xl md:text-6xl font-medium tracking-tight mb-6 text-balance">
-          Building AI systems, agent infrastructure, and the occasional theory of consciousness.
-        </h1>
-        <p className="text-xl text-muted-foreground max-w-3xl font-light">
-          15 years across semantic programming, multi-agent systems, predictive coding,
-          and shipped products. Currently building <Link href="/projects/karta/" className="underline">Karta</Link>,
-          {' '}<Link href="/projects/agent-callstack/" className="underline">the agent call stack</Link>,
-          and <Link href="/projects/carapace-intelligence/" className="underline">Carapace Intelligence</Link>.
-        </p>
+      <section className="min-h-[80vh] flex items-center pt-24">
+        <div className="space-y-8 max-w-4xl">
+          <h1 className="font-serif text-5xl md:text-7xl font-light leading-tight text-balance">
+            AI systems, agent infrastructure, and the occasional theory of consciousness.
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-500 font-light max-w-3xl leading-relaxed">
+            Building <Link href="/projects/karta/" className="underline underline-offset-4 hover:text-black">Karta</Link>,{' '}
+            <Link href="/projects/agent-callstack/" className="underline underline-offset-4 hover:text-black">the agent call stack</Link>, and{' '}
+            <Link href="/projects/carapace-intelligence/" className="underline underline-offset-4 hover:text-black">Carapace Intelligence</Link>{' '}
+            — alongside a 15-year arc through semantic programming, multi-agent systems, predictive coding, and shipped products.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <Link href="/projects/" className="px-8 py-3 bg-black text-white rounded-full text-base font-medium hover:bg-gray-800 transition-all duration-300 hover:scale-105 inline-block text-center">
+              Browse all projects
+            </Link>
+            <Link href="/timeline/" className="px-8 py-3 border border-gray-300 text-gray-700 rounded-full text-base font-medium hover:border-black hover:text-black transition-all duration-300 inline-block text-center">
+              See timeline
+            </Link>
+          </div>
+        </div>
       </section>
 
       {/* Featured */}
-      <section className="mb-20">
-        <div className="flex items-baseline justify-between mb-6">
-          <h2 className="font-serif text-2xl font-medium">Featured projects</h2>
-          <Link href="/projects/" className="text-sm text-muted-foreground hover:text-foreground">
+      <section className="py-20">
+        <div className="flex items-baseline justify-between mb-8">
+          <h2 className="font-serif text-3xl md:text-4xl font-medium">Featured</h2>
+          <Link href="/projects/" className="text-sm text-gray-500 hover:text-black transition-colors">
             All projects →
           </Link>
         </div>
-        <div className="grid sm:grid-cols-2 gap-4">
+        <div className="grid sm:grid-cols-2 gap-5">
           {featured.map((p) => <ProjectCard key={p.slug} project={p} />)}
         </div>
       </section>

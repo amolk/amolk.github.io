@@ -7,31 +7,10 @@ category: shipped
 year_started: "2025"
 tags: ["playbooks", "vscode", "extension", "dap", "debugger"]
 repo_url: "https://github.com/playbooks-ai/vscode-playbooks.git"
+is_public: false
 featured: false
 ---
 
-## About
+A subproject of Playbooks: a published VSCode extension (`playbooks-ai.playbooks` on the Marketplace, current v0.6.2) that delivers a full debugger for `.pb` source and `.pbasm` compiled-assembly files. Built against the standard Debug Adapter Protocol — but the runtime on the other end is an LLM interpreter, so the breakpoints land on natural-language steps rather than Python lines. Call-stack inspection, variable watches, multi-agent threads, and a read-only stack-frame preview that shows the compiled assembly during debugging all work end-to-end. Also ships TextMate grammars for syntax highlighting in both languages.
 
-Subproject of playbooks. Published VSCode extension (`playbooks-ai.playbooks` on the Marketplace, current v0.6.2) that delivers a full debugger for `.pb` (source) and `.pbasm` (compiled assembly) files using the standard Debug Adapter Protocol — breakpoints on natural-language steps, call-stack inspection, variable watches, multi-agent threads, and a live preview provider. Also ships TextMate grammars for syntax highlighting in both languages. This was the headline May 2025 demo for Playbooks: "set a breakpoint on a sentence and step through it." Both desktop and browser extension targets are built. Status: paused with the parent project.
-
-## Why notable
-
-- DAP implementation against a non-traditional runtime (an LLM interpreter) — breakpoints on prose, not Python.
-- Both desktop and browser extension targets built from one codebase; full test pyramid (unit/integration/e2e).
-- Genuinely shipped to the VSCode Marketplace across multiple versions.
-
-## Architecture
-
-- `src/extension.ts` + `src/web-extension.ts` — desktop and web extension entry points; build via esbuild to `dist/extension.js` and `dist/web-extension.js`.
-- `src/debug/`, `debugAdapter.ts`, `debugAdapterFactory.ts`, `activatePlaybooksDebug.ts` — DAP implementation talking to the Python Playbooks runtime over a unique-per-session port.
-- `src/playbooksProgramDetector.ts`, `src/playbooksPreviewProvider.ts` — `.pb`/`.pbasm` detection and the read-only stack-frame preview that shows compiled assembly during debugging.
-- `syntaxes/playbooks.tmLanguage.json`, `syntaxes/playbooks-asm.tmLanguage.json` — TextMate grammars for both languages.
-- Tests: mocha unit + integration + e2e via `npm test`. Build/package/publish via `vsce`; CI-grade `tsconfig`, eslint, mocharc all configured.
-- `.vsix` artifacts checked in for 0.6.0 / 0.6.1 / 0.6.2.
-
-## Chronology
-
-- **2025-05-25 / 26** — First commits: `.pb` debug session, stopOnEntry, DAP launch, `.pb → .pbc` compile flow.
-- **2025-09-06 / 13** — v0.6.0 RC1 then v0.6.0 release; full rebuild from scratch, multi-agent threads, `.pbasm` rename, breakpoint path normalization.
-- **2025-09-14 / 15** — Stack frame previews per agent, debug output toggle, unique port per session.
-- **2025-09-23** — v0.6.2 published with agent-to-agent messaging example.
+This was the headline May 2025 demo for Playbooks: "set a breakpoint on a sentence and step through it." Both desktop and browser extension targets are built from one codebase, with mocha unit/integration/e2e tests and the full `vsce` packaging path. Genuinely shipped across multiple Marketplace versions before being paused alongside the parent project.

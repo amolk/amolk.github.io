@@ -7,23 +7,10 @@ category: tool
 year_started: "2016"
 tags: ["spreadsheet", "hierarchy", "relay", "graphql", "react"]
 repo_url: "https://github.com/amolk/hypersheet"
+is_public: true
 featured: false
 ---
 
-## About
+Hypersheet was a January-2016 experiment in "easy scalable hierarchical spreadsheets" — the hypothesis that spreadsheets should compose hierarchically (sheets within cells, nested groupings) rather than as flat grids. Small in scope (the model layer is essentially a single `Sheet`), but it's the earliest artifact of a hierarchical-data instinct that later resurfaced in z10 and karta.
 
-A January-2016 experiment in hierarchical spreadsheets, built directly on Facebook's just-released Relay Starter Kit when Relay was still at 0.6 and GraphQL at 0.4. The product hypothesis — that spreadsheets should compose hierarchically rather than as flat grids — is the same instinct that later showed up in z10 and karta. Small in scope (the model layer is essentially a single `Sheet`), but interesting as the first artifact in that line of thinking and as an early-adopter Relay/GraphQL codebase.
-
-## Why notable
-
-- Earliest artifact of Amol's hierarchical-data thread — direct lineage to z10 and karta.
-- Built on Relay 0.6 / GraphQL 0.4 in January 2016, weeks after they were open-sourced — willingness to adopt unstable bleeding-edge stacks.
-- Demonstrates full-stack range in a tiny repo (GraphQL schema, Relay client, Sequelize/Postgres, Babel/Webpack pipeline).
-
-## Architecture
-
-- `server.js` — Express + `express-graphql` (Relay-style) entry point.
-- `js/` — React 0.14 client (`app.js`, `components/`, `routes/`) using `fixed-data-table` for the grid surface and `material-ui` 0.14 for chrome.
-- `data/schema.js` + `scripts/updateSchema.js` — GraphQL schema definition and the introspection-dump script Relay needed for build-time codegen.
-- `models/sheet.js` + `migrations/` — Sequelize ORM over Postgres.
-- Babel 6 transpile pipeline (`babel-preset-stage-0`/`es2015`/`react`), `webpack` 1.12 + `webpack-dev-server`.
+Beyond the idea, the codebase was an early-adopter Relay/GraphQL build: forked directly off Facebook's Relay Starter Kit weeks after open-source release, with Relay still at 0.6 and GraphQL at 0.4. Full stack in a tiny repo — Express + express-graphql server, React 0.14 + fixed-data-table client, Sequelize over Postgres, and the Babel 6 / Webpack 1 pipeline of the era. Paused mid-flight rather than completed; archived as a historical reference point in the hierarchical-spreadsheet line of thinking.

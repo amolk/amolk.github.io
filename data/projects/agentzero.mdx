@@ -7,30 +7,10 @@ category: shipped
 year_started: "2026"
 tags: ["ai-agents", "meta-agent", "scaffolding", "multi-harness"]
 repo_url: "https://github.com/amolk/AgentZero.git"
+is_public: true
 featured: false
 ---
 
-## About
+AgentZero is a meta-agent — an agent whose job is to design other agents. It bootstraps new multi-agent project workspaces (top-level agents, sub-agents, skills) and then reviews, simulates, and scores them. It is intentionally architecture-aware: it makes the three-level decomposition decisions itself rather than punting them to the user, then closes the loop with a post-scaffold review and a simulation pass that runs the generated project and grades the transcripts.
 
-AgentZero is a meta-agent: it bootstraps new multi-agent projects (agents, sub-agents, skills) and then reviews, simulates, and scores them. It is intentionally architecture-aware — it makes the three-level decomposition decisions itself rather than asking the user. Python 3.12 (Poetry-managed), targets multiple agent harnesses (Claude Code and OpenCode). Built in a tight Feb–Mar 2026 sprint as an exploration of self-scaffolding agent infrastructure.
-
-## Why notable
-
-- Self-referential: an agent whose job is to design other agents, with explicit architecture-decision authority.
-- Multi-harness from day one — portable across Claude Code and OpenCode rather than locked to one vendor.
-- Couples scaffolding with simulation + scoring, so generated projects get an automated quality signal.
-
-## Architecture
-
-- `src/agent_zero/` — Python package (Poetry, `pyproject.toml`, `agent-zero` 0.1.0, requires Python ≥3.12).
-- `dev/` — internal tooling, skills, and templates that AgentZero uses while scaffolding.
-- Workflow primitives observable in commit history: `/new-project`, `/add-agent`, simulation skill with transcript analysis, post-scaffold review loop, two-tier skill-authoring templates, tenant worktrees for multi-org projects.
-- Multi-harness adapter layer lets the same project artifacts run under Claude Code or OpenCode.
-- Run via Poetry (`poetry install`, then invoke the harness with AgentZero's skills/commands loaded).
-
-## Chronology
-
-- **2026-02-18** — Initial commit; multi-harness support (Claude Code + OpenCode) lands within first day.
-- **2026-02 (mid–late)** — Karta-based dev loop, transcript analysis, multi-agent decomposition (`/add-agent`, quality-gap handling).
-- **2026-02 (late)** — Tenant worktrees, projects moved outside tree, karta replaced with direct CLI invocation.
-- **2026-03-01** — Three-artifact skill-authoring model, structured simulation scoring + inter-agent discussions, post-scaffold review loop.
+Python 3.12, Poetry-managed, and multi-harness from day one — the same project artifacts run under either Claude Code or OpenCode via an adapter layer, not locked to one vendor. The repo carries the workflow primitives behind the scaffolding (`/new-project`, `/add-agent`), a two-tier skill-authoring template model, tenant worktrees for multi-org work, and a structured simulation-scoring rubric. Built as a tight Feb–Mar 2026 exploration of what self-scaffolding agent infrastructure looks like in practice.

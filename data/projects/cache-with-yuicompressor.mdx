@@ -7,21 +7,10 @@ category: older
 year_started: "2010"
 tags: ["gem", "rails", "assets"]
 repo_url: "https://github.com/amolk/cache-with-yuicompressor"
+is_public: true
 featured: false
 ---
 
-## About
+A small Ruby gem published to RubyGems in August 2010 (v0.1.2), from the pre-asset-pipeline Rails era when bundling and minification weren't yet built in. It hooked into the old `:cache => "name"` flag on `javascript_include_tag` and `stylesheet_link_tag`, ran YUI Compressor over the combined output, and stripped `console.*` calls from JS along the way.
 
-A Ruby gem (published v0.1.2, August 2010) that hooked into the old Rails `:cache => "name"` flag on `javascript_include_tag` / `stylesheet_link_tag` and ran YUI Compressor over the combined bundle, also stripping `console.*` calls from JS. It targeted the pre-asset-pipeline era (Rails 2.x / early 3.x), when bundling and minification were not yet built in. Shipped as a gem on RubyGems and installable as a Rails plugin.
-
-## Why notable
-
-- An early (2010) published Ruby gem — shows familiarity with the Rails plugin/gem ecosystem before the asset pipeline existed.
-- Pragmatic JS/Java interop: shipping JARs inside a Ruby gem.
-
-## Architecture
-
-- Single-file gem (`lib/cache-with-yuicompressor.rb`) bundled with the YUI Compressor JAR plus Rhino and JArgs as vendored Java assets.
-- Drop-in install via Gemfile / `config.gem` / `script/plugin install`; wraps Rails' built-in asset cache-combining to post-process the resulting bundle file via YUI Compressor.
-- Requires a JRE at runtime to invoke the bundled JARs.
-- Packaged via Jeweler; minimal Shoulda test (`test/test_cache-with-yuicompressor.rb`).
+Single-file gem packaged via Jeweler, with the YUI Compressor JAR plus Rhino and JArgs vendored in as Java assets — so the gem itself was Ruby, but a JRE was needed at runtime to invoke the bundled JARs. Installable via Gemfile, `config.gem`, or `script/plugin install`, depending on which Rails 2.x / early 3.x era you were on. A modest but real published artifact from that period.

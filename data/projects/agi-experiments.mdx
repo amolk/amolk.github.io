@@ -6,30 +6,10 @@ status: paused
 category: research
 year_started: "2019"
 year_ended: "2024"
-repo_url: "https://github.com/amolk/experiments"
+repo_url: "https://github.com/amolk/AGI-experiments"
 featured: false
 ---
 
-## About
+A five-year personal research sandbox approaching AGI top-down: start with the simplest possible "minimal" agent, then iterate capability outward. Each experiment line is a hypothesis about what computational substrate might support general intelligence — predictive coding, free-energy minimization, quantized distribution learning, attractor dynamics, active dendrite models, sparse spiking ensembles, self-organizing maps. The structure is intentionally promiscuous: numbered notebooks (`01.ipynb`, `02.ipynb`, …) track seed-and-fork iterations within each line, year-stamped folders capture later organized sprints, and notebooks run standalone rather than living inside a package.
 
-A multi-year personal research sandbox investigating top-down approaches to AGI: building the simplest "minimal" agent first, then iterating capability. Notebooks span predictive coding, free-energy minimization, quantized distribution learning, attractor dynamics, active dendrite models, sparse spiking ensembles, and self-organizing maps. Python/PyTorch with wandb logging in later experiments. Status: paused as ideas migrated into focused projects (Pattern Machine, carapace-intelligence, fly).
-
-## Why notable
-
-- Five years of consistent first-principles AGI research; durable seedbed for later focused projects.
-- Range of substrates explored: histogram-precision, attractor dynamics, sparse spiking, VAE convolution kernels, active dendrites.
-- Public artifact; specific notebooks (QDL, attractor learning, domain quantization) are cite-worthy standalone investigations.
-
-## Architecture
-
-- Each subdirectory is a self-contained experiment line with its own notebooks (e.g. `Free Energy Minimization Framework/`, `QDL - Quantized Distribution Learning/`, `Attractor Learning/`, `Active Synapse/`, `Predictive Coding/`, `SRU (Spiking Recurrent Unit)/`, `EngramSOM`).
-- Numbered notebooks within each line track iterations (`01.ipynb`, `02.ipynb`, …) — seed-and-fork experimentation pattern.
-- Year-stamped folders (`2020-1`, `2024`, `2025`, `2026`) capture later, organized sprints.
-- No package layout; each notebook runs standalone. Pattern Machine has a 2021 standalone implementation under `Pattern Machine`/`Pattern Machine 2`.
-
-## Chronology
-
-- **2019-07** — Repo seeded with imported notebooks; first iterations on Free Energy Minimization.
-- **2020-2021** — Pattern Machine, lateral connectivity, autoencoding kernel convolution, domain quantization.
-- **2024** — Active dendrite framework, SOM on video frames, MNIST SOM, wandb-instrumented runs.
-- **2024-11** — Last commit ("2024 updates"); ideas absorbed into successor projects.
+Implemented in Python/PyTorch, with Weights & Biases instrumentation on the later runs. Specific lines stand on their own as cite-worthy investigations: Quantized Distribution Learning, Attractor Learning, domain quantization, EngramSOM, the Active Synapse work, and a standalone Pattern Machine implementation. Paused at the end of 2024 as the most promising threads migrated into focused projects — Pattern Machine, the carapace-intelligence series, and the fly connectome simulation — leaving this repo as the seedbed they grew from rather than an active project.
