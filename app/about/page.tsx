@@ -27,8 +27,8 @@ export default function About() {
         I&apos;m Amol Kelkar — <strong>Enterprise AI Architect at{' '}
         <a href="https://www.qualtrics.com">Qualtrics</a></strong> (Seattle, WA). Every
         project here started as something I couldn&apos;t stop thinking about. Some grew
-        into companies (Aflatune was acquired by Dhingana; Got It AI was acquired by
-        Qualtrics). Some became papers —{' '}
+        into companies (Aflatune, Creator Republic, OfficeSpace.com, Got It AI — all
+        acquired). Some became papers —{' '}
         <Link href="/projects/homeostasis-publications/">the homeostatic theory of consciousness</Link>,{' '}
         <a href="https://aamas.csc.liv.ac.uk/Proceedings/aamas2021/pdfs/p12.pdf">Cognitive Homeostatic Agents</a>,{' '}
         <Link href="/projects/carapace-intelligence/">the Decision Intelligence formalization</Link>.
@@ -42,35 +42,58 @@ export default function About() {
         <a href="https://nn.cs.utexas.edu/downloads/papers/bednar.cns01.pdf">modeling
         large cortical networks with growing self-organizing maps</a> under{' '}
         <a href="https://www.cs.utexas.edu/~risto/">Risto Miikkulainen</a> and{' '}
-        <a href="https://homepages.inf.ed.ac.uk/jbednar/">Jim Bednar</a>. Then about a
-        decade at <strong>Microsoft</strong> on NetDocs, InfoPath, the Office Forms
-        platform, and Windows Live — several US patents come from that era. A stretch of
-        founder roles came next — Aflatune (acquired by Dhingana),{' '}
-        <span className="text-gray-400">[TODO]</span> (acquired by uZoom),{' '}
-        <span className="text-gray-400">[TODO]</span> (acquired by Biproxy). Then ~5 years
-        at <strong>Got It AI</strong> leading research and engineering on conversational
-        analytics, text-to-SQL, AI agent systems, and patented autonomous conversational
-        AI — including{' '}
-        <a href="https://arxiv.org/abs/2002.00557">Bertrand-DR</a>. Now at{' '}
-        <strong>Qualtrics</strong>, guiding the agent-native transformation of the
-        company.
+        <a href="https://homepages.inf.ed.ac.uk/jbednar/">Jim Bednar</a>. Then seven years
+        at <strong>Microsoft (2001–2008)</strong> on NetDocs, InfoPath, the Office Forms
+        platform, OneNote, and Windows Live — eight US patents come from that era. A
+        stretch of founder roles came next: <strong>Aflatune</strong> (2008–2010, India&apos;s
+        first streaming music service, acquired by Dhingana),{' '}
+        <strong>Creator Republic</strong> (2010–2011, KingOfTheWeb — a &ldquo;YouTube with
+        a winner&rdquo; online reality game; acquired by uZoom),{' '}
+        <strong>Edufied</strong> (2011–2013, an ed-tech platform whose products included{' '}
+        <Link href="/projects/ragafied/">Ragafied</Link> and{' '}
+        <Link href="/projects/videoreadr/">VideoReadr</Link>), and{' '}
+        <strong>OfficeSpace.com</strong> (2013–2017, CTO of the commercial-real-estate
+        B2B platform serving 100K+ business users; acquired by Biproxy). Then five years
+        at <strong>Got It AI (2019–2024)</strong> as <em>Co-founder, Chief Scientist, and
+        CTO</em> — leading R&amp;D and product on AutoRAG, TruthChecker (adopted by
+        NVIDIA), AutoFlows, and the patented autonomous conversational AI system, with
+        copilots deployed to tens of thousands of enterprise users. Acquired by Qualtrics
+        in November 2024. Now at <strong>Qualtrics</strong>, guiding the agent-native
+        transformation of the company.
       </p>
 
       <p>
         <Link href="/projects/playbooks/"><strong>Playbooks</strong></Link>{' '}
-        deserves its own callout. It&apos;s one of the first agent harnesses ever built,
-        with capabilities — a durable runtime, a class-based agent model, prose-debuggable{' '}
-        <code>.pb</code> programs, multi-agent threads — that mainstream systems are still
-        catching up to. I ran a company around it for ~2 years, shipped 16 releases
-        through v0.7.4, and sunset it in April 2026 with a public retrospective once the
-        broader ecosystem (Claude Skills, etc.) converged on enough of the same ground
-        that the marginal contribution dropped.
+        deserves its own callout. It&apos;s one of the first agent harnesses ever built —
+        a pioneering open-source Software 3.0 framework where you write multi-agent
+        systems as plain-English Markdown programs that semantically compile to a
+        low-level assembly executed by LLMs. The stack includes a semantic compiler,
+        runtime engine, hybrid Python interop, MCP-based multi-agent collaboration, a
+        VSCode step-debugger that breakpoints on English instructions, and{' '}
+        <Link href="/projects/playbooks-lm/">PlaybooksLM</Link> — a 3B-parameter LLM
+        fine-tuned for fast, cheap, accurate execution. Advanced capabilities like
+        runtime program synthesis, verifiability constraints, and multi-agent emergent
+        behavior hint at potential AGI use. Mainstream agent systems are still catching
+        up to a lot of this.
       </p>
 
       <p>
-        I love to build, and with coding AI agents I&apos;m having an amazing time
-        building at 1000× my former pace. I&apos;m rapidly building large-scale projects
-        and loving the process. Right now that means{' '}
+        Alongside the day jobs, I&apos;ve also been running <strong>i3AI.org</strong>{' '}
+        since 2017 — a personal research program toward a biologically plausible neural
+        network framework for AGI, with the long goal of sentient AGI by 2030. Currently
+        on hold while the agent-infrastructure work has the foreground. The research
+        artifacts (<a href="https://aamas.csc.liv.ac.uk/Proceedings/aamas2021/pdfs/p12.pdf">Cognitive Homeostatic Agents</a>,{' '}
+        the <Link href="/projects/homeostasis-publications/">homeostatic theory of consciousness</Link>,{' '}
+        <Link href="/projects/pattern-machine/">Pattern Machine</Link>,{' '}
+        <Link href="/projects/nanogpt-experiments/">nanoGPT experiments</Link>, and the{' '}
+        <Link href="/projects/hierarchical-predictive-coding-transformer/">hierarchical
+        predictive coding transformer</Link>) all live under this thread.
+      </p>
+
+      <p>
+        I love to build, and with coding AI agents I&apos;m now having an amazing time
+        building at 1000× my former pace. Rapidly building large-scale projects, loving
+        the process. Right now that means{' '}
         <Link href="/projects/karta/">Karta</Link>,{' '}
         <Link href="/projects/agent-callstack/">agent-callstack</Link> +{' '}
         <Link href="/projects/agent-callstack-unwind/">unwind</Link>,{' '}
