@@ -99,9 +99,9 @@ export default function About() {
         <Link href="/projects/agent-callstack/">agent-callstack</Link> +{' '}
         <Link href="/projects/agent-callstack-unwind/">unwind</Link>,{' '}
         <Link href="/projects/carapace-intelligence/">Carapace Intelligence</Link>,{' '}
-        <Link href="/projects/unfold/">unfold</Link>,{' '}
-        <Link href="/projects/crazydisk/">CrazyDisk</Link>,{' '}
-        <Link href="/projects/crazywindows/">CrazyWindows</Link>, and{' '}
+        <Link href="/projects/unfold/">unfold</Link>, a few native macOS apps
+        (<Link href="/projects/crazydisk/">CrazyDisk</Link>,{' '}
+        <Link href="/projects/crazywindows/">CrazyWindows</Link>), and{' '}
         <Link href="/projects/harness-programming/">Harness Programming</Link> (a book in
         progress) - see the <Link href="/projects/">full project list</Link> ({total}{' '}
         entries) and the <Link href="/timeline/">timeline</Link> for the rest.
