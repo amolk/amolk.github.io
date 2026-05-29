@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { allProjects } from 'contentlayer/generated';
-import { useMDXComponent } from 'next-contentlayer2/hooks';
+import { getMDXComponent } from 'next-contentlayer2/hooks';
 
 export async function generateStaticParams() {
   return allProjects.map((p) => ({ slug: p.slug }));
@@ -12,7 +12,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   const project = allProjects.find((p) => p.slug === slug);
   if (!project) notFound();
 
-  const MDX = useMDXComponent(project.body.code);
+  const MDX = getMDXComponent(project.body.code);
 
   return (
     <article className="max-w-3xl mx-auto px-6 py-16">
