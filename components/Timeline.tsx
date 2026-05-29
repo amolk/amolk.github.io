@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useMemo } from 'react';
+import { useMemo, useEffect, useState } from 'react';
 import type { Project } from 'contentlayer/generated';
 
 const STATUS_COLORS: Record<string, string> = {
@@ -44,7 +44,12 @@ const fmt = (d: Date) =>
   d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
 
 export default function Timeline({ projects }: { projects: Project[] }) {
-  const { rows, minMs, spanMs, years } = useMemo(() => {
+  // Resolve "today" client-side to keep the axis ending at the current date.
+  // Starts null so SSR/first paint matches (no hydration mismatch), then fills in.
+  const [nowMs, setNowMs] = useState<number | null>(null);
+  useEffect(() => setNowMs(Date.now()), []);
+
+  const { rows, minMs, spanMs, years, todayMs } = useMemo(() => {
     const rows = projects
       .map((p) => ({ p, ranges: parseRanges(p) }))
       .filter((r) => r.ranges.length > 0)
@@ -57,17 +62,18 @@ export default function Timeline({ projects }: { projects: Project[] }) {
       .sort((a, b) => b.earliest - a.earliest || a.p.title.localeCompare(b.p.title));
 
     const minMs = Math.min(...rows.map((r) => r.earliest));
-    const maxMs = Math.max(...rows.map((r) => r.latest));
-    // pad to year boundaries
+    const latestEnd = Math.max(...rows.map((r) => r.latest));
+    // axis starts at Jan 1 of the earliest year, ends at today (or latest activity)
     const minYear = new Date(minMs).getFullYear();
-    const maxYear = new Date(maxMs).getFullYear();
     const axisMin = new Date(minYear, 0, 1).getTime();
-    const axisMax = new Date(maxYear + 1, 0, 1).getTime();
+    const todayMs = Math.max(latestEnd, nowMs ?? latestEnd);
+    const axisMax = todayMs;
     const span = axisMax - axisMin;
+    const lastYear = new Date(axisMax).getFullYear();
     const years: number[] = [];
-    for (let y = minYear; y <= maxYear + 1; y++) years.push(y);
-    return { rows, minMs: axisMin, spanMs: span, years };
-  }, [projects]);
+    for (let y = minYear; y <= lastYear; y++) years.push(y);
+    return { rows, minMs: axisMin, spanMs: span, years, todayMs };
+  }, [projects, nowMs]);
 
   const pct = (ms: number) => ((ms - minMs) / spanMs) * 100;
 
@@ -102,6 +108,11 @@ export default function Timeline({ projects }: { projects: Project[] }) {
                 style={{ left: `${pct(new Date(y, 0, 1).getTime())}%` }}
               />
             ))}
+            {/* today marker */}
+            <div
+              className="absolute top-0 bottom-0 border-l border-dashed border-gray-300"
+              style={{ left: `${pct(todayMs)}%` }}
+            />
           </div>
         </div>
 
