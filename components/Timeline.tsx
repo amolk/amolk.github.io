@@ -116,18 +116,28 @@ export default function Timeline({ projects }: { projects: Project[] }) {
           </div>
         </div>
 
-        {rows.map(({ p, ranges }) => {
+        {rows.map(({ p, ranges, earliest }, idx) => {
           const color = STATUS_COLORS[p.status] || 'bg-gray-500';
+          const firstLeft = pct(earliest);
           return (
-            <div key={p.slug} className="flex items-center group" style={{ height: ROW_H }}>
+            <div
+              key={p.slug}
+              className={`flex items-center group transition-colors hover:bg-black/[0.05] ${idx % 2 === 1 ? 'bg-black/[0.015]' : ''}`}
+              style={{ height: ROW_H }}
+            >
               <Link
                 href={p.url}
-                className="w-44 shrink-0 pr-3 text-[11px] leading-none truncate text-gray-700 group-hover:text-black group-hover:underline underline-offset-2"
+                className="w-44 shrink-0 pr-3 text-[11px] leading-none truncate text-gray-600 group-hover:text-black group-hover:font-medium"
                 title={p.summary}
               >
                 {p.title}
               </Link>
               <div className="flex-1 relative h-full">
+                {/* dotted leader from label to first bar (length = the gap to bridge) */}
+                <div
+                  className="absolute border-t border-dotted border-gray-200 group-hover:border-gray-400 transition-colors"
+                  style={{ left: 0, width: `${firstLeft}%`, top: '50%' }}
+                />
                 {ranges.map((r, i) => {
                   const left = pct(r.start.getTime());
                   const widthRaw = ((r.end.getTime() - r.start.getTime() + DAY) / spanMs) * 100;
@@ -136,7 +146,7 @@ export default function Timeline({ projects }: { projects: Project[] }) {
                     <Link
                       key={i}
                       href={p.url}
-                      className={`absolute ${color} rounded-[2px] opacity-80 group-hover:opacity-100 transition-opacity`}
+                      className={`absolute ${color} rounded-[2px] opacity-80 group-hover:opacity-100 ring-0 group-hover:ring-1 group-hover:ring-black/20 transition-all`}
                       style={{ left: `${left}%`, width: `${width}%`, top: 3, bottom: 3 }}
                       title={`${p.title} · ${fmt(r.start)}${r.end.getTime() !== r.start.getTime() ? ` – ${fmt(r.end)}` : ''} · ${STATUS_LABEL[p.status] || p.status}`}
                     />
@@ -156,7 +166,6 @@ export default function Timeline({ projects }: { projects: Project[] }) {
             {v}
           </div>
         ))}
-        <span className="text-gray-400">· bars seeded from git history; multiple bars = paused &amp; resumed</span>
       </div>
     </div>
   );
