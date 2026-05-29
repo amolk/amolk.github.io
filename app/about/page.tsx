@@ -3,7 +3,7 @@ import { allProjects } from 'contentlayer/generated';
 
 export const metadata = {
   title: 'About',
-  description: 'About Amol Kelkar — Enterprise AI Architect at Qualtrics, researcher, founder-engineer, builder of AI systems.',
+  description: 'About Amol Kelkar - Enterprise AI Architect at Qualtrics, researcher, founder-engineer, builder of AI systems.',
 };
 
 const PUBLICATIONS = [
@@ -24,11 +24,11 @@ export default function About() {
       <h1 className="font-serif text-4xl md:text-5xl font-medium tracking-tight mb-3">About</h1>
 
       <p>
-        I&apos;m Amol Kelkar — <strong>Enterprise AI Architect at{' '}
+        I&apos;m Amol Kelkar - <strong>Enterprise AI Architect at{' '}
         <a href="https://www.qualtrics.com">Qualtrics</a></strong> (Seattle, WA). Every
         project here started as something I couldn&apos;t stop thinking about. Some grew
-        into companies (Aflatune, Creator Republic, OfficeSpace.com, Got It AI — all
-        acquired). Some became papers —{' '}
+        into companies (Aflatune, Creator Republic, OfficeSpace.com, Got It AI - all
+        acquired). Some became papers -{' '}
         <Link href="/projects/homeostasis-publications/">the homeostatic theory of consciousness</Link>,{' '}
         <a href="https://aamas.csc.liv.ac.uk/Proceedings/aamas2021/pdfs/p12.pdf">Cognitive Homeostatic Agents</a>,{' '}
         <Link href="/projects/carapace-intelligence/">the Decision Intelligence formalization</Link>.
@@ -44,10 +44,10 @@ export default function About() {
         <a href="https://www.cs.utexas.edu/~risto/">Risto Miikkulainen</a> and{' '}
         <a href="https://homepages.inf.ed.ac.uk/jbednar/">Jim Bednar</a>. Then seven years
         at <strong>Microsoft (2001–2008)</strong> on NetDocs, InfoPath, the Office Forms
-        platform, OneNote, and Windows Live — eight US patents come from that era. A
+        platform, OneNote, and Windows Live - eight US patents come from that era. A
         stretch of founder roles came next: <strong>Aflatune</strong> (2008–2010, India&apos;s
         first streaming music service, acquired by Dhingana),{' '}
-        <strong>Creator Republic</strong> (2010–2011, KingOfTheWeb — a &ldquo;YouTube with
+        <strong>Creator Republic</strong> (2010–2011, KingOfTheWeb - a &ldquo;YouTube with
         a winner&rdquo; online reality game; acquired by uZoom),{' '}
         <strong>Edufied</strong> (2011–2013, an ed-tech platform whose products included{' '}
         <Link href="/projects/ragafied/">Ragafied</Link> and{' '}
@@ -55,7 +55,7 @@ export default function About() {
         <strong>OfficeSpace.com</strong> (2013–2017, CTO of the commercial-real-estate
         B2B platform serving 100K+ business users; acquired by Biproxy). Then five years
         at <strong>Got It AI (2019–2024)</strong> as <em>Co-founder, Chief Scientist, and
-        CTO</em> — leading R&amp;D and product on AutoRAG, TruthChecker (adopted by
+        CTO</em> - leading R&amp;D and product on AutoRAG, TruthChecker (adopted by
         NVIDIA), AutoFlows, and the patented autonomous conversational AI system, with
         copilots deployed to tens of thousands of enterprise users. Acquired by Qualtrics
         in November 2024. Now at <strong>Qualtrics</strong>, guiding the agent-native
@@ -64,13 +64,13 @@ export default function About() {
 
       <p>
         <Link href="/projects/playbooks/"><strong>Playbooks</strong></Link>{' '}
-        deserves its own callout. It&apos;s one of the first agent harnesses ever built —
+        deserves its own callout. It&apos;s one of the first agent harnesses ever built -
         a pioneering open-source Software 3.0 framework where you write multi-agent
         systems as plain-English Markdown programs that semantically compile to a
         low-level assembly executed by LLMs. The stack includes a semantic compiler,
         runtime engine, hybrid Python interop, MCP-based multi-agent collaboration, a
         VSCode step-debugger that breakpoints on English instructions, and{' '}
-        <Link href="/projects/playbooks-lm/">PlaybooksLM</Link> — a 3B-parameter LLM
+        <Link href="/projects/playbooks-lm/">PlaybooksLM</Link> - a 3B-parameter LLM
         fine-tuned for fast, cheap, accurate execution. Advanced capabilities like
         runtime program synthesis, verifiability constraints, and multi-agent emergent
         behavior hint at potential AGI use. Mainstream agent systems are still catching
@@ -79,7 +79,7 @@ export default function About() {
 
       <p>
         Alongside the day jobs, I&apos;ve also been running <strong>i3AI.org</strong>{' '}
-        since 2017 — a personal research program toward a biologically plausible neural
+        since 2017 - a personal research program toward a biologically plausible neural
         network framework for AGI, with the long goal of sentient AGI by 2030. Currently
         on hold while the agent-infrastructure work has the foreground. The research
         artifacts (<a href="https://aamas.csc.liv.ac.uk/Proceedings/aamas2021/pdfs/p12.pdf">Cognitive Homeostatic Agents</a>,{' '}
@@ -92,7 +92,7 @@ export default function About() {
 
       <p>
         I love to build, and with coding AI agents I&apos;m now having an amazing time
-        building at 1000× my former pace. Rapidly building large-scale projects, loving
+        building at 1000x my former pace. Rapidly building large-scale projects, loving
         the process. Right now that means{' '}
         <Link href="/projects/karta/">Karta</Link>,{' '}
         <Link href="/projects/agent-callstack/">agent-callstack</Link> +{' '}
@@ -102,7 +102,7 @@ export default function About() {
         <Link href="/projects/crazydisk/">CrazyDisk</Link>,{' '}
         <Link href="/projects/crazywindows/">CrazyWindows</Link>, and{' '}
         <Link href="/projects/harness-programming/">Harness Programming</Link> (a book in
-        progress) — see the <Link href="/projects/">full project list</Link> ({total}{' '}
+        progress) - see the <Link href="/projects/">full project list</Link> ({total}{' '}
         entries) and the <Link href="/timeline/">timeline</Link> for the rest.
       </p>
 
@@ -111,7 +111,7 @@ export default function About() {
         {PUBLICATIONS.map((p) => (
           <li key={p.title}>
             {p.link ? <a href={p.link}>{p.title}</a> : <span>{p.title}</span>}
-            {' '}<span className="text-gray-500">— {p.venue}, {p.year}{p.citations ? `, ${p.citations} citations` : ''}</span>
+            {' '}<span className="text-gray-500">- {p.venue}, {p.year}{p.citations ? `, ${p.citations} citations` : ''}</span>
           </li>
         ))}
       </ul>
@@ -125,8 +125,8 @@ export default function About() {
 
       <h2>Education</h2>
       <ul>
-        <li><strong>The University of Texas at Austin</strong> (1998–2000) — graduate research on biologically realistic large-scale cortical network models</li>
-        <li><strong>University of Pune</strong> (1993–1997) — BE Computer Engineering, Summa Cum Laude</li>
+        <li><strong>The University of Texas at Austin</strong> (1998–2000) - graduate research on biologically realistic large-scale cortical network models</li>
+        <li><strong>University of Pune</strong> (1993–1997) - BE Computer Engineering, Summa Cum Laude</li>
       </ul>
 
       <h2>Contact</h2>

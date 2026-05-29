@@ -11,6 +11,6 @@ is_public: false
 featured: false
 ---
 
-Production Scrapy spider fleet that fed a commercial real-estate listings product — the data-acquisition layer for a CRE search tool. Four spiders handle a base crawl and incremental refresh against two source sites, deployed to a dedicated scrapyd host on EC2 (provisioned by a sister infra-as-code project) and scheduled through scrapyd's HTTP API.
+Production Scrapy spider fleet that fed a commercial real-estate listings product - the data-acquisition layer for a CRE search tool. Four spiders handle a base crawl and incremental refresh against two source sites, deployed to a dedicated scrapyd host on EC2 (provisioned by a sister infra-as-code project) and scheduled through scrapyd's HTTP API.
 
 The interesting bit beyond standard Scrapy shape: the long-running historical spider supports resume by skipping listing IDs already present in the production DB, seeded into a local id list at startup. So a crawl interrupted halfway through a multi-year backfill picks up where it left off rather than re-fetching everything. End-to-end deployed with infra-as-code rather than running off a snowflake server.

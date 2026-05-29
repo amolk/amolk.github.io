@@ -15,7 +15,7 @@ const sourceSerifPro = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
-  title: { default: siteMetadata.title, template: `%s — ${siteMetadata.title}` },
+  title: { default: siteMetadata.title, template: `%s - ${siteMetadata.title}` },
   description: siteMetadata.description,
   metadataBase: new URL(siteMetadata.siteUrl),
   openGraph: {

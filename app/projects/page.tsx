@@ -27,7 +27,7 @@ export default function ProjectsIndex() {
     <div className="max-w-6xl mx-auto px-8 pt-24 pb-16">
       <header className="mb-12">
         <h1 className="font-serif text-4xl md:text-5xl font-medium tracking-tight mb-3">Projects</h1>
-        <p className="text-gray-500 text-lg font-light">{allProjects.length} projects total — across product, research, and tooling.</p>
+        <p className="text-gray-500 text-lg font-light">{allProjects.length} projects total - across product, research, and tooling.</p>
       </header>
 
       {groups.map((g) => (

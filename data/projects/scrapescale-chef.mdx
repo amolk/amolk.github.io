@@ -11,6 +11,6 @@ is_public: false
 featured: false
 ---
 
-Infra-as-code companion to the scrapescale spider fleet — so the production scraper host could be rebuilt from a clean EC2 image in one command, rather than being a snowflake server nobody dared touch. Uses Chef with `knife-solo` (Ruby) to bootstrap a fresh node into a working scrapyd worker: SSH in, copy cookbooks, run chef, configure the proxy in the shell.
+Infra-as-code companion to the scrapescale spider fleet - so the production scraper host could be rebuilt from a clean EC2 image in one command, rather than being a snowflake server nobody dared touch. Uses Chef with `knife-solo` (Ruby) to bootstrap a fresh node into a working scrapyd worker: SSH in, copy cookbooks, run chef, configure the proxy in the shell.
 
-Single-host setup, one cookbook, one target node defined in YAML — useful glue rather than a piece of architecture worth a deep dive on its own. Included here mainly to show the scrapescale side of the CRE stack was reproducibly provisioned, not hand-built.
+Single-host setup, one cookbook, one target node defined in YAML - useful glue rather than a piece of architecture worth a deep dive on its own. Included here mainly to show the scrapescale side of the CRE stack was reproducibly provisioned, not hand-built.

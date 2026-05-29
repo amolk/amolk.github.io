@@ -1,7 +1,7 @@
 ---
 title: "karta"
 slug: karta
-summary: "Multi-agent orchestration layer on top of Claude Code and OpenCode — now ships as a monorepo with a Rails control-plane (`karta-web`) alongside the Python runtime (`karta-python`)."
+summary: "Multi-agent orchestration layer on top of Claude Code and OpenCode - now ships as a monorepo with a Rails control-plane (`karta-web`) alongside the Python runtime (`karta-python`)."
 status: active
 category: flagship
 year_started: "2026"
@@ -12,6 +12,6 @@ featured: true
 order: 1
 ---
 
-Karta is a thin orchestration layer for production AI agents. It builds on top of existing coding agents — Claude Code, OpenCode — rather than reimplementing them, and adds the pieces real applications need: multi-user sessions, multi-agent routing, participant-aware messaging, cross-instance communication, HTTP deployment, multi-tenancy, policy enforcement, and lifecycle hooks. The bet is that the next generation of agentic apps will be assembled from harnesses that already exist, and what's missing is the surrounding control plane.
+Karta is a thin orchestration layer for production AI agents. It builds on top of existing coding agents - Claude Code, OpenCode - rather than reimplementing them, and adds the pieces real applications need: multi-user sessions, multi-agent routing, participant-aware messaging, cross-instance communication, HTTP deployment, multi-tenancy, policy enforcement, and lifecycle hooks. The bet is that the next generation of agentic apps will be assembled from harnesses that already exist, and what's missing is the surrounding control plane.
 
-The runtime ships on PyPI as `karta-python` and pairs with `karta-web`, a Rails control plane handling identity, organizations, audit logs, and per-org API keys. The two halves are wired through a service-token channel so customer keys are validated centrally while agent execution stays in the runtime. It is the active flagship of the work — a monorepo with both halves under one roof.
+The runtime ships on PyPI as `karta-python` and pairs with `karta-web`, a Rails control plane handling identity, organizations, audit logs, and per-org API keys. The two halves are wired through a service-token channel so customer keys are validated centrally while agent execution stays in the runtime. It is the active flagship of the work - a monorepo with both halves under one roof.

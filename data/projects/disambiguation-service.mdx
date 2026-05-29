@@ -11,6 +11,6 @@ is_public: false
 featured: false
 ---
 
-Text-to-SQL systems fail silently when a user's question contains words that don't cleanly map to the database schema — the parser produces confident-looking SQL against the wrong column, or hallucinates a join. This service, part of a broader text-to-SQL research arc from the pre-transformer-mainstream NLP era, catches that failure mode upstream by flagging ambiguous tokens before the parser ever sees them, so the UI can ask the user to clarify instead.
+Text-to-SQL systems fail silently when a user's question contains words that don't cleanly map to the database schema - the parser produces confident-looking SQL against the wrong column, or hallucinates a join. This service, part of a broader text-to-SQL research arc from the pre-transformer-mainstream NLP era, catches that failure mode upstream by flagging ambiguous tokens before the parser ever sees them, so the UI can ask the user to clarify instead.
 
-It's a small Python service: given a natural-language question and a schema, it runs POS tagging, NER, and word-vector similarity to score each meaningful token against the schema's columns, returning ranked suggestions for the ambiguous ones and separate prompts for temporal phrases that need a time range. Narrow but production-shaped — single-purpose, tightly typed return contract, pytest-tested.
+It's a small Python service: given a natural-language question and a schema, it runs POS tagging, NER, and word-vector similarity to score each meaningful token against the schema's columns, returning ranked suggestions for the ambiguous ones and separate prompts for temporal phrases that need a time range. Narrow but production-shaped - single-purpose, tightly typed return contract, pytest-tested.

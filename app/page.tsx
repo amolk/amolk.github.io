@@ -20,7 +20,7 @@ export default function Home() {
             <Link href="/projects/agent-callstack/" className="underline underline-offset-4 hover:text-black">the agent call stack</Link>, and{' '}
             <Link href="/projects/carapace-intelligence/" className="underline underline-offset-4 hover:text-black">Carapace Intelligence</Link>.
             A 25-year arc from cortical neural networks at UT Austin, through a decade
-            on Microsoft InfoPath, founder roles, and conversational AI at Got It —
+            on Microsoft InfoPath, founder roles, and conversational AI at Got It -
             to today&apos;s agent infrastructure and a slow-burning research program
             on consciousness.
           </p>

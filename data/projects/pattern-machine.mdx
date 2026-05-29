@@ -1,7 +1,7 @@
 ---
 title: "pattern-machine"
 slug: pattern-machine
-summary: "Pattern-discovery engine — long-running personal research on spiking-NN pattern formation."
+summary: "Pattern-discovery engine - long-running personal research on spiking-NN pattern formation."
 status: paused
 category: research
 year_started: "2022"
@@ -14,6 +14,6 @@ images: ["/images/projects/pattern-machine/temporal-to-spatial.gif"]
 featured: false
 ---
 
-How do structural patterns emerge from raw temporal sensory streams when the only available signal is local — no labels, no backprop through time? Pattern Machine framed this as a spiking-neural-network architecture with local Hebbian-style learning, asking whether repeated temporal regularities could self-organize into reusable spatial primitives. A multi-year research thread, paused after two distinct iterations.
+How do structural patterns emerge from raw temporal sensory streams when the only available signal is local - no labels, no backprop through time? Pattern Machine framed this as a spiking-neural-network architecture with local Hebbian-style learning, asking whether repeated temporal regularities could self-organize into reusable spatial primitives. A multi-year research thread, paused after two distinct iterations.
 
-The 2022 iteration built a full `patternmachine` Python package with layers, patch and pattern grids, signal-grid sets, local learning, and pattern-similarity primitives, alongside a documented experiment series running from single-layer regression through 1D bouncing-ball dynamics, temporal-to-spatial mapping, high-dimensional multi-patch patterns, and pattern hallucination. Each experiment left behind animated GIFs, pickled trained patterns, and reproducible drivers — the thinking is auditable. The 2023 rewrite (under the i3AI org) collapsed that into a smaller, cleaner computational-graph core with explicit operations modules and a LIF-with-adaptive-threshold demonstration on PyTorch. Neither iteration produced a definitive answer to the underlying question, but the experimental artifacts show what worked and what didn't.
+The 2022 iteration built a full `patternmachine` Python package with layers, patch and pattern grids, signal-grid sets, local learning, and pattern-similarity primitives, alongside a documented experiment series running from single-layer regression through 1D bouncing-ball dynamics, temporal-to-spatial mapping, high-dimensional multi-patch patterns, and pattern hallucination. Each experiment left behind animated GIFs, pickled trained patterns, and reproducible drivers - the thinking is auditable. The 2023 rewrite (under the i3AI org) collapsed that into a smaller, cleaner computational-graph core with explicit operations modules and a LIF-with-adaptive-threshold demonstration on PyTorch. Neither iteration produced a definitive answer to the underlying question, but the experimental artifacts show what worked and what didn't.
