@@ -59,7 +59,7 @@ export default function About() {
         at <strong>Got It AI (2019–2024)</strong> as <em>Co-founder, Chief Scientist, and
         CTO</em> - leading R&amp;D and product on AutoRAG, TruthChecker (adopted by
         NVIDIA), AutoFlows, and the patented autonomous conversational AI system, with
-        copilots deployed to tens of thousands of enterprise users. Acquired by Qualtrics
+        AI agents deployed to tens of thousands of enterprise users. Acquired by Qualtrics
         in November 2024. Now at <strong>Qualtrics</strong>, guiding the agent-native
         transformation of the company.
       </p>
