@@ -26,14 +26,17 @@ export default function About() {
 
       <p>
         I&apos;m Amol Kelkar — <strong>Enterprise AI Architect at{' '}
-        <a href="https://www.qualtrics.com">Qualtrics</a></strong> (Redmond, WA). I&apos;ve
-        been building things for 25 years and not been able to stop. The job titles have
-        varied; the projects have been the constant. Some have grown into companies, some
-        into papers, most are right here on this site.{' '}
+        <a href="https://www.qualtrics.com">Qualtrics</a></strong> (Redmond, WA). Every
+        project here started as something I couldn&apos;t stop thinking about. Some grew
+        into companies (Aflatune was acquired by Dhingana; Got It AI grew around{' '}
+        <a href="https://arxiv.org/abs/2002.00557">Bertrand-DR</a>). Some became papers —{' '}
+        <Link href="/projects/homeostasis-publications/">the homeostatic theory of consciousness</Link>,{' '}
+        Cognitive Homeostatic Agents,{' '}
+        <Link href="/projects/carapace-intelligence/">the Decision Intelligence formalization</Link>.
+        Some are still small things I&apos;m pulling on. Right now the foreground is{' '}
         <Link href="/projects/karta/">Karta</Link>,{' '}
         <Link href="/projects/agent-callstack/">the agent call stack</Link>, and{' '}
-        <Link href="/projects/carapace-intelligence/">Carapace Intelligence</Link>{' '}
-        are what I&apos;m pulling on right now.
+        <Link href="/projects/carapace-intelligence/">Carapace Intelligence</Link>.
       </p>
 
       <p>
