@@ -18,8 +18,9 @@ export default function ProjectLinks({ project }: { project: Project }) {
   const links: LinkSpec[] = [];
 
   if (project.is_public && project.repo_url) {
-    const slug = project.repo_url.replace(/^https?:\/\/github\.com\//, '').replace(/\.git$/, '').replace(/\/$/, '');
-    links.push({ href: project.repo_url, label: slug, icon: <GitHubIcon className="w-4 h-4" /> });
+    const path = project.repo_url.replace(/^https?:\/\/github\.com\//, '').replace(/\.git$/, '').replace(/\/$/, '');
+    const label = path.split('/').slice(0, 2).join('/'); // owner/repo, even for deep tree URLs
+    links.push({ href: project.repo_url, label, icon: <GitHubIcon className="w-4 h-4" /> });
   }
   if (project.demo_url) links.push({ href: project.demo_url, label: 'Demo', icon: <ExternalLink className="w-4 h-4" /> });
   if (project.paper_url) links.push({ href: project.paper_url, label: 'Paper', icon: <FileText className="w-4 h-4" /> });

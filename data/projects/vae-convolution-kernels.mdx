@@ -1,0 +1,14 @@
+---
+title: "VAE Convolution Kernels"
+slug: vae-convolution-kernels
+summary: "What if a variational autoencoder were used as a convolution kernel?"
+status: archived
+category: research
+year_started: "2020"
+is_public: true
+parent: agi-experiments
+repo_url: "https://github.com/amolk/AGI-experiments/tree/master/Autoencoding%20kernel%20convolution"
+featured: false
+---
+
+This line asks what happens if a VAE is used as the convolution kernel itself. A four-layer network builds up a small top-level latent representation of MNIST digits, with each layer trained two ways at once: independently, like a deep belief network, and with top-down feedback from the layers above. It is an exploration of how local generative learning and global predictive feedback can be combined in a single stacked architecture.

@@ -1,0 +1,14 @@
+---
+title: "Domain Quantization"
+slug: domain-quantization
+summary: "Information-density normalization - adjust histogram bins so precision follows where the data is."
+status: archived
+category: research
+year_started: "2018"
+is_public: true
+parent: agi-experiments
+repo_url: "https://github.com/amolk/AGI-experiments/tree/master/Domain%20Quantization"
+featured: false
+---
+
+Each input is represented as a histogram, and the model adjusts the bin boundaries so that they pack tightly where data points are dense and spread out where they are sparse - precision following information density. The effect is a learned transform that maps an input drawn from the expected distribution onto a roughly piecewise-linear output, which can make the job of downstream layers considerably easier. It is a normalization idea grounded in how much information actually lives in each region of the input space.

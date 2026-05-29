@@ -1,0 +1,14 @@
+---
+title: "Quantized Distribution Learning"
+slug: qdl
+summary: "Learning latent-variable probability distributions directly, as histograms over quantized bins."
+status: archived
+category: research
+year_started: "2020"
+is_public: true
+parent: agi-experiments
+repo_url: "https://github.com/amolk/AGI-experiments/tree/master/QDL%20-%20Quantized%20Distribution%20Learning"
+featured: false
+---
+
+Can a model learn latent-variable probability distributions directly, instead of assuming a parametric form? The Quantized Distribution Auto-Encoder represents each value as a histogram over quantized bins and learns the distribution end to end. Representing values this way sidesteps the precision-weighting machinery that explicit Gaussian latents require - the spread of the histogram already encodes uncertainty - and it became a recurring building block across the AGI experiments.

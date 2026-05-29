@@ -19,12 +19,19 @@ const CATEGORIES: { key: string; label: string; blurb?: string }[] = [
 
 export default function ProjectsIndex() {
   const bySlug = new Map(allProjects.map((p) => [p.slug, p]));
-  const topLevel = allProjects.filter((p) => !p.parent);
+  const isHidden = (p?: (typeof allProjects)[number]) => !!p?.hide_from_index;
+  // A project gets its own card if it isn't hidden and is either top-level
+  // or has a hidden parent (so day-job subprojects surface as standalone cards).
+  const isCard = (p: (typeof allProjects)[number]) => {
+    if (isHidden(p)) return false;
+    const parent = p.parent ? bySlug.get(p.parent) : undefined;
+    return !parent || isHidden(parent);
+  };
 
   const groups = CATEGORIES.map(({ key, label, blurb }) => ({
     key, label, blurb,
-    projects: topLevel
-      .filter((p) => p.category === key)
+    projects: allProjects
+      .filter((p) => isCard(p) && p.category === key)
       .sort((a, b) => (b.year_started ?? '').localeCompare(a.year_started ?? '')),
   })).filter((g) => g.projects.length > 0);
 
@@ -47,13 +54,17 @@ export default function ProjectsIndex() {
             {g.blurb && <p className="text-sm text-gray-500 mt-1 font-light">{g.blurb}</p>}
           </div>
           <div className="grid sm:grid-cols-2 gap-5">
-            {g.projects.map((p) => (
-              <ProjectCard
-                key={p.slug}
-                project={p}
-                subprojects={(p.subprojects || []).map((s) => bySlug.get(s)).filter(Boolean) as typeof allProjects}
-              />
-            ))}
+            {g.projects.map((p) => {
+              const parent = p.parent ? bySlug.get(p.parent) : undefined;
+              return (
+                <ProjectCard
+                  key={p.slug}
+                  project={p}
+                  parentLabel={isHidden(parent) ? parent?.title : undefined}
+                  subprojects={(p.subprojects || []).map((s) => bySlug.get(s)).filter(Boolean) as typeof allProjects}
+                />
+              );
+            })}
           </div>
         </section>
       ))}

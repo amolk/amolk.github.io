@@ -4,15 +4,20 @@ import { Project } from 'contentlayer/generated';
 export default function ProjectCard({
   project,
   subprojects = [],
+  parentLabel,
 }: {
   project: Project;
   subprojects?: Project[];
+  parentLabel?: string;
 }) {
   const years = project.year_started
     + (project.year_ended && project.year_ended !== project.year_started ? `–${project.year_ended}` : '');
   return (
     <div className="group p-6 rounded-2xl border border-gray-200 hover:border-gray-400 hover:bg-white transition-all duration-300">
       <Link href={project.url} className="block">
+        {parentLabel && (
+          <div className="text-[11px] uppercase tracking-wide text-gray-400 mb-1">{parentLabel}</div>
+        )}
         <div className="flex items-baseline justify-between gap-3 mb-3">
           <h3 className="font-serif text-xl font-medium group-hover:underline underline-offset-4">{project.title}</h3>
           <span className="text-xs text-gray-400 whitespace-nowrap font-light">{years}</span>
