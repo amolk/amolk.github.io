@@ -116,13 +116,12 @@ export default function Timeline({ projects }: { projects: Project[] }) {
           </div>
         </div>
 
-        {rows.map(({ p, ranges, earliest }, idx) => {
+        {rows.map(({ p, ranges }) => {
           const color = STATUS_COLORS[p.status] || 'bg-gray-500';
-          const firstLeft = pct(earliest);
           return (
             <div
               key={p.slug}
-              className={`flex items-center group transition-colors hover:bg-black/[0.05] ${idx % 2 === 1 ? 'bg-black/[0.015]' : ''}`}
+              className="flex items-center group transition-colors hover:bg-black/[0.05]"
               style={{ height: ROW_H }}
             >
               <Link
@@ -133,11 +132,6 @@ export default function Timeline({ projects }: { projects: Project[] }) {
                 {p.title}
               </Link>
               <div className="flex-1 relative h-full">
-                {/* dotted leader from label to first bar (length = the gap to bridge) */}
-                <div
-                  className="absolute border-t border-dotted border-gray-200 group-hover:border-gray-400 transition-colors"
-                  style={{ left: 0, width: `${firstLeft}%`, top: '50%' }}
-                />
                 {ranges.map((r, i) => {
                   const left = pct(r.start.getTime());
                   const widthRaw = ((r.end.getTime() - r.start.getTime() + DAY) / spanMs) * 100;

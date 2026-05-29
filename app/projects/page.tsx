@@ -33,7 +33,6 @@ export default function ProjectsIndex() {
 
       {/* Timeline */}
       <section id="timeline" className="mb-20 scroll-mt-24">
-        <h2 className="font-serif text-2xl md:text-3xl font-medium mb-6">Timeline</h2>
         <Timeline projects={allProjects} />
       </section>
 
