@@ -25,28 +25,30 @@ export default function About() {
       <h1 className="font-serif text-4xl md:text-5xl font-medium tracking-tight mb-3">About</h1>
 
       <p>
-        I&apos;m Amol Kelkar. I build AI systems — currently as a research engineer at{' '}
-        <a href="https://www.qualtrics.com">Qualtrics</a> (Redmond, WA), and on the side
-        as maintainer of the{' '}
-        <Link href="/projects/agent-callstack/">agent call stack</Link>,{' '}
-        <Link href="/projects/karta/">Karta</Link> (multi-agent orchestration),{' '}
+        I&apos;m Amol Kelkar — <strong>Enterprise AI Architect at{' '}
+        <a href="https://www.qualtrics.com">Qualtrics</a></strong> (Redmond, WA). I&apos;ve
+        been building things for 25 years and not been able to stop. The job titles have
+        varied; the projects have been the constant. Some have grown into companies, some
+        into papers, most are right here on this site.{' '}
+        <Link href="/projects/karta/">Karta</Link>,{' '}
+        <Link href="/projects/agent-callstack/">the agent call stack</Link>, and{' '}
         <Link href="/projects/carapace-intelligence/">Carapace Intelligence</Link>{' '}
-        (decision-intelligence infrastructure), and a slow-burning research program on
-        consciousness and predictive coding.
+        are what I&apos;m pulling on right now.
       </p>
 
       <p>
         The arc began at <strong>UT Austin (1998–2000)</strong>, modeling large cortical
         networks with growing self-organizing maps under{' '}
         <a href="https://www.cs.utexas.edu/~risto/">Risto Miikkulainen</a> and{' '}
-        <a href="https://homepages.inf.ed.ac.uk/jbednar/">Jim Bednar</a>. Then ~a decade
-        at <strong>Microsoft</strong> on the InfoPath / Office Forms platform — most of
-        the ten US patents on my CV come from that era. After that, a stretch of founder
-        roles (companies acquired by Dhingana, uZoom, and Biproxy), then ~5 years at{' '}
-        <strong>Got It AI</strong> leading research and engineering on conversational
-        systems and text-to-SQL parsing —{' '}
+        <a href="https://homepages.inf.ed.ac.uk/jbednar/">Jim Bednar</a>. Then a decade at{' '}
+        <strong>Microsoft</strong> on the InfoPath / Office Forms platform — most of the
+        ten US patents on my CV come from that era. A stretch of founder roles came next
+        — Aflatune (acquired by Dhingana), then ventures acquired by uZoom and Biproxy.
+        Then ~5 years at <strong>Got It AI</strong> leading research and engineering on
+        conversational systems and text-to-SQL parsing —{' '}
         <a href="https://arxiv.org/abs/2002.00557">Bertrand-DR</a>, the autonomous
-        conversational AI system, and follow-ons.
+        conversational AI patent, and follow-ons. Now at <strong>Qualtrics</strong>,
+        building enterprise AI infrastructure.
       </p>
 
       <p>
