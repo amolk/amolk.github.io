@@ -47,7 +47,11 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       <header className="mt-6 mb-10">
         {parent && (
           <div className="text-sm text-gray-500 mb-2">
-            Part of <Link href={parent.url} className="underline underline-offset-2 hover:text-black">{parent.title}</Link>
+            Part of {parent.is_private ? (
+              <span>{parent.title}</span>
+            ) : (
+              <Link href={parent.url} className="underline underline-offset-2 hover:text-black">{parent.title}</Link>
+            )}
           </div>
         )}
         <h1 className="font-serif text-4xl md:text-5xl font-medium tracking-tight mb-3">{project.title}</h1>
