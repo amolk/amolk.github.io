@@ -7,7 +7,7 @@ export const metadata = {
 };
 
 const PUBLICATIONS = [
-  { title: 'Autonomous conversational AI system without any configuration', year: 2025, venue: 'US Patent 12,282,743', citations: 26 },
+  { title: 'Autonomous conversational AI system without any configuration', year: 2025, venue: 'US Patent 12,282,743', citations: 26, link: 'https://patents.google.com/patent/US20230274095A1/en' },
   { title: 'Towards automatic evaluation of task-oriented dialogue flows', year: 2024, venue: 'arXiv:2411.10416', link: 'https://arxiv.org/abs/2411.10416' },
   { title: 'KULCQ: An Unsupervised Keyword-based Utterance Level Clustering Quality Metric', year: 2024, venue: 'arXiv:2411.09853', link: 'https://arxiv.org/abs/2411.09853' },
   { title: 'Cognitive Homeostatic Agents', year: 2021, venue: 'AAMAS 2021', citations: 5, link: 'https://aamas.csc.liv.ac.uk/Proceedings/aamas2021/pdfs/p12.pdf' },
@@ -21,6 +21,34 @@ export default function About() {
 
   return (
     <article className="max-w-3xl mx-auto px-8 pt-24 pb-16 project-content">
+      {/* Cool slate duotone: desaturate (Rec.709 luma), then map shadows→#121d33
+          (slate-navy) and highlights→#edf1f6 (cool light), matching the site's
+          cool-gray palette. */}
+      <svg className="absolute h-0 w-0" aria-hidden="true">
+        <filter id="duotone" colorInterpolationFilters="sRGB">
+          <feColorMatrix
+            type="matrix"
+            values="0.2126 0.7152 0.0722 0 0
+                    0.2126 0.7152 0.0722 0 0
+                    0.2126 0.7152 0.0722 0 0
+                    0      0      0      1 0"
+          />
+          <feComponentTransfer>
+            <feFuncR type="table" tableValues="0.071 0.929" />
+            <feFuncG type="table" tableValues="0.114 0.945" />
+            <feFuncB type="table" tableValues="0.200 0.965" />
+          </feComponentTransfer>
+        </filter>
+      </svg>
+
+      <img
+        src="/images/amol-kelkar.jpg"
+        alt="Amol Kelkar, Enterprise AI Architect at Qualtrics"
+        width={600}
+        height={800}
+        className="headshot"
+      />
+
       <h1 className="font-serif text-4xl md:text-5xl font-medium tracking-tight mb-3">About</h1>
 
       <p>

@@ -53,6 +53,13 @@
   @apply rounded-2xl my-8 mx-auto shadow-sm border border-gray-100;
 }
 
+/* About-page headshot: neutral duotone, floated alongside the intro prose.
+   Higher specificity than `.project-content img` so the float/margins win. */
+.project-content img.headshot {
+  @apply float-right ml-6 mb-4 mt-1 w-40 sm:w-52 rounded-2xl border border-gray-200 shadow-sm;
+  filter: url(#duotone);
+}
+
 .project-content video {
   @apply rounded-2xl my-8 mx-auto shadow-sm border border-gray-100;
 }
