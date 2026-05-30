@@ -1,17 +1,17 @@
 ---
 title: "bertrand-dr"
 slug: bertrand-dr
-summary: "BERTRAND-DR - discriminative re-ranker for text-to-SQL."
+summary: "BERTRAND-DR - a published discriminative re-ranker that improves neural text-to-SQL parsers, reaching top-4 on the Spider benchmark."
 status: archived
-category: tool
+category: research
 year_started: "2020"
-tags: ["text2sql", "nlp", "reranking", "research"]
-repo_url: "https://github.com/amolk/Bertrand-DR"
+tags: ["text-to-SQL", "NLP", "machine learning", "research"]
+paper_url: "https://arxiv.org/abs/2002.00557"
 is_public: true
 ranges: ["2019-12-30:2020-01-29"]
 featured: false
 ---
 
-Bertrand-DR (Bertrand Discriminative Re-ranker) was a 2020 research effort: a discriminator-based re-ranking approach for improving neural text-to-SQL parsers on the [Spider](https://yale-lily.github.io/spider) benchmark. Rather than generating SQL directly, the method trains a separate discriminator to score candidate parses from a base model and re-rank them, lifting accuracy on hard queries.
+Bertrand-DR (Bertrand Discriminative Re-ranker) is a 2020 research paper on improving neural text-to-SQL parsers for the [Spider](https://yale-lily.github.io/spider) benchmark. Rather than generating SQL directly, the method trains a schema-agnostic BERT classifier to score and re-rank the candidate parses in a base model's beam output - recovering the cases where the correct query is in the beam but not at the top - and analyzes how the generator and re-ranker complement each other across query-hardness levels.
 
-Honest caveat: this code repository never landed - only a README placeholder. The actual research artifact (method, results, write-up) lives in the companion bertrand-paper repo, with supporting tooling in text2sql-utils. The portfolio value here is in the paper, not the code.
+Co-authored at Got It AI R&D, the paper reached a top-4 score on the Spider leaderboard at the time of publication and is published on [arXiv](https://arxiv.org/abs/2002.00557). Supporting preprocessing and log-parsing tooling lives in [text2sql-utils](/projects/text2sql-utils/).

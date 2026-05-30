@@ -34,6 +34,7 @@ export const Project = defineDocumentType(() => ({
     parent: { type: 'string', required: false },
     subprojects: { type: 'list', of: { type: 'string' }, default: [] },
     hide_from_index: { type: 'boolean', default: false },
+    is_private: { type: 'boolean', default: false },
     featured: { type: 'boolean', default: false },
     order: { type: 'number', required: false },
   },

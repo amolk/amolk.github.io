@@ -1,17 +1,17 @@
 ---
 title: "playbooks-lm"
 slug: playbooks-lm
-summary: "Subproject of [[playbooks]]: fine-tune a small open-weight model (Qwen-3-4B / Gemma) to compile and interpret Playbooks programs locally."
+summary: "Subproject of Playbooks: fine-tune a small open-weight model (Qwen-3-4B / Gemma) to compile and interpret Playbooks programs locally."
 status: paused
 category: shipped
 year_started: "2025"
-tags: ["playbooks", "fine-tuning", "llm", "qwen", "sagemaker"]
+tags: ["LLM", "machine learning", "developer tools", "research"]
 repo_url: "https://github.com/playbooks-ai/playbooks-lm.git"
 is_public: false
 ranges: ["2025-06-29:2025-08-14"]
 featured: false
 ---
 
-A subproject of Playbooks: an end-to-end pipeline that fine-tunes a small open-weight model on real Playbooks compilation and interpretation traces, then ships it as a locally-runnable Ollama model so users can run Playbooks programs without paying frontier-model token costs. Both Qwen-3-4B and Gemma training paths exist.
+A subproject of Playbooks: an end-to-end pipeline that fine-tunes a small open-weight model on real Playbooks compilation and interpretation traces, then ships it as a locally-runnable Ollama model so users can run Playbooks programs locally without frontier-model API calls. Both Qwen-3-4B and Gemma training paths exist.
 
-The full vertical is in the repo: extract traces from LangFuse, curate prompt/response pairs with dedup, quality scoring, ChatML formatting, and stratified splits; LoRA-fine-tune on AWS SageMaker (ml.g5.xlarge, single GPU) via Docker; convert the adapter to GGUF; serve through Ollama. Configured so Playbooks can point at the local model for the hot interpreter path while keeping a frontier model for the cold compilation path - the right economic shape for an LLM-program interpreter. Experimental, paused alongside the main Playbooks project.
+The full vertical is in the repo: extract traces from LangFuse, curate prompt/response pairs with dedup, quality scoring, ChatML formatting, and stratified splits; LoRA-fine-tune on AWS SageMaker (ml.g5.xlarge, single GPU) via Docker; convert the adapter to GGUF; serve through Ollama. Configured so Playbooks can point at the local model for the hot interpreter path while keeping a frontier model for the cold compilation path. Experimental, paused alongside the main Playbooks project.

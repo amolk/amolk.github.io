@@ -22,7 +22,7 @@ export default function ProjectCard({
           <h3 className="font-serif text-xl font-medium group-hover:underline underline-offset-4">{project.title}</h3>
           <span className="text-xs text-gray-400 whitespace-nowrap font-light">{years}</span>
         </div>
-        <p className="text-sm text-gray-600 mb-4 leading-relaxed">{project.summary}</p>
+        <p className="text-sm text-gray-600 mb-4 leading-tight">{project.summary}</p>
         <div className="flex flex-wrap gap-1.5">
           <span className="text-xs px-2.5 py-0.5 rounded-full bg-gray-100 text-gray-600 capitalize">{project.status}</span>
           {project.tags.slice(0, 3).map((t) => (

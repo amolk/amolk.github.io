@@ -5,7 +5,7 @@ summary: "Edufied.com Rails app - VideoReadr."
 status: archived
 category: older
 year_started: "2013"
-tags: ["rails", "edtech", "video"]
+tags: ["edtech", "video", "product", "web"]
 repo_url: "https://github.com/amolk/VideoReadr"
 is_public: false
 ranges: ["2010-04-01:2010-10-15", "2013-01-28:2013-01-29"]
@@ -14,4 +14,4 @@ featured: false
 
 A Rails 3.2 edtech app from 2013, shipped under the Edufied.com brand. The core idea was annotating videos with timestamped paragraphs for educational use - a real product surface rather than a scaffold, with versioned content, multi-tier privacy, an admin UI, and Facebook OAuth login.
 
-The `Envideo` model carried paragraphs, privacy levels (`community / public / unlisted / private`), slugs, and an Infusionsoft id; auth was Devise + Warden + Omniauth + CanCan, with `vestal_versions` for content versioning. MySQL backend, Capistrano deploys, Haml + Formtastic + jQuery on the front end, RSpec + Cucumber for tests. One of the more substantive Rails-era projects in this portfolio - and it consumed the author's own `cache-with-yuicompressor` gem for asset compression.
+The `Envideo` model carried paragraphs, privacy levels (`community / public / unlisted / private`), and slugs; auth was Devise + Warden + Omniauth + CanCan, with `vestal_versions` for content versioning. MySQL backend, Capistrano deploys, Haml + Formtastic + jQuery on the front end, RSpec + Cucumber for tests. One of the more substantive Rails-era projects in this portfolio - and it consumed the author's own `cache-with-yuicompressor` gem for asset compression.

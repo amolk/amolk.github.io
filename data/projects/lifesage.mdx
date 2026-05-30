@@ -5,13 +5,14 @@ summary: "AI life-coaching product (paused) - Rails + Hotwire chat app with prog
 status: paused
 category: startup
 year_started: "2023"
-tags: ["rails", "hotwire", "viewcomponent", "auth0", "devise"]
+tags: ["agentic AI", "SaaS", "product", "web", "wellness"]
 repo_url: "https://github.com/LifeSage/LifeSage"
 is_public: false
+image: "/images/projects/lifesage/hero.png"
 ranges: ["2023-07-11:2023-12-22"]
 featured: false
 ---
 
-LifeSage was a venture to build an AI life-coaching product, a chat app where a "Sage" persona held long-running coaching conversations with a user. It reached alpha-1 - deployed at lifesage.ai on Render, LLC formed, analytics and IAP groundwork in place - before being paused. The Rails 7 + Hotwire stack carried disciplined fundamentals: ViewComponent, RSpec, Devise + Auth0, Tailwind/Haml templates, and a Person-centric domain where users and sages were both `Person` records linked through conversations and messages.
+LifeSage was a venture to build an AI life-coaching product, a chat app where a "Sage" persona held long-running coaching conversations with a user. It reached alpha-1 - deployed at lifesage.ai on Render, with analytics groundwork in place - before being paused. The Rails 7 + Hotwire stack carried disciplined fundamentals: ViewComponent, RSpec, Devise + Auth0, Tailwind/Haml templates, and a Person-centric domain where users and sages were both `Person` records linked through conversations and messages.
 
-The more interesting part was the memory architecture. A family of `Derivative*` models captured asynchronously-computed summaries of conversations and person profiles, and every LLM call logged its token usage. That progressive-compaction approach - compressing long histories into retrievable artifacts - turned out to prefigure ideas I came back to years later in agent-callstack. Alpha-2 plans (vector-DB long-term memory, dynamic summary retrieval) were scoped but not shipped.
+The more interesting part was the memory architecture. A family of `Derivative*` models captured asynchronously-computed summaries of conversations and person profiles, and every LLM call logged its token usage. That progressive-compaction approach - compressing long histories into retrievable artifacts - turned out to prefigure ideas I came back to years later in callstack. Alpha-2 plans (vector-DB long-term memory, dynamic summary retrieval) were scoped but not shipped.

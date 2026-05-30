@@ -5,12 +5,12 @@ summary: "Investigation framework for AI-assisted Medicaid fraud detection acros
 status: exploration
 category: research
 year_started: "2026"
-tags: ["fraud-detection", "healthcare", "data", "investigation", "exploration"]
+tags: ["fraud detection", "healthcare", "data engineering", "research"]
 is_public: false
 ranges: ["2026-02-21:2026-02-21"]
 featured: false
 ---
 
-Real-world fraud investigation is gated less by modeling sophistication than by knowing which dataset answers which question. This project maps the public CMS and federal healthcare data landscape to concrete Medicaid fraud hypotheses, working catalog-first before any pipeline build-out. The current artifact is a tiered inventory of dozens of dataset categories spanning tens of millions of provider, payment, and prescription records, with each dataset annotated by its fraud applications - identity verification, ownership-network analysis, dual-billing detection, prescribing-pattern analysis - and tied back to a roster of named investigations.
+Real-world fraud investigation is gated less by modeling sophistication than by knowing which dataset answers which question. This project maps the public CMS and federal healthcare data landscape to concrete Medicaid fraud hypotheses, working catalog-first before any pipeline build-out. The current artifact is a tiered inventory of dozens of dataset categories spanning tens of millions of provider, payment, and prescription records, with each dataset annotated by its fraud applications - identity verification, ownership-network analysis, dual-billing detection, prescribing-pattern analysis - and tied back to a set of investigation hypotheses.
 
 The methodology emphasizes cross-dataset linkage: EIN clusters across enrollment files, authorized-official networks tracing shared individuals across shell entities, NPI deactivation timelines correlated with billing spikes. Each catalog entry documents file path, size, row and column counts, key join columns, and which specific investigation it strengthens, giving a phased load plan (foundation tier first, analytical layers second, on-demand specifics last) once the pipeline work begins. Domain-deep, exploratory, framing-to-be-decided between open methodology writeup and applied work.

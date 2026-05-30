@@ -48,14 +48,14 @@ export default function About() {
         at <strong>Microsoft (2001–2008)</strong> on NetDocs, InfoPath, the Office Forms
         platform, OneNote, and Windows Live - eight US patents come from that era. A
         stretch of co-founder and CTO roles came next: <strong>Aflatune</strong> (2008–2010, India&apos;s
-        first streaming music service, acquired by Dhingana),{' '}
+        first streaming music service, later acquired),{' '}
         <strong>Creator Republic</strong> (2010–2011, KingOfTheWeb - a &ldquo;YouTube with
-        a winner&rdquo; online reality game; acquired by uZoom),{' '}
+        a winner&rdquo; online reality game; later acquired),{' '}
         <strong>Edufied</strong> (2011–2013, an ed-tech platform whose products included{' '}
         <Link href="/projects/ragafied/">Ragafied</Link> and{' '}
         <Link href="/projects/videoreadr/">VideoReadr</Link>), and{' '}
         <strong>OfficeSpace.com</strong> (2013–2017, CTO of the commercial-real-estate
-        B2B platform serving 100K+ business users; acquired by Biproxy). Then five years
+        B2B platform serving 100K+ business users; later acquired). Then five years
         at <strong>Got It AI (2019–2024)</strong> as <em>Co-founder, Chief Scientist, and
         CTO</em> - leading R&amp;D and product on AutoRAG, TruthChecker (adopted by
         NVIDIA), AutoFlows, and the patented autonomous conversational AI system, with

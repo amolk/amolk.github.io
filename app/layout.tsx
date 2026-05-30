@@ -30,6 +30,15 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={sourceSerifPro.variable}>
+      <head>
+        {/* Body (Source Sans Pro) + code (Source Code Pro) fonts, matching i3ai.org/htcc */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700"
+          rel="stylesheet"
+        />
+      </head>
       <body className="font-sans relative min-h-screen flex flex-col">
         <AnimatedBackground />
         <TopNav />

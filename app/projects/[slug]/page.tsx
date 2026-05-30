@@ -1,12 +1,13 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import Image from 'next/image';
 import { allProjects } from 'contentlayer/generated';
 import { getMDXComponent } from 'next-contentlayer2/hooks';
 import ProjectLinks from '@/components/ProjectLinks';
+import ZoomableImage from '@/components/ZoomableImage';
+import { tagSlug } from '@/lib/tags';
 
 export async function generateStaticParams() {
-  return allProjects.map((p) => ({ slug: p.slug }));
+  return allProjects.filter((p) => !p.is_private).map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
@@ -28,7 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const project = allProjects.find((p) => p.slug === slug);
-  if (!project) notFound();
+  if (!project || project.is_private) notFound();
 
   const MDX = getMDXComponent(project.body.code);
   const years = project.year_started + (project.year_ended && project.year_ended !== project.year_started ? `–${project.year_ended}` : '');
@@ -50,12 +51,12 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           </div>
         )}
         <h1 className="font-serif text-4xl md:text-5xl font-medium tracking-tight mb-3">{project.title}</h1>
-        <p className="text-xl text-gray-500 font-light mb-6 leading-relaxed">{project.summary}</p>
+        <p className="text-xl text-gray-500 font-light mb-6 leading-tight">{project.summary}</p>
         <div className="flex flex-wrap gap-2 text-xs mb-6">
           <span className="px-2.5 py-0.5 rounded-full bg-gray-100 text-gray-600 capitalize">{project.status}</span>
           <span className="px-2.5 py-0.5 rounded-full bg-gray-100 text-gray-600">{years}</span>
           {project.tags.map((t) => (
-            <span key={t} className="px-2.5 py-0.5 rounded-full bg-gray-100 text-gray-600">{t}</span>
+            <Link key={t} href={`/tags/${tagSlug(t)}/`} className="px-2.5 py-0.5 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 hover:text-black transition-colors">{t}</Link>
           ))}
         </div>
         <ProjectLinks project={project} />
@@ -63,7 +64,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
       {project.image && (
         <div className="mb-10">
-          <Image
+          <ZoomableImage
             src={project.image}
             alt={`${project.title} screenshot`}
             width={1600}
@@ -101,7 +102,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                     {c.year_started}{c.year_ended && c.year_ended !== c.year_started ? `–${c.year_ended}` : ''}
                   </span>
                 </div>
-                <p className="text-sm text-gray-600 leading-relaxed">{c.summary}</p>
+                <p className="text-sm text-gray-600 leading-tight">{c.summary}</p>
               </Link>
             ))}
           </div>
@@ -111,7 +112,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       {project.images && project.images.length > 0 && (
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4">
           {project.images.map((src) => (
-            <Image
+            <ZoomableImage
               key={src}
               src={src}
               alt={`${project.title} screenshot`}

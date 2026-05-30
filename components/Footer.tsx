@@ -18,7 +18,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           <div className="space-y-4">
             <h3 className="text-xl font-semibold font-serif mb-4">Amol Kelkar</h3>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-400 leading-tight">
               AI systems, agent infrastructure, semantic programming, consciousness research.
             </p>
           </div>

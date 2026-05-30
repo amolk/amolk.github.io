@@ -119,27 +119,24 @@ export default function Timeline({ projects }: { projects: Project[] }) {
         {rows.map(({ p, ranges }) => {
           const color = STATUS_COLORS[p.status] || 'bg-gray-500';
           return (
-            <div
+            <Link
               key={p.slug}
+              href={p.url}
               className="flex items-center group transition-colors hover:bg-black/[0.05]"
               style={{ height: ROW_H }}
+              title={p.summary}
             >
-              <Link
-                href={p.url}
-                className="w-44 shrink-0 pr-3 text-[11px] leading-none truncate text-gray-600 group-hover:text-black group-hover:font-medium"
-                title={p.summary}
-              >
+              <span className="w-44 shrink-0 pr-3 text-[11px] leading-none truncate text-gray-600 group-hover:text-black group-hover:font-medium">
                 {p.title}
-              </Link>
+              </span>
               <div className="flex-1 relative h-full">
                 {ranges.map((r, i) => {
                   const left = pct(r.start.getTime());
                   const widthRaw = ((r.end.getTime() - r.start.getTime() + DAY) / spanMs) * 100;
                   const width = Math.max(widthRaw, 0.4); // floor so single-day shows
                   return (
-                    <Link
+                    <span
                       key={i}
-                      href={p.url}
                       className={`absolute ${color} rounded-[2px] opacity-80 group-hover:opacity-100 ring-0 group-hover:ring-1 group-hover:ring-black/20 transition-all`}
                       style={{ left: `${left}%`, width: `${width}%`, top: 3, bottom: 3 }}
                       title={`${p.title} · ${fmt(r.start)}${r.end.getTime() !== r.start.getTime() ? ` – ${fmt(r.end)}` : ''} · ${STATUS_LABEL[p.status] || p.status}`}
@@ -147,7 +144,7 @@ export default function Timeline({ projects }: { projects: Project[] }) {
                   );
                 })}
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>

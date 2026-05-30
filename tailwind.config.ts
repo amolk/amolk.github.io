@@ -10,8 +10,12 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
+        // Headings: Source Serif 4 (self-hosted via next/font).
+        // Body + code: Source Sans Pro / Source Code Pro loaded via Google Fonts
+        // <link> in layout.tsx — clean stacks matching i3ai.org/htcc exactly.
         serif: ['var(--font-source-serif-pro)', 'Georgia', 'serif'],
-        sans: ['var(--font-source-serif-pro)', 'Georgia', 'serif'],
+        sans: ['"Source Sans Pro"', 'sans-serif'],
+        mono: ['"Source Code Pro"', 'ui-monospace', 'monospace'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

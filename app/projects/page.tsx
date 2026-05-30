@@ -18,7 +18,8 @@ const CATEGORIES: { key: string; label: string; blurb?: string }[] = [
 ];
 
 export default function ProjectsIndex() {
-  const bySlug = new Map(allProjects.map((p) => [p.slug, p]));
+  const visible = allProjects.filter((p) => !p.is_private);
+  const bySlug = new Map(visible.map((p) => [p.slug, p]));
   const isHidden = (p?: (typeof allProjects)[number]) => !!p?.hide_from_index;
   // A project gets its own card if it isn't hidden and is either top-level
   // or has a hidden parent (so day-job subprojects surface as standalone cards).
@@ -30,7 +31,7 @@ export default function ProjectsIndex() {
 
   const groups = CATEGORIES.map(({ key, label, blurb }) => ({
     key, label, blurb,
-    projects: allProjects
+    projects: visible
       .filter((p) => isCard(p) && p.category === key)
       .sort((a, b) => (b.year_started ?? '').localeCompare(a.year_started ?? '')),
   })).filter((g) => g.projects.length > 0);
@@ -39,12 +40,12 @@ export default function ProjectsIndex() {
     <div className="max-w-6xl mx-auto px-8 pt-24 pb-16">
       <header className="mb-12">
         <h1 className="font-serif text-4xl md:text-5xl font-medium tracking-tight mb-3">Projects</h1>
-        <p className="text-gray-500 text-lg font-light">{allProjects.length} projects total - across product, research, and tooling.</p>
+        <p className="text-gray-500 text-lg font-light">{visible.length} projects total - across product, research, and tooling.</p>
       </header>
 
       {/* Timeline */}
       <section id="timeline" className="mb-20 scroll-mt-24">
-        <Timeline projects={allProjects} />
+        <Timeline projects={visible} />
       </section>
 
       {groups.map((g) => (

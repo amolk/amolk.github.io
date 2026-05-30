@@ -4,7 +4,7 @@ import ProjectCard from '@/components/ProjectCard';
 
 export default function Home() {
   const featured = allProjects
-    .filter((p) => p.featured)
+    .filter((p) => p.featured && !p.is_private)
     .sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
 
   return (
@@ -15,7 +15,7 @@ export default function Home() {
           <h1 className="font-serif text-5xl md:text-7xl font-light leading-tight text-balance">
             AI systems, agent infrastructure, and the occasional theory of consciousness.
           </h1>
-          <p className="text-xl md:text-2xl text-gray-500 font-light max-w-3xl leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-500 font-light max-w-3xl leading-tight">
             Enterprise AI Architect at Qualtrics. I build things I can&apos;t stop
             thinking about - some have grown into companies, some into papers, most
             live right here. Lately, coding agents let me build at 1000x my former

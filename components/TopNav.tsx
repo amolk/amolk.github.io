@@ -19,10 +19,13 @@ export default function TopNav() {
   const isActive = (href: string) =>
     href === '/' ? pathname === '/' : pathname.startsWith(href);
 
+  // Keep the nav fully visible on the home page; mouse-distance fade applies elsewhere.
+  const effectiveOpacity = pathname === '/' ? 1 : opacity;
+
   return (
     <div
       ref={navRef}
-      style={{ opacity }}
+      style={{ opacity: effectiveOpacity }}
       className="fixed top-0 right-0 z-50 bg-white bg-opacity-50 px-8 py-3 w-full transition-opacity duration-100 ease-out backdrop-brightness-200 pointer-events-none"
     >
       <nav className="flex justify-between items-center font-light max-w-6xl mx-auto">

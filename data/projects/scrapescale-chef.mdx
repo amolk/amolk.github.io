@@ -5,7 +5,7 @@ summary: "Chef cookbook + knife-solo runner that provisions the scrapescale scra
 status: archived
 category: older
 year_started: "2019"
-tags: ["chef", "infra-as-code", "scrapyd", "aws"]
+tags: ["data engineering", "developer tools", "infrastructure"]
 repo_url: "https://github.com/amolk/scrapescale_chef"
 is_public: false
 ranges: ["2018-06-09:2018-06-09", "2019-07-26:2019-07-29"]
@@ -14,4 +14,4 @@ featured: false
 
 Infra-as-code companion to the scrapescale spider fleet - so the production scraper host could be rebuilt from a clean EC2 image in one command, rather than being a snowflake server nobody dared touch. Uses Chef with `knife-solo` (Ruby) to bootstrap a fresh node into a working scrapyd worker: SSH in, copy cookbooks, run chef, configure the proxy in the shell.
 
-Single-host setup, one cookbook, one target node defined in YAML - useful glue rather than a piece of architecture worth a deep dive on its own. Included here mainly to show the scrapescale side of the CRE stack was reproducibly provisioned, not hand-built.
+Single-host setup - one cookbook, one target node defined in YAML - so the scrapescale side of the CRE stack was reproducibly provisioned rather than a hand-built snowflake.
