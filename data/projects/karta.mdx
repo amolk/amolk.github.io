@@ -1,7 +1,7 @@
 ---
 title: "karta"
 slug: karta
-summary: "Multi-agent orchestration layer on top of Claude Code and OpenCode - now ships as a monorepo with a Rails control-plane (`karta-web`) alongside the Python runtime (`karta-python`)."
+summary: "A Managed Agent Harness Platform - Heroku, but for harness applications. A harness-native Python data plane (`karta-python`) in the request path, paired with a Rails control plane (`karta-web`) for identity, keys, and audit."
 status: active
 category: flagship
 year_started: "2026"
@@ -13,8 +13,8 @@ featured: true
 order: 1
 ---
 
-Karta is a thin orchestration layer for production AI agents. It builds on top of existing coding agents - Claude Code, OpenCode - rather than reimplementing them, and adds the pieces real applications need: multi-user sessions, multi-agent routing, participant-aware messaging, cross-instance communication, HTTP deployment, multi-tenancy, policy enforcement, and lifecycle hooks. The bet is that the next generation of agentic apps will be assembled from harnesses that already exist, and what's missing is the surrounding control plane.
+Karta is a Managed Agent Harness Platform - Heroku, but for harness applications. An agent harness is the agent runtime itself - Claude Code, OpenCode, deepagents - and a harness application is just a folder that configures one, a `.claude/` directory and a `CLAUDE.md`. Karta runs and manages those applications rather than reimplementing agent capabilities, adding the pieces real products need around them: multi-user sessions, multi-agent routing, participant-aware messaging, HTTP deployment, multi-tenancy, policy enforcement, and lifecycle hooks. The bet is that the next generation of agentic apps will be assembled from harnesses that already exist, and what's missing is the platform around them.
 
-The runtime ships on PyPI as `karta-python` and pairs with `karta-web`, a Rails control plane handling identity, organizations, audit logs, and per-org API keys. The two halves are wired through a service-token channel so customer keys are validated centrally while agent execution stays in the runtime. It is the active flagship of the work - a monorepo with both halves under one roof.
+It ships as a monorepo split across two planes that deploy independently. The data plane, on PyPI as `karta-python`, sits in the request path - sandboxes, harnesses, sessions, gateway, instance manager, request-time budget enforcement. The control plane, `karta-web` in Rails, handles identity, organizations, per-org API keys, usage metering, and an immutable audit log. The two halves talk over a service-token channel so customer keys are validated centrally while agent execution stays in the runtime, closing the full self-serve loop from sign-up to metered agent execution. It is the active flagship of the work.
 
 Agent execution can run locally or on a managed cloud runtime, with each session isolated in its own microVM on AWS Bedrock AgentCore. Both paths sit behind a single execution-backend seam, so local development stays identical to production while the cloud path adds durable per-session workspaces, per-user credential isolation, and hosted MCP gateways. The full loop runs end to end: deploy a harness app, then chat with it from a product's own UI over streaming HTTP, with replies coming straight from the agent.
