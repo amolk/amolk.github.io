@@ -8,7 +8,7 @@ year_started: "2026"
 tags: ["agentic AI", "AI agents", "orchestration", "framework"]
 repo_url: "https://github.com/amolk/karta.git"
 is_public: true
-ranges: ["2026-02-12:2026-05-31"]
+ranges: ["2026-02-12:2026-06-01"]
 featured: true
 order: 1
 ---
@@ -17,4 +17,4 @@ Karta is a thin orchestration layer for production AI agents. It builds on top o
 
 The runtime ships on PyPI as `karta-python` and pairs with `karta-web`, a Rails control plane handling identity, organizations, audit logs, and per-org API keys. The two halves are wired through a service-token channel so customer keys are validated centrally while agent execution stays in the runtime. It is the active flagship of the work - a monorepo with both halves under one roof.
 
-Agent execution can run locally or on a managed cloud runtime, with each session isolated in its own microVM on AWS Bedrock AgentCore. Both paths sit behind a single execution-backend seam, so local development stays identical to production while the cloud path adds durable per-session workspaces, per-user credential isolation, and hosted MCP gateways.
+Agent execution can run locally or on a managed cloud runtime, with each session isolated in its own microVM on AWS Bedrock AgentCore. Both paths sit behind a single execution-backend seam, so local development stays identical to production while the cloud path adds durable per-session workspaces, per-user credential isolation, and hosted MCP gateways. The full loop runs end to end: deploy a harness app, then chat with it from a product's own UI over streaming HTTP, with replies coming straight from the agent.
