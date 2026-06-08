@@ -8,6 +8,7 @@ import { useMouseDistanceOpacity } from '@/lib/useMouseDistanceOpacity';
 const NAV = [
   { href: '/', label: 'Home' },
   { href: '/projects/', label: 'Projects' },
+  { href: '/publications/', label: 'Publications' },
   { href: '/about/', label: 'About' },
 ];
 

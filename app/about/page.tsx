@@ -1,20 +1,11 @@
 import Link from 'next/link';
 import { allProjects } from 'contentlayer/generated';
+import { publications as PUBLICATIONS } from '@/data/publications';
 
 export const metadata = {
   title: 'About',
   description: 'About Amol Kelkar - Enterprise AI Architect at Qualtrics, researcher, founder-engineer, builder of AI systems.',
 };
-
-const PUBLICATIONS = [
-  { title: 'Autonomous conversational AI system without any configuration', year: 2025, venue: 'US Patent 12,282,743', citations: 26, link: 'https://patents.google.com/patent/US20230274095A1/en' },
-  { title: 'Towards automatic evaluation of task-oriented dialogue flows', year: 2024, venue: 'arXiv:2411.10416', link: 'https://arxiv.org/abs/2411.10416' },
-  { title: 'KULCQ: An Unsupervised Keyword-based Utterance Level Clustering Quality Metric', year: 2024, venue: 'arXiv:2411.09853', link: 'https://arxiv.org/abs/2411.09853' },
-  { title: 'Cognitive Homeostatic Agents', year: 2021, venue: 'AAMAS 2021', citations: 5, link: 'https://aamas.csc.liv.ac.uk/Proceedings/aamas2021/pdfs/p12.pdf' },
-  { title: 'Bertrand-DR: Improving Text-to-SQL using a Discriminative Re-ranker', year: 2020, venue: 'arXiv:2002.00557', citations: 34, link: 'https://arxiv.org/abs/2002.00557' },
-  { title: 'Scaling self-organizing maps to model large cortical networks', year: 2004, venue: 'Neuroinformatics 2(3)', citations: 45 },
-  { title: 'Modeling large cortical networks with growing self-organizing maps', year: 2002, venue: 'Neurocomputing 44', citations: 33, link: 'https://nn.cs.utexas.edu/downloads/papers/bednar.cns01.pdf' },
-];
 
 export default function About() {
   const total = allProjects.length;
@@ -111,8 +102,7 @@ export default function About() {
         I&apos;ve always been fascinated by the substrate of biological intelligence and
         consciousness. What started in 1999 toward a PhD thesis I revisited during a
         3-year sabbatical (2017-2020) and have continued investigating through the
-        years. Not actively investigating right now while I focus on agentic AI
-        initiatives, but the computational neuroscience learnings continue to guide me.
+        years. The computational neuroscience learnings continue to guide me.
         The artifacts (<a href="https://aamas.csc.liv.ac.uk/Proceedings/aamas2021/pdfs/p12.pdf">Cognitive Homeostatic Agents</a>,{' '}
         the <Link href="/projects/homeostasis-publications/">homeostatic theory of consciousness</Link>,{' '}
         <Link href="/projects/pattern-machine/">Pattern Machine</Link>,{' '}
@@ -138,7 +128,7 @@ export default function About() {
 
       <h2>Selected publications and patents</h2>
       <ul>
-        {PUBLICATIONS.map((p) => (
+        {PUBLICATIONS.filter((p) => p.selected).map((p) => (
           <li key={p.title}>
             {p.link ? <a href={p.link}>{p.title}</a> : <span>{p.title}</span>}
             {' '}<span className="text-gray-500">- {p.venue}, {p.year}{p.citations ? `, ${p.citations} citations` : ''}</span>
@@ -146,11 +136,12 @@ export default function About() {
         ))}
       </ul>
       <p>
-        Full list on{' '}
+        See the full{' '}
+        <Link href="/publications/">list of publications and patents</Link>, or
+        browse on{' '}
         <a href="https://scholar.google.com/citations?user=qKZ2VRAAAAAJ&hl=en">
           Google Scholar
-        </a>{' '}
-        (~485 citations, h-index 12, i10-index 12).
+        </a>.
       </p>
 
       <h2>Education</h2>
