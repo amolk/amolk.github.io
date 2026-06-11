@@ -8,7 +8,7 @@ year_started: "2026"
 tags: ["agentic AI", "AI agents", "orchestration", "framework"]
 repo_url: "https://github.com/amolk/karta.git"
 is_public: true
-ranges: ["2026-02-12:2026-06-08"]
+ranges: ["2026-02-12:2026-06-10"]
 featured: true
 order: 1
 ---
@@ -19,4 +19,4 @@ It ships as a monorepo split across two planes that deploy independently. The da
 
 Agent execution can run locally or on a managed cloud runtime, with each session isolated in its own microVM on AWS Bedrock AgentCore. Both paths sit behind a single execution-backend seam, so local development stays identical to production while the cloud path adds durable per-session workspaces, per-user credential isolation, and hosted MCP gateways. That managed path now runs live in production, end to end: a product's API key drives an agent turn inside its own isolated microVM, and the work is metered and budget-capped as it runs — then the agent's replies stream back into the product's own UI over HTTP. Each user's workspace is durable: their files persist not just from one session to the next but across new deploys of the app, and concurrent sessions reconcile cleanly — so the per-user filesystem keeps building up while compute stays ephemeral and per-session.
 
-It now has a public face under its own brand: a landing page that walks the folder → `git push` → chat-widget story, a dedicated documentation site, and an early-access waitlist — now live at karta.sh, invite-only ahead of launch. That chat widget is a real drop-in: any product can embed a Karta-backed chat surface with a publishable key, in plain JavaScript or as a React component, with the agent's replies streaming straight into the page.
+It now has a public face under its own brand and is open to sign-ups at karta.sh: a landing page that walks the folder → `git push` → chat-widget story, and a dedicated documentation site. Getting an agent live takes one of three on-ramps. `git push karta main` deploys a folder straight from your machine — Karta hosts the git remote, and build progress streams back over the push itself, ending in the live agent URL. A browser flow creates and edits an agent with no terminal at all, including its `CLAUDE.md`, where every save becomes a new versioned release. Or a single `karta` CLI carries you from `init` through a local dev loop to a live URL. That chat widget is a real drop-in too: any product can embed a Karta-backed chat surface with a publishable key, in plain JavaScript or as a React component, with the agent's replies streaming straight into the page.
