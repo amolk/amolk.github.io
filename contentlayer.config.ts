@@ -21,6 +21,7 @@ export const Project = defineDocumentType(() => ({
     ranges: { type: 'list', of: { type: 'string' }, default: [] },
     tags: { type: 'list', of: { type: 'string' }, default: [] },
     repo_url: { type: 'string', required: false },
+    website_url: { type: 'string', required: false },
     demo_url: { type: 'string', required: false },
     paper_url: { type: 'string', required: false },
     pypi_url: { type: 'string', required: false },

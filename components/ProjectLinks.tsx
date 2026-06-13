@@ -1,5 +1,5 @@
 import { siGithub } from 'simple-icons';
-import { ExternalLink, FileText, Package, Store, Apple } from 'lucide-react';
+import { ExternalLink, FileText, Package, Store, Apple, Globe } from 'lucide-react';
 import type { Project } from 'contentlayer/generated';
 
 const GitHubIcon = ({ className }: { className?: string }) => (
@@ -22,6 +22,7 @@ export default function ProjectLinks({ project }: { project: Project }) {
     const label = path.split('/').slice(0, 2).join('/'); // owner/repo, even for deep tree URLs
     links.push({ href: project.repo_url, label, icon: <GitHubIcon className="w-4 h-4" /> });
   }
+  if (project.website_url) links.push({ href: project.website_url, label: 'Website', icon: <Globe className="w-4 h-4" /> });
   if (project.demo_url) links.push({ href: project.demo_url, label: 'Demo', icon: <ExternalLink className="w-4 h-4" /> });
   if (project.paper_url) links.push({ href: project.paper_url, label: 'Paper', icon: <FileText className="w-4 h-4" /> });
   if (project.pypi_url) links.push({ href: project.pypi_url, label: 'PyPI', icon: <Package className="w-4 h-4" /> });
