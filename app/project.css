@@ -25,19 +25,37 @@
   @apply font-serif;
 }
 
-.project-content h1 { @apply text-3xl font-bold tracking-tight mt-12 mb-6; }
-.project-content h2 { @apply text-2xl font-bold tracking-tight mt-10 mb-5; }
-.project-content h3 { @apply text-xl font-bold tracking-tight mt-8 mb-4; }
-.project-content h4 { @apply text-lg font-bold tracking-tight mt-8 mb-4; }
+.project-content h1 {
+  @apply text-3xl font-bold tracking-tight mt-12 mb-6;
+}
+.project-content h2 {
+  @apply text-2xl font-bold tracking-tight mt-10 mb-5;
+}
+.project-content h3 {
+  @apply text-xl font-bold tracking-tight mt-8 mb-4;
+}
+.project-content h4 {
+  @apply text-lg font-bold tracking-tight mt-8 mb-4;
+}
 
 .project-content ul,
-.project-content ol { @apply my-6 space-y-2; }
+.project-content ol {
+  @apply my-6 space-y-2;
+}
 
-.project-content li { @apply text-xl leading-tight list-inside; }
-.project-content ul li { @apply list-disc; }
-.project-content ol li { @apply list-decimal; }
+.project-content li {
+  @apply text-xl leading-tight list-inside;
+}
+.project-content ul li {
+  @apply list-disc;
+}
+.project-content ol li {
+  @apply list-decimal;
+}
 
-.project-content p { @apply text-xl leading-tight my-5; }
+.project-content p {
+  @apply text-xl leading-tight my-5;
+}
 
 .project-content a {
   @apply text-black font-medium hover:text-gray-600 transition-colors duration-300 underline underline-offset-4;
@@ -47,7 +65,9 @@
   @apply border-l-2 border-gray-300 pl-6 italic my-8 text-gray-500;
 }
 
-.project-content strong { @apply font-semibold text-gray-900; }
+.project-content strong {
+  @apply font-semibold text-gray-900;
+}
 
 .project-content img {
   @apply rounded-2xl my-8 mx-auto shadow-sm border border-gray-100;
@@ -56,7 +76,7 @@
 /* About-page headshot: neutral duotone, floated alongside the intro prose.
    Higher specificity than `.project-content img` so the float/margins win. */
 .project-content img.headshot {
-  @apply float-right ml-6 mb-4 mt-1 w-40 sm:w-52 rounded-2xl border border-gray-200 shadow-sm;
+  @apply float-right ml-6 mb-4 mt-[7.5rem] w-40 sm:w-52 rounded-2xl border border-gray-200 shadow-sm;
   filter: url(#duotone);
 }
 
