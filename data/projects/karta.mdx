@@ -9,13 +9,13 @@ tags: ["agentic AI", "AI agents", "orchestration", "framework"]
 repo_url: "https://github.com/amolk/karta.git"
 website_url: "https://karta.sh"
 is_public: true
-ranges: ["2026-02-12:2026-06-21"]
+ranges: ["2026-02-12:2026-06-22"]
 featured: true
 order: 1
 ---
 
 Karta runs your agents in production. It's a managed platform - Heroku, but for agent harness applications. A harness application is just a folder that configures an agent runtime like Claude Code or OpenCode: a `.claude/` directory and a `CLAUDE.md`. You `git push` that folder and Karta turns it into a live agent behind a stable URL - production-grade from the first push. The bet is that the next wave of AI products will be assembled from agent runtimes that already exist, and what's missing is the platform that runs them. Plenty of platforms can deploy a transactional bot; Karta specializes in long-running agents that accrete work product over time and build high-trust relationships with their users - the kind you'd think of as an AI employee, an AI tax consultant, or an AI life coach.
 
-Everything a real product needs is built in, so you don't have to assemble it yourself. Each user's session runs in its own isolated sandbox, with streaming responses, end-user sign-in, and hard spend caps from day one. Usage metering, bring-your-own-model, scoped API keys, signed webhooks, audit logs, and roles and permissions all come with the platform rather than as add-ons. And every agent speaks the same simple protocol - open a session, send a message, stream the reply - so any front end can talk to any agent the same way.
+Everything a real product needs is built in, so you don't have to assemble it yourself. You deploy one agent, and each user gets their own *karta* - a durable, private instance of that agent whose workspace and memory carry over from one session to the next, running in its own isolated sandbox - with streaming responses, end-user sign-in, and hard spend caps from day one. Usage metering, bring-your-own-model, scoped API keys, signed webhooks, audit logs, and roles and permissions all come with the platform rather than as add-ons. And every agent speaks the same simple protocol - open a session, send a message, stream the reply - so any front end can talk to any agent the same way.
 
 Getting an agent live takes one of three on-ramps. `git push` deploys a folder straight from your machine, streaming the build back to your terminal and ending at the live agent URL. A browser flow lets you create and edit an agent - including its `CLAUDE.md` - with no terminal at all, where every save becomes a new versioned release. Or the `karta` CLI carries you from `karta setup` - which scans your repo, where a single repo can hold many agents - through a local dev loop to a live URL. And any product can drop in a Karta-backed chat widget - plain JavaScript or a React component - to put the agent in front of its own users, with replies streaming straight into the page.
