@@ -67,7 +67,6 @@ export default function About() {
           the Decision Intelligence formalization
         </Link>
         . I love to build, and there&apos;s a lot of it these days -{" "}
-        <Link href="/projects/karta/">Karta</Link>,{" "}
         <Link href="/projects/callstack/">the agent call stack</Link>,{" "}
         <Link href="/projects/carapace-intelligence/">
           Carapace Intelligence
@@ -146,8 +145,7 @@ export default function About() {
       <p>
         With coding AI agents I&apos;m now building at 1000x my former pace.
         Rapidly building large-scale projects, loving the process. Right now
-        that means <Link href="/projects/karta/">Karta</Link>,{" "}
-        <Link href="/projects/callstack/">callstack</Link> +{" "}
+        that means <Link href="/projects/callstack/">callstack</Link> +{" "}
         <Link href="/projects/unwind/">unwind</Link>,{" "}
         <Link href="/projects/carapace-intelligence/">
           Carapace Intelligence

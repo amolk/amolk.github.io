@@ -22,13 +22,6 @@ export default function Home() {
             beautiful things and insights. Lately, coding agents let me build at
             1000x my former pace, so there&apos;s a lot on my mind:{" "}
             <Link
-              href="/projects/karta/"
-              className="underline underline-offset-4 hover:text-black"
-            >
-              Karta
-            </Link>
-            ,{" "}
-            <Link
               href="/projects/callstack/"
               className="underline underline-offset-4 hover:text-black"
             >

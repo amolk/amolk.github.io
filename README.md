@@ -24,16 +24,16 @@ Each project is one MDX file in `data/projects/<slug>.mdx` with frontmatter:
 
 ```yaml
 ---
-title: Karta
-slug: karta
+title: Example Project
+slug: example-project
 summary: One-line tagline.
 status: active        # active | shipped | paused | archived | exploration
 category: flagship    # flagship | shipped | research | startup | tool | older
 year_started: 2025
 year_ended: 2026
 tags: [rails, multi-tenant, ai-agents]
-repo_url: https://github.com/amolk/karta
-demo_url: https://karta.example.com
+repo_url: https://github.com/amolk/example-project
+demo_url: https://example.com
 featured: true
 order: 1
 ---
