@@ -1,0 +1,22 @@
+---
+title: "Agent Applications"
+slug: agentapplication
+summary: "A working paper naming and defining a category of software that already exists - products built around persistent, tool-using agents that keep a durable workspace and accumulate real work over time. Published openly for collaboration."
+status: active
+category: research
+year_started: "2026"
+tags: ["agentic AI", "AI agents", "software architecture", "standards", "paper"]
+repo_url: "https://github.com/agentapplication/agentapplication"
+website_url: "https://agentapplication.io"
+is_public: true
+ranges: ["2026-08-02:2026-08-06"]
+featured: false
+---
+
+ChatGPT, Claude, Gemini, Lovable, Replit Agent, and Manus look like different products, but they share a shape: an agent returns to work it left unfinished, uses tools, and leaves behind results that outlive the conversation. Terms like chatbot, copilot, and agent harness each describe a part. This paper names the whole thing an **Agent Application** - a software system whose primary unit of execution is one or more persistent, tool-using agents operating in durable workspaces to produce or maintain durable artifacts - and works out the architecture that follows from that definition.
+
+The argument starts from an analogy to 1994. The web had HTTP, HTML, and browsers before it had an application model; frameworks arrived and settled what people meant by a "web application." Agent developers now have the equivalent building blocks - the Model Context Protocol for tools, portable Agent Skills for instructions, sandboxed compute, and harnesses that run the agent loop - without the application model that turns them into an industry. One consequence the paper draws out: today's agent harnesses are early Agent Application frameworks, and the capabilities they still lack are a roadmap for the people building them.
+
+Much of the paper is about what changes when software stops being identical everywhere it runs. Each instance accumulates its own knowledge, artifacts, and local natural-language instructions, so a fleet diverges in program as well as state - which makes updates, provenance, evaluation, and portability harder than deploying a new version. The paper also argues that the boundary deciding what deserves its own instance is privacy rather than identity: an agent can read its whole workspace, so the workspace has to be drawn where mutual visibility is acceptable. Alongside the definition it maps which existing standards already cover parts of the stack and marks the interfaces - packaging and conformance, artifacts, workspace and lineage portability, delegated authority - where shared contracts would let independent systems interoperate.
+
+It is deliberately vendor-neutral and published as a working draft under an MIT license, with a companion overview, a minimal Hello World Agent Application, concept pages, and a plain-text edition for machines. Counterexamples, prior art, sharper definitions, and implementation experience are all welcome through the public repository.
