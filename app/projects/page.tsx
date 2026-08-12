@@ -11,8 +11,8 @@ export const metadata = {
 const CATEGORIES: { key: string; label: string; blurb?: string }[] = [
   {
     key: "flagship",
-    label: "Top of mind",
-    blurb: "Current focus, deepest work.",
+    label: "Flagship",
+    blurb: "The biggest, most ambitious work.",
   },
   { key: "shipped", label: "Shipped", blurb: "Products in the world." },
   {
