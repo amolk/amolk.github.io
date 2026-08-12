@@ -9,7 +9,7 @@ tags: ["agentic AI", "AI agents", "software architecture", "standards", "paper"]
 repo_url: "https://github.com/agentapplication/agentapplication"
 website_url: "https://agentapplication.io"
 is_public: true
-ranges: ["2026-08-02:2026-08-09"]
+ranges: ["2026-08-02:2026-08-11"]
 featured: true
 order: 1
 ---
@@ -21,5 +21,7 @@ The argument starts from an analogy to 1994. The web had HTTP, HTML, and browser
 The paper also names the practice it thinks this calls for. **Agent Application Programming** is the work of decomposing a use case across code, instructions, tools, agents, workflows, state, and policy - deciding what should be written as a deterministic program, what belongs in natural language the agent reads, and what has to be enforced as policy rather than requested.
 
 Much of the paper is about what changes when software stops being identical everywhere it runs. Each instance accumulates its own knowledge, artifacts, and local natural-language instructions, so a fleet diverges in program as well as state - which makes updates, provenance, evaluation, and portability harder than deploying a new version. The paper also argues that the boundary deciding what deserves its own instance is privacy rather than identity: an agent can read its whole workspace, so the workspace has to be drawn where mutual visibility is acceptable. Alongside the definition it maps which existing standards already cover parts of the stack and marks the interfaces - packaging and conformance, artifacts, workspace and lineage portability, delegated authority - where shared contracts would let independent systems interoperate.
+
+Rather than proposing a specification nobody is ready to implement, the paper states a **capability model**: what an agent project has to be able to express, what a platform has to be able to do with it, and then a direct comparison of how far each of today's agent harnesses already covers that list. The comparison is the more useful half of the argument, because it turns a category claim into something a framework author can check their own product against - and it is falsifiable now, where a normative contract would be waiting on two independent implementations that need the same boundary.
 
 It is deliberately vendor-neutral and published as a working draft under an MIT license, with a companion overview, a minimal Hello World Agent Application, concept pages, and a plain-text edition for machines. Counterexamples, prior art, sharper definitions, and implementation experience are all welcome through the public repository.
