@@ -1,7 +1,7 @@
 ---
 title: "Agent Applications"
 slug: agentapplication
-summary: "A working paper naming and defining a category of software that already exists - products built around persistent, tool-using agents that keep a durable workspace and accumulate real work over time. Published openly for collaboration."
+summary: "A vendor-neutral reference architecture for building and operating AI agent systems - the products built around persistent, tool-using agents that keep a durable workspace and accumulate real work over time. Published openly as a working draft, for collaboration."
 status: active
 category: flagship
 year_started: "2026"
@@ -9,12 +9,14 @@ tags: ["agentic AI", "AI agents", "software architecture", "standards", "paper"]
 repo_url: "https://github.com/agentapplication/agentapplication"
 website_url: "https://agentapplication.io"
 is_public: true
-ranges: ["2026-08-02:2026-08-11"]
+ranges: ["2026-08-02:2026-08-12"]
 featured: true
 order: 1
 ---
 
 ChatGPT, Claude, Gemini, Lovable, Replit Agent, and Manus look like different products, but they share a shape: an agent returns to work it left unfinished, uses tools, and leaves behind results that outlive the conversation. Terms like chatbot, copilot, and agent harness each describe a part. This paper names the whole thing an **Agent Application** - a software system whose primary unit of execution is one or more persistent, tool-using agents operating in durable workspaces to produce or maintain durable artifacts - and works out the architecture that follows from that definition.
+
+It is written as a reference architecture rather than an essay. It identifies the elements a system of this kind tends to have, assigns responsibilities to each, and follows an Agent Project through release, deployment, operation, and change, with drawn views of the system context, the layered stack, the logical structure, the release-and-instance lifecycle, and the trust boundaries. It is explicitly not a technical standard, a package format, or a reference implementation; a real system can use different names and technologies, and the useful questions are whether it handles these responsibilities, who owns each one, and which boundaries need to interoperate. Because it covers design, development, operation, security, and ecosystem roles, it names the readers it is for - architects, framework authors, platform operators, security teams, buyers, standards contributors - and offers each a shorter path through it.
 
 The argument starts from an analogy to 1994. The web had HTTP, HTML, and browsers before it had an application model; frameworks arrived and settled what people meant by a "web application." Agent developers now have the equivalent building blocks - the Model Context Protocol for tools, portable Agent Skills for instructions, sandboxed compute, and harnesses that run the agent loop - without the application model that turns them into an industry. One consequence the paper draws out: today's agent harnesses are early Agent Application frameworks, and the capabilities they still lack are a roadmap for the people building them. A framework covers the build side - application formats, conventions, tooling, evaluations, connections to outside systems, audit trails. A platform covers the operate side: it packages a tested project into an immutable release and runs long-lived instances from it.
 
