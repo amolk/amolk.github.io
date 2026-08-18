@@ -1,17 +1,37 @@
 ---
 title: "ragafied"
 slug: ragafied
-summary: "Ragafied - Indian classical music side project."
-status: archived
-category: older
+summary: "A browser-native call-and-response practice space for Hindustani classical singing: the teacher sings a phrase, the vocal drops out of the recording, and the accompaniment replays that same window for you to answer into."
+status: active
+category: tool
 year_started: "2013"
-tags: ["music", "edtech", "SaaS", "web", "prototype"]
+tags: ["music", "edtech", "audio", "signal processing", "web", "prototype"]
 repo_url: "https://github.com/amolk/ragafied"
 is_public: true
-ranges: ["2013-04-03:2013-05-14"]
+ranges: ["2013-04-03:2013-05-14", "2026-08-13:2026-08-17"]
 featured: false
 ---
 
-A Rails 3.2 SaaS scaffold from May 2013, generated from the `rails-stripe-membership-saas` recipe of `rails_apps_composer` and shaped around an Indian-classical-music lessons concept. Domain models - `Raga`, `Guru` (teacher with images), `Lesson`, `Audio` - were wired up alongside `User` / `AdminUser` / `Role` / `Ability`.
+Indian classical music, attempted twice, thirteen years apart and with no shared code.
 
-Stack reflects the era: Devise + CanCan for auth, Stripe for membership billing, Bootstrap/Sass + Haml + Simple Form on the front end, RSpec + Cucumber + FactoryGirl + Guard for testing. A snapshot of how a full Rails SaaS got bootstrapped in 2013.
+## The current build
+
+Hindustani vocal music is learned by imitation: the teacher sings a phrase, the student sings it back, and the cycle repeats until the shape is right. Ragafied turns an archival recording into exactly that loop. It separates the performance into vocal and accompaniment, proposes phrase boundaries across the whole recording, and then plays each phrase twice - once as the teacher sang it, and once with the vocal removed so the tanpura and harmonium hold the same window open for you to answer into. Do nothing and the phrase repeats. Tap to move on.
+
+Everything a singer needs to bend is independent of everything else. You can move the tonic to your own register without changing the tempo, slow a phrase down without lowering its pitch, and step through a graded tempo ladder as a passage becomes playable. Turn controls make the guru turn and the learner turn explicit rather than implicit, and loops can be dragged tighter around the two seconds that are actually giving you trouble.
+
+The visual feedback is deliberately not a score. The teacher's pitch contour is drawn in the swar notation of the raga; yours is drawn live against it as you sing; detector confidence controls opacity, so uncertainty looks uncertain and gaps stay gaps instead of being interpolated into invented notes. Octave displacement between a male recording and a female voice is folded away so the two contours overlay as one melodic shape. There is no composite grade, because a number would be read as a verdict long before it deserves to be one.
+
+## Listening in a real room
+
+The hard part is not drawing pitch - it is hearing the singer at all. A learner practicing without headphones is singing over their own speakers, and the accompaniment leaking back into the microphone is louder than they are.
+
+So the app measures the room instead of guessing at it. Because the accompaniment is generated in the browser, its exact signal is known ahead of the microphone, and the two share one clock. Before a session, the lesson's own accompaniment plays into the room with nobody singing; the app captures it, fits the speaker-and-room path from that capture, and then validates the fit against a second, held-out capture rather than trusting the first one. Neural pitch detection runs over the teacher's vocal ahead of time and in the browser for the learner, behind a short fixed lag that buys accuracy a purely causal detector cannot reach.
+
+That work produced the constraint the whole listening path is now built around: an offline lab can subtract the room very aggressively because a person listens to the result and judges it, but a neural pitch detector is far less forgiving. Subtract too deeply and you erase the voice's own harmonics, leaving narrow tonal residue that *looks* like pitch. The live path therefore stops short on purpose and leaves a measured fraction of the raw microphone in the analysis signal. Cancelling the room too well is its own failure mode.
+
+Around the practice space sit a timeline studio for authoring lessons from a recording, and a design system - calm instrument surfaces, a single accent colour used only as a signal - so the interface reads as an instrument rather than a dashboard.
+
+## The 2013 build
+
+The first attempt was a Rails 3.2 SaaS scaffold shaped around the same idea: `Raga`, `Guru`, `Lesson` and `Audio` models wired up alongside users and roles, with Devise and CanCan for auth, Bootstrap and Haml on the front end, and RSpec and Cucumber behind it. It is a fair snapshot of how a full Rails application got bootstrapped in 2013, and of an idea that had to wait for the browser to catch up with it.
