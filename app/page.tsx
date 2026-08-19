@@ -22,17 +22,10 @@ export default function Home() {
             beautiful things and insights. Lately, coding agents let me build at
             1000x my former pace, so there&apos;s a lot on my mind:{" "}
             <Link
-              href="/projects/callstack/"
+              href="/projects/agentapplication/"
               className="underline underline-offset-4 hover:text-black"
             >
-              the agent call stack
-            </Link>
-            ,{" "}
-            <Link
-              href="/projects/carapace-intelligence/"
-              className="underline underline-offset-4 hover:text-black"
-            >
-              Carapace Intelligence
+              Agent Applications
             </Link>
             , and more.
           </p>

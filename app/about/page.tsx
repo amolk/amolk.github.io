@@ -145,7 +145,8 @@ export default function About() {
       <p>
         With coding AI agents I&apos;m now building at 1000x my former pace.
         Rapidly building large-scale projects, loving the process. Right now
-        that means <Link href="/projects/callstack/">callstack</Link> +{" "}
+        that means <Link href="/projects/agentapplication/">Agent Applications</Link>
+        , <Link href="/projects/callstack/">callstack</Link> +{" "}
         <Link href="/projects/unwind/">unwind</Link>,{" "}
         <Link href="/projects/carapace-intelligence/">
           Carapace Intelligence
