@@ -8,7 +8,7 @@ year_started: "2013"
 tags: ["music", "edtech", "audio", "signal processing", "web", "prototype"]
 repo_url: "https://github.com/amolk/ragafied"
 is_public: true
-ranges: ["2013-04-03:2013-05-14", "2026-08-13:2026-08-17"]
+ranges: ["2013-04-03:2013-05-14", "2026-08-13:2026-08-18"]
 featured: false
 ---
 
@@ -31,6 +31,16 @@ So the app measures the room instead of guessing at it. Because the accompanimen
 That work produced the constraint the whole listening path is now built around: an offline lab can subtract the room very aggressively because a person listens to the result and judges it, but a neural pitch detector is far less forgiving. Subtract too deeply and you erase the voice's own harmonics, leaving narrow tonal residue that *looks* like pitch. The live path therefore stops short on purpose and leaves a measured fraction of the raw microphone in the analysis signal. Cancelling the room too well is its own failure mode.
 
 Around the practice space sit a timeline studio for authoring lessons from a recording, and a design system - calm instrument surfaces, a single accent colour used only as a signal - so the interface reads as an instrument rather than a dashboard.
+
+## A service, not a demo
+
+The practice space now sits inside a working product: an account, a private library of your own recordings, lessons authored from those recordings, and sharing that is explicit about who may open what.
+
+It has no permanent roles, and that is a deliberate choice. A student following someone else's lesson, a teacher turning a recording into one, and a singer uploading material purely for their own practice are three needs rather than three kinds of account. One account covers any of them, and the interface reshapes around the task at hand instead of asking anyone to declare an identity at signup - so a teacher can practice someone else's lesson and a student can build a private one.
+
+Access is a single policy, checked in a single place. Every page, audio file, pitch track and practice session passes the same gate, because an access rule reimplemented per surface is how a media library eventually leaks. Visibility and permission stay separate questions: a link is a way to find a lesson, never a way past a rule about who can open it. Recordings stay private until their owner publishes a lesson made from them; a lesson cannot be published while its content, its audio or its rights are unresolved; and nothing reaches the public catalogue before review, while direct links keep working while that review is pending - so approval gates discovery rather than access. Moderation is auditable by construction: each decision records who made it, why, and what changed. Operators can review public content and still cannot open anyone's private recordings.
+
+The deployment is described as infrastructure rather than assembled by hand - a deliberately small production footprint defined in code, and one image carrying the site, the practice space, the studio and the background workers.
 
 ## The 2013 build
 
