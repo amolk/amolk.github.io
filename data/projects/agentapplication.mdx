@@ -10,7 +10,7 @@ repo_url: "https://github.com/agentapplication/agentapplication"
 website_url: "https://agentapplication.io"
 is_public: true
 image: "/images/projects/agentapplication/stack.png"
-ranges: ["2026-08-02:2026-08-13", "2026-08-20:2026-08-21"]
+ranges: ["2026-08-02:2026-08-13", "2026-08-20:2026-08-22"]
 featured: true
 order: 1
 ---
@@ -27,4 +27,4 @@ Much of the paper is about what changes when software stops being identical ever
 
 Rather than proposing a specification nobody is ready to implement, the paper states a **capability model**: what an agent project has to be able to express, what a platform has to be able to do with it, and then a direct comparison of how far each of today's agent harnesses already covers that list. The comparison is the more useful half of the argument, because it turns a category claim into something a framework author can check their own product against - and it is falsifiable now, where a normative contract would be waiting on two independent implementations that need the same boundary.
 
-Vendor neutrality here is a constraint on the text, not just on where it is published: every product the paper names is one its author has no stake in. It comes with a Hello World you can actually run - a notebook agent you program, test locally, and deploy so each user gets their own instance, with the project files and an evaluation that checks both that its notes survive a restart and that two users never share a workspace. Alongside it are concept pages, drawn architecture views, and a plain-text edition for machines. The whole thing is a working draft under an MIT license, and counterexamples, prior art, sharper definitions, and implementation experience are all welcome through the public repository.
+Vendor neutrality here is a constraint on the text, not just on where it is published: every product the paper names is one its author has no stake in. It comes with a Hello World you can actually run - a notebook agent built as a real project in a real agent harness, with the committed files, a recipe, tools, and an evaluation that checks both that its notes survive a restart and that two users never share a workspace, so the mapping from the paper's elements onto working code is something you can inspect rather than take on trust. Alongside it are concept pages, drawn architecture views, and a plain-text edition for machines. The whole thing is a working draft under an MIT license, and the first thing it asks of a reader is small and checkable: take one product you know well and say whether the four defining properties make it an Agent Application, not one, or a boundary case - and if the definition failed you, name what you needed to tell the category apart from chatbots, workflows, and task runners. Counterexamples, prior art, sharper definitions, and implementation experience are all welcome through the public repository.
