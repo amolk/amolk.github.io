@@ -9,7 +9,7 @@ tags: ["music", "edtech", "audio", "signal processing", "web", "prototype"]
 repo_url: "https://github.com/amolk/ragafied"
 is_public: true
 image: "/images/projects/ragafied/hero.jpg"
-ranges: ["2013-04-03:2013-05-14", "2026-08-13:2026-08-19"]
+ranges: ["2013-04-03:2013-05-14", "2026-08-13:2026-08-23"]
 featured: false
 ---
 
@@ -22,6 +22,12 @@ Hindustani vocal music is learned by imitation: the teacher sings a phrase, the 
 Everything a singer needs to bend is independent of everything else. You can move the tonic to your own register without changing the tempo, slow a phrase down without lowering its pitch, and step through a graded tempo ladder as a passage becomes playable. Turn controls make the guru turn and the learner turn explicit rather than implicit, and loops can be dragged tighter around the two seconds that are actually giving you trouble.
 
 The visual feedback is deliberately not a score. The teacher's pitch contour is drawn in the swar notation of the raga; yours is drawn live against it as you sing; detector confidence controls opacity, so uncertainty looks uncertain and gaps stay gaps instead of being interpolated into invented notes. Octave displacement between a male recording and a female voice is folded away so the two contours overlay as one melodic shape. There is no composite grade, because a number would be read as a verdict long before it deserves to be one.
+
+## The motion between notes
+
+What a singer has to copy is not really a sequence of notes; it is the motion between them - the slide, the shake, the flick that carries one note into the next. The app reads that motion directly. It separates a phrase into sustained notes and the moving edges between them, and offers each edge a name from the vocabulary the tradition already uses: meend, gamak, khatka, andolan. A workbench draws the annotated contour, lists what it found as hypotheses rather than verdicts, and puts the detector's own thresholds under your hand, so a label is something you can argue with instead of something handed down.
+
+Reading the motion changes what slowing down should mean. Playing a phrase uniformly slower stretches the sustained notes you could already hear perfectly well, and leaves the ornament - which happens in a fraction of a second - still too fast to imitate. So the slow-down is uneven: the moving parts stretch far harder than the held ones, eased between the two so nothing lurches, and the pitch contour and the moving cursor follow that same uneven clock.
 
 ## Listening in a real room
 
