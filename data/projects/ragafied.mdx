@@ -9,7 +9,7 @@ tags: ["music", "edtech", "audio", "signal processing", "web", "prototype"]
 repo_url: "https://github.com/amolk/ragafied"
 is_public: true
 image: "/images/projects/ragafied/hero.jpg"
-ranges: ["2013-04-03:2013-05-14", "2026-08-13:2026-08-25"]
+ranges: ["2013-04-03:2013-05-14", "2026-08-13:2026-08-27"]
 featured: false
 ---
 
@@ -19,7 +19,7 @@ Indian classical music, attempted twice, thirteen years apart and with no shared
 
 Hindustani vocal music is learned by imitation: the teacher sings a phrase, the student sings it back, and the cycle repeats until the shape is right. Ragafied turns an archival recording into exactly that loop. It separates the performance into vocal and accompaniment, proposes phrase boundaries across the whole recording, and then plays each phrase twice - once as the teacher sang it, and once with the vocal removed so the tanpura and harmonium hold the same window open for you to answer into. Do nothing and the phrase repeats. Tap to move on.
 
-Everything a singer needs to bend is independent of everything else. You can move the tonic to your own register without changing the tempo, slow a phrase down without lowering its pitch, and step through a graded tempo ladder as a passage becomes playable. Turn controls make the guru turn and the learner turn explicit rather than implicit, and loops can be dragged tighter around the two seconds that are actually giving you trouble.
+Everything a singer needs to bend is independent of everything else. You can move the tonic to your own register without changing the tempo, slow a phrase down without lowering its pitch, and step through a graded tempo ladder as a passage becomes playable. Turn controls make the guru turn and the learner turn explicit rather than implicit, and loops can be dragged tighter around the two seconds that are actually giving you trouble. The habits of a practice hour - a count-in before the phrase, an audible cue where it starts and ends - are settings you make once and keep, not something to rebuild for every lesson.
 
 The visual feedback is deliberately not a score. The teacher's pitch contour is drawn in the swar notation of the raga; yours is drawn live against it as you sing; detector confidence controls opacity, so uncertainty looks uncertain and gaps stay gaps instead of being interpolated into invented notes. Octave displacement between a male recording and a female voice is folded away so the two contours overlay as one melodic shape. There is no composite grade, because a number would be read as a verdict long before it deserves to be one.
 
@@ -29,7 +29,7 @@ What a singer has to copy is not really a sequence of notes; it is the motion be
 
 Pitch alone cannot settle every one of those labels. A note slid into and a note struck again can trace almost the same line, and the difference is in the attack rather than in the melody. So each moment of the teacher's track now also carries a measure of how sharply the sound restarts there, taken over a far shorter window than pitch needs and scored relative to the phrase it sits in, so it means the same thing across recordings mastered decades apart.
 
-Reading the motion changes what slowing down should mean. Playing a phrase uniformly slower stretches the sustained notes you could already hear perfectly well, and leaves the ornament - which happens in a fraction of a second - still too fast to imitate. So the slow-down is uneven: the moving parts stretch far harder than the held ones, eased between the two so nothing lurches, and the pitch contour and the moving cursor follow that same uneven clock.
+Reading the motion changes what slowing down should mean. Playing a phrase uniformly slower stretches the sustained notes you could already hear perfectly well, and leaves the ornament - which happens in a fraction of a second - still too fast to imitate. So the slow-down is uneven: the moving parts stretch far harder than the held ones, eased between the two so nothing lurches, and the pitch contour and the moving cursor follow that same uneven clock. And when a single note is the thing that has to be got right, the sound can dwell on it, replaying that one moment while the cursor holds still, instead of moving on because the clock says so.
 
 ## Listening in a real room
 
@@ -38,6 +38,8 @@ The hard part is not drawing pitch - it is hearing the singer at all. A learner 
 So the app measures the room instead of guessing at it. Because the accompaniment is generated in the browser, its exact signal is known ahead of the microphone, and the two share one clock. Before a session, the lesson's own accompaniment plays into the room with nobody singing; the app captures it, fits the speaker-and-room path from that capture, and then validates the fit against a second, held-out capture rather than trusting the first one. Neural pitch detection runs over the teacher's vocal ahead of time and in the browser for the learner, behind a short fixed lag that buys accuracy a purely causal detector cannot reach.
 
 That work produced the constraint the whole listening path is now built around: an offline lab can subtract the room very aggressively because a person listens to the result and judges it, but a neural pitch detector is far less forgiving. Subtract too deeply and you erase the voice's own harmonics, leaving narrow tonal residue that *looks* like pitch. The live path therefore stops short on purpose and leaves a measured fraction of the raw microphone in the analysis signal. Cancelling the room too well is its own failure mode.
+
+The cancellation also reports on itself, rather than working silently and leaving you to guess. It says whether it has locked onto the room yet, how confident that lock is, and how much of the accompaniment it is actually removing - so a microphone that cannot hear you looks different from a room the app has not finished measuring.
 
 Around the practice space sit a timeline studio for authoring lessons from a recording, and a design system - calm instrument surfaces, a single accent colour used only as a signal - so the interface reads as an instrument rather than a dashboard.
 
