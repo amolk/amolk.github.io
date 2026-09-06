@@ -1,0 +1,33 @@
+---
+title: "The Living Indus"
+slug: the-living-indus
+summary: "A 3D narrative game about the people who made and sustained an Indus Valley city, built on a hard separation between documented evidence, reasonable reconstruction, and invention - so the world can be inhabited without pretending to be recovered."
+status: active
+category: research
+year_started: "2026"
+tags: ["game", "narrative", "3D", "archaeology", "history", "worldbuilding", "prototype"]
+is_public: false
+image: "/images/projects/the-living-indus/hero.jpg"
+images: ["/images/projects/the-living-indus/city-map.jpg", "/images/projects/the-living-indus/streets.jpg", "/images/projects/the-living-indus/trades.jpg"]
+ranges: ["2026-09-05:2026-09-05"]
+---
+
+Mohenjo-daro is one of the largest cities of the ancient world and almost nothing anyone said in it can be read back. The writing is undeciphered. There are no names, no laws, no myths, no recorded beliefs. What survives is architecture, drains, bricks, beads, seals, pots and figurines - the physical residue of ordinary work.
+
+The Living Indus is a first-person narrative game built inside that constraint rather than around it. The first story, *Where the River Turns*, follows Neri, a young member of a brickmaking household, after part of a newly built riverside structure collapses, injures her mother and destroys her family's standing. Tracing the chain of work and promises behind that failure takes her from Mohenjo-daro to Harappa and the coast and back, and turns an attempt to prove her family innocent into an education in how a city depends on people it barely acknowledges. Seven movements, roughly four years, around 2300 BCE. It is deliberately not a story about the civilization's collapse - the civilization is alive, and busy.
+
+## Evidence, reconstruction, invention
+
+Every claim the game makes is sorted into one of three categories, and the sort is enforced where it would be easiest to skip. The city is traced from published excavation maps rather than imagined: a working household at HR House XVII, another at House VIII, deliveries along a 94-metre stretch of First Street, a DK-G well court, the Great Bath and the L Area Pillared Hall. The in-game research map draws traced areas and source-derived alignments in green and authored connections in ochre dashes, so a player can see exactly where the evidence stops and the reconstruction starts. The world layout file keeps source-space points, scale readings and conversion parameters so the trace can be re-derived from the published figures, and a separate calibration record stores source image hashes and independent control-point checks. Placement uncertainties are labelled working estimates, not error bounds. Excavation-area codes are not presented as ancient district names.
+
+The fiction is labelled just as plainly. Names, dialogue, households, institutions and the flood at the story's climax are invented; the person-and-tiger motif on the seals inspires invented variants rather than a recovered tale; later South Asian traditions may inspire the writing without being projected backward as Harappan doctrine. An opening note says so, and an optional in-game notebook lets a player ask what any particular detail rests on.
+
+## Concept work as correction
+
+The visual development runs as a sequence of studies, each image kept beside the exact prompt that produced it and a written review of what it got wrong - and several rounds exist only because an earlier assumption was withdrawn. A colder-climate reading of the seasons was retracted and demoted to a seasonal alternative. Sari-like draping and a fitted blouse were rejected as character references because neither is supported for the period. Ornate earrings and decorative gold spacers were replaced with artifact-specific shapes carrying explicit date limits, on the reasoning that the Dancing Girl's sculpture material and pose establish neither the material of real jewelry nor the status of its wearer. The first study's uniformly beige wardrobe was superseded once the research made clear that working households had colour and ornament too - status shows in workmanship, quantity, space and access to goods, not in a rule that clay means poor and metal means rich.
+
+## What runs today
+
+Unity with URP, targeting browser and desktop from a single project. Two scenes exist: a marketplace study - a 44-metre street with twelve stalls, a courtyard loop and a brick-lined well - and a city framework covering roughly 1,900 by 1,700 metres, assembled at runtime from the layout file into 301 building and landmark volumes with distance-activated facade detail. The Great Bath tank is modelled at about 12 by 7 metres and 2.4 metres deep; the Pillared Hall as a 27.5-metre square with twenty piers in four rows. Both build and validate on Mac and on the web.
+
+It is a spatial framework, not a finished reconstruction. Residents, neighbourhood infill, sound, sailing and story interactions are ahead, and large parts of the map are deliberately empty because the excavations are. The concept art is exploratory work, not real-time graphics.
