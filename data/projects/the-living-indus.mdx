@@ -8,8 +8,8 @@ year_started: "2026"
 tags: ["game", "narrative", "3D", "archaeology", "history", "worldbuilding", "prototype"]
 is_public: false
 image: "/images/projects/the-living-indus/hero.jpg"
-images: ["/images/projects/the-living-indus/city-map.jpg", "/images/projects/the-living-indus/streets.jpg", "/images/projects/the-living-indus/trades.jpg"]
-ranges: ["2026-09-05:2026-09-05"]
+images: ["/images/projects/the-living-indus/household.jpg", "/images/projects/the-living-indus/city-map.jpg", "/images/projects/the-living-indus/streets.jpg", "/images/projects/the-living-indus/trades.jpg"]
+ranges: ["2026-09-05:2026-09-06"]
 ---
 
 Mohenjo-daro is one of the largest cities of the ancient world and almost nothing anyone said in it can be read back. The writing is undeciphered. There are no names, no laws, no myths, no recorded beliefs. What survives is architecture, drains, bricks, beads, seals, pots and figurines - the physical residue of ordinary work.
@@ -28,6 +28,10 @@ The visual development runs as a sequence of studies, each image kept beside the
 
 ## What runs today
 
-Unity with URP, targeting browser and desktop from a single project. Two scenes exist: a marketplace study - a 44-metre street with twelve stalls, a courtyard loop and a brick-lined well - and a city framework covering roughly 1,900 by 1,700 metres, assembled at runtime from the layout file into 301 building and landmark volumes with distance-activated facade detail. The Great Bath tank is modelled at about 12 by 7 metres and 2.4 metres deep; the Pillared Hall as a 27.5-metre square with twenty piers in four rows. Both build and validate on Mac and on the web.
+Unity with URP, targeting browser and desktop from a single project. Three things run. A marketplace study - a 44-metre street with twelve stalls, a courtyard loop and a brick-lined well. A city framework covering roughly 1,900 by 1,700 metres, assembled at runtime from the layout file into 301 building and landmark volumes with distance-activated facade detail; the Great Bath tank is modelled at about 12 by 7 metres and 2.4 metres deep, the Pillared Hall as a 27.5-metre square with twenty piers in four rows. And a furnished household - one room and its cooking court, modelled and lit with baked indirect light and a reflection probe, with two rigged adult residents who breathe, turn their heads, gesture and blink as they move between an idle and a conversational state.
 
-It is a spatial framework, not a finished reconstruction. Residents, neighbourhood infill, sound, sailing and story interactions are ahead, and large parts of the map are deliberately empty because the excavations are. The concept art is exploratory work, not real-time graphics.
+The household is where the visual standard gets decided, so it is measured rather than admired. A review build captures fixed camera views and gesture samples and reports wrist placement, eyelid motion, doorway traversal and collisions as data rather than as an impression. The same room has been rebuilt in a second engine to test whether a higher character standard is worth changing tools for, and the acceptance criteria - portrait detail at conversational distance, cloth that rests on the body, a hand that actually contacts the object it holds, frame times compared at matching resolution - were written down before that comparison runs rather than after it.
+
+Provenance is tracked through the art the same way it is through the map. Modern scanned surfaces and props are labelled visual proxies and carry their source, licence and file hashes. The residents are fictional adults: their garments are a reconstruction proposal, and their faces and grooming are artistic choices that establish nothing about how anyone actually looked.
+
+The city is a spatial framework, not a finished reconstruction. Neighbourhood infill, sound, sailing and story interactions are ahead, the residents so far live in the household study rather than in the streets, and large parts of the map are deliberately empty because the excavations are. The concept art is exploratory work, not real-time graphics.
