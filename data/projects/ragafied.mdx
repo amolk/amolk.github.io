@@ -1,7 +1,7 @@
 ---
 title: "ragafied"
 slug: ragafied
-summary: "A browser-native call-and-response practice space for Hindustani classical singing: the teacher sings a phrase, the vocal drops out of the recording, and the accompaniment replays that same window for you to answer into."
+summary: "Paste a link or upload a recording and it becomes a track you can sing: the lead vocal drops out, key and tempo move independently, and any passage can be looped tight - with call-and-response phrase practice and teacher-authored guidance as capabilities of that same track."
 status: active
 category: tool
 year_started: "2013"
@@ -9,13 +9,21 @@ tags: ["music", "edtech", "audio", "signal processing", "web", "prototype"]
 repo_url: "https://github.com/amolk/ragafied"
 is_public: true
 image: "/images/projects/ragafied/hero.jpg"
-ranges: ["2013-04-03:2013-05-14", "2026-08-13:2026-08-18", "2026-08-26:2026-09-04"]
+ranges: ["2013-04-03:2013-05-14", "2026-08-13:2026-08-18", "2026-08-26:2026-09-07"]
 featured: false
 ---
 
 Indian classical music, attempted twice, thirteen years apart and with no shared code.
 
-## The current build
+## One object, many ways to use it
+
+The product settled on a single noun: a **track**. You give it a link or a recording you are entitled to use, it separates the lead vocal from everything behind it, and what comes back is one object you can sing along to. Everything else is a capability of that same object rather than a separate mode - sing the whole song with the original vocal turned down, pull a range tight around the passage that is actually hard, let the app propose sections as shortcuts, watch your pitch against the original, or follow guidance a teacher authored on top of it. A lesson is no longer a thing you must build before you can sing; it is teacher-authored guidance that uses a track.
+
+That reordering matters more than it sounds. The earlier build asked you to author a lesson first, which meant the fastest path to singing ran through an editing tool. Now the fastest path is paste, wait for separation, and sing - and the practice apparatus below is still there when you want it.
+
+Sharing is deliberately narrow. A track's owner shares one track at a time through a link they can revoke, and revoking it stops playback that is already running rather than merely hiding the next click - because a saved link or a playlist entry is exactly how a media library usually leaks.
+
+## The practice space
 
 Hindustani vocal music is learned by imitation: the teacher sings a phrase, the student sings it back, and the cycle repeats until the shape is right. Ragafied turns an archival recording into exactly that loop. It separates the performance into vocal and accompaniment, proposes phrase boundaries across the whole recording, and then plays each phrase twice - once as the teacher sang it, and once with the vocal removed so the tanpura and harmonium hold the same window open for you to answer into. Do nothing and the phrase repeats. Tap to move on.
 
