@@ -3,13 +3,14 @@ title: "ragafied"
 slug: ragafied
 summary: "Paste a link or upload a recording and it becomes a track you can sing: the lead vocal drops out, key and tempo move independently, and any passage can be looped tight - with call-and-response phrase practice and teacher-authored guidance as capabilities of that same track."
 status: active
-category: tool
+category: shipped
 year_started: "2013"
-tags: ["music", "edtech", "audio", "signal processing", "web", "prototype"]
+tags: ["music", "edtech", "audio", "signal processing", "web", "karaoke"]
 repo_url: "https://github.com/amolk/ragafied"
 is_public: true
+demo_url: "https://ragafied.com"
 image: "/images/projects/ragafied/hero.jpg"
-ranges: ["2013-04-03:2013-05-14", "2026-08-13:2026-08-18", "2026-08-26:2026-09-07"]
+ranges: ["2013-04-03:2013-05-14", "2026-08-13:2026-08-18", "2026-08-26:2026-09-08"]
 featured: false
 ---
 
@@ -59,7 +60,7 @@ It has no permanent roles, and that is a deliberate choice. A student following 
 
 Access is a single policy, checked in a single place. Every page, audio file, pitch track and practice session passes the same gate, because an access rule reimplemented per surface is how a media library eventually leaks. Visibility and permission stay separate questions: a link is a way to find a lesson, never a way past a rule about who can open it. Recordings stay private until their owner publishes a lesson made from them; a lesson cannot be published while its content, its audio or its rights are unresolved; and nothing reaches the public catalogue before review, while direct links keep working while that review is pending - so approval gates discovery rather than access. Moderation is auditable by construction: each decision records who made it, why, and what changed. Operators can review public content and still cannot open anyone's private recordings.
 
-The deployment is described as infrastructure rather than assembled by hand - a deliberately small production footprint defined in code, and one image carrying the site, the practice space, the studio and the background workers.
+It runs at [ragafied.com](https://ragafied.com). The whole production footprint is defined in code rather than assembled by hand - one small server carrying the site, the practice space, the studio and the short background jobs, separate scale-to-zero capacity for the audio work, and private storage for every recording - and a verified build on the main branch deploys itself. Separation is no longer a spike that ran on a laptop; it processes real uploads, and long recordings are checked against recorded acceptance evidence rather than assumed to work. The operator console was built twice on purpose: an off-the-shelf record browser first, to find out what running the service actually asks for, then a purpose-built one - searchable, hierarchical, with bulk actions and audio you can play straight from a job - once that shape was clear.
 
 ## A face for it
 
