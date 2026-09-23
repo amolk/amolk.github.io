@@ -1,10 +1,10 @@
 ---
 title: "ragafied"
 slug: ragafied
-summary: "Upload a recording and it becomes a track you can sing: the lead vocal drops out, key and tempo move independently, and any passage can be looped tight - with call-and-response phrase practice and teacher-authored guidance as capabilities of that same track."
+summary: "A singing-practice app I first built in 2012-13, before browsers could do the audio work it needed, and rebuilt in 2026 on AI models, offline and real-time signal processing, and algorithms of my own: upload a recording and it becomes a track you can sing, with the vocal removed, key and tempo moving independently, and phrase-by-phrase call-and-response practice."
 status: active
 category: shipped
-year_started: "2013"
+year_started: "2012"
 tags: ["music", "edtech", "audio", "signal processing", "web", "karaoke"]
 repo_url: "https://github.com/amolk/ragafied"
 is_public: true
@@ -12,10 +12,24 @@ demo_url: "https://ragafied.com"
 image: "/images/projects/ragafied/hero.jpg"
 images: ["/images/projects/ragafied/logo.png", "/images/projects/ragafied/brand.png"]
 ranges: ["2013-04-03:2013-05-14", "2026-08-13:2026-08-18", "2026-08-26:2026-09-22"]
-featured: false
+featured: true
+order: 7
 ---
 
-Indian classical music, attempted twice, thirteen years apart and with no shared code.
+I first built Ragafied in 2012-13, around an idea that has not changed since: Hindustani vocal music is learned by imitation, so a recording of a great singer should become something you can sing back to, one phrase at a time. The browser of the time could not carry that idea. Its audio support was young and uneven from one browser to the next, custom sound processing could not run off the page's main thread, there was no way to run near-native code or a neural model inside a web page, and microphone access was patchy. What I could build then was the scaffold around the idea - accounts, ragas, gurus, lessons - and not the instrument at its centre.
+
+The 2026 version is that instrument, and it runs at [ragafied.com](https://ragafied.com).
+
+## What it is built on
+
+- **AI models.** Neural source separation lifts the lead vocal away from the accompaniment. A neural pitch detector reads the teacher's melody ahead of time and the learner's voice live in the browser. A neural beat tracker finds the pulse across the whole recording. The heavy models run on cloud graphics hardware that scales to zero when nothing is waiting.
+- **Offline signal processing.** Every upload goes through a pipeline on the server - separation, rhythm, pitch, phrases, playback preparation - with each result remembered by the audio's own fingerprint, so no work is ever done twice.
+- **Online signal processing.** In the browser, in real time: key and tempo move independently of each other, changes cross over mid-phrase without a gap, the room is measured and the accompaniment cancelled out of the microphone, and a chosen tempo and key are rendered ahead and kept on the device.
+- **Algorithms written for this music.** A pitch-and-tempo processor that rebuilds a slowed voice from the singer's own pitch periods, so a phrase at a fifth of its speed still sounds like a person singing. Phrase boundaries placed where the singer actually breathed. Ornaments - meend, gamak, khatka, andolan - read from the motion between notes, and a slow-down that stretches those ornaments far more than the held notes around them.
+
+## Designed as an instrument
+
+The part I am proudest of is how it feels to use. The homepage of ragafied.com opens on the real player rather than a picture of it, so the first thing a visitor does is press play, slow a phrase down and drop the key. The player is built for a thumb: tempo, key and mode are labels you drag through, with the value you are about to choose shown large in the middle of the player; the music and the voice mute on a tap and set their level on a drag; a point of light circling the play button says the sound is being prepared, and a tap cancels it. It comes in four looks, plus a look of its own for any track whose owner designs one, and it can fill the whole screen. The pitch graph is drawn in the swar notation of the raga, and there is deliberately no score. The sections below describe each of these in detail.
 
 ## One object, many ways to use it
 
@@ -81,6 +95,6 @@ The mark that sits on all of it is called Passage: three waves rising through a 
 
 It is aimed at one thing first. Hindustani classical and Indian film music are where listening and repeating have always been the method, so that is what the product commits to; the same studio-and-player model could later carry dance, language, or anything else learned by repeating after someone, but that is a direction rather than a claim. The visual language moves as one system across the public site, the practice space, the studio, the account and administration screens and the transactional emails - calm instrument surfaces, a single accent colour used only as a signal. The player itself comes in four looks - a pearl glass default, a pink, a deep emerald and a warm solar one - chosen with a tap, remembered on the device, and switched without interrupting what is playing; the compact player is drawn at real size rather than scaled down, so its settings stay readable. A track can also carry a look of its own: its owner drops in a background image and picks the colours while a live preview of the real player follows along, and the track then opens in that theme for whoever plays it, as one more swatch beside the four, without touching the theme they chose for everything else. The owner can save how the track plays best in the same place: the review step lists, in plain words, every player setting they changed from the defaults - balance, mode, tempo, key - each with a way to put it back, and saving that list means the track opens that way for anyone who plays it, while each singer's own later adjustments are still remembered for them alone.
 
-## The 2013 build
+## The 2012-13 build
 
-The first attempt was a Rails 3.2 SaaS scaffold shaped around the same idea: `Raga`, `Guru`, `Lesson` and `Audio` models wired up alongside users and roles, with Devise and CanCan for auth, Bootstrap and Haml on the front end, and RSpec and Cucumber behind it. It is a fair snapshot of how a full Rails application got bootstrapped in 2013, and of an idea that had to wait for the browser to catch up with it.
+The first attempt was a Rails 3.2 SaaS scaffold shaped around the same idea: `Raga`, `Guru`, `Lesson` and `Audio` models wired up alongside users and roles, with Devise and CanCan for auth, Bootstrap and Haml on the front end, and RSpec and Cucumber behind it. It is a fair snapshot of how a full Rails application got bootstrapped at the time, and of an idea that had to wait more than a decade for the browser to catch up with it. The 2026 version shares none of its code.
