@@ -7,7 +7,7 @@ category: research
 year_started: "2026"
 tags: ["AGI", "cognitive architecture", "homeostasis", "agentic AI", "research"]
 is_public: false
-ranges: ["2026-09-18:2026-09-23"]
+ranges: ["2026-09-18:2026-09-24"]
 featured: true
 order: 8
 ---
@@ -33,6 +33,8 @@ Hvars can create, change and retire other hvars, and add internal state of their
 In a predator-prey world, sheep need grass and water and wolves hunt them, and each species can run its own Allostat, learning against the other. In Crafter, an open-world survival and crafting game with a ladder of achievements, a player starts with hvars for its vital needs and a single one for progress; whether that one splits into goals of its own - wood, a table, a pickaxe - is one of the things a run will show.
 
 The same design now watches a coding agent. Replaying a recorded working session one turn at a time, a single hvar for the quality of the agent's work - as the person directing it judges it - splits into regulators for particular kinds of shortfall: keeping to the scope that was asked for, testing on the real device before shipping, carrying work through instead of listing it, reporting in plain words. Each new regulator starts by watching, and has to earn the right to step in.
+
+Goals are regulators too, but short-lived ones: each request sets up a goal whose target is what was asked for, and the goal steps in if the agent stops short, then disappears once the target is reached. The system also sleeps. A survival regulator tracks how often its recent decisions were wrong, and when that pressure builds, a rhythm regulator puts the system to sleep, where it dreams: it reviews its mistakes, groups them by cause and fixes each cause once, in the code every goal shares. The measure that matters is precision - an intervention helps only when it says what the person would have said next, and every push they did not want costs them a correction of their own - and raising it is what the current runs work on.
 
 ## Where it came from
 
