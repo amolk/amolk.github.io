@@ -1,6 +1,7 @@
 import { allProjects } from "contentlayer/generated";
 import ProjectCard from "@/components/ProjectCard";
 import Timeline from "@/components/Timeline";
+import { lastActiveMs } from "@/lib/projectDates";
 
 export const metadata = {
   title: "Projects",
@@ -50,14 +51,26 @@ export default function ProjectsIndex() {
     return !parent || isHidden(parent);
   };
 
+  // A card's last activity includes its subprojects, since the card lists them.
+  const cardLastActive = (p: (typeof allProjects)[number]) =>
+    Math.max(
+      lastActiveMs(p),
+      ...(p.subprojects || []).map((s) => {
+        const sub = bySlug.get(s);
+        return sub ? lastActiveMs(sub) : 0;
+      }),
+    );
+
   const groups = CATEGORIES.map(({ key, label, blurb }) => ({
     key,
     label,
     blurb,
     projects: visible
       .filter((p) => isCard(p) && p.category === key)
-      .sort((a, b) =>
-        (b.year_started ?? "").localeCompare(a.year_started ?? ""),
+      .sort(
+        (a, b) =>
+          cardLastActive(b) - cardLastActive(a) ||
+          a.title.localeCompare(b.title),
       ),
   })).filter((g) => g.projects.length > 0);
 

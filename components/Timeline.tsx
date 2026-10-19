@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useMemo, useEffect, useState } from 'react';
 import type { Project } from 'contentlayer/generated';
+import { parseRanges } from '@/lib/projectDates';
 
 const STATUS_COLORS: Record<string, string> = {
   active: 'bg-green-700',
@@ -23,23 +24,6 @@ const STATUS_LABEL: Record<string, string> = {
 const ROW_H = 16; // px per row, zero gap between rows
 const DAY = 86400000;
 
-function parseRanges(p: Project): { start: Date; end: Date }[] {
-  const out: { start: Date; end: Date }[] = [];
-  for (const r of p.ranges || []) {
-    const [a, b] = r.split(':');
-    if (!a) continue;
-    const start = new Date(a + 'T00:00:00');
-    const end = new Date((b || a) + 'T00:00:00');
-    if (!isNaN(start.getTime()) && !isNaN(end.getTime())) out.push({ start, end });
-  }
-  if (out.length === 0 && p.year_started) {
-    const y0 = parseInt(p.year_started, 10);
-    const y1 = parseInt(p.year_ended || p.year_started, 10);
-    if (y0) out.push({ start: new Date(y0, 0, 1), end: new Date(y1 || y0, 11, 31) });
-  }
-  return out;
-}
-
 const fmt = (d: Date) =>
   d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
 
@@ -58,8 +42,11 @@ export default function Timeline({ projects }: { projects: Project[] }) {
         earliest: Math.min(...r.ranges.map((x) => x.start.getTime())),
         latest: Math.max(...r.ranges.map((x) => x.end.getTime())),
       }))
-      // most recently started first
-      .sort((a, b) => b.earliest - a.earliest || a.p.title.localeCompare(b.p.title));
+      // most recently active first
+      .sort(
+        (a, b) =>
+          b.latest - a.latest || b.earliest - a.earliest || a.p.title.localeCompare(b.p.title),
+      );
 
     const minMs = Math.min(...rows.map((r) => r.earliest));
     const latestEnd = Math.max(...rows.map((r) => r.latest));
