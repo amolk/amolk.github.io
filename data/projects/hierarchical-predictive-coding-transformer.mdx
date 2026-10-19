@@ -10,7 +10,6 @@ is_public: false
 image: "/images/projects/hierarchical-predictive-coding-transformer/hero.png"
 images: ["/images/projects/hierarchical-predictive-coding-transformer/attention-analysis.png"]
 ranges: ["2026-03-16:2026-03-18"]
-featured: false
 ---
 
 Can transformer layers be trained as a stack of biological-style predictors instead of a single end-to-end backprop graph? This research codebase (HERT) treats each layer as predicting the next layer's representation and propagates only the residual prediction error - a structural analogue to hierarchical predictive coding in cortex. The question is whether this changes what the network learns: does layer-local prediction induce different representations, calibration, or compute profiles than standard ViT/BERT training?

@@ -10,7 +10,6 @@ is_public: false
 image: "/images/projects/fly/hero.png"
 video: "/images/projects/fly/demo.mp4"
 ranges: ["2026-03-08:2026-03-09"]
-featured: false
 ---
 
 If you plug a real insect connectome into a real insect body and just let the dynamics run, does anything that looks like behavior fall out - without any learning at all? This project wires the FlyWire *Drosophila melanogaster* connectome (~139K neurons, ~50M synapses) into a biomechanical fly via flygym / NeuroMechFly, then closes the loop. The brain is modeled as a Leaky Integrate-and-Fire network with a sparse weight matrix derived directly from FlyWire synapse counts and neurotransmitter signs (acetylcholine excitatory, GABA / glutamate inhibitory). The body provides MuJoCo-simulated 42-DoF legs, compound eyes, and odor sensors. Each timestep, sensory inputs feed visual / olfactory / proprioceptive neurons, the LIF network steps forward, and descending and motor neuron firing rates drive the leg actuators.

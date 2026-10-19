@@ -3,6 +3,9 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  # Daily rebuild so the home page "Top of mind" list ages out without a push.
+  schedule:
+    - cron: "17 8 * * *"
   workflow_dispatch:
 
 permissions:

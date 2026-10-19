@@ -34,8 +34,7 @@ year_ended: 2026
 tags: [rails, multi-tenant, ai-agents]
 repo_url: https://github.com/amolk/example-project
 demo_url: https://example.com
-featured: true
-order: 1
+ranges: ["2025-01-10:2025-03-02", "2026-04-01:2026-05-15"]  # active periods, newest drives sort order
 ---
 ```
 
@@ -43,7 +42,7 @@ Pages render automatically — no React changes needed to add a project.
 
 ## IA
 
-- `/` — hero + featured projects
+- `/` — hero + "Top of mind": projects active in the last 21 days, newest first (computed at build; the deploy workflow rebuilds daily)
 - `/projects/` — all projects grouped by category
 - `/projects/[slug]/` — per-project deep page (from MDX)
 - `/about/` — bio + contact

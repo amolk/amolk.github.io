@@ -1,16 +1,14 @@
 #!/usr/bin/env node
 /**
- * Sync the "top of mind" and "flagship" lists from the wiki onto the site.
+ * Sync the "flagship" list from the wiki onto the site.
  *
- * The wiki (~/work/llm-wiki-vault) is the source of truth. Two independent
- * flags in each project's frontmatter drive two different surfaces:
+ * The wiki (~/work/llm-wiki-vault) is the source of truth for flagship status:
  *
- *   top-of-mind: true  ->  featured: true          home page "Top of mind" grid
  *   flagship: true     ->  category: flagship      /projects "Flagship" group
  *
- * They are separate lists on purpose. Top of mind is what Amol is working on
- * now; flagship is the biggest, most ambitious work. A paused project can be
- * flagship without being top of mind, and vice versa.
+ * The home page "Top of mind" grid is not synced. The site derives it at build
+ * time from each project's `ranges` (see lib/projectIndex.ts), so the wiki's
+ * top-of-mind flag has no effect here.
  *
  * Usage:
  *   node scripts/sync-from-wiki.mjs           apply changes
@@ -52,19 +50,17 @@ if (!existsSync(VAULT_PROJECTS)) {
   process.exit(1);
 }
 
-const topOfMind = new Set();
 const flagship = new Set();
 
 for (const file of readdirSync(VAULT_PROJECTS).filter((f) => f.endsWith('.md'))) {
   const fm = frontmatter(readFileSync(join(VAULT_PROJECTS, file), 'utf8'));
   if (!fm) continue;
   const slug = basename(file, '.md');
-  if (field(fm.raw, 'top-of-mind') === 'true') topOfMind.add(slug);
   if (field(fm.raw, 'flagship') === 'true') flagship.add(slug);
 }
 
 // A flagged wiki entry with no page on the site is a silent no-op otherwise.
-const missing = [...new Set([...topOfMind, ...flagship])].filter(
+const missing = [...flagship].filter(
   (slug) => !existsSync(join(SITE_PROJECTS, `${slug}.mdx`)),
 );
 if (missing.length) {
@@ -79,7 +75,6 @@ if (missing.length) {
 // ---- apply to the site ----------------------------------------------------
 const changes = [];
 const blocked = [];
-let maxOrder = 0;
 
 const pages = readdirSync(SITE_PROJECTS)
   .filter((f) => f.endsWith('.mdx'))
@@ -88,8 +83,6 @@ const pages = readdirSync(SITE_PROJECTS)
     const text = readFileSync(path, 'utf8');
     const fm = frontmatter(text);
     if (!fm) throw new Error(`${file} has no frontmatter`);
-    const order = Number(field(fm.raw, 'order'));
-    if (Number.isFinite(order)) maxOrder = Math.max(maxOrder, order);
     return { slug: basename(file, '.mdx'), path, fm };
   });
 
@@ -97,18 +90,6 @@ for (const page of pages) {
   const { slug, fm } = page;
   let raw = fm.raw;
   const before = raw;
-
-  // top-of-mind -> featured
-  const wantFeatured = topOfMind.has(slug);
-  if ((field(raw, 'featured') === 'true') !== wantFeatured) {
-    raw = setField(raw, 'featured', String(wantFeatured));
-    changes.push(`${slug}: featured -> ${wantFeatured}`);
-  }
-  // A newly top-of-mind project with no order would sort ahead of everything.
-  if (wantFeatured && !Number.isFinite(Number(field(raw, 'order')))) {
-    raw = setField(raw, 'order', String(++maxOrder));
-    changes.push(`${slug}: order -> ${maxOrder} (appended; reorder by hand if you want it higher)`);
-  }
 
   // flagship -> category
   const wantFlagship = flagship.has(slug);
@@ -144,6 +125,5 @@ if (!changes.length) {
 
 console.log(`${CHECK ? 'Out of sync with the wiki' : 'Synced from the wiki'}:`);
 for (const c of changes) console.log(`  ${c}`);
-console.log(`\ntop of mind (${topOfMind.size}): ${[...topOfMind].sort().join(', ')}`);
-console.log(`flagship    (${flagship.size}): ${[...flagship].sort().join(', ')}`);
+console.log(`\nflagship (${flagship.size}): ${[...flagship].sort().join(', ')}`);
 process.exit(CHECK ? 1 : 0);

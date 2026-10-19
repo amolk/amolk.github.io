@@ -9,7 +9,6 @@ tags: ["LLM", "deep learning", "machine learning", "research"]
 repo_url: "https://github.com/i3AI/nanoGPT-experiments"
 is_public: false
 ranges: ["2022-12-28:2023-06-22", "2024-01-02:2024-01-17"]
-featured: false
 ---
 
 What if a transformer didn't have to commit to a fixed forward pass? This fork of Karpathy's nanoGPT served as a sandbox for an adaptive-compute architecture: train each block individually as well as in sequence, have consecutive blocks vote via an LIF-style evidence accumulator on whether to emit a token, and let the stack recur until a stable winner emerges. The design splits blocks into sensory / internal (recurrent) / motor stages, injects noise as a Monte-Carlo-like search mechanism, and decomposes embeddings into sensory, internal, motor, and goal components - tying the architecture back to a broader cognitive-homeostasis / hvar–cvar framing.

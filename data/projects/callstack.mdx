@@ -10,8 +10,6 @@ repo_url: "https://github.com/unwind-labs/callstack"
 is_public: true
 video: "/images/projects/callstack/demo.mp4"
 ranges: ["2026-04-15:2026-05-28"]
-featured: true
-order: 2
 ---
 
 callstack gives AI agents a proper call stack. Each `/call` forks the parent's full session context the way Unix `fork()` forks a process, so the child inherits everything without re-prompting; when the child completes, only its compact return value flows back to the parent. The design targets two well-known failure modes of long-horizon LLM workflows: sub-agents that start blind and waste tokens rebuilding context, and main agents whose context rots as everything accumulates in a single transcript.

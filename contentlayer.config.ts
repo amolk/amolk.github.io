@@ -36,8 +36,6 @@ export const Project = defineDocumentType(() => ({
     subprojects: { type: 'list', of: { type: 'string' }, default: [] },
     hide_from_index: { type: 'boolean', default: false },
     is_private: { type: 'boolean', default: false },
-    featured: { type: 'boolean', default: false },
-    order: { type: 'number', required: false },
   },
   computedFields: {
     url: { type: 'string', resolve: (doc) => `/projects/${doc.slug}/` },

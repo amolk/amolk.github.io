@@ -9,7 +9,6 @@ tags: ["text-to-SQL", "NLP", "tool", "research"]
 repo_url: "https://github.com/amolk/disambiguation_service"
 is_public: false
 ranges: ["2019-11-08:2019-11-14"]
-featured: false
 ---
 
 Text-to-SQL systems fail silently when a user's question contains words that don't cleanly map to the database schema - the parser produces confident-looking SQL against the wrong column, or hallucinates a join. This service, part of a broader text-to-SQL research arc from the pre-transformer-mainstream NLP era, catches that failure mode upstream by flagging ambiguous tokens before the parser ever sees them, so the UI can ask the user to clarify instead.

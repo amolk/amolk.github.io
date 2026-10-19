@@ -1,7 +1,7 @@
 import { allProjects } from "contentlayer/generated";
 import ProjectCard from "@/components/ProjectCard";
 import Timeline from "@/components/Timeline";
-import { lastActiveMs } from "@/lib/projectDates";
+import { projectIndex } from "@/lib/projectIndex";
 
 export const metadata = {
   title: "Projects",
@@ -40,38 +40,13 @@ const CATEGORIES: { key: string; label: string; blurb?: string }[] = [
 ];
 
 export default function ProjectsIndex() {
-  const visible = allProjects.filter((p) => !p.is_private);
-  const bySlug = new Map(visible.map((p) => [p.slug, p]));
-  const isHidden = (p?: (typeof allProjects)[number]) => !!p?.hide_from_index;
-  // A project gets its own card if it isn't hidden and is either top-level
-  // or has a hidden parent (so day-job subprojects surface as standalone cards).
-  const isCard = (p: (typeof allProjects)[number]) => {
-    if (isHidden(p)) return false;
-    const parent = p.parent ? bySlug.get(p.parent) : undefined;
-    return !parent || isHidden(parent);
-  };
-
-  // A card's last activity includes its subprojects, since the card lists them.
-  const cardLastActive = (p: (typeof allProjects)[number]) =>
-    Math.max(
-      lastActiveMs(p),
-      ...(p.subprojects || []).map((s) => {
-        const sub = bySlug.get(s);
-        return sub ? lastActiveMs(sub) : 0;
-      }),
-    );
+  const { visible, bySlug, isHidden, cards } = projectIndex(allProjects);
 
   const groups = CATEGORIES.map(({ key, label, blurb }) => ({
     key,
     label,
     blurb,
-    projects: visible
-      .filter((p) => isCard(p) && p.category === key)
-      .sort(
-        (a, b) =>
-          cardLastActive(b) - cardLastActive(a) ||
-          a.title.localeCompare(b.title),
-      ),
+    projects: cards.filter((p) => p.category === key),
   })).filter((g) => g.projects.length > 0);
 
   return (

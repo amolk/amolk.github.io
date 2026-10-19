@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { allProjects } from "contentlayer/generated";
 import ProjectCard from "@/components/ProjectCard";
+import { projectIndex } from "@/lib/projectIndex";
 
 export default function Home() {
-  const featured = allProjects
-    .filter((p) => p.featured && !p.is_private)
-    .sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
+  // Computed at build time; the deploy workflow rebuilds daily so this stays current.
+  const topOfMind = projectIndex(allProjects).topOfMind(Date.now());
 
   return (
     <div className="max-w-6xl mx-auto px-8">
@@ -46,7 +46,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured */}
+      {/* Top of mind */}
       <section className="py-20">
         <div className="flex items-baseline justify-between mb-8">
           <h2 className="font-serif text-3xl md:text-4xl font-medium">
@@ -60,7 +60,7 @@ export default function Home() {
           </Link>
         </div>
         <div className="grid sm:grid-cols-2 gap-5">
-          {featured.map((p) => (
+          {topOfMind.map((p) => (
             <ProjectCard key={p.slug} project={p} />
           ))}
         </div>

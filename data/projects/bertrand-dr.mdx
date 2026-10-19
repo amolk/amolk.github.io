@@ -9,7 +9,6 @@ tags: ["text-to-SQL", "NLP", "machine learning", "research"]
 paper_url: "https://arxiv.org/abs/2002.00557"
 is_public: true
 ranges: ["2019-12-30:2020-01-29"]
-featured: false
 ---
 
 Bertrand-DR (Bertrand Discriminative Re-ranker) is a 2020 research paper on improving neural text-to-SQL parsers for the [Spider](https://yale-lily.github.io/spider) benchmark. Rather than generating SQL directly, the method trains a schema-agnostic BERT classifier to score and re-rank the candidate parses in a base model's beam output - recovering the cases where the correct query is in the beam but not at the top - and analyzes how the generator and re-ranker complement each other across query-hardness levels.
