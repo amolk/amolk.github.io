@@ -1,0 +1,19 @@
+---
+layout: layout.njk
+title: Projects
+description: All projects, grouped by category, with a timeline across 25+ years of building.
+permalink: /projects/
+---
+<div class="max-w-6xl mx-auto px-8 pt-24 pb-16">
+  <header class="mb-12">
+    <h1 class="font-serif text-4xl md:text-5xl font-medium tracking-tight mb-3">Projects</h1>
+    <p class="text-gray-500 text-lg font-light">Living the exponential. {{ projects.visible.length }} projects total and counting. Products, research, and tooling.</p>
+  </header>
+  <section id="timeline" class="mb-20 scroll-mt-24">{% include "timeline.njk" %}</section>
+  {% for group in projects.groups %}
+  <section class="mb-16">
+    <div class="mb-6"><h2 class="font-serif text-2xl md:text-3xl font-medium">{{ group.label }}</h2>{% if group.blurb %}<p class="text-sm text-gray-500 mt-1 font-light">{{ group.blurb }}</p>{% endif %}</div>
+    <div class="grid sm:grid-cols-2 gap-5">{% for project in group.projects %}{% set showChildren = true %}{% include "card.njk" %}{% endfor %}</div>
+  </section>
+  {% endfor %}
+</div>

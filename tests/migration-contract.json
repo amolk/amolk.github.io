@@ -1,0 +1,4802 @@
+{
+  "sourceCommit": "7fc38db",
+  "pages": {
+    "/404/index.html": {
+      "title": "404: This page could not be found.",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "6abcd9caf953c1e4478516fec352be27f29a4aabb6168e70c22509082e97c5e0",
+      "links": [],
+      "media": [],
+      "headings": []
+    },
+    "/404.html": {
+      "title": "404: This page could not be found.",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "6abcd9caf953c1e4478516fec352be27f29a4aabb6168e70c22509082e97c5e0",
+      "links": [],
+      "media": [],
+      "headings": []
+    },
+    "/about/index.html": {
+      "title": "About - Amol Kelkar",
+      "description": "About Amol Kelkar - Enterprise AI Architect at Qualtrics, researcher, founder-engineer, builder of AI systems.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "ca471e97db9b8fe51defce82b166e26b9f31c8f4a7ce3198b5b55ee76c8205e6",
+      "links": [
+        "/projects/",
+        "/projects/#timeline",
+        "/projects/agentapplication/",
+        "/projects/callstack/",
+        "/projects/callstack/",
+        "/projects/carapace-intelligence/",
+        "/projects/carapace-intelligence/",
+        "/projects/carapace-intelligence/",
+        "/projects/crazydisk/",
+        "/projects/crazywindows/",
+        "/projects/harness-programming/",
+        "/projects/hierarchical-predictive-coding-transformer/",
+        "/projects/homeostasis-publications/",
+        "/projects/homeostasis-publications/",
+        "/projects/nanogpt-experiments/",
+        "/projects/pattern-machine/",
+        "/projects/playbooks-lm/",
+        "/projects/playbooks/",
+        "/projects/ragafied/",
+        "/projects/unfold/",
+        "/projects/unwind/",
+        "/projects/videoreadr/",
+        "/publications/",
+        "https://aamas.csc.liv.ac.uk/Proceedings/aamas2021/pdfs/p12.pdf",
+        "https://aamas.csc.liv.ac.uk/Proceedings/aamas2021/pdfs/p12.pdf",
+        "https://aamas.csc.liv.ac.uk/Proceedings/aamas2021/pdfs/p12.pdf",
+        "https://arxiv.org/abs/2002.00557",
+        "https://github.com/amolk",
+        "https://homepages.inf.ed.ac.uk/jbednar/",
+        "https://nn.cs.utexas.edu/downloads/papers/bednar.cns01.pdf",
+        "https://nn.cs.utexas.edu/downloads/papers/bednar.cns01.pdf",
+        "https://patents.google.com/patent/US12282743",
+        "https://patents.google.com/patent/US7543228",
+        "https://patents.google.com/patent/US7937651",
+        "https://scholar.google.com/citations?user=qKZ2VRAAAAAJ&hl=en",
+        "https://scholar.google.com/citations?user=qKZ2VRAAAAAJ&hl=en",
+        "https://www.cs.utexas.edu/~risto/",
+        "https://www.linkedin.com/in/amol-kelkar/",
+        "https://www.qualtrics.com",
+        "mailto:kelkar.amol@gmail.com"
+      ],
+      "media": [
+        {
+          "src": "/images/amol-kelkar3.png",
+          "alt": "Amol Kelkar, Enterprise AI Architect at Qualtrics"
+        }
+      ],
+      "headings": [
+        "duotone"
+      ]
+    },
+    "/index.html": {
+      "title": "Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "c770faa998372c76977b1e38c0173471faa70c56b88bb30dd176c51c5a9d7fd3",
+      "links": [
+        "/about/",
+        "/projects/",
+        "/projects/",
+        "/projects/agentapplication/",
+        "/projects/agentapplication/",
+        "/projects/allostat/",
+        "/projects/i3ai/",
+        "/projects/ragafied/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/active-dendrites/index.html": {
+      "title": "Active Dendrites - Amol Kelkar",
+      "description": "Neuron models that fire more readily given the right top-down context - a mechanism for mixing prediction with signal.",
+      "og": [
+        [
+          "og:title",
+          "Active Dendrites"
+        ],
+        [
+          "og:description",
+          "Neuron models that fire more readily given the right top-down context - a mechanism for mixing prediction with signal."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "d886ad252a525a6991cf38d233a8ee8b93b79a17fb6e4c068dbaaba6c2c7771f",
+      "links": [
+        "/projects/",
+        "/projects/agi-experiments/",
+        "/tags/machine-learning/",
+        "/tags/neuroscience/",
+        "/tags/predictive-coding/",
+        "/tags/research/",
+        "https://github.com/amolk/AGI-experiments/tree/master/Active%20Synapse"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/aflatune/index.html": {
+      "title": "aflatune - Amol Kelkar",
+      "description": "Aflatune v1 - the original music-discovery startup, built on Rails 2.2.",
+      "og": [
+        [
+          "og:title",
+          "aflatune"
+        ],
+        [
+          "og:description",
+          "Aflatune v1 - the original music-discovery startup, built on Rails 2.2."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "36fb8086b5c778de6e90330d71cd553dd8de940a3d790ae9bb42569f96530360",
+      "links": [
+        "/projects/",
+        "/tags/music/",
+        "/tags/product/",
+        "/tags/recommendation/",
+        "/tags/startup/",
+        "/tags/web/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/agentapplication/index.html": {
+      "title": "Agent Applications - Amol Kelkar",
+      "description": "A vendor-neutral reference architecture for building and operating AI agent systems - the products built around persistent, tool-using agents that keep a durable workspace and accumulate real work over time. Published openly as a working draft, for collaboration.",
+      "og": [
+        [
+          "og:title",
+          "Agent Applications"
+        ],
+        [
+          "og:description",
+          "A vendor-neutral reference architecture for building and operating AI agent systems - the products built around persistent, tool-using agents that keep a durable workspace and accumulate real work over time. Published openly as a working draft, for collaboration."
+        ],
+        [
+          "og:image",
+          "https://amolkelkar.me/images/projects/agentapplication/stack.png"
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "ddd426a93def84da2cfa7fa39625ddf717af716a17104a0e6ea752f0b6a8186d",
+      "links": [
+        "/projects/",
+        "/tags/agentic-ai/",
+        "/tags/ai-agents/",
+        "/tags/paper/",
+        "/tags/software-architecture/",
+        "/tags/standards/",
+        "https://agentapplication.io",
+        "https://github.com/agentapplication/agentapplication"
+      ],
+      "media": [
+        {
+          "src": "/images/projects/agentapplication/stack.png",
+          "alt": "Agent Applications screenshot"
+        }
+      ],
+      "headings": []
+    },
+    "/projects/agentzero/index.html": {
+      "title": "AgentZero - Amol Kelkar",
+      "description": "Meta-agent that scaffolds, reviews, and simulates multi-agent project workspaces",
+      "og": [
+        [
+          "og:title",
+          "AgentZero"
+        ],
+        [
+          "og:description",
+          "Meta-agent that scaffolds, reviews, and simulates multi-agent project workspaces"
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "1306c8066e162e2e6412f9d79327e54a8405a5d296e8c12f14fcc4c3c0f823f3",
+      "links": [
+        "/projects/",
+        "/tags/agentic-ai/",
+        "/tags/ai-agents/",
+        "/tags/developer-tools/",
+        "/tags/tool/",
+        "https://github.com/amolk/AgentZero.git"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/agi-experiments/index.html": {
+      "title": "AGI experiments - Amol Kelkar",
+      "description": "A series of research projects towards biologically inspired AGI.",
+      "og": [
+        [
+          "og:title",
+          "AGI experiments"
+        ],
+        [
+          "og:description",
+          "A series of research projects towards biologically inspired AGI."
+        ],
+        [
+          "og:image",
+          "https://amolkelkar.me/images/projects/agi-experiments/hero.gif"
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "33098bebc01d52ee5ce01037fccde3aac07a6378af7493e4d8fa22b0ad545310",
+      "links": [
+        "/projects/",
+        "/projects/active-dendrites/",
+        "/projects/attractor-learning/",
+        "/projects/domain-quantization/",
+        "/projects/i3ai/",
+        "/projects/qdl/",
+        "/projects/vae-convolution-kernels/",
+        "/tags/agi/",
+        "/tags/machine-learning/",
+        "/tags/neuroscience/",
+        "/tags/research/"
+      ],
+      "media": [
+        {
+          "src": "/images/projects/agi-experiments/hero.gif",
+          "alt": "AGI experiments screenshot"
+        }
+      ],
+      "headings": []
+    },
+    "/projects/allostat/index.html": {
+      "title": "Allostat - Amol Kelkar",
+      "description": "A possible route to general intelligence in which homeostatic imperatives drive behavior: many self-improving agents, each keeping one variable within bounds, with no central controller and a structure of motivation that grows instead of being designed.",
+      "og": [
+        [
+          "og:title",
+          "Allostat"
+        ],
+        [
+          "og:description",
+          "A possible route to general intelligence in which homeostatic imperatives drive behavior: many self-improving agents, each keeping one variable within bounds, with no central controller and a structure of motivation that grows instead of being designed."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "55b4964edf6f8de0d8d02518d897a92e683b37c0fea886c141f4fc8be7ae3556",
+      "links": [
+        "#from-deliberation-to-reflex",
+        "#many-imperatives-no-controller",
+        "#motivation-that-grows",
+        "#where-it-came-from",
+        "#where-it-is-tested",
+        "/projects/",
+        "/projects/i3ai/",
+        "/tags/agentic-ai/",
+        "/tags/agi/",
+        "/tags/cognitive-architecture/",
+        "/tags/homeostasis/",
+        "/tags/research/"
+      ],
+      "media": [],
+      "headings": [
+        "many-imperatives-no-controller",
+        "from-deliberation-to-reflex",
+        "motivation-that-grows",
+        "where-it-is-tested",
+        "where-it-came-from"
+      ]
+    },
+    "/projects/amolk-blog/index.html": {
+      "title": "amolkelkar.me - Amol Kelkar",
+      "description": "This site - my personal portfolio at amolkelkar.me. A Next.js 15 + Contentlayer static export that renders one page per project from typed MDX and deploys to GitHub Pages.",
+      "og": [
+        [
+          "og:title",
+          "amolkelkar.me"
+        ],
+        [
+          "og:description",
+          "This site - my personal portfolio at amolkelkar.me. A Next.js 15 + Contentlayer static export that renders one page per project from typed MDX and deploys to GitHub Pages."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "69c4f8cf623bc25f055e9ce335f4583a46f7dd9a99daa7ac345c2e49cd012a06",
+      "links": [
+        "/projects/",
+        "/projects/llm-wiki-vault/",
+        "/tags/contentlayer/",
+        "/tags/next-js/",
+        "/tags/portfolio/",
+        "/tags/static-site/",
+        "https://amolkelkar.me",
+        "https://github.com/amolk/amolk.github.io"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/attractor-learning/index.html": {
+      "title": "Attractor Learning - Amol Kelkar",
+      "description": "Training a recurrent network to settle into its attractor state faster - LISSOM, but differentiable.",
+      "og": [
+        [
+          "og:title",
+          "Attractor Learning"
+        ],
+        [
+          "og:description",
+          "Training a recurrent network to settle into its attractor state faster - LISSOM, but differentiable."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "c909018c0d43f5cc80705d24fd36742a70056b418487cf503123e920a8815d3a",
+      "links": [
+        "/projects/",
+        "/projects/agi-experiments/",
+        "/tags/deep-learning/",
+        "/tags/machine-learning/",
+        "/tags/neuroscience/",
+        "/tags/research/",
+        "https://github.com/amolk/AGI-experiments/tree/master/Attractor%20Learning"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/bertrand-dr/index.html": {
+      "title": "bertrand-dr - Amol Kelkar",
+      "description": "BERTRAND-DR - a published discriminative re-ranker that improves neural text-to-SQL parsers, reaching top-4 on the Spider benchmark.",
+      "og": [
+        [
+          "og:title",
+          "bertrand-dr"
+        ],
+        [
+          "og:description",
+          "BERTRAND-DR - a published discriminative re-ranker that improves neural text-to-SQL parsers, reaching top-4 on the Spider benchmark."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "3c1d6a560ffe69049fcacd1bb51ee6ce9ebd88e693960e5f110ae8ca4dd8e386",
+      "links": [
+        "/projects/",
+        "/projects/text2sql-utils/",
+        "/tags/machine-learning/",
+        "/tags/nlp/",
+        "/tags/research/",
+        "/tags/text-to-sql/",
+        "https://arxiv.org/abs/2002.00557",
+        "https://arxiv.org/abs/2002.00557",
+        "https://yale-lily.github.io/spider"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/cache-with-yuicompressor/index.html": {
+      "title": "cache-with-yuicompressor - Amol Kelkar",
+      "description": "Rails JS/CSS bundle gem using YUI Compressor.",
+      "og": [
+        [
+          "og:title",
+          "cache-with-yuicompressor"
+        ],
+        [
+          "og:description",
+          "Rails JS/CSS bundle gem using YUI Compressor."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "c3dc72c370859db6c809932dd33c86eeed8456326db08a8737c0a7308f634076",
+      "links": [
+        "/projects/",
+        "/tags/developer-tools/",
+        "/tags/library/",
+        "/tags/web/",
+        "https://github.com/amolk/cache-with-yuicompressor"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/callstack/index.html": {
+      "title": "callstack - Amol Kelkar",
+      "description": "A call stack for AI agents - `fork()` + `join()` semantics for long-horizon LLM workflows.",
+      "og": [
+        [
+          "og:title",
+          "callstack"
+        ],
+        [
+          "og:description",
+          "A call stack for AI agents - `fork()` + `join()` semantics for long-horizon LLM workflows."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "5ec0d37e58b6899b5be6f5dc3ecd27035d790aea86708a1bdea08b16eafc3432",
+      "links": [
+        "/projects/",
+        "/tags/agentic-ai/",
+        "/tags/ai-agents/",
+        "/tags/developer-tools/",
+        "/tags/framework/",
+        "https://github.com/unwind-labs/callstack"
+      ],
+      "media": [
+        {
+          "src": "/images/projects/callstack/demo.mp4",
+          "alt": null
+        }
+      ],
+      "headings": []
+    },
+    "/projects/carapace-intelligence/index.html": {
+      "title": "Carapace Intelligence - Amol Kelkar",
+      "description": "Decision-intelligence infrastructure: LLMs as local judges, deterministic Bayesian search on top.",
+      "og": [
+        [
+          "og:title",
+          "Carapace Intelligence"
+        ],
+        [
+          "og:description",
+          "Decision-intelligence infrastructure: LLMs as local judges, deterministic Bayesian search on top."
+        ],
+        [
+          "og:image",
+          "https://amolkelkar.me/images/projects/carapace-intelligence/hero.jpg"
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "1b7685b8f6f15b6ec5820dfb92d3be95c8c53ab20acdb94c34a9f6123137c94a",
+      "links": [
+        "/projects/",
+        "/tags/agentic-ai/",
+        "/tags/decision-intelligence/",
+        "/tags/infrastructure/",
+        "/tags/llm/",
+        "/tags/research/",
+        "https://carapaceintelligence.com",
+        "https://carapaceintelligence.com/research/2026-04-05-trump-strikes-iran-infrastructure#section-about"
+      ],
+      "media": [
+        {
+          "src": "/images/projects/carapace-intelligence/hero.jpg",
+          "alt": "Carapace Intelligence screenshot"
+        },
+        {
+          "src": "/images/projects/carapace-intelligence/simulation-result.jpg",
+          "alt": "Carapace Intelligence screenshot"
+        },
+        {
+          "src": "/images/projects/carapace-intelligence/bottom-line.jpg",
+          "alt": "Carapace Intelligence screenshot"
+        }
+      ],
+      "headings": []
+    },
+    "/projects/collector/index.html": {
+      "title": "collector - Amol Kelkar",
+      "description": "Ruby data-collection service.",
+      "og": [
+        [
+          "og:title",
+          "collector"
+        ],
+        [
+          "og:description",
+          "Ruby data-collection service."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "5cbb8d54da36fbca6c670491a37fa8e27d531dd3fb5fe277c7d8c4f52a3e8548",
+      "links": [
+        "/projects/",
+        "/tags/prototype/",
+        "/tags/web/",
+        "https://github.com/amolk/collector"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/crazyaiapps/index.html": {
+      "title": "CrazyAIApps - Amol Kelkar",
+      "description": "A line of native macOS apps with practical AI built in.",
+      "og": [
+        [
+          "og:title",
+          "CrazyAIApps"
+        ],
+        [
+          "og:description",
+          "A line of native macOS apps with practical AI built in."
+        ],
+        [
+          "og:image",
+          "https://amolkelkar.me/images/projects/crazyaiapps/hero.png"
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "dd45b6e9a36fe82ae87ad2b04746336ce25ad54c624fee02c8726130d2becac2",
+      "links": [
+        "/projects/",
+        "/projects/crazydisk/",
+        "/projects/crazydisk/",
+        "/projects/crazywindows/",
+        "/projects/crazywindows/",
+        "/tags/agentic-ai/",
+        "/tags/app/",
+        "/tags/developer-tools/",
+        "/tags/macos/",
+        "/tags/product/"
+      ],
+      "media": [
+        {
+          "src": "/images/projects/crazyaiapps/hero.png",
+          "alt": "CrazyAIApps screenshot"
+        }
+      ],
+      "headings": []
+    },
+    "/projects/crazydisk/index.html": {
+      "title": "CrazyDisk - Amol Kelkar",
+      "description": "AI-assisted disk usage analyzer for macOS, built under the CrazyAIApps label",
+      "og": [
+        [
+          "og:title",
+          "CrazyDisk"
+        ],
+        [
+          "og:description",
+          "AI-assisted disk usage analyzer for macOS, built under the CrazyAIApps label"
+        ],
+        [
+          "og:image",
+          "https://amolkelkar.me/images/projects/crazydisk/hero.png"
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "1923ded616a462bf94c7195a681f9d7dd1cda6f74d0b7a0865934313531481c5",
+      "links": [
+        "/projects/",
+        "/projects/crazyaiapps/",
+        "/tags/app/",
+        "/tags/developer-tools/",
+        "/tags/macos/",
+        "/tags/product/"
+      ],
+      "media": [
+        {
+          "src": "/images/projects/crazydisk/hero.png",
+          "alt": "CrazyDisk screenshot"
+        },
+        {
+          "src": "/images/projects/crazydisk/icicle.png",
+          "alt": "CrazyDisk screenshot"
+        },
+        {
+          "src": "/images/projects/crazydisk/largefiles.png",
+          "alt": "CrazyDisk screenshot"
+        },
+        {
+          "src": "/images/projects/crazydisk/ai-recommendations.png",
+          "alt": "CrazyDisk screenshot"
+        }
+      ],
+      "headings": []
+    },
+    "/projects/crazywindows/index.html": {
+      "title": "CrazyWindows - Amol Kelkar",
+      "description": "AI-powered macOS window manager - Magnet/Rectangle competitor with Claude-driven smart layouts.",
+      "og": [
+        [
+          "og:title",
+          "CrazyWindows"
+        ],
+        [
+          "og:description",
+          "AI-powered macOS window manager - Magnet/Rectangle competitor with Claude-driven smart layouts."
+        ],
+        [
+          "og:image",
+          "https://amolkelkar.me/images/projects/crazywindows/hero.png"
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "7a1fcb7ebee832d8e7cd1e780a36142bf243a9f7e35806708d5e811b36801116",
+      "links": [
+        "/projects/",
+        "/projects/crazyaiapps/",
+        "/tags/agentic-ai/",
+        "/tags/app/",
+        "/tags/macos/",
+        "/tags/product/",
+        "/tags/productivity/"
+      ],
+      "media": [
+        {
+          "src": "/images/projects/crazywindows/hero.png",
+          "alt": "CrazyWindows screenshot"
+        }
+      ],
+      "headings": []
+    },
+    "/projects/disambiguation-service/index.html": {
+      "title": "disambiguation-service - Amol Kelkar",
+      "description": "Catches ambiguous words in a natural-language question before it hits a text-to-SQL parser.",
+      "og": [
+        [
+          "og:title",
+          "disambiguation-service"
+        ],
+        [
+          "og:description",
+          "Catches ambiguous words in a natural-language question before it hits a text-to-SQL parser."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "0e5d569a338445182f9e73b8f7febe537221ce4ab867d8d8aaa44eba84723637",
+      "links": [
+        "/projects/",
+        "/tags/nlp/",
+        "/tags/research/",
+        "/tags/text-to-sql/",
+        "/tags/tool/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/domain-quantization/index.html": {
+      "title": "Domain Quantization - Amol Kelkar",
+      "description": "Information-density normalization - adjust histogram bins so precision follows where the data is.",
+      "og": [
+        [
+          "og:title",
+          "Domain Quantization"
+        ],
+        [
+          "og:description",
+          "Information-density normalization - adjust histogram bins so precision follows where the data is."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "bcb20d4cd1d376b64e6e044db091b0c62ac69c28bac8023a738db427090a6452",
+      "links": [
+        "/projects/",
+        "/projects/agi-experiments/",
+        "/tags/deep-learning/",
+        "/tags/machine-learning/",
+        "/tags/research/",
+        "https://github.com/amolk/AGI-experiments/tree/master/Domain%20Quantization"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/durable-python/index.html": {
+      "title": "durable-python - Amol Kelkar",
+      "description": "Make Python async functions durable and resumable with a minimal, pluggable runtime.",
+      "og": [
+        [
+          "og:title",
+          "durable-python"
+        ],
+        [
+          "og:description",
+          "Make Python async functions durable and resumable with a minimal, pluggable runtime."
+        ],
+        [
+          "og:image",
+          "https://amolkelkar.me/images/projects/durable-python/hero.jpeg"
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "5e16d8f7c13098fe89db84e7901e804ceae79231d5959935106d8651bf5bd2b5",
+      "links": [
+        "/projects/",
+        "/tags/agentic-ai/",
+        "/tags/developer-tools/",
+        "/tags/library/",
+        "https://github.com/playbooks-ai/durable-python.git"
+      ],
+      "media": [
+        {
+          "src": "/images/projects/durable-python/hero.jpeg",
+          "alt": "durable-python screenshot"
+        }
+      ],
+      "headings": []
+    },
+    "/projects/fluaid/index.html": {
+      "title": "fluaid - Amol Kelkar",
+      "description": "Web-based fluid presentations on an infinite 2D canvas with 3D camera transitions",
+      "og": [
+        [
+          "og:title",
+          "fluaid"
+        ],
+        [
+          "og:description",
+          "Web-based fluid presentations on an infinite 2D canvas with 3D camera transitions"
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "0936c5bddba632cc3f577be9900de5aab3e16918638f5546d459e4e21b1ae538",
+      "links": [
+        "/projects/",
+        "/tags/presentations/",
+        "/tags/prototype/",
+        "/tags/visualization/",
+        "/tags/web/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/fly/index.html": {
+      "title": "fly - Amol Kelkar",
+      "description": "Drosophila brain connectome simulation with LIF neurons and a NeuroMechFly body",
+      "og": [
+        [
+          "og:title",
+          "fly"
+        ],
+        [
+          "og:description",
+          "Drosophila brain connectome simulation with LIF neurons and a NeuroMechFly body"
+        ],
+        [
+          "og:image",
+          "https://amolkelkar.me/images/projects/fly/hero.png"
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "065e531699a627ed6937a9b27007df2a4b93a45518f8097f729d3bcf02b840c2",
+      "links": [
+        "/projects/",
+        "/tags/connectome/",
+        "/tags/neuroscience/",
+        "/tags/research/",
+        "/tags/simulation/"
+      ],
+      "media": [
+        {
+          "src": "/images/projects/fly/hero.png",
+          "alt": "fly screenshot"
+        },
+        {
+          "src": "/images/projects/fly/demo.mp4",
+          "alt": null
+        }
+      ],
+      "headings": []
+    },
+    "/projects/free-energy-minimization-framework/index.html": {
+      "title": "free-energy-minimization-framework - Amol Kelkar",
+      "description": "Notebook-driven exploration of free-energy minimization for perception, in pure NumPy.",
+      "og": [
+        [
+          "og:title",
+          "free-energy-minimization-framework"
+        ],
+        [
+          "og:description",
+          "Notebook-driven exploration of free-energy minimization for perception, in pure NumPy."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "33a5a3509446771f8c61ed5b466a2390b30199cfa4058280ebd6f3f02163681e",
+      "links": [
+        "/projects/",
+        "/tags/machine-learning/",
+        "/tags/neuroscience/",
+        "/tags/predictive-coding/",
+        "/tags/research/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/harness-programming/index.html": {
+      "title": "harness-programming - Amol Kelkar",
+      "description": "A short e-book coining **Harness Programming** - the discipline of composing the natural-language and configuration artifacts (prompts, skills, hooks, tools, memory) that shape how an AI agent behaves.",
+      "og": [
+        [
+          "og:title",
+          "harness-programming"
+        ],
+        [
+          "og:description",
+          "A short e-book coining **Harness Programming** - the discipline of composing the natural-language and configuration artifacts (prompts, skills, hooks, tools, memory) that shape how an AI agent behaves."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "72afb656d62d2c1d9c90826c6389beba476ad54ded921f4355bf53dc660d57c2",
+      "links": [
+        "/projects/",
+        "/tags/agentic-ai/",
+        "/tags/developer-tools/",
+        "/tags/e-book/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/hierarchical-predictive-coding-transformer/index.html": {
+      "title": "hierarchical-predictive-coding-transformer - Amol Kelkar",
+      "description": "Research codebase exploring hierarchical predictive coding as a training principle for transformers (HERT and variants).",
+      "og": [
+        [
+          "og:title",
+          "hierarchical-predictive-coding-transformer"
+        ],
+        [
+          "og:description",
+          "Research codebase exploring hierarchical predictive coding as a training principle for transformers (HERT and variants)."
+        ],
+        [
+          "og:image",
+          "https://amolkelkar.me/images/projects/hierarchical-predictive-coding-transformer/hero.png"
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "3d66bc9e7e9173dffe1c21d44aa388c298e44f617e9773ae99f195f2f1535eea",
+      "links": [
+        "/projects/",
+        "/tags/deep-learning/",
+        "/tags/machine-learning/",
+        "/tags/predictive-coding/",
+        "/tags/research/"
+      ],
+      "media": [
+        {
+          "src": "/images/projects/hierarchical-predictive-coding-transformer/hero.png",
+          "alt": "hierarchical-predictive-coding-transformer screenshot"
+        },
+        {
+          "src": "/images/projects/hierarchical-predictive-coding-transformer/attention-analysis.png",
+          "alt": "hierarchical-predictive-coding-transformer screenshot"
+        }
+      ],
+      "headings": []
+    },
+    "/projects/homeostasis-publications/index.html": {
+      "title": "homeostasis-publications - Amol Kelkar",
+      "description": "Homeostasis Theory of Consciousness - manuscript draft plus the ASSC22 poster.",
+      "og": [
+        [
+          "og:title",
+          "homeostasis-publications"
+        ],
+        [
+          "og:description",
+          "Homeostasis Theory of Consciousness - manuscript draft plus the ASSC22 poster."
+        ],
+        [
+          "og:image",
+          "https://amolkelkar.me/images/projects/homeostasis-publications/poster-assc22.png"
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "368f0c1fe055757d6148e4964e60521b3d40a14ce1e89b014502f4b4d57db778",
+      "links": [
+        "/projects/",
+        "/projects/i3ai/",
+        "/tags/consciousness/",
+        "/tags/neuroscience/",
+        "/tags/research/",
+        "/tags/theory/",
+        "https://github.com/HomeostasisTheory/publications"
+      ],
+      "media": [
+        {
+          "src": "/images/projects/homeostasis-publications/poster-assc22.png",
+          "alt": "homeostasis-publications screenshot"
+        }
+      ],
+      "headings": []
+    },
+    "/projects/hydra/index.html": {
+      "title": "Hydra - Amol Kelkar",
+      "description": "Massive-scale commercial-real-estate listing data processing system at OfficeSpace.com.",
+      "og": [
+        [
+          "og:title",
+          "Hydra"
+        ],
+        [
+          "og:description",
+          "Massive-scale commercial-real-estate listing data processing system at OfficeSpace.com."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "145da805f1f6de89692da793da63f634178be89d6f023e96f46bf4b30c1797de",
+      "links": [
+        "/projects/",
+        "/projects/officespace-web/",
+        "/tags/data-engineering/",
+        "/tags/professional/",
+        "/tags/real-estate/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/hypersheet/index.html": {
+      "title": "hypersheet - Amol Kelkar",
+      "description": "\"Easy Scalable Hierarchical Spreadsheets\" - a 2016 experiment in composing spreadsheets hierarchically.",
+      "og": [
+        [
+          "og:title",
+          "hypersheet"
+        ],
+        [
+          "og:description",
+          "\"Easy Scalable Hierarchical Spreadsheets\" - a 2016 experiment in composing spreadsheets hierarchically."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "a36c142cd2984692ae41dc20f1a49db6d332cb1323088c8086f4f214a020a1cd",
+      "links": [
+        "/projects/",
+        "/tags/productivity/",
+        "/tags/prototype/",
+        "/tags/web/",
+        "https://github.com/amolk/hypersheet"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/i3ai/index.html": {
+      "title": "i3AI - Amol Kelkar",
+      "description": "Infinite Improbability Institute for Artificial Intelligence - my independent research on the capability-sentience gap: why feeling, unlike intelligence, needs a homeostatic stake.",
+      "og": [
+        [
+          "og:title",
+          "i3AI"
+        ],
+        [
+          "og:description",
+          "Infinite Improbability Institute for Artificial Intelligence - my independent research on the capability-sentience gap: why feeling, unlike intelligence, needs a homeostatic stake."
+        ],
+        [
+          "og:image",
+          "https://amolkelkar.me/images/projects/i3ai/hero.png"
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "cef17985ac394810bf5bb7159617aef81322706e0359423701a95e970c350ff9",
+      "links": [
+        "/projects/",
+        "/projects/agi-experiments/",
+        "/projects/agi-experiments/",
+        "/projects/allostat/",
+        "/projects/homeostasis-publications/",
+        "/projects/homeostasis-publications/",
+        "/tags/agi/",
+        "/tags/consciousness/",
+        "/tags/neuroscience/",
+        "/tags/research/"
+      ],
+      "media": [
+        {
+          "src": "/images/projects/i3ai/hero.png",
+          "alt": "i3AI screenshot"
+        }
+      ],
+      "headings": []
+    },
+    "/projects/index.html": {
+      "title": "Projects - Amol Kelkar",
+      "description": "All projects, grouped by category, with a timeline across 25+ years of building.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "589f89ed3d0437199205d163de65077922267884ec73328fc7913a9e5e9da45c",
+      "links": [
+        "/projects/active-dendrites/",
+        "/projects/aflatune/",
+        "/projects/aflatune/",
+        "/projects/agentapplication/",
+        "/projects/agentapplication/",
+        "/projects/agentzero/",
+        "/projects/agentzero/",
+        "/projects/agi-experiments/",
+        "/projects/agi-experiments/",
+        "/projects/allostat/",
+        "/projects/allostat/",
+        "/projects/amolk-blog/",
+        "/projects/amolk-blog/",
+        "/projects/attractor-learning/",
+        "/projects/bertrand-dr/",
+        "/projects/bertrand-dr/",
+        "/projects/cache-with-yuicompressor/",
+        "/projects/cache-with-yuicompressor/",
+        "/projects/callstack/",
+        "/projects/callstack/",
+        "/projects/carapace-intelligence/",
+        "/projects/carapace-intelligence/",
+        "/projects/collector/",
+        "/projects/collector/",
+        "/projects/crazyaiapps/",
+        "/projects/crazyaiapps/",
+        "/projects/crazydisk/",
+        "/projects/crazydisk/",
+        "/projects/crazywindows/",
+        "/projects/crazywindows/",
+        "/projects/disambiguation-service/",
+        "/projects/disambiguation-service/",
+        "/projects/domain-quantization/",
+        "/projects/durable-python/",
+        "/projects/durable-python/",
+        "/projects/fluaid/",
+        "/projects/fluaid/",
+        "/projects/fly/",
+        "/projects/fly/",
+        "/projects/free-energy-minimization-framework/",
+        "/projects/free-energy-minimization-framework/",
+        "/projects/harness-programming/",
+        "/projects/harness-programming/",
+        "/projects/hierarchical-predictive-coding-transformer/",
+        "/projects/hierarchical-predictive-coding-transformer/",
+        "/projects/homeostasis-publications/",
+        "/projects/homeostasis-publications/",
+        "/projects/hydra/",
+        "/projects/hydra/",
+        "/projects/hypersheet/",
+        "/projects/hypersheet/",
+        "/projects/i3ai/",
+        "/projects/i3ai/",
+        "/projects/infopath-forms-server/",
+        "/projects/infopath-forms-server/",
+        "/projects/infopath/",
+        "/projects/infopath/",
+        "/projects/lifesage/",
+        "/projects/lifesage/",
+        "/projects/llm-wiki-vault/",
+        "/projects/llm-wiki-vault/",
+        "/projects/medicaid-fraud/",
+        "/projects/medicaid-fraud/",
+        "/projects/nanogpt-experiments/",
+        "/projects/nanogpt-experiments/",
+        "/projects/netdocs/",
+        "/projects/netdocs/",
+        "/projects/officespace-web/",
+        "/projects/officespace-web/",
+        "/projects/orgmolt/",
+        "/projects/orgmolt/",
+        "/projects/pattern-machine/",
+        "/projects/pattern-machine/",
+        "/projects/playbooks-lm/",
+        "/projects/playbooks-lm/",
+        "/projects/playbooks-vscode/",
+        "/projects/playbooks-vscode/",
+        "/projects/playbooks/",
+        "/projects/playbooks/",
+        "/projects/qdl/",
+        "/projects/ragafied/",
+        "/projects/ragafied/",
+        "/projects/react-chat-client/",
+        "/projects/react-chat-client/",
+        "/projects/scrapescale-chef/",
+        "/projects/scrapescale-chef/",
+        "/projects/scrapescale/",
+        "/projects/scrapescale/",
+        "/projects/tagger/",
+        "/projects/tagger/",
+        "/projects/text2sql-utils/",
+        "/projects/text2sql-utils/",
+        "/projects/the-living-indus/",
+        "/projects/the-living-indus/",
+        "/projects/timeseries/",
+        "/projects/timeseries/",
+        "/projects/tubestats/",
+        "/projects/tubestats/",
+        "/projects/unfold/",
+        "/projects/unfold/",
+        "/projects/unwind/",
+        "/projects/unwind/",
+        "/projects/vae-convolution-kernels/",
+        "/projects/videoreadr/",
+        "/projects/videoreadr/",
+        "/projects/windows-live/",
+        "/projects/windows-live/",
+        "/projects/z10/",
+        "/projects/z10/"
+      ],
+      "media": [],
+      "headings": [
+        "timeline"
+      ]
+    },
+    "/projects/infopath/index.html": {
+      "title": "InfoPath - Amol Kelkar",
+      "description": "Microsoft Office InfoPath - XML-based electronic forms.",
+      "og": [
+        [
+          "og:title",
+          "InfoPath"
+        ],
+        [
+          "og:description",
+          "Microsoft Office InfoPath - XML-based electronic forms."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "30e2f6b073bc5cbc3d1658de8e5c8ac414e854c9e898d71a8010f77d6fc755f2",
+      "links": [
+        "/projects/",
+        "/tags/desktop/",
+        "/tags/productivity/",
+        "/tags/professional/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/infopath-forms-server/index.html": {
+      "title": "InfoPath Forms Server - Amol Kelkar",
+      "description": "Server-side rendering of InfoPath forms in the browser.",
+      "og": [
+        [
+          "og:title",
+          "InfoPath Forms Server"
+        ],
+        [
+          "og:description",
+          "Server-side rendering of InfoPath forms in the browser."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "a93e055b46efea1905848a997e464b9d4c92fb6e7afb3a53c31e668b909d4eca",
+      "links": [
+        "/projects/",
+        "/tags/productivity/",
+        "/tags/professional/",
+        "/tags/web/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/lifesage/index.html": {
+      "title": "lifesage - Amol Kelkar",
+      "description": "AI life-coaching product (paused) - Rails + Hotwire chat app with progressive conversation compaction and a Person/Sage domain model.",
+      "og": [
+        [
+          "og:title",
+          "lifesage"
+        ],
+        [
+          "og:description",
+          "AI life-coaching product (paused) - Rails + Hotwire chat app with progressive conversation compaction and a Person/Sage domain model."
+        ],
+        [
+          "og:image",
+          "https://amolkelkar.me/images/projects/lifesage/hero.png"
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "4eb21c6b6a1491b0e55da9f288105e50089cb7ea0730ac77da030821ff6f152a",
+      "links": [
+        "/projects/",
+        "/tags/agentic-ai/",
+        "/tags/product/",
+        "/tags/saas/",
+        "/tags/web/",
+        "/tags/wellness/"
+      ],
+      "media": [
+        {
+          "src": "/images/projects/lifesage/hero.png",
+          "alt": "lifesage screenshot"
+        }
+      ],
+      "headings": []
+    },
+    "/projects/llm-wiki-vault/index.html": {
+      "title": "LLM Wiki Vault - Amol Kelkar",
+      "description": "An LLM-managed knowledge graph of everything I build - one page per project, kept current by an agent that reads my repositories. It's the source this portfolio renders from.",
+      "og": [
+        [
+          "og:title",
+          "LLM Wiki Vault"
+        ],
+        [
+          "og:description",
+          "An LLM-managed knowledge graph of everything I build - one page per project, kept current by an agent that reads my repositories. It's the source this portfolio renders from."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "282cf7fef4f8d87449bd958287b1bda664c8bfa9412894478341c963dacfeabd",
+      "links": [
+        "/projects/",
+        "/tags/ai-agents/",
+        "/tags/knowledge-graph/",
+        "/tags/obsidian/",
+        "/tags/personal-tools/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/medicaid-fraud/index.html": {
+      "title": "medicaid-fraud - Amol Kelkar",
+      "description": "Investigation framework for AI-assisted Medicaid fraud detection across federal healthcare datasets.",
+      "og": [
+        [
+          "og:title",
+          "medicaid-fraud"
+        ],
+        [
+          "og:description",
+          "Investigation framework for AI-assisted Medicaid fraud detection across federal healthcare datasets."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "5615e757d5b407fedccd09c158ff4ab43625e76b516d291945cdd0588e67c897",
+      "links": [
+        "/projects/",
+        "/tags/data-engineering/",
+        "/tags/fraud-detection/",
+        "/tags/healthcare/",
+        "/tags/research/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/nanogpt-experiments/index.html": {
+      "title": "nanogpt-experiments - Amol Kelkar",
+      "description": "Karpathy-style nanoGPT fork exploring adaptive-compute transformers with per-block evidence accumulation.",
+      "og": [
+        [
+          "og:title",
+          "nanogpt-experiments"
+        ],
+        [
+          "og:description",
+          "Karpathy-style nanoGPT fork exploring adaptive-compute transformers with per-block evidence accumulation."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "8c803be8fb968189bf276562bdb5ba2dc02882ae7ca699157050265f83934158",
+      "links": [
+        "/projects/",
+        "/tags/deep-learning/",
+        "/tags/llm/",
+        "/tags/machine-learning/",
+        "/tags/research/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/netdocs/index.html": {
+      "title": "NetDocs - Amol Kelkar",
+      "description": "Early web-based Office document platform at Microsoft.",
+      "og": [
+        [
+          "og:title",
+          "NetDocs"
+        ],
+        [
+          "og:description",
+          "Early web-based Office document platform at Microsoft."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "9d4bee8488771c3c911049dc1d24622e749cf9f6db7547c76ca24c4c6229c39b",
+      "links": [
+        "/projects/",
+        "/tags/productivity/",
+        "/tags/professional/",
+        "/tags/web/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/officespace-web/index.html": {
+      "title": "officespace.com - Amol Kelkar",
+      "description": "The OfficeSpace.com web application, used by 100K+ business users monthly.",
+      "og": [
+        [
+          "og:title",
+          "officespace.com"
+        ],
+        [
+          "og:description",
+          "The OfficeSpace.com web application, used by 100K+ business users monthly."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "5d2a91469f47a6264870d681d876e3f44fce69e921564279f5c332a8d08e5b7b",
+      "links": [
+        "/projects/",
+        "/projects/hydra/",
+        "/tags/product/",
+        "/tags/professional/",
+        "/tags/real-estate/",
+        "/tags/web/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/orgmolt/index.html": {
+      "title": "OrgMolt - Amol Kelkar",
+      "description": "Collective intelligence platform for organizations - \"OpenClaw for Enterprise\"",
+      "og": [
+        [
+          "og:title",
+          "OrgMolt"
+        ],
+        [
+          "og:description",
+          "Collective intelligence platform for organizations - \"OpenClaw for Enterprise\""
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "2370e473a3905a5e5ed5c850d78d6dadaed5c5a73dfc3e48a813e1b72bd2bb1f",
+      "links": [
+        "/projects/",
+        "/tags/agentic-ai/",
+        "/tags/ai-agents/",
+        "/tags/enterprise/",
+        "/tags/product/",
+        "/tags/saas/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/pattern-machine/index.html": {
+      "title": "pattern-machine - Amol Kelkar",
+      "description": "Pattern-discovery engine - long-running personal research on spiking-NN pattern formation.",
+      "og": [
+        [
+          "og:title",
+          "pattern-machine"
+        ],
+        [
+          "og:description",
+          "Pattern-discovery engine - long-running personal research on spiking-NN pattern formation."
+        ],
+        [
+          "og:image",
+          "https://amolkelkar.me/images/projects/pattern-machine/hero.gif"
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "8213532af90442950501de8f5015299c71e8cac70b20a84cbc3abd7b3f93996d",
+      "links": [
+        "/projects/",
+        "/tags/deep-learning/",
+        "/tags/machine-learning/",
+        "/tags/neuroscience/",
+        "/tags/research/"
+      ],
+      "media": [
+        {
+          "src": "/images/projects/pattern-machine/hero.gif",
+          "alt": "pattern-machine screenshot"
+        },
+        {
+          "src": "/images/projects/pattern-machine/temporal-to-spatial.gif",
+          "alt": "pattern-machine screenshot"
+        }
+      ],
+      "headings": []
+    },
+    "/projects/playbooks/index.html": {
+      "title": "playbooks - Amol Kelkar",
+      "description": "Flagship: a semantic programming system for AI agents - Markdown-as-source, compiler-to-IR, durable runtime, VSCode debugger. Three years on one thesis: natural language as a programming language.",
+      "og": [
+        [
+          "og:title",
+          "playbooks"
+        ],
+        [
+          "og:description",
+          "Flagship: a semantic programming system for AI agents - Markdown-as-source, compiler-to-IR, durable runtime, VSCode debugger. Three years on one thesis: natural language as a programming language."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "22fb1bf275b4889f912ca275b32bd820cc869fa11b4e6443b98fc52b813737b5",
+      "links": [
+        "/projects/",
+        "/tags/agentic-ai/",
+        "/tags/ai-agents/",
+        "/tags/developer-tools/",
+        "/tags/framework/",
+        "https://github.com/playbooks-ai/playbooks.git",
+        "https://runplaybooks.ai/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/playbooks-lm/index.html": {
+      "title": "playbooks-lm - Amol Kelkar",
+      "description": "Subproject of Playbooks: fine-tune a small open-weight model (Qwen-3-4B / Gemma) to compile and interpret Playbooks programs locally.",
+      "og": [
+        [
+          "og:title",
+          "playbooks-lm"
+        ],
+        [
+          "og:description",
+          "Subproject of Playbooks: fine-tune a small open-weight model (Qwen-3-4B / Gemma) to compile and interpret Playbooks programs locally."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "dd155cac83a758406d4ee0317f5482929fb5b02866e70011c7a4d9796a78d3c2",
+      "links": [
+        "/projects/",
+        "/tags/developer-tools/",
+        "/tags/llm/",
+        "/tags/machine-learning/",
+        "/tags/research/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/playbooks-vscode/index.html": {
+      "title": "playbooks-vscode - Amol Kelkar",
+      "description": "Subproject of Playbooks: published VSCode extension that debugs natural-language Playbooks programs via the Debug Adapter Protocol.",
+      "og": [
+        [
+          "og:title",
+          "playbooks-vscode"
+        ],
+        [
+          "og:description",
+          "Subproject of Playbooks: published VSCode extension that debugs natural-language Playbooks programs via the Debug Adapter Protocol."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "7a95d0cd88b6cf6fe9d94ea4f85f717aa32d48018281758e5653e03fc118f31c",
+      "links": [
+        "/projects/",
+        "/tags/agentic-ai/",
+        "/tags/developer-tools/",
+        "/tags/tool/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/qdl/index.html": {
+      "title": "Quantized Distribution Learning - Amol Kelkar",
+      "description": "Learning latent-variable probability distributions directly, as histograms over quantized bins.",
+      "og": [
+        [
+          "og:title",
+          "Quantized Distribution Learning"
+        ],
+        [
+          "og:description",
+          "Learning latent-variable probability distributions directly, as histograms over quantized bins."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "9923217cfb10271f6cbda13165d255b6699add42127181996e33053149e3115f",
+      "links": [
+        "/projects/",
+        "/projects/agi-experiments/",
+        "/tags/deep-learning/",
+        "/tags/machine-learning/",
+        "/tags/research/",
+        "https://github.com/amolk/AGI-experiments/tree/master/QDL%20-%20Quantized%20Distribution%20Learning"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/ragafied/index.html": {
+      "title": "ragafied - Amol Kelkar",
+      "description": "A singing-practice app I first built in 2012-13, before browsers could do the audio work it needed, and rebuilt in 2026 on AI models, offline and real-time signal processing, and algorithms of my own: upload a recording and it becomes a track you can sing, with the vocal removed, key and tempo moving independently, and phrase-by-phrase call-and-response practice.",
+      "og": [
+        [
+          "og:title",
+          "ragafied"
+        ],
+        [
+          "og:description",
+          "A singing-practice app I first built in 2012-13, before browsers could do the audio work it needed, and rebuilt in 2026 on AI models, offline and real-time signal processing, and algorithms of my own: upload a recording and it becomes a track you can sing, with the vocal removed, key and tempo moving independently, and phrase-by-phrase call-and-response practice."
+        ],
+        [
+          "og:image",
+          "https://amolkelkar.me/images/projects/ragafied/hero.jpg"
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "1e2bdf689d65cafe700a43f4a7553b7ef1b28bbced06284bb83945835eaba82c",
+      "links": [
+        "#what-it-is-built-on",
+        "/projects/",
+        "/tags/audio/",
+        "/tags/edtech/",
+        "/tags/karaoke/",
+        "/tags/music/",
+        "/tags/signal-processing/",
+        "/tags/web/",
+        "https://github.com/amolk/ragafied",
+        "https://ragafied.com",
+        "https://ragafied.com"
+      ],
+      "media": [
+        {
+          "src": "/images/projects/ragafied/hero.jpg",
+          "alt": "ragafied screenshot"
+        },
+        {
+          "src": "/images/projects/ragafied/logo.png",
+          "alt": "ragafied screenshot"
+        },
+        {
+          "src": "/images/projects/ragafied/brand.png",
+          "alt": "ragafied screenshot"
+        }
+      ],
+      "headings": [
+        "what-it-is-built-on"
+      ]
+    },
+    "/projects/react-chat-client/index.html": {
+      "title": "react-chat-client - Amol Kelkar",
+      "description": "React/Redux chat UI for Google DialogFlow with rich responses and drag-drop file upload.",
+      "og": [
+        [
+          "og:title",
+          "react-chat-client"
+        ],
+        [
+          "og:description",
+          "React/Redux chat UI for Google DialogFlow with rich responses and drag-drop file upload."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "b4ce0014d0e766421ba367bd5437af5cac6b7dec5a2ceff11e0f2cd666577e95",
+      "links": [
+        "/projects/",
+        "/tags/chatbot/",
+        "/tags/library/",
+        "/tags/web/",
+        "https://github.com/amolk/react_chat_client"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/scrapescale/index.html": {
+      "title": "scrapescale - Amol Kelkar",
+      "description": "Production Scrapy spider fleet that fed a commercial real-estate listings pipeline.",
+      "og": [
+        [
+          "og:title",
+          "scrapescale"
+        ],
+        [
+          "og:description",
+          "Production Scrapy spider fleet that fed a commercial real-estate listings pipeline."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "d3e8e4c0138724baeecb9724a725cc6fb5b99967aa760b835aff3bfec60727ce",
+      "links": [
+        "/projects/",
+        "/tags/data-engineering/",
+        "/tags/real-estate/",
+        "/tags/tool/",
+        "/tags/web-scraping/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/scrapescale-chef/index.html": {
+      "title": "scrapescale-chef - Amol Kelkar",
+      "description": "Chef cookbook + knife-solo runner that provisions the scrapescale scrapyd EC2 host.",
+      "og": [
+        [
+          "og:title",
+          "scrapescale-chef"
+        ],
+        [
+          "og:description",
+          "Chef cookbook + knife-solo runner that provisions the scrapescale scrapyd EC2 host."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "25c5cb0bbe8ffa79c3c51b5286ed9748337328f22b4275487d33dc87b66a2e70",
+      "links": [
+        "/projects/",
+        "/tags/data-engineering/",
+        "/tags/developer-tools/",
+        "/tags/infrastructure/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/tagger/index.html": {
+      "title": "tagger - Amol Kelkar",
+      "description": "Fine-tunes BERT for token-level sequence tagging on natural-language utterances.",
+      "og": [
+        [
+          "og:title",
+          "tagger"
+        ],
+        [
+          "og:description",
+          "Fine-tunes BERT for token-level sequence tagging on natural-language utterances."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "095824f0807404aea04109d89c8d3c5781f7dd9bc7e158e9b4daea382c7b38a0",
+      "links": [
+        "/projects/",
+        "/tags/machine-learning/",
+        "/tags/nlp/",
+        "/tags/research/",
+        "/tags/tool/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/text2sql-utils/index.html": {
+      "title": "text2sql-utils - Amol Kelkar",
+      "description": "Shared preprocessing + log-parsing utilities across the text-to-SQL research line (Spider schema format).",
+      "og": [
+        [
+          "og:title",
+          "text2sql-utils"
+        ],
+        [
+          "og:description",
+          "Shared preprocessing + log-parsing utilities across the text-to-SQL research line (Spider schema format)."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "9e5dfc4b564dc55fe431710784195d3acba548b764e821a7fcd9c92f2bf11e08",
+      "links": [
+        "/projects/",
+        "/tags/developer-tools/",
+        "/tags/library/",
+        "/tags/nlp/",
+        "/tags/text-to-sql/",
+        "https://github.com/amolk/text2sql-utils",
+        "https://yale-lily.github.io/spider"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/the-living-indus/index.html": {
+      "title": "The Living Indus - Amol Kelkar",
+      "description": "A 3D narrative game about the people who made and sustained an Indus Valley city, built on a hard separation between documented evidence, reasonable reconstruction, and invention - so the world can be inhabited without pretending to be recovered.",
+      "og": [
+        [
+          "og:title",
+          "The Living Indus"
+        ],
+        [
+          "og:description",
+          "A 3D narrative game about the people who made and sustained an Indus Valley city, built on a hard separation between documented evidence, reasonable reconstruction, and invention - so the world can be inhabited without pretending to be recovered."
+        ],
+        [
+          "og:image",
+          "https://amolkelkar.me/images/projects/the-living-indus/hero.jpg"
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "8ab069e4ea5a76ea2cf5f04132bfb031dc656169a9ab1567614b081f81cec2fc",
+      "links": [
+        "#concept-work-as-correction",
+        "#evidence-reconstruction-invention",
+        "#what-runs-today",
+        "/projects/",
+        "/tags/3d/",
+        "/tags/archaeology/",
+        "/tags/game/",
+        "/tags/history/",
+        "/tags/narrative/",
+        "/tags/prototype/",
+        "/tags/worldbuilding/"
+      ],
+      "media": [
+        {
+          "src": "/images/projects/the-living-indus/hero.jpg",
+          "alt": "The Living Indus screenshot"
+        },
+        {
+          "src": "/images/projects/the-living-indus/household.jpg",
+          "alt": "The Living Indus screenshot"
+        },
+        {
+          "src": "/images/projects/the-living-indus/city-map.jpg",
+          "alt": "The Living Indus screenshot"
+        },
+        {
+          "src": "/images/projects/the-living-indus/streets.jpg",
+          "alt": "The Living Indus screenshot"
+        },
+        {
+          "src": "/images/projects/the-living-indus/trades.jpg",
+          "alt": "The Living Indus screenshot"
+        }
+      ],
+      "headings": [
+        "evidence-reconstruction-invention",
+        "concept-work-as-correction",
+        "what-runs-today"
+      ]
+    },
+    "/projects/timeseries/index.html": {
+      "title": "timeseries - Amol Kelkar",
+      "description": "Ruby time-series helper for MongoMapper / MongoDB.",
+      "og": [
+        [
+          "og:title",
+          "timeseries"
+        ],
+        [
+          "og:description",
+          "Ruby time-series helper for MongoMapper / MongoDB."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "cf824c04e6b0cd52111be83b3f9a5d1e7cb6a2320598e4c540220619b8051a2f",
+      "links": [
+        "/projects/",
+        "/tags/data-engineering/",
+        "/tags/library/",
+        "https://github.com/amolk/timeseries"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/tubestats/index.html": {
+      "title": "tubestats - Amol Kelkar",
+      "description": "YouTube tube-stats Ruby app.",
+      "og": [
+        [
+          "og:title",
+          "tubestats"
+        ],
+        [
+          "og:description",
+          "YouTube tube-stats Ruby app."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "95e746cb6fda37335e2c72b9c3818c70a9f26bf999ef73fb3e650af6293754c9",
+      "links": [
+        "/projects/",
+        "/tags/prototype/",
+        "/tags/web/",
+        "https://github.com/amolk/tubestats"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/unfold/index.html": {
+      "title": "unfold - Amol Kelkar",
+      "description": "A React component for rendering branching timelines as a 3D graph - flat-shaded nodes, curved edges, and per-edge particle streams, with a visual language inspired by Foundation's Prime Radiant.",
+      "og": [
+        [
+          "og:title",
+          "unfold"
+        ],
+        [
+          "og:description",
+          "A React component for rendering branching timelines as a 3D graph - flat-shaded nodes, curved edges, and per-edge particle streams, with a visual language inspired by Foundation's Prime Radiant."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "273784981f74e7929577b2f4403b155b9a8678fdef046d9a111f27fe99c65c01",
+      "links": [
+        "/projects/",
+        "/tags/developer-tools/",
+        "/tags/library/",
+        "/tags/visualization/",
+        "/tags/web/",
+        "https://amolkelkar.me/unfold/",
+        "https://github.com/amolk/unfold"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/unwind/index.html": {
+      "title": "unwind - Amol Kelkar",
+      "description": "Outside-in web observer for Claude Code sessions and callstack call trees.",
+      "og": [
+        [
+          "og:title",
+          "unwind"
+        ],
+        [
+          "og:description",
+          "Outside-in web observer for Claude Code sessions and callstack call trees."
+        ],
+        [
+          "og:image",
+          "https://amolkelkar.me/images/projects/unwind/hero.png"
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "233adcbdb0fd0bdd33a7e31649b353fccb12164a19cf2dbb422e3e2b50a3ce5c",
+      "links": [
+        "/projects/",
+        "/tags/agentic-ai/",
+        "/tags/developer-tools/",
+        "/tags/observability/",
+        "/tags/tool/",
+        "https://github.com/unwind-labs/unwind"
+      ],
+      "media": [
+        {
+          "src": "/images/projects/unwind/hero.png",
+          "alt": "unwind screenshot"
+        },
+        {
+          "src": "/images/projects/unwind/call-tree.png",
+          "alt": "unwind screenshot"
+        },
+        {
+          "src": "/images/projects/unwind/node-detail.png",
+          "alt": "unwind screenshot"
+        },
+        {
+          "src": "/images/projects/unwind/usage-report.png",
+          "alt": "unwind screenshot"
+        }
+      ],
+      "headings": []
+    },
+    "/projects/vae-convolution-kernels/index.html": {
+      "title": "VAE Convolution Kernels - Amol Kelkar",
+      "description": "What if a variational autoencoder were used as a convolution kernel?",
+      "og": [
+        [
+          "og:title",
+          "VAE Convolution Kernels"
+        ],
+        [
+          "og:description",
+          "What if a variational autoencoder were used as a convolution kernel?"
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "b2cf5d443ff5a32107e05d7757eeb5eecae119c075d36aa882ce355ae78c731a",
+      "links": [
+        "/projects/",
+        "/projects/agi-experiments/",
+        "/tags/deep-learning/",
+        "/tags/machine-learning/",
+        "/tags/research/",
+        "https://github.com/amolk/AGI-experiments/tree/master/Autoencoding%20kernel%20convolution"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/videoreadr/index.html": {
+      "title": "videoreadr - Amol Kelkar",
+      "description": "Edufied.com Rails app - VideoReadr.",
+      "og": [
+        [
+          "og:title",
+          "videoreadr"
+        ],
+        [
+          "og:description",
+          "Edufied.com Rails app - VideoReadr."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "8945401276f3c2899c4ab06f5c8dc0d3866f9e1cd72d9b1ce04c4f2a0bab18bf",
+      "links": [
+        "/projects/",
+        "/tags/edtech/",
+        "/tags/product/",
+        "/tags/video/",
+        "/tags/web/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/windows-live/index.html": {
+      "title": "Windows Live - Amol Kelkar",
+      "description": "Microsoft's Windows Live online services suite.",
+      "og": [
+        [
+          "og:title",
+          "Windows Live"
+        ],
+        [
+          "og:description",
+          "Microsoft's Windows Live online services suite."
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "7fa087f8196ae3fa865f246ed8f69dff5c1e9d4f2e37ba81a7ec8b1d9bae7647",
+      "links": [
+        "/projects/",
+        "/tags/professional/",
+        "/tags/web/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/projects/z10/index.html": {
+      "title": "z10 - Amol Kelkar",
+      "description": "Agent-native Figma-like design surface.",
+      "og": [
+        [
+          "og:title",
+          "z10"
+        ],
+        [
+          "og:description",
+          "Agent-native Figma-like design surface."
+        ],
+        [
+          "og:image",
+          "https://amolkelkar.me/images/projects/z10/hero.png"
+        ],
+        [
+          "og:type",
+          "article"
+        ]
+      ],
+      "text": "b976dd6956404e59daed2b2ad46c2c6bae00c793763f776d69c25fd708db5bae",
+      "links": [
+        "/projects/",
+        "/tags/agentic-ai/",
+        "/tags/design-tools/",
+        "/tags/developer-tools/",
+        "/tags/tool/",
+        "/tags/web/",
+        "https://github.com/amolk/z10"
+      ],
+      "media": [
+        {
+          "src": "/images/projects/z10/hero.png",
+          "alt": "z10 screenshot"
+        }
+      ],
+      "headings": []
+    },
+    "/publications/index.html": {
+      "title": "Publications - Amol Kelkar",
+      "description": "Peer-reviewed papers and patents on AI systems, conversational agents, and computational neuroscience.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "9aba92cfc25b738e2128c338456686d314ca5e11e6fa7a502f9a0e3e41900722",
+      "links": [
+        "https://aamas.csc.liv.ac.uk/Proceedings/aamas2021/pdfs/p12.pdf",
+        "https://arxiv.org/abs/2002.00557",
+        "https://arxiv.org/abs/2012.08146",
+        "https://arxiv.org/abs/2411.09853",
+        "https://arxiv.org/abs/2411.10416",
+        "https://nn.cs.utexas.edu/downloads/papers/bednar.cns01.pdf",
+        "https://patents.google.com/patent/US12282743",
+        "https://patents.google.com/patent/US7509353",
+        "https://patents.google.com/patent/US7543228",
+        "https://patents.google.com/patent/US7673228",
+        "https://patents.google.com/patent/US7676843",
+        "https://patents.google.com/patent/US7774620",
+        "https://patents.google.com/patent/US7937651",
+        "https://patents.google.com/patent/US7941746",
+        "https://patents.google.com/patent/US8069433",
+        "https://patents.google.com/patent/US9229915",
+        "https://scholar.google.com/citations?user=qKZ2VRAAAAAJ&hl=en"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/3d/index.html": {
+      "title": "Projects tagged “3D” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "7c58e7b4aba9b6fa760a87da987724ed7147e14d40b6acab7acd5268eaeddded",
+      "links": [
+        "/projects/",
+        "/projects/the-living-indus/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/agentic-ai/index.html": {
+      "title": "Projects tagged “agentic AI” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "083699b728afc0dcaa40ed3b89446ef1df7d89d9b917f1ede0d62a0cde6098ef",
+      "links": [
+        "/projects/",
+        "/projects/agentapplication/",
+        "/projects/agentzero/",
+        "/projects/allostat/",
+        "/projects/callstack/",
+        "/projects/carapace-intelligence/",
+        "/projects/crazyaiapps/",
+        "/projects/crazywindows/",
+        "/projects/durable-python/",
+        "/projects/harness-programming/",
+        "/projects/lifesage/",
+        "/projects/orgmolt/",
+        "/projects/playbooks-vscode/",
+        "/projects/playbooks/",
+        "/projects/unwind/",
+        "/projects/z10/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/agi/index.html": {
+      "title": "Projects tagged “AGI” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "9b97d736500752c89d7fdf43a641a9df4a1e8bad98954599d19471d23d73e6d5",
+      "links": [
+        "/projects/",
+        "/projects/agi-experiments/",
+        "/projects/allostat/",
+        "/projects/i3ai/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/ai-agents/index.html": {
+      "title": "Projects tagged “AI agents” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "306deff717366b72c68c360145e7616c6d9dfd77b68e30439ce55505bf1a96ea",
+      "links": [
+        "/projects/",
+        "/projects/agentapplication/",
+        "/projects/agentzero/",
+        "/projects/callstack/",
+        "/projects/llm-wiki-vault/",
+        "/projects/orgmolt/",
+        "/projects/playbooks/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/app/index.html": {
+      "title": "Projects tagged “app” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "ed152452c266b109172148afe8cd8b467a1913b87902b73c4d81199cb67b33cc",
+      "links": [
+        "/projects/",
+        "/projects/crazyaiapps/",
+        "/projects/crazydisk/",
+        "/projects/crazywindows/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/archaeology/index.html": {
+      "title": "Projects tagged “archaeology” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "b5f1fcd1b85d8ea844c3fb7c38bc6b9f30d875ab0c98d406aaf633d8b6dcec2f",
+      "links": [
+        "/projects/",
+        "/projects/the-living-indus/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/audio/index.html": {
+      "title": "Projects tagged “audio” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "d25353efc69e2032d3dd4484523ef6a5047e50758eea55c7513bed41aa50530f",
+      "links": [
+        "/projects/",
+        "/projects/ragafied/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/chatbot/index.html": {
+      "title": "Projects tagged “chatbot” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "e1c4e91fd2d0578bb9f17ceb89ed18a5d34488fc17a7c8ded37119db610d1a57",
+      "links": [
+        "/projects/",
+        "/projects/react-chat-client/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/cognitive-architecture/index.html": {
+      "title": "Projects tagged “cognitive architecture” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "583d848b7614c2ff5a2c7ee507c7dac00a1233c6d634966f179200b9f62edf38",
+      "links": [
+        "/projects/",
+        "/projects/allostat/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/connectome/index.html": {
+      "title": "Projects tagged “connectome” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "285299504985aac1e3677998c48691a646b126ef161bc5486098b4e8e15fc3dc",
+      "links": [
+        "/projects/",
+        "/projects/fly/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/consciousness/index.html": {
+      "title": "Projects tagged “consciousness” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "c72047698815b0770f3d42cab93de2183431ba45e699302789cede22786a9087",
+      "links": [
+        "/projects/",
+        "/projects/homeostasis-publications/",
+        "/projects/i3ai/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/contentlayer/index.html": {
+      "title": "Projects tagged “Contentlayer” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "994289b5dd11c8c86e947eb1c21f26481b0156ed8f70bc1ac076ed0fda8f330a",
+      "links": [
+        "/projects/",
+        "/projects/amolk-blog/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/data-engineering/index.html": {
+      "title": "Projects tagged “data engineering” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "777a20b6cfc61688ff423142f563959543f80d4f9a2172c88a33166531069332",
+      "links": [
+        "/projects/",
+        "/projects/hydra/",
+        "/projects/medicaid-fraud/",
+        "/projects/scrapescale-chef/",
+        "/projects/scrapescale/",
+        "/projects/timeseries/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/decision-intelligence/index.html": {
+      "title": "Projects tagged “decision intelligence” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "438a50a73ed2ba0395d6dbbe2e832af54f94cffe81b58d1d26f36224ccd4e021",
+      "links": [
+        "/projects/",
+        "/projects/carapace-intelligence/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/deep-learning/index.html": {
+      "title": "Projects tagged “deep learning” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "51110eeeec6989ec169755ddac690d3844e650a8ba0c290e8018fcfa4261c293",
+      "links": [
+        "/projects/",
+        "/projects/attractor-learning/",
+        "/projects/domain-quantization/",
+        "/projects/hierarchical-predictive-coding-transformer/",
+        "/projects/nanogpt-experiments/",
+        "/projects/pattern-machine/",
+        "/projects/qdl/",
+        "/projects/vae-convolution-kernels/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/design-tools/index.html": {
+      "title": "Projects tagged “design tools” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "88cc4dde6d31981ce7be3a92735abd91d52e6122aa45b92474c64f043c83495b",
+      "links": [
+        "/projects/",
+        "/projects/z10/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/desktop/index.html": {
+      "title": "Projects tagged “desktop” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "4e5137ac9cdd9d3ee35825c9454015a9b3e72a0a1e38716c717c6d074a031c09",
+      "links": [
+        "/projects/",
+        "/projects/infopath/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/developer-tools/index.html": {
+      "title": "Projects tagged “developer tools” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "3454f3b0774301c7398cd4ec3adf008f2f5bf96c2c3e8e5b7cdcda481f80afb7",
+      "links": [
+        "/projects/",
+        "/projects/agentzero/",
+        "/projects/cache-with-yuicompressor/",
+        "/projects/callstack/",
+        "/projects/crazyaiapps/",
+        "/projects/crazydisk/",
+        "/projects/durable-python/",
+        "/projects/harness-programming/",
+        "/projects/playbooks-lm/",
+        "/projects/playbooks-vscode/",
+        "/projects/playbooks/",
+        "/projects/scrapescale-chef/",
+        "/projects/text2sql-utils/",
+        "/projects/unfold/",
+        "/projects/unwind/",
+        "/projects/z10/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/e-book/index.html": {
+      "title": "Projects tagged “e-book” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "9889d6faa4c6533dd322bf7c8edc420fbd5a263def2f92fba763f610fc094d8b",
+      "links": [
+        "/projects/",
+        "/projects/harness-programming/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/edtech/index.html": {
+      "title": "Projects tagged “edtech” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "b221b3762fb0021b5295d5d746fd8b05dcc9276a0584de0235aee139586b5d13",
+      "links": [
+        "/projects/",
+        "/projects/ragafied/",
+        "/projects/videoreadr/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/enterprise/index.html": {
+      "title": "Projects tagged “enterprise” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "2f5cecfba49d2732357982816ce65b0a4658ea2e4cbc875cca5f81a8c8804530",
+      "links": [
+        "/projects/",
+        "/projects/orgmolt/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/framework/index.html": {
+      "title": "Projects tagged “framework” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "e92c38a7cb5f15269e4e6616e20e3a2fce60c8fd720e21118fa865f367d96c8b",
+      "links": [
+        "/projects/",
+        "/projects/callstack/",
+        "/projects/playbooks/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/fraud-detection/index.html": {
+      "title": "Projects tagged “fraud detection” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "fa83acafd940a5156ee1bdc9a25508d36dacddb053c20e3fdd269b1c60811ed1",
+      "links": [
+        "/projects/",
+        "/projects/medicaid-fraud/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/game/index.html": {
+      "title": "Projects tagged “game” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "a5622ed3519e6951d2fb596348eccf98540eb6cf78accbc9312730d19760f22d",
+      "links": [
+        "/projects/",
+        "/projects/the-living-indus/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/healthcare/index.html": {
+      "title": "Projects tagged “healthcare” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "61a6b3b8f34c26721e81e06203ea423a58226efb170cbbbb42a68c7f51261624",
+      "links": [
+        "/projects/",
+        "/projects/medicaid-fraud/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/history/index.html": {
+      "title": "Projects tagged “history” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "6f929e015550697c66fb37dbd8c6dbdc58b9c575ae8801239a6dba9e935b56a3",
+      "links": [
+        "/projects/",
+        "/projects/the-living-indus/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/homeostasis/index.html": {
+      "title": "Projects tagged “homeostasis” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "c85cea5394562a659b2987490795fa93390f35a5344a7adb13795869b19abf84",
+      "links": [
+        "/projects/",
+        "/projects/allostat/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/infrastructure/index.html": {
+      "title": "Projects tagged “infrastructure” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "acc6f02e0e37df6af1ab9577662f385a5614cc8e84f68e24c33a7c4111a3ed42",
+      "links": [
+        "/projects/",
+        "/projects/carapace-intelligence/",
+        "/projects/scrapescale-chef/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/karaoke/index.html": {
+      "title": "Projects tagged “karaoke” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "1d7e867f2f65da0f7213fa44d4d700f60168720080cff6508070879c3475b1e7",
+      "links": [
+        "/projects/",
+        "/projects/ragafied/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/knowledge-graph/index.html": {
+      "title": "Projects tagged “knowledge graph” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "74e9135351b919025fd6505d8cf6cd2d5b9d46b4fd1e015ebfabdad5f9233d45",
+      "links": [
+        "/projects/",
+        "/projects/llm-wiki-vault/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/library/index.html": {
+      "title": "Projects tagged “library” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "70d9ae764e2399da6d09b154a2bbe0462a1ae60394432eede17cbc8efae58faa",
+      "links": [
+        "/projects/",
+        "/projects/cache-with-yuicompressor/",
+        "/projects/durable-python/",
+        "/projects/react-chat-client/",
+        "/projects/text2sql-utils/",
+        "/projects/timeseries/",
+        "/projects/unfold/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/llm/index.html": {
+      "title": "Projects tagged “LLM” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "2f62665ca3bc21e3491e979e8b04512e59fd918df1047caf3c6032f1f9de1628",
+      "links": [
+        "/projects/",
+        "/projects/carapace-intelligence/",
+        "/projects/nanogpt-experiments/",
+        "/projects/playbooks-lm/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/machine-learning/index.html": {
+      "title": "Projects tagged “machine learning” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "765c96606677dd4c78579a5b4b6b13360e34cbd40559099b7358a5de8112c134",
+      "links": [
+        "/projects/",
+        "/projects/active-dendrites/",
+        "/projects/agi-experiments/",
+        "/projects/attractor-learning/",
+        "/projects/bertrand-dr/",
+        "/projects/domain-quantization/",
+        "/projects/free-energy-minimization-framework/",
+        "/projects/hierarchical-predictive-coding-transformer/",
+        "/projects/nanogpt-experiments/",
+        "/projects/pattern-machine/",
+        "/projects/playbooks-lm/",
+        "/projects/qdl/",
+        "/projects/tagger/",
+        "/projects/vae-convolution-kernels/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/macos/index.html": {
+      "title": "Projects tagged “macOS” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "1c276554adeabea5146754b91ca4846d96d7a151ccbe57043cab7a8aca2e63ec",
+      "links": [
+        "/projects/",
+        "/projects/crazyaiapps/",
+        "/projects/crazydisk/",
+        "/projects/crazywindows/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/music/index.html": {
+      "title": "Projects tagged “music” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "c03697a0be77428cd5c57750f1153c013acfb4ada35a2f4f90cc8417bf0f863f",
+      "links": [
+        "/projects/",
+        "/projects/aflatune/",
+        "/projects/ragafied/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/narrative/index.html": {
+      "title": "Projects tagged “narrative” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "33240b8a52503701bf8e6ce1e16ed854efafddd2e96439784bd877cbc76018e8",
+      "links": [
+        "/projects/",
+        "/projects/the-living-indus/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/neuroscience/index.html": {
+      "title": "Projects tagged “neuroscience” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "444921c11443e14de8202b271c8ef814eb30abe4b9a18c29d37794f7040e54b0",
+      "links": [
+        "/projects/",
+        "/projects/active-dendrites/",
+        "/projects/agi-experiments/",
+        "/projects/attractor-learning/",
+        "/projects/fly/",
+        "/projects/free-energy-minimization-framework/",
+        "/projects/homeostasis-publications/",
+        "/projects/i3ai/",
+        "/projects/pattern-machine/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/next-js/index.html": {
+      "title": "Projects tagged “Next.js” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "7d051cb1b11be31580e73f346ec2b4e611f7898dc257acaf5d45e0e5858595a3",
+      "links": [
+        "/projects/",
+        "/projects/amolk-blog/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/nlp/index.html": {
+      "title": "Projects tagged “NLP” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "73dbe053f944fc9ff4b1d5b31c24543e178a516b3e620eb33d433bf946c5ea85",
+      "links": [
+        "/projects/",
+        "/projects/bertrand-dr/",
+        "/projects/disambiguation-service/",
+        "/projects/tagger/",
+        "/projects/text2sql-utils/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/observability/index.html": {
+      "title": "Projects tagged “observability” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "ea2b7c53af18b292e60bd4551d25e2348b3158e62d3041ee223d02bcee3a1b65",
+      "links": [
+        "/projects/",
+        "/projects/unwind/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/obsidian/index.html": {
+      "title": "Projects tagged “Obsidian” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "5bb642d7eb3036b6c0af8ad98dcc831531f717d6d59d3413622cefd0cdc7d93c",
+      "links": [
+        "/projects/",
+        "/projects/llm-wiki-vault/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/paper/index.html": {
+      "title": "Projects tagged “paper” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "5409b64d2371d7160f95625c36ae7710584cf711db2b1256cbb569d0bae419af",
+      "links": [
+        "/projects/",
+        "/projects/agentapplication/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/personal-tools/index.html": {
+      "title": "Projects tagged “personal tools” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "218658f1221a80126524ba76692ece08296cdc8d109ac115530dd2fbcfb1c0df",
+      "links": [
+        "/projects/",
+        "/projects/llm-wiki-vault/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/portfolio/index.html": {
+      "title": "Projects tagged “portfolio” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "c113a417fdb69660deb46f2d8b741e97204b9507cf07bab00ea18bc8615e8fc5",
+      "links": [
+        "/projects/",
+        "/projects/amolk-blog/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/predictive-coding/index.html": {
+      "title": "Projects tagged “predictive coding” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "956143374657fe2816e0cea84b20666c7f022b178c94daf80b6dd7e6b0ff6e44",
+      "links": [
+        "/projects/",
+        "/projects/active-dendrites/",
+        "/projects/free-energy-minimization-framework/",
+        "/projects/hierarchical-predictive-coding-transformer/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/presentations/index.html": {
+      "title": "Projects tagged “presentations” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "459190541ac27ca49b8fd1b411f0ba37651e564591303c8a9bb10d848436a18a",
+      "links": [
+        "/projects/",
+        "/projects/fluaid/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/product/index.html": {
+      "title": "Projects tagged “product” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "cfa5682466b6166ee1f2f6293aa490847f9985c8bf30524ed1616ca48ef1f97f",
+      "links": [
+        "/projects/",
+        "/projects/aflatune/",
+        "/projects/crazyaiapps/",
+        "/projects/crazydisk/",
+        "/projects/crazywindows/",
+        "/projects/lifesage/",
+        "/projects/officespace-web/",
+        "/projects/orgmolt/",
+        "/projects/videoreadr/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/productivity/index.html": {
+      "title": "Projects tagged “productivity” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "9060072ce2a9a5ce24897b0544996200e68130036da6b31a48d93644b9a75b34",
+      "links": [
+        "/projects/",
+        "/projects/crazywindows/",
+        "/projects/hypersheet/",
+        "/projects/infopath-forms-server/",
+        "/projects/infopath/",
+        "/projects/netdocs/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/professional/index.html": {
+      "title": "Projects tagged “professional” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "bffbb4a7b5b38ba90fd4d48dfb4cd9140caebb3bfb3f51bb23403cf37632f959",
+      "links": [
+        "/projects/",
+        "/projects/hydra/",
+        "/projects/infopath-forms-server/",
+        "/projects/infopath/",
+        "/projects/netdocs/",
+        "/projects/officespace-web/",
+        "/projects/windows-live/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/prototype/index.html": {
+      "title": "Projects tagged “prototype” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "1f74a2f18459c377c601943b1e29d4322b2ed52c0c85134032f5d82d2dac9ffd",
+      "links": [
+        "/projects/",
+        "/projects/collector/",
+        "/projects/fluaid/",
+        "/projects/hypersheet/",
+        "/projects/the-living-indus/",
+        "/projects/tubestats/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/real-estate/index.html": {
+      "title": "Projects tagged “real estate” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "91d46dd2e37428f26d713f98ab40461af634bcfcfcbbf19ce1f791918e874526",
+      "links": [
+        "/projects/",
+        "/projects/hydra/",
+        "/projects/officespace-web/",
+        "/projects/scrapescale/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/recommendation/index.html": {
+      "title": "Projects tagged “recommendation” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "ee9d799842408c4fa9e1f7d5041e8bc6ff0b5b3e48b105b2b80f5346e3517797",
+      "links": [
+        "/projects/",
+        "/projects/aflatune/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/research/index.html": {
+      "title": "Projects tagged “research” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "a84e56aa4cb6343f8d005959ae80acb1cf92199976d6fff60f40468a7c848732",
+      "links": [
+        "/projects/",
+        "/projects/active-dendrites/",
+        "/projects/agi-experiments/",
+        "/projects/allostat/",
+        "/projects/attractor-learning/",
+        "/projects/bertrand-dr/",
+        "/projects/carapace-intelligence/",
+        "/projects/disambiguation-service/",
+        "/projects/domain-quantization/",
+        "/projects/fly/",
+        "/projects/free-energy-minimization-framework/",
+        "/projects/hierarchical-predictive-coding-transformer/",
+        "/projects/homeostasis-publications/",
+        "/projects/i3ai/",
+        "/projects/medicaid-fraud/",
+        "/projects/nanogpt-experiments/",
+        "/projects/pattern-machine/",
+        "/projects/playbooks-lm/",
+        "/projects/qdl/",
+        "/projects/tagger/",
+        "/projects/vae-convolution-kernels/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/saas/index.html": {
+      "title": "Projects tagged “SaaS” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "2504e021507ceb408f2ce302f6d945f203fc3841993b146f6e0c4f65266f585a",
+      "links": [
+        "/projects/",
+        "/projects/lifesage/",
+        "/projects/orgmolt/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/signal-processing/index.html": {
+      "title": "Projects tagged “signal processing” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "a02a15272a71c36a7aae5bad7ea1fa3187d50723e8298752d5aa0d77b7520114",
+      "links": [
+        "/projects/",
+        "/projects/ragafied/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/simulation/index.html": {
+      "title": "Projects tagged “simulation” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "0f4e817a05c7df54e6b63f93fba762b7692b593098e46615b3b50d8952e7ea81",
+      "links": [
+        "/projects/",
+        "/projects/fly/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/software-architecture/index.html": {
+      "title": "Projects tagged “software architecture” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "c3c2da99b6ac786c4e4797cfab188d3daf23d377c4c916dddf886962a1f59aed",
+      "links": [
+        "/projects/",
+        "/projects/agentapplication/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/standards/index.html": {
+      "title": "Projects tagged “standards” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "cd1e53aab221aef6bbeba3d9b0971390c9e6a3caebb07fde4e0b8c237d80a432",
+      "links": [
+        "/projects/",
+        "/projects/agentapplication/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/startup/index.html": {
+      "title": "Projects tagged “startup” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "959b931ad401e7f4c6b19207a47bfe34512301708aa377bfd91bea6844db2e8c",
+      "links": [
+        "/projects/",
+        "/projects/aflatune/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/static-site/index.html": {
+      "title": "Projects tagged “static site” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "23f2565d7efafa55c96159173a08c6e0c39327ae2e62aab0ba91ec7b7530e827",
+      "links": [
+        "/projects/",
+        "/projects/amolk-blog/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/text-to-sql/index.html": {
+      "title": "Projects tagged “text-to-SQL” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "aaefcbd7bef9b83626a4373f3edb2e44a4e784e0eafc4abb14095351feb53025",
+      "links": [
+        "/projects/",
+        "/projects/bertrand-dr/",
+        "/projects/disambiguation-service/",
+        "/projects/text2sql-utils/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/theory/index.html": {
+      "title": "Projects tagged “theory” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "ffc59dd3e5a506d1281c4e34970ece64048cdcb2acb03287c21b7771280a9479",
+      "links": [
+        "/projects/",
+        "/projects/homeostasis-publications/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/tool/index.html": {
+      "title": "Projects tagged “tool” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "fab0ca8e5c740370f51e6f4662c1a08eb331bc0e07a31b8ada27a0f7fa92a31e",
+      "links": [
+        "/projects/",
+        "/projects/agentzero/",
+        "/projects/disambiguation-service/",
+        "/projects/playbooks-vscode/",
+        "/projects/scrapescale/",
+        "/projects/tagger/",
+        "/projects/unwind/",
+        "/projects/z10/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/video/index.html": {
+      "title": "Projects tagged “video” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "bb67735812ea6cc20d79931d545715002936b0c5a4aa24bf1e81e6ec60d9b153",
+      "links": [
+        "/projects/",
+        "/projects/videoreadr/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/visualization/index.html": {
+      "title": "Projects tagged “visualization” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "a9590a047572405494786868eca88b53628baea441e6ba0e6810b10b18abd54a",
+      "links": [
+        "/projects/",
+        "/projects/fluaid/",
+        "/projects/unfold/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/web/index.html": {
+      "title": "Projects tagged “web” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "6b925291d3ed104c4d8cbb15b772872de372fed8b7367a3e7b88b6d5c25aaf29",
+      "links": [
+        "/projects/",
+        "/projects/aflatune/",
+        "/projects/cache-with-yuicompressor/",
+        "/projects/collector/",
+        "/projects/fluaid/",
+        "/projects/hypersheet/",
+        "/projects/infopath-forms-server/",
+        "/projects/lifesage/",
+        "/projects/netdocs/",
+        "/projects/officespace-web/",
+        "/projects/ragafied/",
+        "/projects/react-chat-client/",
+        "/projects/tubestats/",
+        "/projects/unfold/",
+        "/projects/videoreadr/",
+        "/projects/windows-live/",
+        "/projects/z10/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/web-scraping/index.html": {
+      "title": "Projects tagged “web scraping” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "d333387a09e856d86368f51561cfc174a09de2a002bacb9fabe3c6c882c00ca6",
+      "links": [
+        "/projects/",
+        "/projects/scrapescale/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/wellness/index.html": {
+      "title": "Projects tagged “wellness” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "46468e721b37b8b7d08308adff8207b2629117ed18420455a507c1e9961e7eba",
+      "links": [
+        "/projects/",
+        "/projects/lifesage/"
+      ],
+      "media": [],
+      "headings": []
+    },
+    "/tags/worldbuilding/index.html": {
+      "title": "Projects tagged “worldbuilding” - Amol Kelkar",
+      "description": "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments.",
+      "og": [
+        [
+          "og:title",
+          "Amol Kelkar"
+        ],
+        [
+          "og:description",
+          "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+        ],
+        [
+          "og:url",
+          "https://amolkelkar.me/"
+        ],
+        [
+          "og:site_name",
+          "Amol Kelkar"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "text": "f2732220ae907b20dca302191a013af8746987ee7160d6bea9c130e2df3410a9",
+      "links": [
+        "/projects/",
+        "/projects/the-living-indus/"
+      ],
+      "media": [],
+      "headings": []
+    }
+  },
+  "assets": {
+    "/CNAME": "9705542b388151cd0e5eaa4d9365f75d8bb73f844d8fe2570ab474917c730b4c",
+    "/images/amol-kelkar0.png": "7d20fbde1820e7606eadd004378472f3bc6f59fce6b6682baa2b5c7db4c7e7da",
+    "/images/amol-kelkar1.jpg": "dcf3549e06bf9f8b9253fd37c278a16e673672352bc12764a12427d97d72b2c8",
+    "/images/amol-kelkar2.png": "12527cc641023f21646d5eab8a011d2ab117d372ea947606f59fb1af3b0d6e19",
+    "/images/amol-kelkar3.png": "05a3a870053236c84c976a102e5d93ee33f2daa12da36d0af933f6ff0a39b1ae",
+    "/images/projects/agentapplication/stack.png": "e8c039602116523d23142832db92931b4f6264fafe71d532571ff2f018e0ffd6",
+    "/images/projects/agi-experiments/hero.gif": "9cea03b5af63b0bb8d8723db9bf4506769a5fa1d1cc8a96036bc88cd7f2f0ac8",
+    "/images/projects/callstack/demo.mp4": "b6fe5c367c8634f9f8eacfafc367be9456d4a4990159c7ffa7c101ed9cf6afac",
+    "/images/projects/carapace-intelligence/bottom-line.jpg": "f93bf2f5b3b0884d730a46e7f8801bf64e455b636003b5d311e6498c8afd4ba6",
+    "/images/projects/carapace-intelligence/hero.jpg": "399b4e6a3bd4f4d2a36244376f91e419a48a003297cff067cb2d135353273268",
+    "/images/projects/carapace-intelligence/simulation-result.jpg": "769fdf6cdf72f8211e5eeaf1200e19ae26c936b7aa412ba18c2798d8f5868b88",
+    "/images/projects/crazyaiapps/hero.png": "be4660b6cd7fb2fc8e7f033400ca2a3fd99761979341170c72c5207d9bf353d7",
+    "/images/projects/crazydisk/ai-recommendations.png": "229da194e539ae6ddbb9a3ce1622b7885ee050a6520585614204c533aceb77dc",
+    "/images/projects/crazydisk/hero.png": "2af9aac6c3c1d7b9869eda1496fd1a55dce50f55e0252534e9d8c5de74020620",
+    "/images/projects/crazydisk/icicle.png": "edf821bb4bc01ab4650989fe39e409c470e98dcda11d3bf3741a1d3cd06fe68c",
+    "/images/projects/crazydisk/largefiles.png": "6e044ac70cfb4308920f48e9b2b777beefa7a94ae3487d02d85aa4941a749abf",
+    "/images/projects/crazywindows/hero.png": "c17f0f756e96275821847b19b59f96e7e9d52b435f5061bb66d03eeca46f1eac",
+    "/images/projects/durable-python/hero.jpeg": "22f3e5c7f17ce155646f770426af3af85a32f9b6e72271af0b8d59e1fc9c09fd",
+    "/images/projects/fly/demo.mp4": "c8a08889f81d16ea6de6a7be01df26363a76787bfe1441d8c292d49a3ee2efcd",
+    "/images/projects/fly/hero.png": "ce284007010ca2b62e2aa6c77a6298d7de635966937233a969c98d0b69106aba",
+    "/images/projects/hierarchical-predictive-coding-transformer/attention-analysis.png": "aa183bee719b2d04af7df79ef39015ac85d7a80ec6ac6b6a769a8619a2c9077a",
+    "/images/projects/hierarchical-predictive-coding-transformer/hero.png": "76e50c5f792bb04c35ad694d44f0cc56f67944bcef5340f18aa1f442da6d69c2",
+    "/images/projects/homeostasis-publications/poster-assc22.png": "5764494fd1091fafb4c896a5859d658e809a49e3c429df11df33e29b02884017",
+    "/images/projects/i3ai/hero.png": "5764494fd1091fafb4c896a5859d658e809a49e3c429df11df33e29b02884017",
+    "/images/projects/lifesage/hero.png": "fad618c0db1b31e510584c6eac00c08272f7e795931be8bb0323ceb1b287d69c",
+    "/images/projects/pattern-machine/hero.gif": "2b05ecb0c328bf6ab3f422fb0addb7df40d739497f72088c96ebc168440c77f1",
+    "/images/projects/pattern-machine/temporal-to-spatial.gif": "5644c994be4256bf3ec8442cdebc37cd5861025a842ebabfa977b7fa5689f72f",
+    "/images/projects/ragafied/brand.png": "f66d7d22424b464ebb70e454a408c66d8c7f4be3255d71df6d84d7a9d66932de",
+    "/images/projects/ragafied/hero.jpg": "8e47ec5950e4b5c24a52fa87e088ecd5610dd60dba39562aca3efe5f3d771418",
+    "/images/projects/ragafied/logo.png": "a4de1a972430491874dd08adf3c91acee8d0c83bfaf14c26b3701fc2c425f7c5",
+    "/images/projects/the-living-indus/city-map.jpg": "09c6d263daa3b02141f3a2cfef179fac018a6cacbf652cb7aaa47e593b8b98f7",
+    "/images/projects/the-living-indus/hero.jpg": "e7b1e959bc4a5cde3ba6aebd7b22bf757db260030008e9dab8b8c6e6c83fca65",
+    "/images/projects/the-living-indus/household.jpg": "5c6fed37d579904391f4af6ecff5afe93fd288886db0a0f67aef4e48d8a1ac70",
+    "/images/projects/the-living-indus/streets.jpg": "b31e9a59a519aa85352f939ceff23b9ebbbbd8bc3866d32ae5f205adecadac56",
+    "/images/projects/the-living-indus/trades.jpg": "e4230c3ab2e25bfb4d1e39262af07c3ba978f7a8f9e656d25f7959b63e167004",
+    "/images/projects/unwind/call-tree.png": "f191c4d09c5261ffa5ca26f5f238bf05716438b2b733ad43b3ab19390774f001",
+    "/images/projects/unwind/hero.png": "fa4823befb7aa5d5fd60bcef97b4459392927742c29583af7e508e5b68e04766",
+    "/images/projects/unwind/node-detail.png": "ca74125ca2778720ab1c7d465dc162ed1d5cf00d7390a34b40e703e6d595aa3c",
+    "/images/projects/unwind/usage-report.png": "12f55d110dc64b21f66c87e0557849d0f193abb5ddef200bcc8e4bca0534d9d0",
+    "/images/projects/z10/hero.png": "071fcb9c082199a9f1fd8434e89745a22aed085f644fd6708c68de8c9e836041"
+  },
+  "content": {
+    "data/projects/active-dendrites.mdx": "239205b7389432d2ef2a848e1a9c71b4d0e830c4c9b25a297aaca83f65e4c66e",
+    "data/projects/aflatune.mdx": "7601e4e42c995509d06184f49c811d4725b71bb8d942f2d7cb304f87dfb73ee8",
+    "data/projects/agentapplication.mdx": "6d5d0376f79e568f9ca6db3795e2ba44d1540175149342daa0acda7dc98ae3d9",
+    "data/projects/agentzero.mdx": "a959300aabcf2378889f65c3dcbb223867fde1edcb9021c52683a37fd340da00",
+    "data/projects/agi-experiments.mdx": "d4d13c98159171f1c3a83de54dbf0da566849d1a8c86d93db358f8dd48aace98",
+    "data/projects/allostat.mdx": "19e6c0f191e193444389cdc5986f4bca5ce82de436c47fb2da20e3c14b95cc69",
+    "data/projects/amolk-blog.mdx": "e39d048334e973622302d6d3e33ed016e1897acdbf90a17feec4921cc4838ba3",
+    "data/projects/attractor-learning.mdx": "25b4720da72c0d06e278ecfc4f0177b08148daf7af2c8c281b12d3c092455f82",
+    "data/projects/bertrand-dr.mdx": "9278539847498898533293c3d08e5f154a47d41be4547b1b51b668f085549569",
+    "data/projects/cache-with-yuicompressor.mdx": "f6eb4a580ac2a67a21065fbeac6fe10be3e4e79d5ec8875a8b068c9c2cce8dff",
+    "data/projects/callstack.mdx": "3b1b7d20351b8f4753a062d6da8ba5968404196b8e01c95bf7d9466a90faf3e0",
+    "data/projects/carapace-intelligence.mdx": "0621b7687feb32b2b14fcf1812d9861209135427a265feb8e65c171180d26c91",
+    "data/projects/collector.mdx": "40db9a58276bf0e4692a073d8b0473dd68c7741b087a8da9820913c0793effbf",
+    "data/projects/crazyaiapps.mdx": "d34d2b57faf8d12f1bb7ebfdd91eb2e9ee6f22d008136b208b2ce67e20789cd9",
+    "data/projects/crazydisk.mdx": "f11b03f922ff5bf7e39a592e21d1043c9c35cf5a30c861767337dab7adcafc52",
+    "data/projects/crazywindows.mdx": "5d335a6739aea4e1b1771f6e7df58d7f729fea4eea3fd5c7094c534e344316d2",
+    "data/projects/disambiguation-service.mdx": "d1d2907033282c8d3151980a470a6a6f937d2e7cd338fd9956915bed4f08a14c",
+    "data/projects/domain-quantization.mdx": "9f7f476d25983e883399d23779dd579dba4c2bd8c151e1c696dd5761e6649a9a",
+    "data/projects/durable-python.mdx": "43e615de550f455d97da1a8894a9dd40942cb5666ceb9b090b61113f9106f75b",
+    "data/projects/fluaid.mdx": "13c4017a89300151082afa9902df3035e20215753aaabbf3a1b21b9014048e08",
+    "data/projects/fly.mdx": "83e084128d8090e793da213106c28ef65c166a75baed6c26db36e9eb245cbb36",
+    "data/projects/free-energy-minimization-framework.mdx": "dc1fea0c789f23f5b3985cb6cf32523314f2d9935e5123ef73ff8aafbfccc18d",
+    "data/projects/harness-programming.mdx": "4ea982ee7c06e80eae3bc37a2da68e20ef146d14915d0aef9007e05a23e95186",
+    "data/projects/hierarchical-predictive-coding-transformer.mdx": "365c519e22cae8263cfc3a8642c2cb4b1ec253ef9dbf864cb68e0d4430471ffc",
+    "data/projects/homeostasis-publications.mdx": "6a46df7d96a9a45961f4a0fe1321205b4de5b740825776a8367e4b46f61e57f0",
+    "data/projects/hydra.mdx": "7cce556cb6817663a97d1f335c3b77dabc141742f126bfdc338016083b075631",
+    "data/projects/hypersheet.mdx": "158b6d47a19d1710911d00ee7eaba57d165cd1a2981aee42017f9e525ea00cb3",
+    "data/projects/i3ai.mdx": "3a79ec4c122b4302607fc9e7431dc7859e0e8b5dd00f71830b4861d8cab51786",
+    "data/projects/infopath-forms-server.mdx": "6365f76e89b6aed343cb4d4d4f152152061e23b0d3685f414160ebd208d23466",
+    "data/projects/infopath.mdx": "66bd4afba3e7097723152eeb2225bb41f4dc20dec6d30cf55810726ffee08997",
+    "data/projects/karta.mdx": "5e21929ac6949a43170a1a4c83a66061e3ec0b89f4ca38019f240b7da52d5df4",
+    "data/projects/lifesage.mdx": "66e72b07fa63516ab788543481d662735afcc628bfac611fbcf7c3508ad67433",
+    "data/projects/llm-wiki-vault.mdx": "0037bd924925d3da50e60fcde6ebb331ae0700060407e383e97fad8bc1ceb6d9",
+    "data/projects/medicaid-fraud.mdx": "8b9f189ee5ef72b80b4b064cd0d6d1219b0c13130a9af247012c1415202198d6",
+    "data/projects/microsoft.mdx": "bd0b06ebcd652d434de45828a21f689b82fa763764d30cad8176addaf15d2961",
+    "data/projects/nanogpt-experiments.mdx": "cf50c6147bf8d165171ca8a7eca825a42fa0038c58ea21c51c1c0fdb836f3a5c",
+    "data/projects/netdocs.mdx": "1ed662df7e9fd9cbfb75a869c58aed84e7882651e2a196d366379305743368eb",
+    "data/projects/officespace-web.mdx": "cd9764cb553f72e715d4f7be8b4ed4d3f33f3469083761bc1ecd17819b9d54d6",
+    "data/projects/officespace.mdx": "462cd0945a0cdae9178f574c46be86b9d2b636af6f3cec5a5794378d20b43740",
+    "data/projects/orgmolt.mdx": "ebeac0896919765b985891721bdfb880fd93b150349795547288347039fa9114",
+    "data/projects/pattern-machine.mdx": "da261cd561b867efbe157151ac3c70a729b8c11bd43442f2b53836990ad408cf",
+    "data/projects/playbooks-lm.mdx": "eb74ddecb97bb2e914d3195c6c2f939b4f320fc661e492edc339e47f9df3328f",
+    "data/projects/playbooks-vscode.mdx": "320cc323e315697b02818378e8ceddff4654fbe9c05cc7d88f1adf1f69f845b6",
+    "data/projects/playbooks.mdx": "2b15ce0cf769670221fc439a9205df12917185770abfc4d0a168bdc68dc20546",
+    "data/projects/qdl.mdx": "e61852f4471ac8b15b4d24efef2f40e000f6e109c68ba52a758c83c97e1cedf0",
+    "data/projects/ragafied.mdx": "01928f7b5b00b75462ccb7878fccb9bff5f1b89ffe98102a2032b16c3727a882",
+    "data/projects/react-chat-client.mdx": "e3f2e0f3b78dcea2156977e51bc6509b263b57bd8469212f385cb4be45b56f11",
+    "data/projects/scrapescale-chef.mdx": "2bff655fa56c6416c49bf05ae6771ac8ba7abd3357b658bff07cd473f9cde9f1",
+    "data/projects/scrapescale.mdx": "1bf5e11302924fd97c4669306cdeffcd62aba394acabb068c8e90af4a7088ed1",
+    "data/projects/tagger.mdx": "e48afbb95e00c479382c0e85ef8093619cde1c04b6f667579c7e982758e77756",
+    "data/projects/text2sql-utils.mdx": "2c85e29179e510ec6d4720a57525e23a884dea57f4aeceeed8a0804ed9db39ca",
+    "data/projects/the-living-indus.mdx": "ec5b1c4cfb4a32cfd0770542d6e47f915b8026aed58cf7c393273cd54b10e6c8",
+    "data/projects/timeseries.mdx": "b2938a16e64b2e389a1b7158774c2a6d877b148ee6b3db5db4c257947993ab67",
+    "data/projects/tubestats.mdx": "c16ad3a76104ece919ba99e0cc590e2d358f3ac485006d85c2f382c45f1edca3",
+    "data/projects/unfold.mdx": "6ff0d045eb5164af0e87171a328bfbea4e6634e635064d1a1ff91ac6a41ec6e7",
+    "data/projects/unwind.mdx": "f9787928a3ba9c26daeb8026924444d312bf86a1f4c86daa49a9c478cf40d1f4",
+    "data/projects/vae-convolution-kernels.mdx": "0d79c0e8b0e3c86a20c5b9635205aa342270f7c65710a54c760ba25147b933c3",
+    "data/projects/videoreadr.mdx": "594b4912e4c1f8e6991498a80a4434745abfc57d2d1b58a7ff42785ee3fb92c6",
+    "data/projects/windows-live.mdx": "ada30e932b240bcf5228ec1e8059fea1009b9dfecd13519555597cea6b3bb1c2",
+    "data/projects/z10.mdx": "db6f2b9a4a9531a7107452a0f6617e7a7cd02725e27a4031d6619cd847bd0766"
+  }
+}

@@ -7,7 +7,7 @@
  *   flagship: true     ->  category: flagship      /projects "Flagship" group
  *
  * The home page "Top of mind" grid is not synced. The site derives it at build
- * time from each project's `ranges` (see lib/projectIndex.ts), so the wiki's
+ * time from each project's `ranges` (see lib/projectIndex.mjs), so the wiki's
  * top-of-mind flag has no effect here.
  *
  * Usage:

@@ -1,0 +1,19 @@
+---
+layout: layout.njk
+pagination:
+  data: projects.tags
+  size: 1
+  alias: tag
+permalink: "{{ tag.url }}"
+eleventyComputed:
+  title: "Projects tagged “{{ tag.label | safe }}”"
+---
+<div class="max-w-6xl mx-auto px-8 pt-24 pb-16">
+  <a href="/projects/" class="text-sm text-gray-500 hover:text-black transition-colors">← All projects</a>
+  <header class="mt-6 mb-10">
+    <div class="text-sm text-gray-500 mb-2">Tag</div>
+    <h1 class="font-serif text-4xl md:text-5xl font-medium tracking-tight">{{ tag.label }}</h1>
+    <p class="text-gray-500 text-lg font-light mt-2">{{ tag.projects.length }} project{% if tag.projects.length != 1 %}s{% endif %}</p>
+  </header>
+  <div class="grid sm:grid-cols-2 gap-5">{% for project in tag.projects %}{% set showChildren = false %}{% include "card.njk" %}{% endfor %}</div>
+</div>
