@@ -1,10 +1,10 @@
 # amolk.github.io
 
-Personal portfolio for [Amol Kelkar](https://amolkelkar.me), built with Eleventy and deployed to GitHub Pages.
+Personal portfolio for [Amol Kelkar](https://amolkelkar.me), built with Eleventy and deployed through Cloudflare Workers Builds.
 
 ## Develop and verify
 
-Use Node.js 22 or later and npm.
+Use Node.js 24.22.1 (recorded in `.node-version`) and npm.
 
 ```bash
 npm ci
@@ -45,7 +45,22 @@ Edit publications in `data/publications.json`, site metadata in `_data/site.json
 
 ## Deploy
 
-`.github/workflows/deploy.yml` runs tests and builds on pushes to `main`, on the daily schedule, and through **Run workflow**. It uploads `out/` and deploys through GitHub Pages. In the repository's **Settings → Pages**, keep the source set to **GitHub Actions** and the custom domain set to `amolkelkar.me`. `public/CNAME` preserves that domain in the output. Existing domain DNS settings remain in use.
+Cloudflare Workers Builds connects `amolk/amolk.github.io` to the `amolkelkar-me` Worker. Pushes to `main` trigger `npm test && npm run build`, then `npx wrangler deploy`, with `/` as the repository root. `wrangler.jsonc` publishes `out/`, preserves trailing-slash URLs, and serves the existing custom 404 page. The website uses the same GitHub-to-Cloudflare deployment flow as i3AI.
+
+The Cloudflare dashboard manages the `amolkelkar.me/*` Worker route. DNS uses `collins.ns.cloudflare.com` and `eric.ns.cloudflare.com`. The `www` hostname redirects to the apex domain. `public/CNAME` remains as a record of the original GitHub Pages domain; Cloudflare does not use that file to configure DNS.
+
+The daily GitHub Actions schedule and **Run workflow** trigger the Cloudflare deploy hook named `daily-top-of-mind`, scoped to `main`. Its URL is stored only in the encrypted repository secret `CLOUDFLARE_DEPLOY_HOOK`. Keep it out of source code. Cloudflare runs the same tests, build, and deployment for scheduled refreshes. GitHub Actions also verifies pushes and pull requests; it no longer deploys GitHub Pages.
+
+For a manual local deployment after signing in to Cloudflare, run:
+
+```bash
+npm test
+npm run build
+npx wrangler deploy --dry-run
+npm run deploy
+```
+
+Static assets serve the pages, styles, fonts, and images directly. A small handler in `worker.mjs` preserves byte-range requests for MP4 files under `public/images/`, so the project videos support seeking. It streams the full video into the edge cache only on a cache miss; an asset ETag in the cache key prevents reuse after the video changes. Runtime tests cover exact ranges, suffix ranges, invalid ranges, conditional requests, and static fallback behavior.
 
 ## Migration verification
 
