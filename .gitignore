@@ -11,3 +11,5 @@ next-env.d.ts
 public/assets/site.css
 output/
 .playwright-cli/
+
+.wrangler/
