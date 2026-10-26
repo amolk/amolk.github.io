@@ -11,7 +11,7 @@ is_public: true
 demo_url: "https://ragafied.com"
 image: "/images/projects/ragafied/hero.jpg"
 images: ["/images/projects/ragafied/logo.png", "/images/projects/ragafied/brand.png"]
-ranges: ["2013-04-03:2013-05-14", "2026-08-13:2026-08-18", "2026-08-26:2026-10-24"]
+ranges: ["2013-04-03:2013-05-14", "2026-08-13:2026-08-18", "2026-08-26:2026-10-25"]
 ---
 
 I first built Ragafied in 2012-13, around an idea that has not changed since: Hindustani vocal music is learned by imitation, so a recording of a great singer should become something you can sing back to, one phrase at a time. The browser of the time could not carry that idea. Its audio support was young and uneven from one browser to the next, custom sound processing could not run off the page's main thread, there was no way to run near-native code or a neural model inside a web page, and microphone access was patchy. What I could build then was the scaffold around the idea - accounts, ragas, gurus, lessons - and not the instrument at its centre.
@@ -22,5 +22,5 @@ The 2026 version is that instrument, and it runs at [ragafied.com](https://ragaf
 
 - **AI models.** Neural source separation lifts the lead vocal away from the accompaniment. A neural pitch detector reads the teacher's melody ahead of time and the learner's voice live in the browser. A neural beat tracker finds the pulse across the whole recording. The heavy models run on cloud graphics hardware that scales to zero when nothing is waiting.
 - **Offline signal processing.** Every upload goes through a pipeline on the server - separation, rhythm, pitch, phrases, playback preparation - with each result remembered by the audio's own fingerprint, so no work is ever done twice.
-- **Online signal processing.** In the browser, in real time: key and tempo move independently of each other, changes cross over mid-phrase without a gap, the room is measured and the accompaniment cancelled out of the microphone, and a chosen tempo and key are rendered ahead and kept on the device.
+- **Online signal processing.** In the browser, in real time: key and tempo move independently of each other, with tempo anywhere from a tenth of normal speed to double, changes cross over mid-phrase without a gap, the room is measured and the accompaniment cancelled out of the microphone, and a chosen tempo and key are rendered ahead and kept on the device.
 - **Algorithms written for this music.** A pitch-and-tempo processor that rebuilds a slowed voice from the singer's own pitch periods, so a phrase at a fifth of its speed still sounds like a person singing. Phrase boundaries placed where the singer actually breathed. Ornaments - meend, gamak, khatka, andolan - read from the motion between notes, and a slow-down that stretches those ornaments far more than the held notes around them.
