@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-26",
+  "scope": "Final spacing, typography, and responsive layout pass. Preserve the approved palette, artwork, copy, routes, and authored explainer content.",
+  "changes": [
+    "Scale shared project and custom explainer titles to 60px at smaller desktop widths and 48px at tablet widths.",
+    "Use 20px mobile article subheadings beneath 24px section headings.",
+    "Match article list line height to surrounding prose; use Geist Mono and consistent 14px code text with 24px block line height.",
+    "Normalize custom explainer prose to 18/28 desktop and 16/24 mobile, while retaining compact card text and larger name callouts.",
+    "Normalize explainer metadata, monospace labels, use-case headings, and 24px use-case card padding through the external compatibility stylesheet.",
+    "Align the 404 page with shared responsive heading sizes, body text, top spacing, and the orange-yellow primary action."
+  ],
+  "routeChecks": {
+    "routes": 132,
+    "fullMatrix": [
+      { "width": 1440, "height": 1000, "theme": "light" },
+      { "width": 390, "height": 844, "theme": "light" },
+      { "width": 1440, "height": 1000, "theme": "dark" },
+      { "width": 390, "height": 844, "theme": "dark" }
+    ],
+    "result": "No page-level horizontal overflow or overflowing main headings.",
+    "edgeChecks": "All 132 routes also checked at 320px before changes; ten representative routes rechecked after changes at 320px, 768px, and 1024px.",
+    "visualReview": "Homepage cards, illustrated mastheads, About biography, publication year groups, tag collections, standard project headers and reading layout, custom Unwind explainer, and both shared 404 outputs. Visual review sampled distinct templates; each generated route received DOM layout measurements."
+  },
+  "interactionChecks": [
+    "Publication filters: 7 papers, 13 patents, 20 total.",
+    "Project search empty state and clear: 48 collection entries restored.",
+    "Timeline project navigation and browser Back: 225% zoom and both pan positions restored exactly.",
+    "Custom explainer section toolbar remains sticky at top 0.",
+    "Image dialog opens, Escape closes it, and focus returns to the trigger."
+  ],
+  "checks": {
+    "eleventy": "132 pages built.",
+    "verify": "Internal links, anchors, media, and static resources pass for all 132 pages.",
+    "tests": "8 relevant project and timeline tests pass, none skipped. Worker integration tests were not part of this CSS review.",
+    "format": "Prettier and git diff --check pass.",
+    "limits": "Browser review used Chromium viewport emulation, not physical devices. Performance and Lighthouse were not measured."
+  },
+  "preview": "The local preview uses a temporary stylesheet revision query in generated out/ HTML to avoid the in-app browser's cached CSS. Source templates and production asset URLs are unchanged."
+}

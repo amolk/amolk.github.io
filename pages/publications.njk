@@ -1,7 +1,32 @@
 ---
 layout: layout.njk
-title: "Publications"
-description: "Peer-reviewed papers and patents on AI systems, conversational agents, and computational neuroscience."
+title: Publications
+description: Peer-reviewed papers and patents on AI systems, conversational agents, and computational neuroscience.
 permalink: /publications/
+pageArtwork: /images/artwork/paper-strata.webp
 ---
-<div class="max-w-4xl mx-auto px-8 pt-24 pb-16"><header class="mb-12"><h1 class="font-serif text-4xl md:text-5xl font-medium tracking-tight mb-3">Publications</h1><p class="text-gray-500 text-lg font-light">Peer-reviewed papers and patents across AI systems, conversational agents, and computational neuroscience. Full list on <a href="https://scholar.google.com/citations?user=qKZ2VRAAAAAJ&amp;hl=en" class="underline underline-offset-4 hover:text-black">Google Scholar</a>.</p></header><ol class="space-y-4">{% for p in publications.sorted %}<li class="group p-5 rounded-xl border border-gray-200 hover:border-gray-400 hover:bg-white transition-all duration-300"><div class="flex items-baseline justify-between gap-3 mb-1"><h2 class="font-serif text-lg font-medium leading-snug">{% if p.link %}<a href="{{ p.link }}" class="group-hover:underline underline-offset-4">{{ p.title }}</a>{% else %}<span>{{ p.title }}</span>{% endif %}</h2><span class="text-xs text-gray-400 whitespace-nowrap font-light">{{ p.year }}</span></div><p class="text-sm text-gray-500 font-light mb-1.5">{{ p.authors }}</p><div class="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-gray-600"><span class="text-xs px-2.5 py-0.5 rounded-full bg-gray-100 text-gray-600 capitalize">{{ p.type }}</span><span>{{ p.venue }}</span>{% if p.citations %}<span class="text-gray-400">· {{ p.citations }} citations</span>{% endif %}</div></li>{% endfor %}</ol></div>
+<header class="page-masthead page-masthead-illustrated publications-masthead">
+  {% include "page-artwork.njk" %}
+  <div class="home-container"><div class="page-masthead-copy">
+    <p class="home-eyebrow">Research &amp; patents</p>
+    <h1>Publications</h1>
+    <p class="page-masthead-description">Ideas on intelligence, from cortical networks to conversational AI.</p>
+    <a class="home-text-link" href="{{ publications.scholar.url }}">View Google Scholar</a>
+  </div></div>
+</header>
+<div class="home-container portfolio-main" data-publications>
+  <div class="portfolio-toolbar" data-publication-controls hidden>
+    <div class="publication-filter" role="group" aria-label="Filter publications"><button type="button" data-publication-filter="all" aria-pressed="true">All work</button><button type="button" data-publication-filter="paper" aria-pressed="false">Papers</button><button type="button" data-publication-filter="patent" aria-pressed="false">Patents</button></div>
+    <p class="portfolio-result-count" data-publication-count role="status" aria-live="polite"></p>
+  </div>
+  {% for group in publications.years %}
+  <section class="publication-year" data-publication-year aria-labelledby="year-{{ group.year }}">
+    <h2 id="year-{{ group.year }}">{{ group.year }}</h2>
+    <ol>{% for p in group.items %}<li class="publication-entry" data-publication-type="{{ p.type }}">
+      <h3>{% if p.link %}<a href="{{ p.link }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</h3>
+      <p class="publication-authors">{{ p.authors }}</p>
+      <div class="publication-venue"><span>{{ p.type }}</span><span>{{ p.venue }}</span>{% if p.citations %}<span>{{ p.citations }} citation{% if p.citations != 1 %}s{% endif %}</span>{% endif %}</div>
+    </li>{% endfor %}</ol>
+  </section>
+  {% endfor %}
+</div>

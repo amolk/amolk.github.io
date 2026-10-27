@@ -1,0 +1,15 @@
+<header class="home-header">
+  <div class="home-container home-header-inner">
+    <a class="home-wordmark" href="/">Amol Kelkar<span aria-hidden="true">.</span></a>
+    <nav class="home-navigation" aria-label="Main navigation">
+      <a href="/"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
+      <a href="/projects/"{% if page.url.startsWith('/projects/') or page.url.startsWith('/tags/') %} aria-current="{% if page.url == '/projects/' %}page{% else %}true{% endif %}"{% endif %}>Projects</a>
+      <a href="/publications/"{% if page.url == '/publications/' %} aria-current="page"{% endif %}>Publications</a>
+      <a href="/about/"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a>
+    </nav>
+    <div class="home-header-actions">
+      <button class="home-theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false" hidden data-theme-toggle><span aria-hidden="true">◐</span></button>
+      <a class="home-contact" href="mailto:{{ site.email }}">Say hello</a>
+    </div>
+  </div>
+</header>

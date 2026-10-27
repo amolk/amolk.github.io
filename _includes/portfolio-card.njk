@@ -1,0 +1,8 @@
+<article class="portfolio-card" data-project-card data-project-keywords="{{ project.summary }} {{ project.tags | join(' ') }}">
+  <div class="portfolio-card-meta"><span>{{ project.status }}</span><span>{{ project.years }}</span></div>
+  <h3><a href="{{ project.url }}">{{ project.title }}</a></h3>
+  {% if showChildren and project.parentLabel %}<p class="portfolio-card-parent">Part of {{ project.parentLabel }}</p>{% endif %}
+  <p class="portfolio-card-description">{{ (homepage.projectSummaries[project.slug] or project.summary) | replace('`', '') }}</p>
+  <div class="portfolio-tags">{% for tag in project.tagLinks | take(3) %}<a href="{{ tag.url }}">{{ tag.label }}</a>{% endfor %}</div>
+  {% if showChildren and project.children.length %}<div class="portfolio-card-children"><span>Includes</span>{% for child in project.children %}<a href="{{ child.url }}">{{ child.title }}</a>{% endfor %}</div>{% endif %}
+</article>

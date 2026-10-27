@@ -1,0 +1,18 @@
+{
+  "categoryLabels": {
+    "research": "Research",
+    "shipped": "Product",
+    "flagship": "Flagship",
+    "professional": "Professional",
+    "startup": "Startup",
+    "tool": "Tool",
+    "older": "Earlier work"
+  },
+  "projectSummaries": {
+    "allostat": "What if intelligence grows from having something at stake? Agents that improve themselves, driven by homeostatic imperatives, with no central controller.",
+    "i3ai": "Exploring the gap between intelligence and feeling, and what it would take for a machine to have a stake of its own.",
+    "pattern-machine": "How do patterns emerge from experience? An ongoing exploration of local learning in spiking neural networks.",
+    "ragafied": "An idea from 2012, rebuilt for today. Turn a recording into something you can sing back to, one phrase at a time.",
+    "agentapplication": "A shared architecture for persistent agents that use tools, keep a workspace, and build things that last."
+  }
+}

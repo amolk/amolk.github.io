@@ -1,0 +1,34 @@
+{
+  "generator": "OpenAI built-in image_gen",
+  "defaultDirection": "canopy",
+  "options": [
+    {
+      "id": "folds",
+      "name": "Folded light",
+      "asset": "public/images/home/folded-light.webp",
+      "prompt": "Create a beautifully art-directed photographic artwork asset for Amol Kelkar's personal website: he builds AI systems and researches intelligence and consciousness. Wide landscape, 3:2 aspect ratio, no text or interface. Composition is essential: the LEFT 55% is very quiet pale negative space for a large dark headline; all visual interest is on the RIGHT 45%, with breathing room at the top for website navigation. Airy, tactile, rich, meticulously composed, high-end editorial photography, subtle real textures, confident simplicity. No lettering, no logos, no people, no orange or amber glass, no loop sculpture, no beige, no cream, no plinth, no neon, no futuristic circuitry, no mockup. SUBJECT: A large sheet of exquisitely folded white and very pale blue paper forming an abstract architectural landscape, with a few long sweeping folded ridges and sculpted valleys, asymmetrical and geometric yet gently curved, evocative of thought becoming structure. This is not origami animals or an object on a pedestal: it is an immersive relief filling the right side of the image. Studio daylight from upper right creates cobalt and slate blue shadows in the folds, rich tonal depth, minute visible paper fibers. Left half recedes into a flat, empty, pale blue-grey studio background. Palette: porcelain white, glacial blue, blue-grey, one restrained dark cobalt fold edge. Camera sees the relief from a gentle elevated angle. Sophisticated and restrained, as if photographed for a contemporary architecture journal. The main ridges begin around 65% of the frame; no folds or edges crossing the empty left half."
+    },
+    {
+      "id": "canopy",
+      "name": "Living systems",
+      "asset": "public/images/home/living-systems.webp",
+      "prompt": "Create a beautifully art-directed photographic artwork asset for Amol Kelkar's personal website: he builds AI systems and researches intelligence and consciousness. Wide landscape, 3:2 aspect ratio, no text or interface. Composition is essential: the LEFT 55% is very quiet pale negative space for a large dark headline; all visual interest is on the RIGHT 45%, with breathing room at the top for website navigation. Airy, tactile, rich, meticulously composed, high-end editorial photography, subtle real textures, confident simplicity. No lettering, no logos, no people, no orange or amber glass, no loop sculpture, no beige, no cream, no plinth, no neon, no futuristic circuitry, no mockup. SUBJECT: Macro botanical photograph of a graceful, branching fern frond with delicately curling new growth, luminous translucent leaves, and remarkably fine natural vein structure. Frame the fern as an organic architecture, entering from the lower RIGHT and extending upward through the RIGHT third. Beautifully light shining through leaves reveals the detailed branching systems, suggesting biological intelligence and emergence. Crisp deep forest green structural details and fresh leaf green with soft silver-sage reflected light. Not a lush wall of plants, not tropical decor, no pot, no vase. Minimal background: very pale cool silver-green mist, completely uncluttered across the left 55%. A few softly focused natural shadows lend subtle depth. Fine-art botanical photography on medium format, natural and striking rather than stock wellness imagery."
+    },
+    {
+      "id": "horizon",
+      "name": "Open horizon",
+      "asset": "public/images/home/open-horizon.webp",
+      "prompt": "Create a beautifully art-directed photographic artwork asset for Amol Kelkar's personal website: he builds AI systems and researches intelligence and consciousness. Wide landscape, 3:2 aspect ratio, no text or interface. Composition is essential: the LEFT 55% is very quiet pale negative space for a large dark headline; all visual interest is on the RIGHT 45%, with breathing room at the top for website navigation. Airy, tactile, rich, meticulously composed, high-end editorial photography, subtle real textures, confident simplicity. No lettering, no logos, no people, no orange or amber glass, no loop sculpture, no beige, no cream, no plinth, no neon, no futuristic circuitry, no mockup. SUBJECT: Exceptionally calm, expansive photographic landscape of a Nordic fjord seen from low above the water, with beautiful dark blue slate and weathered silver rock formations confined to the right third, a distant dramatic but understated mountain ridge at far right, and glassy silver-blue water opening toward a pale blue-grey sky. The water surface has tiny delicate ripples, subtle reflections and a whisper of silver mist. Contemporary fine-art landscape photography. LEFT 55% is mostly pale empty silver-blue atmosphere and quiet water, very light and evenly toned to hold dark headline text. Avoid any objects near the left. Horizon is understated, no bold horizon line behind text. Crisp photographic natural detail on the right, atmospheric and tactile, sense of possibility, depth and open space. NO sunsets, no golden hour, no beige beaches, no people, no boats, no houses. Colors: cool blue-grey, pearl, slate, deep ink blue, a hint of pale arctic teal."
+    }
+  ],
+  "fernRevision": {
+    "asset": "public/images/home/living-systems-blue.webp",
+    "prompt": "Edit this botanical photograph. Preserve the exact fern forms, branching geometry, delicate leaf veins, curling shoots, right-side composition, and the photographic lighting and realism. Keep the leaves their beautiful natural green. Change the environment and entire background from pale green/sage to an airy, cool blue-grey, matching the glacial blue-grey of white paper folds photographed in cool daylight: a very pale powder blue-grey (#e5edf4 to #cbdbe8), with blue-grey shadows and soft silver reflections. Remove the warm yellow-green cast from the empty left 55%, while preserving the fern's organic green as the distinct foreground contrast. No beige or cream. Give the fern subtle cool reflected daylight without turning the leaves blue or desaturating their green. The left 55% remains uncluttered, light and quiet for dark website text. No text, no logos, no new objects. The result should belong naturally to the same visual palette as cool white folded paper with slate-blue shadows."
+  },
+  "comparisonUrls": [
+    "http://localhost:3000/?direction=folds",
+    "http://localhost:3000/?direction=canopy",
+    "http://localhost:3000/?direction=horizon",
+    "http://localhost:3000/?direction=amber"
+  ]
+}

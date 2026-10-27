@@ -1,4 +1,4 @@
-import { readFileSync, readdirSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 import matter from "gray-matter";
 import { renderMarkdown } from "../lib/markdown.mjs";
 import { projectIndex } from "../lib/projectIndex.mjs";
@@ -68,6 +68,9 @@ export default async function () {
         ? `–${project.year_ended}`
         : "");
     project.body = await renderMarkdown(content);
+    // A hand-built explainer in _includes/explainers/ replaces the default page body.
+    if (existsSync(`_includes/explainers/${project.slug}.njk`))
+      project.explainer = `explainers/${project.slug}.njk`;
     project.tagLinks = project.tags.map((label) => ({
       label,
       url: `/tags/${tagSlug(label)}/`,

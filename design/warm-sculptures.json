@@ -1,0 +1,53 @@
+{
+  "generator": "OpenAI built-in image_gen",
+  "mode": "generate",
+  "transparent_background": true,
+  "brief": "Replace literal heading-adjacent icons with intricate sculptural objects, scattered sparingly through apparently incidental whitespace. Static compositions vary by page and screen width.",
+  "dimensions": {
+    "width": 1254,
+    "height": 1254
+  },
+  "optimization": "WebP quality 88, same dimensions; alpha channel verified byte-for-byte against the generated PNG. No creative raster edits.",
+  "assets": [
+    {
+      "id": "pleated-ember",
+      "generatedSource": "exec-25d29d88-f7f0-41a2-b820-37cd4a6ca1d3.png",
+      "originalAsset": "public/images/artwork/pleated-ember.png",
+      "runtimeAsset": "public/images/artwork/pleated-ember.webp",
+      "runtimeBytes": 205704,
+      "placements": [
+        "Home: upper-right whitespace before Top of mind",
+        "Publications: off-center in the lower masthead",
+        "Product, professional and startup project pages: offset closing whitespace"
+      ],
+      "generationPrompt": "Use case: stylized-concept. Asset type: a single premium transparent-background cutout for an airy blue-grey personal portfolio. Create an intriguing physical sculpture with an unusual, asymmetric silhouette and rich, precise material detail. Mature contemporary art direction, photographed like a small museum object under soft directional studio light, slightly above three-quarter view. A coherent family of tactile colored paper and matte sculptural surfaces. All exterior pixels and open holes must be genuinely transparent, clean anti-aliased alpha, no backdrop, no floor, no detached cast shadow, no label or writing. Square canvas. Exactly ONE complete object, centered with at least 15% empty transparent margin on every side, including every point or tendril. The object should read beautifully at 130–240px on pale blue-grey #edf2f6. Saturated warm color only, controlled natural tonal depth. No beige, brown, gold metal, glass, glowing effects, gradient blobs, stock 3D UI icons, emoji, simple torus, literal math symbol, spheres-and-rods diagram, base or pedestal. No props.\n\nSubject: a surprising, elegant paper structure made from ONE continuous thin vermilion-orange sheet. The sheet turns through a loose, uneven open curl; one side splits into many very fine accordion fins that fan out irregularly, and the other tapers into a long sharp, gracefully curling tail. Somewhere between an unfurling living frond, a wind-shaped flame, and an architectural paper experiment. The folds vary in spacing and depth and reveal slivers of saffron on a few inner edges. The silhouette is diagonal, elongated, air-filled and expressive, with an off-center void and a delicate interruption in its rhythm. Deep saturated vermilion #ff4a24 and tangerine #ff8725, tiny sun-yellow edges. Real paper fiber and exceptionally crisp folds. No regular closed ring and no symmetrical flower."
+    },
+    {
+      "id": "saffron-bloom",
+      "generatedSource": "exec-127022e8-1a17-44a3-9451-99fd8885ffed.png",
+      "originalAsset": "public/images/artwork/saffron-bloom.png",
+      "runtimeAsset": "public/images/artwork/saffron-bloom.webp",
+      "runtimeBytes": 227970,
+      "placements": [
+        "Home: breathing room between portrait and publications",
+        "Other generic project pages: offset above the closing link"
+      ],
+      "generationPrompt": "Use case: stylized-concept. Asset type: a single premium transparent-background cutout for an airy blue-grey personal portfolio. Create an intriguing physical sculpture with an unusual, asymmetric silhouette and rich, precise material detail. Mature contemporary art direction, photographed like a small museum object under soft directional studio light, slightly above three-quarter view. A coherent family of tactile colored paper and matte sculptural surfaces. All exterior pixels and open holes must be genuinely transparent, clean anti-aliased alpha, no backdrop, no floor, no detached cast shadow, no label or writing. Square canvas. Exactly ONE complete object, centered with at least 15% empty transparent margin on every side, including every point or tendril. The object should read beautifully at 130–240px on pale blue-grey #edf2f6. Saturated warm color only, controlled natural tonal depth. No beige, brown, gold metal, glass, glowing effects, gradient blobs, stock 3D UI icons, emoji, simple torus, literal math symbol, spheres-and-rods diagram, base or pedestal. No props.\n\nSubject: an asymmetric, partly opened seed-like volume constructed from a very thin saffron-yellow sheet with intricate fan pleats. The sheet has been folded, curled and gently torn into a strange organic form: one broad ribbed lobe curls around a large empty opening, a smaller lobe folds inward, and a slender irregular pointed tendril escapes to one side. Beautiful structural tension between sharp folds and supple curves. The orientation is tilted and the mass is uneven, like a specimen from an imagined botanical collection rather than a familiar leaf or flower. Sun-yellow #ffc52c with saturated golden-orange #ff9b20 in the deeper folds; dry matte paper, finely visible fibers, glowing only through natural thin-paper translucency. Strong sophisticated silhouette, substantial dimensional depth. No round ball, radial rosette, chrysanthemum, recognizable ginkgo leaf, or simple fan."
+    },
+    {
+      "id": "vermilion-lattice",
+      "generatedSource": "exec-b8b2878f-ccb8-4a1a-a0a5-729b5640a5a7.png",
+      "originalAsset": "public/images/artwork/vermilion-lattice.png",
+      "runtimeAsset": "public/images/artwork/vermilion-lattice.webp",
+      "runtimeBytes": 291306,
+      "placements": [
+        "Projects: upper-right open space above the first category",
+        "About: asymmetric interlude between agent systems and research",
+        "Authored project pages: whitespace across the footer boundary",
+        "Research project pages: closing whitespace, with a different angle and horizontal offset"
+      ],
+      "generationPrompt": "Use case: stylized-concept. Asset type: a single premium transparent-background cutout for an airy blue-grey personal portfolio. Create an intriguing physical sculpture with an unusual, asymmetric silhouette and rich, precise material detail. Mature contemporary art direction, photographed like a small museum object under soft directional studio light, slightly above three-quarter view. A coherent family of tactile colored paper and matte sculptural surfaces. All exterior pixels and open holes must be genuinely transparent, clean anti-aliased alpha, no backdrop, no floor, no detached cast shadow, no label or writing. Square canvas. Exactly ONE complete object, centered with at least 15% empty transparent margin on every side, including every point or tendril. The object should read beautifully at 130–240px on pale blue-grey #edf2f6. Saturated warm color only, controlled natural tonal depth. No beige, brown, gold metal, glass, glowing effects, gradient blobs, stock 3D UI icons, emoji, simple torus, literal math symbol, spheres-and-rods diagram, base or pedestal. No props.\n\nSubject: an extraordinary small vermilion sculpture shaped like a thin, crumpled, porous organic membrane. A lopsided folded saddle arches around negative space, with a hierarchy of irregular oval and elongated cellular openings through its skin. Some edges are knife-thin and lifted; one narrow section curls outward into an unexpected pointed hook. Think a physically plausible porous coral fragment meeting an experimental architectural surface, finely crafted, intricate, with clear large openings and a few delicate branching struts. Entire structure is ONE connected object, broad on one side and tapered on the other, not spherical and not symmetrical. Saturated scarlet-vermilion #ff3b24, subtle tangerine on a few thin edges, matte mineral / paper-porcelain texture. Rich self-shadow within the openings, no black cavities painted onto surfaces: all holes show true transparency. Avoid an obvious coral tree, neuron icon, rounded cheese, rock, crumpled ball, octopus, honeycomb grid, regular lattice cube or generic 3D knot."
+    }
+  ],
+  "status": "Archived exploration. Floating accent objects were removed from every page at the user’s request."
+}

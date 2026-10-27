@@ -1,0 +1,137 @@
+{
+  "generator": "OpenAI built-in image_gen",
+  "asset": "public/images/artwork/warm-objects-grid.png",
+  "runtimeAsset": "public/images/artwork/warm-objects-grid.webp",
+  "runtimeBytes": 499456,
+  "format": "PNG, RGBA with transparent background",
+  "width": 1254,
+  "height": 1254,
+  "rows": 4,
+  "columns": 4,
+  "palette": {
+    "vermilion": "#ff5729",
+    "scarlet": "#ff3b24",
+    "tangerine": "#ff8725",
+    "saffron": "#ffc52c",
+    "intendedSurface": "#edf2f6"
+  },
+  "items": [
+    {
+      "number": 1,
+      "id": "fern-frond",
+      "label": "Vermilion fern frond",
+      "row": 1,
+      "column": 1
+    },
+    {
+      "number": 2,
+      "id": "ginkgo-leaf",
+      "label": "Saffron ginkgo leaf",
+      "row": 1,
+      "column": 2
+    },
+    {
+      "number": 3,
+      "id": "fern-fiddlehead",
+      "label": "Tangerine fern fiddlehead",
+      "row": 1,
+      "column": 3
+    },
+    {
+      "number": 4,
+      "id": "leafy-twig",
+      "label": "Scarlet three-leaf twig",
+      "row": 1,
+      "column": 4
+    },
+    {
+      "number": 5,
+      "id": "summation",
+      "label": "Scarlet summation operator",
+      "row": 2,
+      "column": 1
+    },
+    {
+      "number": 6,
+      "id": "integral",
+      "label": "Tangerine integral operator",
+      "row": 2,
+      "column": 2
+    },
+    {
+      "number": 7,
+      "id": "infinity",
+      "label": "Saffron infinity symbol",
+      "row": 2,
+      "column": 3
+    },
+    {
+      "number": 8,
+      "id": "nabla",
+      "label": "Vermilion nabla operator",
+      "row": 2,
+      "column": 4
+    },
+    {
+      "number": 9,
+      "id": "neuron",
+      "label": "Vermilion neuron",
+      "row": 3,
+      "column": 1
+    },
+    {
+      "number": 10,
+      "id": "synapse",
+      "label": "Orange and saffron synapse",
+      "row": 3,
+      "column": 2
+    },
+    {
+      "number": 11,
+      "id": "binary-tree",
+      "label": "Tangerine binary tree",
+      "row": 3,
+      "column": 3
+    },
+    {
+      "number": 12,
+      "id": "directed-graph",
+      "label": "Scarlet directed graph",
+      "row": 3,
+      "column": 4
+    },
+    {
+      "number": 13,
+      "id": "neural-network",
+      "label": "Orange and yellow neural network",
+      "row": 4,
+      "column": 1
+    },
+    {
+      "number": 14,
+      "id": "sierpinski-triangle",
+      "label": "Vermilion triangular fractal",
+      "row": 4,
+      "column": 2
+    },
+    {
+      "number": 15,
+      "id": "mobius-strip",
+      "label": "Tangerine paper Möbius strip",
+      "row": 4,
+      "column": 3
+    },
+    {
+      "number": 16,
+      "id": "call-stack",
+      "label": "Scarlet paper call stack",
+      "row": 4,
+      "column": 4
+    }
+  ],
+  "generationPrompt": "Use case: stylized-concept.\nAsset type: a production-ready transparent PNG sprite sheet of sculptural accent objects for a carefully designed personal portfolio.\nCanvas: SQUARE, 2048 x 2048 pixels. TRUE TRANSPARENT ALPHA background throughout.\nLayout: EXACTLY 16 separate, self-contained objects, in an exact evenly spaced 4-column by 4-row grid. Each cell is a 512 x 512 square. Object centers at the center of each cell. Every complete silhouette including tips and branches stays inside the central 72% of its cell, with generous transparent breathing room on every side. No visible grid lines, labels, numbers, frames, tile backgrounds, platforms, or connecting elements between cells. Each cell contains one grouped concept and nothing else. This is a sheet of cutout objects, not a website mockup.\n\nArt direction: tactile, rich, meticulously crafted physical objects photographed in a soft studio. Real paper fibers, subtle botanical leaf veins, smooth matte ceramic, and powder-coated wire. A coherent visual family, common soft upper-left lighting and a gentle three-quarter perspective. Delicate detail but strong readable silhouettes at small sizes. Mature, understated fine-art objects rather than flat icons, cartoon emoji, glossy toys, game items, or an icon pack. Keep the mathematical glyphs recognizable and geometrically correct.\n\nColor palette: exclusively high-chroma warm colors intended to pop against a pale BLUE-GREY #edf2f6 webpage. Main colors saturated orange-red / vermilion #ff5729, scarlet #ff3b24, tangerine #ff8725, with a few saffron / sun-yellow #ffc52c pieces. Colored material all the way through, with natural tonal variation, no global warm color cast. Most objects should be vermilion and orange, about four can be yellow. Avoid muted burnt orange, rust, terracotta, brown, beige, white, cold blue/green, gold metal, amber glass, metallic reflections, neon emission and outer glows.\n\nExact grid content, read left-to-right, top-to-bottom:\nROW 1, botanical:\n1. One delicate vermilion fern frond with clearly separated pinnate leaflets and a gracefully curved stem.\n2. One saffron-yellow ginkgo leaf, fan shaped, finely veined, short natural stem.\n3. One tangerine unfurling fern fiddlehead, an elegant organic curled spiral with small emerging leaflets.\n4. One scarlet-red small botanical twig with three beautifully shaped oval leaves, a single cohesive branch.\n\nROW 2, mathematical:\n5. A clear summation operator, capital Greek sigma ∑, as a solid matte scarlet ceramic sculpture.\n6. A single integral operator ∫, a tall elegant tangerine matte ceramic sculpture, correctly curved at both ends.\n7. A correct infinity symbol ∞, one continuous smooth saffron-yellow loop with a clearly readable crossing and two open spaces.\n8. A correct nabla / gradient operator ∇, an open inverted triangle made of thick vermilion matte ceramic strokes, with a clear triangular opening.\n\nROW 3, biological intelligence and computation:\n9. A beautiful vermilion neuron: one soma, multiple fine branching dendrites and one longer axon, all contained in the cell and clearly readable.\n10. A synapse as ONE grouped object: two organically branching neural terminals facing each other across a small visible gap, orange on one side, saffron on the other, no arrows or text.\n11. A compact balanced binary tree: seven tangerine spheres joined by fine matte-orange rods, one root, two children, four leaves, a single connected physical graph.\n12. A compact directed acyclic graph: six scarlet nodes connected by thin red rods with a few small sculptural arrowheads, branching and rejoining, coherent and uncluttered.\n\nROW 4, structures and abstractions:\n13. A small feedforward neural network, three layers of 3, 4, and 2 small warm orange and yellow nodes, connected by fine warm wires, one cohesive physical object.\n14. A vermilion Sierpinski triangle, a precise triangular fractal sculpture with clean nested triangular openings, no base.\n15. A tangerine Möbius strip made of a single tactile folded-paper ribbon with one half twist, visibly elegant, not glossy.\n16. A call-stack-inspired sculpture: four thin scarlet matte-paper slabs stacked with a slight orderly offset, one narrow saffron inner edge, no writing or numbers.\n\nTechnical constraints: actual transparent pixels outside every object and inside all open holes, NOT a white background and NOT a painted checkerboard. Clean anti-aliased alpha edges without white halos. Do not cast shadows onto any background plane; only restrained self-shadow and ambient occlusion within each object. No detached drop shadows, no backdrop, no text except the four requested mathematical operators as sculptural forms. No watermarks or logos. Do not crop any leaf tip, graph node, operator, or branch. EXACTLY FOUR rows and FOUR columns.",
+  "refinementPrompt": "Refine this existing 4x4 object sheet into a clean, production-ready transparent PNG. Preserve all SIXTEEN subject designs, their order, the tactile matte materials, saturated red/orange/yellow palette, and soft common lighting. The single change is clean individual isolation: give each object generous empty margins and flawless transparency.\n\nLayout: exact square canvas, FOUR equal columns and FOUR equal rows. Exactly one existing grouped object per cell. Center every object in its own cell. Scale each entire object down so its COMPLETE silhouette fits within the central 66% of that cell. There must be at least 17% fully transparent padding between every silhouette and each of the four boundaries of its cell. No tip, stem, dendrite, loop, graph sphere or wire may cross its cell boundary. Do not let objects from adjacent cells touch. Equal cell centers with no visible grid. Keep the sixteen designs in exactly their current order: fern, ginkgo, fiddlehead, three-leaf twig / sum, integral, infinity, nabla / neuron, synapse, binary tree, directed graph / neural network, triangular fractal, Möbius paper strip, four-layer paper stack.\n\nTransparency quality: genuinely transparent RGBA pixels outside the sixteen clean silhouettes. All body surfaces must be FULLY OPAQUE, saturated physical objects, with transparency only outside and at naturally anti-aliased edges. Every hole between leaves, between graph nodes, and inside the operators is transparent. Remove ALL loose red/yellow speckle, digital debris, colored haze, broken pixels, matte halos, detached shadows and background remnants. Texture stays INSIDE objects only. No painted checkerboard, black backdrop, white backdrop, backdrop plane, floor, label, border, caption or grid line. No detached drop shadows. Crisp clean alpha, calm material texture, not grain scattered into empty space.\n\nThe graph in row 3 column 4 should have six nodes arranged in levels, with arrowheads consistently pointing downward from the top node through branching nodes to one bottom merge node, so it has no cycles. Keep all other subjects and visual identities unchanged. Deliver the clean transparent square sheet at the highest available resolution.",
+  "source": "/Users/amolk/.codex/generated_images/01a17413-c482-7280-973f-b055717e5799/exec-1408b2ee-be1b-453c-b02e-9668bc9deb2f.png",
+  "notes": "Original sprite-sheet exploration, retained with exact alpha in PNG and WebP. Current pages use the individual sculptures and freeform compositions documented in warm-sculptures.json.",
+  "status": "Exploration retained as source material; no longer used on pages. Superseded by warm-sculptures.json."
+}

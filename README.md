@@ -37,7 +37,7 @@ ranges: ["2025-01-10:2025-03-02", "2026-04-01:2026-05-15"]
 ---
 ```
 
-Projects generate `/projects/<slug>/` pages and `/tags/<tag>/` indexes. Set `is_private: true` to omit a project from public pages, or `hide_from_index: true` to keep its detail page while hiding its card. Parent projects can list `subprojects`. Store images, videos, and other downloadable files in `public/` to preserve their URLs.
+Projects generate `/projects/<slug>/` pages and `/tags/<tag>/` indexes. To replace a project's default page with a hand-built explainer, add `_includes/explainers/<slug>.njk`. The template receives the same `project` data, and the Markdown body is no longer shown. Set `is_private: true` to omit a project from public pages, or `hide_from_index: true` to keep its detail page while hiding its card. Parent projects can list `subprojects`. Store images, videos, and other downloadable files in `public/` to preserve their URLs.
 
 The home page shows two to six cards based on activity in the last 21 days. A parent card includes its subprojects' activity. The deploy workflow rebuilds daily to keep that selection current. `node scripts/sync-from-wiki.mjs` still syncs flagship status from the local wiki; use `--check` to report drift without changing files.
 

@@ -1,0 +1,21 @@
+{
+  "generator": "OpenAI built-in image_gen",
+  "intent": "A complementary three-image series for the portfolio's interior pages.",
+  "artworks": [
+    {
+      "id": "paper-paths",
+      "prompt": "Use case: stylized-concept. Asset type: wide website portfolio section artwork, landscape 1536x1024. Create a breathtaking fine-art photograph of a few slender sculptural folded paper paths, like graceful matte ribbons turning and branching across a pale blue-grey surface. Paper is real thick uncoated porcelain-white paper, visible natural fibers, elegant folds, quiet dimensional shadows. A single short inner face of one ribbon is highly saturated vermilion red-orange, under 5% of the composition; one tiny saffron edge is acceptable. All other surfaces are restrained white and cool blue-grey. Composition: asymmetrical, sculpture concentrated in right 55% and bottom-right, generous completely clear softly lit blue-grey negative space across left 45% and upper left for text. Soft daylight from upper right, museum editorial photography, subtle depth and natural shadows, rich and airy, meticulously composed. Background hue matches #edf2f6 / #dce5ec, never beige. No amber/glass sculpture, no text, no logos, no watermarks, no graphic lines or fake diagrams. One single cohesive photograph, not collage. This is a new artwork, not a website mockup.",
+      "asset": "public/images/artwork/paper-paths.webp"
+    },
+    {
+      "id": "paper-strata",
+      "prompt": "Use case: stylized-concept. Asset type: wide website artwork for a research publications page, landscape 1536x1024. Make a refined fine-art still life photograph of a small, architectural fan of very thin white paper sheets, sculpturally curving and opening like the edge of a book caught in a single gentle wave. Paper layers are tangible with delicate fibers, translucent light along the edges, exquisite tonal blue-grey shadows between each sheet. Only ONE narrow inner page has a saturated red-orange edge and a second tiny saffron edge; warm area under 3% of the whole image. The main sculptural form sits on the RIGHT half, sweeping from bottom-right toward upper-right. The LEFT 45% is clear pale blue-grey open space with just soft natural light, suitable for a text heading. Background and most paper shadows stay #edf2f6 and cool slate-blue grey, never beige or warm cream. Soft directional window light, subtle depth of field, high-end editorial product photography, real tactile materials, serene, airy, rich. No book titles, no printed text, no symbols, no logos, no watermarks, no amber or glass. Single photograph, not collage or website screenshot.",
+      "asset": "public/images/artwork/paper-strata.webp"
+    },
+    {
+      "id": "ginkgo-study",
+      "prompt": "Use case: photorealistic-natural. Asset type: botanical fine-art artwork for a personal portfolio about page, landscape 1536x1024. A graceful small branch of ginkgo leaves, beautiful fan-shaped veined leaves caught in soft natural daylight against an airy pale blue-grey backdrop. Most leaves are desaturated silver-grey green with deep fine vein details, natural asymmetry, subtle translucency and overlapping soft shadows. ONE small leaf is vivid natural vermilion orange-red, with a tiny neighboring saffron yellow leaf; warm colors occupy under 5% of the picture. Branch and foliage concentrated on RIGHT half with a graceful diagonal rising from bottom-right, LEFT 45% is uncluttered softly illuminated blue-grey negative space. Background hue #edf2f6 / #dce5ec; no beige, no sunset, no overall warm tint. Botanical editorial photography, tangible organic texture, shallow but not excessive depth, understated and sophisticated like a museum print, beautifully composed, full tonal richness while remaining light. No vase, no hands, no text, no logos, no watermark, no fantasy plants. One cohesive photographic image, not a website mockup.",
+      "asset": "public/images/artwork/ginkgo-study.webp"
+    }
+  ]
+}

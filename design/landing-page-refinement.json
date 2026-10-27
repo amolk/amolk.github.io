@@ -1,0 +1,149 @@
+{
+  "skills": ["landing-page-design"],
+  "intent": "A personal portfolio for AI builders, researchers, and potential collaborators. Primary action: explore the work. Use the existing visual hero and editorial sections to support discovery.",
+  "preservedPreferences": [
+    "Blue gray palette and warm fern / folded paper directions",
+    "Sparse saturated orange yellow primary actions",
+    "Constant glass navigation that scrolls away with the page",
+    "Approved Builder. Researcher. Endlessly curious. and introduction copy",
+    "Every timeline row visible at the default zoom",
+    "Matching mobile cards with tags at the bottom"
+  ],
+  "changes": [
+    "Self-hosted Manrope for interface and reading text, Geist Mono for code",
+    "Tailwind type scale and shared spacing values, balanced headings and responsive line breaks",
+    "Compact floating glass navigation with a flat translucent surface",
+    "Two leading project cards and three full-width cards on desktop; five matching cards on mobile",
+    "Counts drawn from real project and publication records beside the primary action",
+    "A separate Understand deeply. Then make it real. word reveal and once-only content reveals",
+    "Larger touch targets, visible focus, and reduced motion / forced color fallbacks",
+    "Branded favicon, canonical URLs, page-specific sharing metadata, and image fallbacks"
+  ],
+  "motion": {
+    "implementation": "IntersectionObserver, once per element; CSS transform and opacity. No scroll listener, looping artwork, or moving background.",
+    "reducedMotion": "Content is visible by default. Reduced-motion users get the final state. The source paths were reviewed; the OS preference was not changed.",
+    "companionDecision": "design-to-motion was consulted. These editorial cards do not need product story loops or video exports."
+  },
+  "approvedScopeDecisions": [
+    "This is a portfolio, so its authored work and research provide proof rather than commercial offers, trial guarantees, or invented testimonials.",
+    "Blue gray dark surfaces and the existing artwork blending preserve the requested palette and approved image treatment.",
+    "The fitted 57-row timeline retains viewport-scaled type to satisfy the explicit fit-all requirement.",
+    "Technical project names, source articles, and code retain their authored punctuation. The separate Unwind explainer source remains owned by the parallel author."
+  ],
+  "fonts": {
+    "stylesheetSource": "https://fonts.googleapis.com/css2?family=Manrope:wght@400..700&family=Geist+Mono:wght@400..500&display=swap",
+    "localFiles": [
+      "public/fonts/manrope-latin-variable.woff2",
+      "public/fonts/manrope-latin-ext-variable.woff2",
+      "public/fonts/geist-mono-latin-variable.woff2",
+      "public/fonts/geist-mono-latin-ext-variable.woff2"
+    ],
+    "licenses": [
+      "public/fonts/Manrope-OFL.txt",
+      "public/fonts/GeistMono-OFL.txt"
+    ]
+  },
+  "artworkManifest": "design/warm-sculptures.json",
+  "verification": {
+    "tests": {
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0
+    },
+    "build": "132 pages; internal links, anchors, media, and static resources verified.",
+    "browserChecks": [
+      {
+        "overflow": 0,
+        "page": "projects",
+        "timeline": {
+          "first": true,
+          "horizontalOverflow": 0,
+          "last": true,
+          "rows": 57,
+          "verticalOverflow": 0
+        },
+        "width": 320
+      },
+      {
+        "count": "0 matching entries",
+        "message": "No projects match your search. Clear the search",
+        "page": "search-empty",
+        "visible": true
+      },
+      {
+        "page": "search-clear",
+        "value": "",
+        "visibleCards": 48
+      },
+      {
+        "count": "7 papers",
+        "overflow": 0,
+        "page": "publication-filter",
+        "pressed": "true",
+        "types": ["paper"],
+        "width": 320
+      },
+      {
+        "overflow": 0,
+        "page": "about",
+        "width": 320
+      },
+      {
+        "overflow": 0,
+        "page": "project",
+        "title": "playbooks",
+        "width": 320
+      },
+      {
+        "overflow": 0,
+        "page": "authored-project",
+        "toolbarPosition": "sticky",
+        "toolbarTop": 0,
+        "width": 320
+      },
+      {
+        "overflow": 0,
+        "page": "about-tablet-final",
+        "titleHeight": 80,
+        "width": 768
+      },
+      {
+        "overflow": 0,
+        "page": "home-tablet-final",
+        "titleHeight": 96,
+        "width": 768
+      },
+      {
+        "headingColor": "linear-gradient(90deg, rgb(255, 255, 255), rgb(155, 155, 155))",
+        "overflow": 0,
+        "page": "home-dark",
+        "theme": "dark",
+        "width": 768
+      },
+      {
+        "overflow": 0,
+        "page": "projects-dark",
+        "theme": "dark",
+        "width": 1280
+      },
+      {
+        "overflow": 0,
+        "page": "publications-desktop",
+        "width": 1280
+      },
+      {
+        "overflow": 0,
+        "page": "about-desktop",
+        "width": 1280
+      }
+    ],
+    "mobileCards": "All five use 24px padding and a 24px title; tag inset is 25px including the border. Cards grow for longer text.",
+    "motion": "Word activation and once-only reveals observed in the browser.",
+    "screenshots": [
+      "design-refresh-desktop.png",
+      "design-refresh-mobile.png",
+      "design-refresh-whitespace.png"
+    ]
+  },
+  "latestRevision": "Removed all floating accent objects, their shared macro and stylesheet, and the extra spacing reserved for them."
+}

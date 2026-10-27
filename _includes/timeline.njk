@@ -1,25 +1,38 @@
 {% set timeline = projects.timeline %}
-<div class="w-full text-sm" data-timeline data-min-year="{{ timeline.minYear }}" data-latest-end="{{ timeline.latestEnd }}">
-  <div class="flex border-b border-gray-300 pb-1 mb-1">
-    <div class="w-44 shrink-0"></div><div class="flex-1 relative h-4" data-year-labels>
-      {% for point in timeline.years %}<div class="absolute top-0 text-[10px] text-gray-400 font-light -translate-x-1/2" style="left:{{ point.left }}%" data-year="{{ point.year }}">{{ point.year }}</div>{% endfor %}
+<div class="timeline-frame" data-timeline data-min-year="{{ timeline.minYear }}" data-latest-end="{{ timeline.latestEnd }}" style="--timeline-row-count: {{ timeline.rows.length }}">
+  <div class="timeline-scroll" data-timeline-scroll role="region" aria-label="Project timeline. All {{ timeline.rows.length }} projects and years fit initially. Pinch or use the zoom controls to enlarge, then scroll in either direction." tabindex="0">
+    <div class="timeline-chart">
+      <div class="timeline-axis">
+        <span class="timeline-label timeline-axis-label">Project</span>
+        <div class="timeline-years" data-year-labels>
+          {% for point in timeline.years %}<span class="timeline-year-label" style="left:{{ point.left }}%" data-year="{{ point.year }}">{{ point.year }}</span>{% endfor %}
+        </div>
+      </div>
+      <div class="timeline-body">
+        <div class="timeline-grid" data-year-grid aria-hidden="true">
+          {% for point in timeline.years %}<span class="timeline-year-line" style="left:{{ point.left }}%" data-year="{{ point.year }}"></span>{% endfor %}
+          <span class="timeline-today" style="left:100%" data-today></span>
+        </div>
+        {% for row in timeline.rows %}
+        <a href="{{ row.project.url }}" class="timeline-row" title="{{ row.project.summary }}">
+          <span class="timeline-label">{{ row.project.title }}</span>
+          <span class="timeline-ranges">
+            {% for range in row.ranges %}<span class="timeline-range {{ row.color }}" style="left:{{ range.left }}%;width:{{ range.width }}%" title="{{ range.title }}" data-range-start="{{ range.start }}" data-range-end="{{ range.end }}"></span>{% endfor %}
+          </span>
+        </a>
+        {% endfor %}
+      </div>
     </div>
   </div>
-  <div class="relative">
-    <div class="absolute inset-0 flex pointer-events-none"><div class="w-44 shrink-0"></div><div class="flex-1 relative" data-year-grid>
-      {% for point in timeline.years %}<div class="absolute top-0 bottom-0 border-l border-gray-100" style="left:{{ point.left }}%" data-year="{{ point.year }}"></div>{% endfor %}
-      <div class="absolute top-0 bottom-0 border-l border-dashed border-gray-300" style="left:100%" data-today></div>
-    </div></div>
-    {% for row in timeline.rows %}
-    <a href="{{ row.project.url }}" class="flex items-center group transition-colors hover:bg-black/[0.05]" style="height:16px" title="{{ row.project.summary }}">
-      <span class="w-44 shrink-0 pr-3 text-[11px] leading-none truncate text-gray-600 group-hover:text-black group-hover:font-medium">{{ row.project.title }}</span>
-      <div class="flex-1 relative h-full">
-        {% for range in row.ranges %}<span class="absolute {{ row.color }} rounded-[2px] opacity-80 group-hover:opacity-100 ring-0 group-hover:ring-1 group-hover:ring-black/20 transition-all" style="left:{{ range.left }}%;width:{{ range.width }}%;top:3px;bottom:3px" title="{{ range.title }}" data-range-start="{{ range.start }}" data-range-end="{{ range.end }}"></span>{% endfor %}
-      </div>
-    </a>
-    {% endfor %}
-  </div>
-  <div class="flex flex-wrap gap-x-4 gap-y-1 mt-4 text-[10px] text-gray-500">
-    {% for status in timeline.legend %}<div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-[2px] {{ status.color }}"></span>{{ status.label }}</div>{% endfor %}
+  <div class="timeline-footer">
+    <div class="timeline-legend" aria-label="Project status legend">
+      {% for status in timeline.legend %}<span><i class="{{ status.color }}" aria-hidden="true"></i>{{ status.label }}</span>{% endfor %}
+    </div>
+    <div class="timeline-zoom" data-timeline-zoom role="group" aria-label="Timeline zoom" hidden>
+      <button type="button" data-timeline-zoom-out aria-label="Zoom out timeline" disabled>−</button>
+      <output data-timeline-zoom-level aria-label="Timeline zoom level" aria-live="off">100%</output>
+      <button type="button" data-timeline-zoom-in aria-label="Zoom in timeline">+</button>
+      <button type="button" data-timeline-fit>Fit</button>
+    </div>
   </div>
 </div>

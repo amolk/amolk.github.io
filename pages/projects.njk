@@ -3,17 +3,38 @@ layout: layout.njk
 title: Projects
 description: All projects, grouped by category, with a timeline across 25+ years of building.
 permalink: /projects/
+pageArtwork: /images/artwork/paper-paths.webp
 ---
-<div class="max-w-6xl mx-auto px-8 pt-24 pb-16">
-  <header class="mb-12">
-    <h1 class="font-serif text-4xl md:text-5xl font-medium tracking-tight mb-3">Projects</h1>
-    <p class="text-gray-500 text-lg font-light">Living the exponential. {{ projects.visible.length }} projects total and counting. Products, research, and tooling.</p>
-  </header>
-  <section id="timeline" class="mb-20 scroll-mt-24">{% include "timeline.njk" %}</section>
-  {% for group in projects.groups %}
-  <section class="mb-16">
-    <div class="mb-6"><h2 class="font-serif text-2xl md:text-3xl font-medium">{{ group.label }}</h2>{% if group.blurb %}<p class="text-sm text-gray-500 mt-1 font-light">{{ group.blurb }}</p>{% endif %}</div>
-    <div class="grid sm:grid-cols-2 gap-5">{% for project in group.projects %}{% set showChildren = true %}{% include "card.njk" %}{% endfor %}</div>
-  </section>
-  {% endfor %}
+<header class="page-masthead page-masthead-illustrated projects-masthead">
+  {% include "page-artwork.njk" %}
+  <div class="home-container"><div class="page-masthead-copy">
+    <p class="home-eyebrow">{{ projects.visible.length }} projects, and counting</p>
+    <h1>Projects</h1>
+    <p class="page-masthead-description">Products, research, and tools.<br>A collection of ideas made real.</p>
+  </div></div>
+</header>
+<div class="home-container portfolio-main" data-project-index>
+  <details class="portfolio-timeline" id="timeline" open>
+    <summary><span>Living the exponential</span><span>{{ projects.timeline.minYear }} to today</span></summary>
+    <div class="timeline-panel">
+      <p class="portfolio-timeline-intro">All {{ projects.timeline.rows.length }} projects, most recent first. Pinch to zoom.</p>
+      {% include "timeline.njk" %}
+    </div>
+  </details>
+  <div class="portfolio-collection-controls">
+  <nav class="portfolio-index-nav" aria-label="Project categories"><a href="#timeline">Timeline</a>{% for group in projects.groups %}<a href="#category-{{ group.key }}">{{ group.label }}</a>{% endfor %}</nav>
+  <div class="portfolio-toolbar" data-project-search hidden>
+    <div class="portfolio-search"><label for="project-search">Find a project</label><input id="project-search" type="search" placeholder="Search by name, topic, or technology" autocomplete="off" aria-controls="project-groups"></div>
+    <p class="portfolio-result-count" data-project-count role="status" aria-live="polite"></p>
+  </div>
+  </div>
+  <p class="portfolio-empty" data-project-empty hidden>No projects match your search. <button type="button" class="home-text-link" data-search-clear>Clear the search</button></p>
+  <div id="project-groups">
+    {% for group in projects.groups %}
+    <section class="portfolio-section" id="category-{{ group.key }}" data-project-group aria-labelledby="heading-{{ group.key }}">
+      <header class="portfolio-section-heading"><h2 id="heading-{{ group.key }}">{{ group.label }}</h2>{% if group.blurb %}<p>{{ group.blurb }}</p>{% endif %}</header>
+      <div class="portfolio-grid">{% for project in group.projects %}{% set showChildren = true %}{% include "portfolio-card.njk" %}{% endfor %}</div>
+    </section>
+    {% endfor %}
+  </div>
 </div>

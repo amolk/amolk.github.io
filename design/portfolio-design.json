@@ -1,0 +1,53 @@
+{
+  "designRead": "An editorial portfolio extending the approved airy blue-grey homepage, with tactile artwork and rare saturated warmth.",
+  "dials": {
+    "DESIGN_VARIANCE": 6,
+    "MOTION_INTENSITY": 3,
+    "VISUAL_DENSITY": 3
+  },
+  "foundation": "Eleventy and Nunjucks, native CSS, self-hosted Manrope throughout, Geist Mono for code and data, and shared blue gray color tokens. Refined through landing-page-design; see landing-page-refinement.json.",
+  "audit": {
+    "preserved": [
+      "Project and tag routes",
+      "Published heading IDs and deep links",
+      "Project bodies and source metadata",
+      "Publication records and sorting",
+      "Biography content",
+      "The authored Unwind explainer include and its discovery hook",
+      "The approved home-page design options"
+    ],
+    "replaced": [
+      "White interior-page shell",
+      "Fixed fading navigation on interior pages",
+      "Dense timeline before the project collection",
+      "Uniform publication cards",
+      "Narrow legacy project header with loose typography"
+    ],
+    "seo": "Page-specific titles, descriptions, canonical URLs, Open Graph and Twitter image fallbacks, and a branded favicon. Search ranking was not measured."
+  },
+  "pages": {
+    "projects": "Expanded paper-paths masthead, full project timeline open at the top with a fitted overview and two-axis zoom, followed by category navigation, full-topic search, and project cards with child links.",
+    "publications": "Paper-strata masthead, year groups, working All / Papers / Patents filters, publication authors and venue metadata.",
+    "about": "Ginkgo masthead, portrait and introduction, readable biography sections, publications, education and contact.",
+    "projectTemplate": "Project summary and links, facts, optional real image or video, build-time section navigation, readable long-form content, related projects and gallery.",
+    "authoredExplainers": "External compatibility styles and navigation derived from existing section IDs; the source include remains independent.",
+    "secondary": "Tag collections and both custom 404 routes use the same shell."
+  },
+  "artworkManifest": "design/portfolio-artwork.json",
+  "verification": {
+    "build": "132 pages, internal links, anchors, media and static resources verified.",
+    "tests": "All 8 existing tests passed; none skipped.",
+    "lightLayoutWidths": [320, 390, 768, 1440],
+    "darkLayoutWidths": [390, 1440],
+    "functional": [
+      "Search, empty state and clear",
+      "Search across full project tags",
+      "Publication filters",
+      "Timeline anchor opens the chart",
+      "Timeline scroll stays within the component",
+      "Project section links",
+      "Screenshot zoom, Escape, focus return"
+    ],
+    "performance": "Artwork optimised to WebP (73,328 / 85,156 / 138,938 bytes). No Lighthouse audit was run."
+  }
+}

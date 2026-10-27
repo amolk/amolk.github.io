@@ -1,9 +1,9 @@
 ---
 title: "unwind"
 slug: unwind
-summary: "Outside-in web observer for Claude Code sessions and callstack call trees."
+summary: "See Claude Code and Codex sessions in one place, with agent calls as a tree and cost on every branch."
 tags: ["agentic AI", "developer tools", "observability", "tool"]
-status: active
+status: shipped
 category: shipped
 year_started: "2026"
 repo_url: "https://github.com/unwind-labs/unwind"
@@ -13,6 +13,6 @@ images: ["/images/projects/unwind/call-tree.png", "/images/projects/unwind/node-
 ranges: ["2026-04-28:2026-06-05"]
 ---
 
-unwind is a local observability tool for Claude Code. Run `unwind serve` from a project folder and it opens a browser onto every session that has run there: a list of sessions, a call-tree canvas showing how sessions spawned each other when the callstack `/call` skill is used, and a conversation pane for any selected session. The same data is also exposed through `unwind project | session | messages | task` CLI subcommands for scripting. It reads Claude Code's own JSONL session logs plus the callstack trace sidecars, so it works without any harness modifications.
+unwind shows your Claude Code and Codex sessions in one place. Sessions started by [callstack](/projects/callstack/) calls appear as a nested tree, with live status and cost on every branch. A monthly report totals tokens and cost across all your projects. Everything runs locally, and unwind sends no data anywhere.
 
-The canvas surfaces per-window token usage and USD cost, propagates live status from descendants up to ancestors, and rolls usage up across projects in a monthly Reports view. Stack is Python with FastAPI and a Vite-built shadcn-style frontend; the watcher uses tail-reads and a fingerprinted ETag to stay cheap on large session histories. Ships on PyPI as `unwind-labs` and installs the `unwind` console script. Current release is 0.4.5.
+<!-- The project page is built from _includes/explainers/unwind.njk; this text shows only if that file is removed. -->

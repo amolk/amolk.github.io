@@ -1,0 +1,35 @@
+{
+  "generator": "OpenAI built-in image_gen",
+  "intent": "Selective warm color against the existing blue-grey design.",
+  "defaultPalette": "warm",
+  "defaultDirection": "canopy",
+  "artworks": [
+    {
+      "id": "folds",
+      "asset": "public/images/home/folded-light-warm.webp",
+      "source": "/Users/amolk/work/amolk.github.io/public/images/home/folded-light.webp",
+      "prompt": "Edit this exact architectural paper-fold artwork for a refined website hero. Preserve the exact composition, all folded paper geometry, natural paper-fiber texture, light and shadows, and the pale blue-grey negative space across the LEFT 55%. The purpose is a precise selective-color photographic effect: blue-grey and porcelain remain the dominant 90-94% of the image, with just a few small, confident warm color pops. Recolor the INNER FACE / UNDERSIDE of ONE of the middle-right folded paper ribbons (around x=80%, y=40-55%) a richly saturated vermilion / red-orange. It must remain real matte colored paper with the existing folded geometry and shadows, not glowing light. Let this warm face taper to a thin point toward the center. Keep its total surface area under 8% of the whole image. Add one very narrow saffron-yellow paper edge on a nearby lower fold, covering less than 1% of the image. Every other fold stays cool white and blue-grey. Preserve the original blue-grey lighting and background exactly; NO overall warm tint, NO orange background, NO beige, NO gradients painted over the picture, NO extra objects, NO extra folds, NO text. The result should be sophisticated, restrained, warm through contrast, with a deliberate photographic color-pop effect."
+    },
+    {
+      "id": "canopy",
+      "asset": "public/images/home/living-systems-warm.webp",
+      "source": "/Users/amolk/work/amolk.github.io/public/images/home/living-systems-blue.webp",
+      "prompt": "Edit this exact fern photograph for a sophisticated selective-color website hero. Preserve its composition, the exact graceful branching shapes and curling new growth, fine leaf-vein texture, and the airy BLUE-GREY background and negative space on the LEFT 55%. Keep the scene predominantly cool blue-grey and softly desaturated silver-grey-green foliage. Introduce small concentrated warm colors within the fern itself: change ONE graceful unfurling frond in the middle-right (around x=75%, y=35%) to beautiful vivid copper-orange and vermilion young foliage, and give just a few tiny leaflets near it a rich saffron-yellow tone. These are natural matte leaves, not painted metal or glass. The orange-red growth should occupy no more than 5-7% of the entire image, and yellow under 1%. Make the rest of the fern quietly grey-green, retaining some botanical color and the photographic detail, so the little orange-red frond truly pops against the mostly desaturated picture. Preserve realism, backlit translucent leaf texture and spatial depth. NO sunset or overall warm cast. NO beige, NO amber sculpture, NO colored background, NO butterflies, NO flowers, NO new props, NO text. Understated fine-art botanical color-pop photography, beautiful and grown-up rather than decorative."
+    }
+  ],
+  "palette": {
+    "lightAccent": "#345e80",
+    "lightButton": "#ffb52b",
+    "darkAccent": "#a3c5df",
+    "darkButton": "#ffb52b",
+    "buttonHover": "#ffc247",
+    "buttonText": "#132735",
+    "background": "#edf2f6"
+  },
+  "previews": {
+    "fern": "http://localhost:3000/?direction=canopy&palette=warm",
+    "paper": "http://localhost:3000/?direction=folds&palette=warm",
+    "originalFern": "http://localhost:3000/?direction=canopy&palette=cool",
+    "originalPaper": "http://localhost:3000/?direction=folds&palette=cool"
+  }
+}

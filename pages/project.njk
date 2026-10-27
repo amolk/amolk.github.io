@@ -9,28 +9,33 @@ eleventyComputed:
   title: "{{ project.title | safe }}"
   description: "{{ project.summary | safe }}"
 ---
-<article class="max-w-3xl mx-auto px-8 pt-24 pb-16">
-  <a href="/projects/" class="text-sm text-gray-500 hover:text-black transition-colors">← All projects</a>
-  <header class="mt-6 mb-10">
-    {% if project.parentProject %}<div class="text-sm text-gray-500 mb-2">Part of {% if project.parentProject.is_private %}<span>{{ project.parentProject.title }}</span>{% else %}<a href="{{ project.parentProject.url }}" class="underline underline-offset-2 hover:text-black">{{ project.parentProject.title }}</a>{% endif %}</div>{% endif %}
-    <h1 class="font-serif text-4xl md:text-5xl font-medium tracking-tight mb-3">{{ project.title }}</h1>
-    <p class="text-xl text-gray-500 font-light mb-6 leading-tight">{{ project.summary }}</p>
-    <div class="flex flex-wrap gap-2 text-xs mb-6">
-      <span class="px-2.5 py-0.5 rounded-full bg-gray-100 text-gray-600 capitalize">{{ project.status }}</span>
-      <span class="px-2.5 py-0.5 rounded-full bg-gray-100 text-gray-600">{{ project.years }}</span>
-      {% for tag in project.tagLinks %}<a href="{{ tag.url }}" class="px-2.5 py-0.5 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 hover:text-black transition-colors">{{ tag.label }}</a>{% endfor %}
-    </div>
-    {% if project.links.length %}<div class="flex flex-wrap gap-3">{% for link in project.links %}<a href="{{ link.href }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-300 text-sm text-gray-700 hover:border-black hover:text-black transition-colors">{{ icons[link.icon] | safe }}<span>{{ link.label }}</span></a>{% endfor %}</div>{% endif %}
+{% if project.explainer %}
+{# Keep authored explainers independent, including the work-in-progress Unwind page. #}
+<div class="case-explainer">{% include project.explainer %}</div>
+{% else %}
+{% set sections = project.body | projectSections %}
+<article class="case-study home-container">
+  <header class="case-header">
+    <a href="/projects/" class="portfolio-back">All projects</a>
+    {% if project.parentProject %}<p class="case-parent">Part of {% if project.parentProject.is_private %}{{ project.parentProject.title }}{% else %}<a href="{{ project.parentProject.url }}">{{ project.parentProject.title }}</a>{% endif %}</p>{% endif %}
+    <h1>{{ project.title }}</h1>
+    <p class="case-description">{{ project.summary | replace('`', '') }}</p>
+    {% if project.links.length %}<div class="case-actions">{% for link in project.links %}<a href="{{ link.href }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>{% endfor %}</div>{% endif %}
+    <dl class="case-facts">
+      <div><dt>Status</dt><dd class="case-status">{{ project.status }}</dd></div>
+      <div><dt>Started</dt><dd>{{ project.year_started }}</dd></div>
+      <div><dt>Focus</dt><dd>{{ homepage.categoryLabels[project.category] or project.category }}</dd></div>
+      <div><dt>Topics</dt><dd>{% for tag in project.tagLinks %}<a href="{{ tag.url }}">{{ tag.label }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</dd></div>
+    </dl>
   </header>
-  {% if project.image %}<div class="mb-10">{% set imageSource = project.image %}{% set imageWidth = 1600 %}{% set imageHeight = 900 %}{% set imageClass = "rounded-2xl border border-gray-200 shadow-sm w-full h-auto" %}{% include "zoom-image.njk" %}</div>{% endif %}
-  {% if project.video %}<div class="mb-10"><video controls class="rounded-2xl border border-gray-200 shadow-sm w-full"><source src="{{ project.video }}"></video></div>{% endif %}
-  <div class="project-content">{{ project.body | safe }}</div>
-  {% if project.children.length %}
-  <section class="mt-12 pt-8 border-t border-gray-200">
-    <h2 class="font-serif text-2xl font-medium mb-5">Sub-projects</h2><div class="grid gap-4">
-      {% for child in project.children %}<a href="{{ child.url }}" class="block group p-5 rounded-xl border border-gray-200 hover:border-gray-400 transition-colors"><div class="flex items-baseline justify-between gap-3 mb-1"><h3 class="font-serif text-lg font-medium group-hover:underline underline-offset-4">{{ child.title }}</h3><span class="text-xs text-gray-400 whitespace-nowrap font-light">{{ child.years }}</span></div><p class="text-sm text-gray-600 leading-tight">{{ child.summary }}</p></a>{% endfor %}
-    </div>
-  </section>
-  {% endif %}
-  {% if project.images.length %}<div class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4">{% for source in project.images %}{% set imageSource = source %}{% set imageWidth = 1200 %}{% set imageHeight = 800 %}{% set imageClass = "rounded-xl border border-gray-200 w-full h-auto" %}{% include "zoom-image.njk" %}{% endfor %}</div>{% endif %}
+  {% if project.image %}<figure class="case-hero-media">{% set imageSource = project.image %}{% set imageWidth = 1600 %}{% set imageHeight = 900 %}{% set imageClass = "case-image" %}{% include "zoom-image.njk" %}</figure>{% endif %}
+  {% if project.video %}<figure class="case-hero-media"><video controls preload="metadata" aria-label="{{ project.title }} demonstration"><source src="{{ project.video }}"></video></figure>{% endif %}
+  <div class="case-content-layout{% if sections.length > 1 %} has-contents{% endif %}">
+    {% if sections.length > 1 %}<nav class="case-contents" aria-label="On this page"><p>On this page</p>{% for section in sections %}<a href="#{{ section.id }}">{{ section.label }}</a>{% endfor %}</nav>{% endif %}
+    <div class="case-reading project-content">{{ project.body | safe }}</div>
+  </div>
+  {% if project.children.length %}<section class="case-related" aria-labelledby="related-title"><h2 id="related-title">Related work</h2><div class="portfolio-grid">{% for project in project.children %}{% set showChildren = false %}{% include "portfolio-card.njk" %}{% endfor %}</div></section>{% endif %}
+  {% if project.images.length %}<section class="case-gallery" aria-label="Project images">{% for source in project.images %}{% set imageSource = source %}{% set imageWidth = 1200 %}{% set imageHeight = 800 %}{% set imageClass = "case-image" %}{% include "zoom-image.njk" %}{% endfor %}</section>{% endif %}
+  <div class="case-end"><a class="home-text-link" href="/projects/">Browse all projects</a></div>
 </article>
+{% endif %}

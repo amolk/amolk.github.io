@@ -1,6 +1,59 @@
 ---
 layout: layout.njk
-description: "AI systems, agent infrastructure, semantic programming, and consciousness research. A 15-year portfolio of shipped products, papers, and experiments."
+home: true
+description: "AI systems, agent infrastructure, semantic programming, and consciousness research. A portfolio of shipped products, papers, and experiments."
 permalink: /
 ---
-<div class="max-w-6xl mx-auto px-8"><section class="min-h-[85vh] flex items-center pt-24"><div class="space-y-8 max-w-4xl"><h1 class="font-serif text-5xl md:text-7xl font-light leading-tight text-balance">AI systems, agent infrastructure, and the occasional theory of consciousness.</h1><p class="text-xl md:text-2xl text-gray-500 font-light max-w-3xl leading-tight">I am Amol Kelkar. I build things I can't stop thinking about - some have grown into companies, some into papers, others produced beautiful things and insights. Lately, coding agents let me build at 1000x my former pace, so there's a lot on my mind: <a class="underline underline-offset-4 hover:text-black" href="/projects/agentapplication/">Agent Applications</a>, and more.</p><div class="flex flex-col sm:flex-row gap-4 pt-4"><a class="px-8 py-3 bg-black text-white rounded-full text-base font-medium hover:bg-gray-800 transition-all duration-300 hover:scale-105 inline-block text-center" href="/projects/">Browse all projects</a><a class="px-8 py-3 border border-gray-300 text-gray-700 rounded-full text-base font-medium hover:border-black hover:text-black transition-all duration-300 inline-block text-center" href="/about/">About me</a></div></div></section><section class="py-20"><div class="flex items-baseline justify-between mb-8"><h2 class="font-serif text-3xl md:text-4xl font-medium">Top of mind</h2><a class="text-sm text-gray-500 hover:text-black transition-colors" href="/projects/">All projects →</a></div><div class="grid sm:grid-cols-2 gap-5">{% for project in projects.topOfMind %}{% set showChildren = false %}{% include "card.njk" %}{% endfor %}</div></section></div>
+<section class="home-hero" aria-labelledby="home-title">
+  <div class="home-hero-art" aria-hidden="true"></div>
+  <div class="home-hero-wash" aria-hidden="true"></div>
+  <div class="home-container home-hero-inner">
+    <div class="home-hero-copy">
+      <p class="home-eyebrow">Builder. Researcher. Endlessly curious.</p>
+      <h1 id="home-title">Turning ideas into<br>things that matter.</h1>
+      <p class="home-hero-description">I’m Amol. I build AI systems, explore intelligence,<br class="home-desktop-break"> and follow the questions I can’t leave alone.</p>
+      <div class="home-hero-actions"><a class="home-button home-button-primary" href="/projects/">Explore my work</a><a class="home-text-link" href="/about/">A little about me</a></div>
+      <p class="home-hero-proof">{{ projects.visible.length }} projects <span aria-hidden="true">·</span> {{ publications.all.length }} publications &amp; patents</p>
+    </div>
+  </div>
+</section>
+
+<div class="home-container">
+  <section class="home-intro" aria-label="About my work">
+    <p>AI systems. Agent infrastructure.<br>And the occasional theory of consciousness.</p>
+    <div><p>Some ideas grow into companies. Some become papers.<br class="home-desktop-break"> Others produce beautiful things and unexpected insights.</p><a class="home-text-link" href="/projects/#timeline">Follow the journey</a></div>
+  </section>
+
+  <section class="home-current home-section" aria-labelledby="current-title">
+    <div class="home-section-heading" data-reveal><div><h2 id="current-title">Top of mind</h2><p>The projects and questions I keep coming back to.</p></div><a class="home-text-link" href="/projects/">All projects</a></div>
+    <div class="home-current-grid">
+      {% for project in projects.topOfMind %}
+      <a class="home-project{% if loop.first %} home-project-lead{% endif %}" href="{{ project.url }}">
+        <div class="home-project-meta"><span>{{ homepage.categoryLabels[project.category] or 'Project' }}</span><span>{{ project.year_started }}</span></div>
+        <div class="home-project-body"><h3>{{ project.title }}</h3><p>{{ homepage.projectSummaries[project.slug] or project.summary }}</p></div>
+        <div class="home-project-bottom"><span>{% for tag in project.tags | take(2) %}{{ tag }}{% if not loop.last %}<span class="home-tag-divider" aria-hidden="true">/</span>{% endif %}{% endfor %}</span></div>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="home-feature home-section" aria-labelledby="ragafied-title">
+    <a class="home-feature-image" href="/projects/ragafied/" aria-label="Read the Ragafied story"><img src="/images/home/ragafied.webp" alt="A singer learning from a teacher, surrounded by the colors of Hindustani music" width="900" height="922" loading="lazy"></a>
+    <div class="home-feature-copy" data-reveal><p class="home-eyebrow">Made for the love of it</p><h2 id="ragafied-title">Technology,<br>with a human side.</h2><p>Ragafied started with a simple idea: a recording of a great singer should become something you can learn from.</p><p>First built in 2012. Reimagined in 2026. AI and signal processing, in service of something deeply human: finding your voice.</p><div class="home-feature-actions"><a class="home-button" href="https://ragafied.com">Meet Ragafied</a><a class="home-text-link" href="/projects/ragafied/">Read the story</a></div></div>
+  </section>
+
+  <section class="home-manifesto" aria-labelledby="manifesto-title" data-manifesto>
+    <p class="home-eyebrow">The thread through it all</p>
+    <h2 id="manifesto-title">{% for word in ['Understand', 'deeply.', 'Then', 'make', 'it', 'real.'] %}<span class="manifesto-word" style="--word: {{ loop.index0 }}">{{ word }}</span>{% if loop.index == 2 %}<br>{% elif not loop.last %} {% endif %}{% endfor %}</h2>
+  </section>
+
+  <section class="home-about home-section" aria-labelledby="about-title">
+    <div class="home-about-copy" data-reveal><h2 id="about-title">A builder’s instinct.<br>A researcher’s curiosity.</h2><p>I’ve followed both, from modeling cortical networks at UT Austin to building products at Microsoft, founding companies, and now working on enterprise AI at Qualtrics.</p><a class="home-text-link" href="/about/">More about me</a></div>
+    <figure class="home-portrait"><img src="/images/home/amol-kelkar.webp" alt="Amol Kelkar" width="660" height="660" loading="lazy"><figcaption>Amol Kelkar <span>Engineer, founder, researcher</span></figcaption></figure>
+  </section>
+
+  <section class="home-publications home-section" aria-labelledby="publications-title">
+    <div class="home-section-heading" data-reveal><div><h2 id="publications-title">Ideas on paper</h2><p>Research, formalizations, and a few patents along the way.</p></div><a class="home-text-link" href="/publications/">All publications</a></div>
+    <div class="home-paper-list">{% for paper in publications.selected | take(3) %}<a class="home-paper" href="{{ paper.link or '/publications/' }}"><span class="home-paper-year">{{ paper.year }}</span><div><h3>{{ paper.title }}</h3><p>{{ paper.venue }}</p></div></a>{% endfor %}</div>
+  </section>
+</div>
